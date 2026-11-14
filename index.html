@@ -1,0 +1,1707 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Jesus’Trip &amp; Co · Groupe belge de pop-louange</title>
+<meta name="description" content="Jesus’Trip &amp; Co, groupe belge de pop-louange : des temps de louange festifs et priants dans les églises de Wallonie, de Bruxelles et jusqu’à Lourdes. Invitez-nous chez vous.">
+<meta name="theme-color" content="#041F3E">
+<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="img/icon-192.png">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_BE">
+<meta property="og:site_name" content="Jesus’Trip &amp; Co">
+<meta property="og:title" content="Jesus’Trip &amp; Co · Groupe belge de pop-louange">
+<meta property="og:description" content="Jesus’Trip &amp; Co, groupe belge de pop-louange : des temps de louange festifs et priants dans les églises de Wallonie, de Bruxelles et jusqu’à Lourdes. Invitez-nous chez vous.">
+<link rel="canonical" href="https://jesustripandco.be/">
+<meta property="og:url" content="https://jesustripandco.be/">
+<meta property="og:image" content="https://jesustripandco.be/img/partage.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preload" href="fonts/montserrat-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/lato-400.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face{font-family:"Montserrat";font-style:normal;font-weight:100 900;font-display:swap;src:url("fonts/montserrat-latin.woff2") format("woff2")}
+@font-face{font-family:"Caveat";font-style:normal;font-weight:400 700;font-display:swap;src:url("fonts/caveat-latin.woff2") format("woff2")}
+@font-face{font-family:"Lato";font-style:normal;font-weight:400;font-display:swap;src:url("fonts/lato-400.woff2") format("woff2")}
+@font-face{font-family:"Lato";font-style:italic;font-weight:400;font-display:swap;src:url("fonts/lato-400i.woff2") format("woff2")}
+@font-face{font-family:"Lato";font-style:normal;font-weight:700;font-display:swap;src:url("fonts/lato-700.woff2") format("woff2")}
+
+[hidden]{display:none!important}
+/* Jesus'Trip & Co · bleu nuit, rouge, blanc ; Montserrat, Lato, Caveat ;
+   transitions variées entre les blocs, tirages photo, annotations à la main */
+:root{
+  --nuit:#041F3E;--marine:#06305F;--marine-2:#0A3F7A;--ciel:#93B7D9;--glace:#DCEBF5;--brume:#F3F7FB;
+  --rouge:#C61122;--rouge-vif:#E83442;--rose:#FF8C95;
+  --encre:#1C3352;--gris:#52637A;--clair:#DCE6F2;--clair-2:#C9D6E6;
+  --ligne:rgba(6,48,95,.13);
+  --vague:clamp(46px,6vw,90px);
+  --f-titre:"Montserrat",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  --f-texte:"Lato",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  --f-main:"Caveat","Segoe Print","Bradley Hand",cursive;
+  --f-journal:Georgia,"Times New Roman","Noto Serif",serif;
+  color-scheme:light;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:80px;-webkit-text-size-adjust:100%}
+body{margin:0;background:#FFFFFF;color:var(--encre);font-family:var(--f-texte);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:40;background:var(--nuit)}
+main{overflow-x:clip}
+img{max-width:100%;height:auto;display:block}
+h1,h2,h3,h4,p,ul,ol,dl,dd,figure,blockquote{margin:0}
+h1,h2,h3,h4{font-family:var(--f-titre);line-height:1.15;text-wrap:balance}
+h2{font-size:clamp(32px,4vw,46px);font-weight:800;letter-spacing:-.01em;color:var(--marine)}
+p{text-wrap:pretty}
+a{color:inherit}
+a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid var(--ciel);outline-offset:3px;border-radius:8px}
+cite{font-style:italic}
+.insecable{white-space:nowrap}
+.wrap{position:relative;z-index:2;width:100%;max-width:1200px;margin-inline:auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+.sr{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.defs{position:absolute;width:0;height:0;overflow:hidden}
+.skip{position:absolute;left:12px;top:-60px;z-index:60;background:#fff;color:var(--marine);padding:10px 16px;border-radius:999px;font-weight:700;text-decoration:none}
+.skip:focus{top:12px}
+.ico{width:20px;height:20px;flex:none;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.marque{fill:currentColor}
+
+/* ---------- Transitions entre les blocs ---------- */
+.sep{position:absolute;z-index:1;left:0;bottom:-1px;width:100%;height:var(--vague);pointer-events:none;overflow:hidden}
+.sep path,.sep circle,.sep rect{fill:var(--sep,#fff)}
+.sep .sep__echo{opacity:.4}
+.sep .sep__trait{fill:none;stroke:var(--rouge-vif);stroke-width:3;vector-effect:non-scaling-stroke}
+.sep .sep__fibre{fill:#FFFFFF}
+.sep .sep__bulle{opacity:.75}
+.sep--biais{height:clamp(56px,7vw,110px)}
+.sep--dechirure{height:clamp(24px,2.8vw,42px);bottom:-2px}
+.sep--arche{height:clamp(60px,8vw,130px)}
+.sep--bulles{height:clamp(54px,6.4vw,96px)}
+/* fondus : pas de bord, la couleur glisse d'un bloc à l'autre */
+.section.section--fondu-glace{background:linear-gradient(180deg,#FFFFFF 0,#FFFFFF calc(100% - 240px),var(--glace) 100%)}
+.section.section--fondu-blanc{background:linear-gradient(180deg,var(--brume) 0,var(--brume) calc(100% - 220px),#FFFFFF 100%)}
+/* reflet flou : la galerie se reflète sous la scène */
+.reflet{position:absolute;z-index:-1;left:0;right:0;top:0;height:clamp(110px,13vw,210px);display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:4px;transform:scaleY(-1);opacity:.5;filter:blur(5px) saturate(1.2);-webkit-mask-image:linear-gradient(180deg,transparent 0%,rgba(0,0,0,.35) 45%,#000 100%);mask-image:linear-gradient(180deg,transparent 0%,rgba(0,0,0,.35) 45%,#000 100%);pointer-events:none}
+.reflet img{width:100%;height:100%;object-fit:cover;object-position:50% 100%}
+/* aube : la nuit de Lourdes s'éclaire jusqu'au bleu de la soirée */
+.aube{position:absolute;z-index:0;left:0;right:0;bottom:0;height:clamp(200px,22vw,330px);overflow:hidden;pointer-events:none;background:linear-gradient(180deg,rgba(220,235,245,0) 0%,rgba(220,235,245,.06) 22%,rgba(220,235,245,.36) 58%,rgba(220,235,245,.85) 85%,var(--glace) 100%)}
+.aube::before{content:"";position:absolute;left:50%;bottom:-55%;width:min(1500px,140%);height:130%;translate:-50% 0;border-radius:50%;background:radial-gradient(closest-side,rgba(255,255,255,.95),rgba(255,247,236,.55) 42%,rgba(255,255,255,0) 100%)}
+.aube::after{content:"";position:absolute;inset:0;background:repeating-conic-gradient(from -90deg at 50% 130%,rgba(255,255,255,.11) 0deg 1.6deg,rgba(255,255,255,0) 1.6deg 7deg);-webkit-mask-image:linear-gradient(180deg,transparent 5%,#000 70%);mask-image:linear-gradient(180deg,transparent 5%,#000 70%)}
+/* égaliseur : la musique monte */
+.eq{position:absolute;z-index:1;left:0;right:0;bottom:-1px;height:clamp(54px,7vw,104px);display:flex;align-items:flex-end;gap:clamp(3px,.42vw,7px);padding-inline:clamp(4px,.5vw,8px);pointer-events:none}
+.eq::after{content:"";position:absolute;left:0;right:0;bottom:0;height:7px;background:#FFFFFF}
+.eq span{flex:1 1 0;min-width:0;height:calc(var(--h) * 100%);border-radius:99px 99px 0 0;background:#FFFFFF;transform-origin:50% 100%}
+/* projecteurs */
+.faisceaux{position:absolute;inset:0;z-index:-1;pointer-events:none;overflow:hidden}
+.faisceaux span{position:absolute;top:-4%;width:300px;height:78%;transform-origin:50% 0;clip-path:polygon(44% 0,56% 0,100% 100%,0 100%);background:linear-gradient(180deg,rgba(255,255,255,.15),rgba(255,255,255,0) 80%);mix-blend-mode:screen}
+.faisceaux--agenda span:nth-child(1){left:-40px;rotate:-30deg}
+.faisceaux--agenda span:nth-child(2){right:-40px;rotate:30deg;background:linear-gradient(180deg,rgba(232,52,66,.24),rgba(232,52,66,0) 78%)}
+.faisceaux--equipe span{height:44%;top:0;opacity:.75}
+.faisceaux--equipe span:nth-child(1){left:10%;rotate:-18deg}
+.faisceaux--equipe span:nth-child(2){left:44%;rotate:3deg;background:linear-gradient(180deg,rgba(232,52,66,.2),rgba(232,52,66,0) 78%)}
+.faisceaux--equipe span:nth-child(3){right:9%;rotate:18deg}
+
+/* ---------- Effets sur les côtés : lueurs et petits dessins ---------- */
+.lueur{position:absolute;z-index:0;top:var(--y,30%);width:clamp(320px,40vw,640px);aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,var(--c),rgba(0,0,0,0) 66%);pointer-events:none}
+.lueur--g{left:0;translate:-55% 0}
+.lueur--d{right:0;translate:55% 0}
+.deco{position:absolute;z-index:1;top:var(--y,20%);width:var(--t,46px);height:var(--t,46px);color:var(--c,var(--rouge-vif));rotate:var(--r,0deg);pointer-events:none;opacity:.85}
+.deco--g{left:max(10px,calc(50% - 600px - var(--dx,78px)))}
+.deco--d{right:max(10px,calc(50% - 600px - var(--dx,78px)))}
+.deco svg{display:block;width:100%;height:100%;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;overflow:visible;filter:url(#crayon)}
+
+/* ---------- Annotations à la main ---------- */
+.annot{position:absolute;z-index:4;display:flex;align-items:center;gap:4px;margin:0;font-family:var(--f-main);font-size:25px;font-weight:700;line-height:1.05;color:var(--rouge);white-space:nowrap;pointer-events:none}
+.annot b{font-family:var(--f-titre);font-size:.74em;font-weight:800;letter-spacing:.01em}
+.fleche{width:64px;height:41px;flex:none;fill:none;stroke:currentColor;stroke-width:2.6;stroke-linecap:round;stroke-linejoin:round;overflow:visible;filter:url(#crayon-fleche)}
+.souligne{fill:none;stroke:currentColor;stroke-width:4.5;stroke-linecap:round;overflow:visible}
+.souligne-mot{position:relative;display:inline-block}
+.souligne-mot .souligne{position:absolute;left:-4%;bottom:-.14em;width:108%;height:.34em}
+.entoure{position:relative}
+.entoure__trait{position:absolute;left:-12px;top:-9px;width:calc(100% + 24px);height:calc(100% + 18px);fill:none;stroke:var(--rouge);stroke-width:2.2;stroke-linecap:round;vector-effect:non-scaling-stroke;overflow:visible;pointer-events:none}
+
+/* ---------- Titres ---------- */
+.surtitre{font-family:var(--f-titre);font-size:12.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--rouge);margin-bottom:14px}
+.surtitre--ciel{color:var(--ciel)}
+.chapo{font-size:19.5px;line-height:1.6;color:var(--encre);margin-top:18px}
+.entete-section{max-width:820px;margin:0 auto clamp(38px,5vw,58px);text-align:center}
+.entete-section .surtitre{display:inline-flex;align-items:center;gap:12px}
+.entete-section .surtitre::before,.entete-section .surtitre::after{content:"";width:26px;height:2px;border-radius:2px;background:currentColor;opacity:.55}
+.entete-section .chapo{max-width:720px;margin-inline:auto}
+.eclat{padding-inline:.02em;background-image:linear-gradient(100deg,var(--marine) 0%,#1D5AA8 22%,var(--rouge-vif) 45%,var(--rouge) 58%,#1D5AA8 78%,var(--marine) 100%);background-size:260% 100%;background-position:0% 50%;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:var(--marine)}
+.section--nuit .eclat,.section--marine .eclat{background-image:linear-gradient(100deg,#93B7D9 0%,#FFFFFF 24%,#FF8C95 48%,#FFC9CE 60%,#FFFFFF 78%,#93B7D9 100%);color:#fff}
+.main{font-family:var(--f-main);font-size:30px;font-weight:700;line-height:1.2;color:var(--rouge);margin-top:26px}
+.main--ciel{color:var(--ciel)}
+.texte-justifie p:not(.main):not(.exergue){text-align:justify;-webkit-hyphens:auto;hyphens:auto}
+
+/* ---------- Boutons ---------- */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:50px;padding:0 26px;border-radius:999px;border:2px solid transparent;font:700 15px/1.2 var(--f-titre);text-decoration:none;text-align:center;cursor:pointer;transition:background-color .25s,border-color .25s,color .25s,translate .25s,box-shadow .25s}
+.btn--rouge{background:var(--rouge);color:#fff;box-shadow:0 12px 28px -12px rgba(198,17,34,.8)}
+.btn--rouge:hover{background:#D7192D;translate:0 -2px}
+.btn--clair{color:#fff;border-color:rgba(255,255,255,.75)}
+.btn--clair:hover{background:#fff;color:var(--marine);border-color:#fff;translate:0 -2px}
+.btn--marine{background:var(--marine);color:#fff}
+.btn--marine:hover{background:var(--marine-2);translate:0 -2px}
+.btn--contour-marine{color:var(--marine);border-color:var(--marine);background:#fff}
+.btn--contour-marine:hover{background:var(--marine);color:#fff}
+.btn--petit{min-height:42px;padding:0 18px;font-size:14px}
+
+/* ---------- Barre du haut ---------- */
+.barre{background:#021631;color:var(--clair);font-size:13.5px}
+.barre__in{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:40px}
+.barre__concert{color:var(--clair);text-decoration:none;font-family:var(--f-titre);font-size:12.5px;font-weight:600;letter-spacing:.02em}
+.barre__concert strong{color:#fff;font-weight:800}
+.barre__concert:hover strong{color:var(--ciel)}
+.barre__reseaux{list-style:none;padding:0;display:flex;align-items:center;gap:4px}
+.barre__reseaux a{display:flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;color:var(--clair);transition:background-color .2s,color .2s}
+.barre__reseaux a:hover{background:var(--rouge);color:#fff}
+.barre__reseaux svg{width:16px;height:16px;fill:currentColor}
+
+/* ---------- En-tête ---------- */
+.entete{position:sticky;top:env(safe-area-inset-top,0px);z-index:30;background:rgba(4,31,62,.95);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,.08);transition:box-shadow .3s}
+.entete.est-defile{box-shadow:0 10px 30px -18px rgba(0,0,0,.8)}
+.entete__in{display:flex;align-items:center;gap:20px;min-height:74px}
+.entete__logo img{height:38px;width:auto;transition:height .3s}
+.entete.est-defile .entete__logo img{height:32px}
+.nav{margin-left:auto;display:flex;align-items:center;gap:2px}
+.nav a{padding:8px 11px;border-radius:8px;color:#fff;text-decoration:none;font-family:var(--f-titre);font-size:14px;font-weight:600;white-space:nowrap;transition:color .2s,background-color .2s}
+.nav a:hover{color:var(--ciel)}
+.nav .nav__cta{margin-left:8px;padding:10px 20px;border-radius:999px;background:var(--rouge);font-weight:700}
+.nav .nav__cta:hover{background:#D7192D;color:#fff}
+.nav-bouton{display:none;margin-left:auto;align-items:center;justify-content:center;width:46px;height:46px;border-radius:50%;border:1px solid rgba(255,255,255,.3);background:transparent;color:#fff;cursor:pointer}
+.nav-bouton svg:nth-of-type(2){display:none}
+.entete.est-ouvert .nav-bouton svg:nth-of-type(1){display:none}
+.entete.est-ouvert .nav-bouton svg:nth-of-type(2){display:block}
+
+/* ---------- Accueil ---------- */
+.hero{position:relative;overflow:hidden;isolation:isolate;background:var(--nuit);color:#fff;text-align:center;padding-block:clamp(84px,10vw,130px) clamp(130px,14vw,180px)}
+.hero__fond{position:absolute;inset:0;z-index:-3;background:linear-gradient(180deg,rgba(4,31,62,.8),rgba(6,48,95,.66) 45%,rgba(4,31,62,.92)),url("img/hero.jpg") center 40%/cover no-repeat}
+.hero__faisceaux{position:absolute;inset:0;z-index:-2;pointer-events:none;overflow:hidden}
+.hero__faisceaux span{position:absolute;top:-8%;width:300px;height:118%;transform-origin:50% 0;clip-path:polygon(44% 0,56% 0,100% 100%,0 100%);background:linear-gradient(180deg,rgba(255,255,255,.2),rgba(255,255,255,0) 80%);mix-blend-mode:screen}
+.hero__faisceaux span:nth-child(1){left:14%;rotate:-16deg}
+.hero__faisceaux span:nth-child(2){left:42%;rotate:6deg;background:linear-gradient(180deg,rgba(232,52,66,.32),rgba(232,52,66,0) 78%)}
+.hero__faisceaux span:nth-child(3){right:12%;rotate:18deg}
+.hero__in{display:flex;flex-direction:column;align-items:center}
+.hero__sur{font-family:var(--f-titre);font-size:13px;font-weight:700;letter-spacing:.28em;text-transform:uppercase;color:var(--ciel)}
+.hero__marque{position:relative;margin-top:22px}
+.hero__logo{width:min(680px,86vw);height:auto;filter:drop-shadow(0 10px 30px rgba(4,31,62,.6))}
+.annot--hero{left:calc(100% + 2px);top:38%;color:var(--ciel);font-size:27px;rotate:-5deg;white-space:normal}
+.annot--hero span{width:200px;text-align:left}
+.annot--hero b{color:#fff}
+.annot--hero .fleche{transform:scaleX(-1) rotate(-14deg)}
+.hero__devise{margin-top:24px;font-family:var(--f-titre);font-size:18px;font-weight:800;letter-spacing:.45em;text-transform:uppercase;padding-left:.45em}
+.hero__devise span{color:var(--rouge-vif);margin-inline:.3em}
+.hero__intro{margin-top:22px;max-width:600px;font-size:20px;line-height:1.6;color:var(--clair)}
+.hero__actions{display:flex;flex-wrap:wrap;justify-content:center;gap:14px;margin-top:32px}
+.hero__concert{display:inline-flex;align-items:center;gap:12px;margin-top:30px;padding:6px 20px 6px 6px;border-radius:999px;border:1px solid rgba(255,255,255,.3);background:rgba(4,31,62,.45);color:#fff;text-decoration:none;font-family:var(--f-titre);font-size:14.5px;font-weight:600;transition:border-color .25s,background-color .25s}
+.hero__concert:hover{border-color:#fff;background:rgba(4,31,62,.7)}
+.hero__concert-label{padding:6px 12px;border-radius:999px;background:var(--rouge);font-size:11.5px;font-weight:800;letter-spacing:.12em;text-transform:uppercase}
+
+/* ---------- Sections ---------- */
+.section{--espace:clamp(72px,9vw,120px);--bas:calc(var(--vague) * .6);position:relative;padding-block:var(--espace) calc(var(--espace) + var(--bas))}
+.section--blanc{background:#FFFFFF}
+.section--glace{background:var(--brume)}
+.section--ciel{background:var(--glace)}
+.section--marine{background:var(--marine);color:var(--clair-2)}
+.section--nuit{background:var(--nuit);color:var(--clair-2)}
+.section--marine h2,.section--nuit h2{color:#fff}
+.section--marine .chapo,.section--nuit .chapo{color:var(--clair)}
+
+/* Tirages photo : cadre blanc, scotch, légende écrite à la main */
+.tirage{position:relative;background:#fff;padding:10px 10px 0;border-radius:3px;box-shadow:0 26px 46px -24px rgba(4,31,62,.6)}
+.tirage img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.tirage figcaption{padding:9px 8px 12px;font-family:var(--f-main);font-size:21px;font-weight:700;line-height:1.15;text-align:center;color:var(--marine)}
+.tirage::before{content:"";position:absolute;z-index:2;top:-13px;left:50%;width:96px;height:26px;translate:-50% 0;rotate:-4deg;background:rgba(147,183,217,.62);box-shadow:0 2px 4px rgba(0,0,0,.08)}
+
+/* ---------- Le mot de l'évêque ---------- */
+.section--fondu-glace{--bas:30px}
+.eveque{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(36px,6vw,80px);align-items:center}
+.eveque__visuel{position:relative;isolation:isolate;max-width:420px;width:100%;justify-self:center}
+.eveque__visuel::before{content:"";position:absolute;z-index:-1;inset:0;translate:18px 18px;border:2px solid var(--ciel);border-radius:999px 999px 26px 26px}
+.eveque__photo{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:68% 50%;border-radius:999px 999px 26px 26px;box-shadow:0 30px 50px -28px rgba(6,48,95,.6)}
+.eveque__guillemet{position:absolute;left:-22px;bottom:12%;display:flex;align-items:center;justify-content:center;width:78px;height:78px;border-radius:50%;background:var(--rouge);color:#fff;font-family:var(--f-titre);font-size:48px;font-weight:800;line-height:1;padding-bottom:6px;box-shadow:0 14px 30px -12px rgba(198,17,34,.9)}
+.eveque blockquote{display:flex;flex-direction:column;gap:14px}
+.eveque__accroche{font-family:var(--f-titre);font-size:clamp(20px,2.1vw,25px);font-weight:700;line-height:1.42;color:var(--marine)}
+.eveque blockquote p:not(.eveque__accroche){color:var(--gris)}
+.signature{margin-top:22px;font-size:15px;color:var(--gris)}
+.signature strong{font-family:var(--f-titre);font-weight:700;color:var(--marine);margin-right:8px}
+.eveque__preuve{display:flex;flex-wrap:wrap;align-items:center;gap:6px 14px;margin-top:22px}
+.pilule-video{display:inline-flex;align-items:center;gap:12px;padding:6px 20px 6px 6px;border-radius:999px;background:var(--marine);color:#fff;text-decoration:none;box-shadow:0 16px 30px -16px rgba(6,48,95,.9);transition:background-color .25s,translate .25s}
+.pilule-video:hover{background:var(--marine-2);translate:0 -2px}
+.pilule-video__play{display:flex;align-items:center;justify-content:center;width:42px;height:42px;flex:none;border-radius:50%;background:var(--rouge)}
+.pilule-video__play .ico{width:17px;height:17px;fill:currentColor;stroke:none;margin-left:2px}
+.pilule-video>span:last-child{display:flex;flex-direction:column;line-height:1.25}
+.pilule-video strong{font-family:var(--f-titre);font-size:14.5px;font-weight:700}
+.pilule-video small{font-size:12.5px;color:var(--clair-2)}
+.annot--preuve{position:static;flex-direction:row-reverse;rotate:-3deg}
+.annot--preuve .fleche{width:54px;height:36px;transform:scaleX(-1) rotate(-6deg)}
+
+/* ---------- Chiffres ---------- */
+.bande-chiffres{position:relative;background:var(--glace);padding:6px 0 34px}
+.chiffres{list-style:none;display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}
+.chiffres li{display:flex;flex-direction:column;align-items:center;gap:8px;padding:30px 22px 34px;text-align:center}
+.chiffres li+li{border-left:1px solid var(--ligne)}
+.chiffre__n{font-family:var(--f-titre);font-size:clamp(40px,4.8vw,58px);font-weight:800;line-height:1;color:var(--marine);font-variant-numeric:tabular-nums}
+.chiffre__l{max-width:210px;font-size:14.5px;line-height:1.45;color:var(--gris)}
+
+/* ---------- Bandeau défilant, posé de biais ---------- */
+.defile{position:relative;z-index:3;margin:-26px -4% -26px;overflow:hidden;background:var(--rouge);padding-block:16px;rotate:-1.6deg;box-shadow:0 16px 30px -16px rgba(4,31,62,.55);user-select:none}
+.defile__piste{display:flex;align-items:center;gap:30px;width:max-content;font-family:var(--f-titre);font-size:clamp(28px,3.6vw,46px);font-weight:800;line-height:1.1;text-transform:uppercase;color:#fff;white-space:nowrap}
+.defile__creux{color:transparent;-webkit-text-stroke:1.6px #fff}
+.defile i{font-style:normal;font-size:.6em;color:rgba(255,255,255,.55)}
+
+/* ---------- Galerie ---------- */
+.galerie{position:relative;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));grid-auto-rows:clamp(150px,17vw,260px);gap:4px;background:var(--nuit)}
+.galerie img{width:100%;height:100%;object-fit:cover;transition:filter .4s}
+.galerie img:hover{filter:brightness(1.12) saturate(1.1)}
+.galerie__a{grid-column:1 / 3;grid-row:1 / 3}
+.galerie__b{grid-column:3 / 4;grid-row:1 / 2}
+.galerie__c{grid-column:4 / 5;grid-row:1 / 2}
+.galerie__d{grid-column:3 / 5;grid-row:2 / 3}
+.galerie__e{grid-column:5 / 7;grid-row:1 / 2}
+.galerie__f{grid-column:5 / 7;grid-row:2 / 3}
+
+/* ---------- Prochain concert ---------- */
+.section--agenda{isolation:isolate;--bas:clamp(44px,5.4vw,86px);padding-top:calc(var(--espace) + clamp(10px,3vw,50px))}
+.agenda__scene{position:relative;margin-top:clamp(56px,6vw,72px)}
+.annot--attend{left:clamp(26px,5vw,96px);top:-60px;flex-direction:row-reverse;color:var(--rose);rotate:-5deg}
+.annot--attend .fleche{width:58px;height:38px;transform:rotate(132deg) translate(-4px,-14px)}
+.date-carte{display:grid;grid-template-columns:190px minmax(0,1.15fr) minmax(0,.85fr);overflow:hidden;border-radius:22px;background:var(--brume);box-shadow:0 40px 80px -36px rgba(0,0,0,.85),0 0 0 1px rgba(255,255,255,.1)}
+.date-bloc{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;padding:30px 20px;background:var(--marine);color:#fff;text-align:center}
+.date-bloc__jour{font-family:var(--f-titre);font-size:13px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--ciel)}
+.date-bloc__num{font-family:var(--f-titre);font-size:68px;font-weight:800;line-height:1}
+.date-bloc__mois{font-family:var(--f-titre);font-size:18px;font-weight:800;letter-spacing:.12em;text-transform:uppercase}
+.date-bloc__an{font-size:14px;color:var(--ciel)}
+.date-infos{display:flex;flex-direction:column;align-items:flex-start;gap:12px;padding:clamp(24px,3vw,34px);color:var(--encre)}
+.date-infos h3{font-size:clamp(21px,2.2vw,25px);font-weight:800;color:var(--marine)}
+.date-intro{font-size:16.5px;color:var(--encre)}
+.date-anecdote{font-size:14.5px;color:var(--gris)}
+.date-infos dl{display:grid;grid-template-columns:auto 1fr;align-items:baseline;gap:6px 16px}
+.date-infos dt{font-family:var(--f-titre);font-size:11.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--gris)}
+.date-infos dd{font-size:16px;color:var(--marine)}
+.puces{list-style:none;padding:4px 0 2px 10px;display:flex;flex-wrap:wrap;gap:12px 14px}
+.puces li{padding:6px 14px;border-radius:999px;background:var(--glace);color:var(--marine);font-family:var(--f-titre);font-size:13px;font-weight:700}
+.date-photo{position:relative;min-height:320px}
+.date-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.date-photo__vague{position:absolute;left:-1px;top:0;width:46px;height:100%}
+.date-photo__vague path{fill:var(--brume)}
+.agenda__suite{margin-top:22px;text-align:center;font-size:15px;color:var(--clair-2)}
+.agenda__suite a{color:#fff}
+
+/* ---------- Notre histoire ---------- */
+.section--dechiree{--bas:clamp(34px,4vw,56px)}
+.duo{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:clamp(36px,5vw,72px);align-items:center}
+.duo__texte .chapo{margin-top:0}
+.duo__texte p:not(.chapo):not(.surtitre):not(.main):not(.exergue){margin-top:14px;color:var(--gris)}
+.section--nuit .duo__texte p:not(.surtitre):not(.main):not(.exergue){color:var(--clair-2)}
+.collage{position:relative;padding:74px 0 10px}
+.tirage--a{width:86%;margin-left:auto;rotate:2.2deg}
+.tirage--b{position:absolute;left:0;top:0;width:46%;rotate:-6deg}
+.tirage--b::before{left:30%;rotate:6deg;background:rgba(232,52,66,.45)}
+.valeurs{margin-top:clamp(64px,8vw,100px);text-align:center}
+.valeurs__titre{font-size:clamp(24px,2.6vw,30px);font-weight:800;color:var(--marine)}
+.valeurs__liste{list-style:none;padding:0;margin-top:30px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+.valeur{display:flex;flex-direction:column;align-items:center;gap:6px;padding:30px 24px 28px;border-radius:24px;background:#fff;border:1px solid var(--ligne);box-shadow:0 22px 40px -30px rgba(6,48,95,.5);transition:translate .3s,box-shadow .3s}
+.valeur:hover{translate:0 -5px;box-shadow:0 28px 46px -28px rgba(6,48,95,.55)}
+.valeur__ico{display:flex;align-items:center;justify-content:center;width:64px;height:64px;margin-bottom:10px;border-radius:50%;background:var(--rouge);color:#fff;box-shadow:0 12px 24px -12px rgba(198,17,34,.85)}
+.valeur:nth-child(even) .valeur__ico{background:var(--marine);box-shadow:0 12px 24px -12px rgba(6,48,95,.85)}
+.valeur__ico .ico{width:28px;height:28px}
+.valeur strong{font-family:var(--f-titre);font-size:18px;font-weight:800;color:var(--marine)}
+.valeur>span:last-child{font-size:15px;line-height:1.55;color:var(--gris)}
+
+/* ---------- Le « & Co » ---------- */
+.section--aube{--bas:clamp(140px,16vw,240px)}
+.equation{display:flex;align-items:flex-start;justify-content:center;flex-wrap:wrap;gap:clamp(14px,2.6vw,38px);margin:0 auto clamp(60px,7vw,90px)}
+.equation__terme{display:flex;flex-direction:column;align-items:center;margin:0;max-width:250px}
+.equation__terme img{height:clamp(62px,7vw,96px);width:auto}
+.equation__signe{display:flex;align-items:center;justify-content:center;flex:none;width:50px;height:50px;margin-top:clamp(8px,1.6vw,22px);border-radius:50%;background:var(--rouge);color:#fff;font:800 30px/1 var(--f-titre)}
+.equation__signe--egal{background:transparent;border:2px solid rgba(255,255,255,.4)}
+.equation__total{display:flex;flex-direction:column;align-items:center;gap:6px;max-width:150px;text-align:center}
+.equation__total strong{display:flex;align-items:center;justify-content:center;width:clamp(68px,7vw,92px);aspect-ratio:1;border-radius:50%;background:#fff;color:var(--marine);font:800 clamp(38px,4.2vw,52px)/1 var(--f-titre);box-shadow:0 0 0 6px rgba(255,255,255,.12)}
+.equation__total span{font-family:var(--f-main);font-size:24px;font-weight:700;line-height:1.05;color:#fff}
+.annot--terme{position:static;flex-direction:column;align-items:center;gap:0;margin-top:2px;white-space:normal;text-align:center;color:var(--ciel);font-size:24px}
+.annot--terme .fleche{width:48px;height:44px;transform:rotate(-78deg)}
+.equation__terme--co .annot--terme{color:var(--rose)}
+.duo--lourdes{grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr)}
+.lourdes__photos{position:relative;padding:14px 50px 80px 0}
+.tirage--c{rotate:-2deg}
+.tirage--c figcaption{text-align:left;padding-left:14px}
+.polaroid{position:absolute;right:0;bottom:0;width:40%;padding:10px 10px 0;background:#fff;border-radius:3px;box-shadow:0 24px 50px -16px rgba(0,0,0,.7);rotate:5deg}
+.polaroid img{width:100%;aspect-ratio:4/5;object-fit:cover}
+.polaroid figcaption{padding:8px 4px 12px;font-family:var(--f-main);font-size:20px;font-weight:700;line-height:1.15;text-align:center;color:var(--marine)}
+.duo__texte .exergue{margin-top:20px;padding-left:16px;border-left:4px solid var(--rouge-vif);font-family:var(--f-titre);font-size:18.5px;font-weight:700;line-height:1.45;color:#fff}
+
+/* ---------- Une soirée ---------- */
+.section--egaliseur{--bas:clamp(64px,8vw,116px)}
+.section.section--egaliseur{background:radial-gradient(80% 280px at 50% 0,rgba(247,251,254,.95),rgba(220,235,245,0) 100%),var(--glace)}
+.vague{position:relative;height:clamp(110px,14vw,170px);margin-top:10px}
+.vague svg{display:block;width:100%;height:100%;overflow:visible}
+.vague__point{position:absolute;left:var(--x);top:var(--y);translate:-50% -50%;display:flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:50%;background:var(--rouge);border:3px solid #fff;color:#fff;font-family:var(--f-titre);font-size:14px;font-weight:800;box-shadow:0 8px 18px -8px rgba(198,17,34,.9)}
+.temps{list-style:none;padding:0;margin-top:26px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:26px;text-align:center}
+.temps li{display:flex;flex-direction:column;align-items:center}
+.temps__photo{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:999px 999px 18px 18px;outline:2px solid rgba(255,255,255,.65);outline-offset:-9px;box-shadow:0 22px 40px -24px rgba(6,48,95,.7);margin-bottom:18px;transition:translate .35s}
+.temps li:hover .temps__photo{translate:0 -6px}
+.temps h3{font-size:18px;font-weight:800;color:var(--marine)}
+.temps__sous{font-family:var(--f-main);font-size:21px;font-weight:700;line-height:1.2;color:var(--rouge)}
+.temps li p:last-child{margin-top:8px;font-size:15px;line-height:1.55;color:var(--gris)}
+.citation{margin-top:clamp(56px,7vw,80px);text-align:center}
+.citation blockquote p{font-family:var(--f-main);font-size:clamp(34px,4.4vw,50px);font-weight:700;line-height:1.15;color:var(--marine)}
+.citation figcaption{margin-top:10px;font-family:var(--f-titre);font-size:12px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gris)}
+
+/* ---------- Musique ---------- */
+.section--arche{--bas:clamp(56px,7.4vw,124px)}
+.musique{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr);gap:clamp(36px,5vw,72px);align-items:start}
+.musique__texte>p{color:var(--gris)}
+.livret{display:grid;grid-template-columns:92px minmax(0,1fr);gap:20px;align-items:center;margin-top:28px;padding:22px;border-radius:18px;background:var(--glace)}
+.livret__couverture{width:92px;border-radius:6px;box-shadow:0 14px 24px -12px rgba(6,48,95,.6);rotate:-4deg}
+.livret__infos{display:flex;flex-direction:column;align-items:flex-start;gap:6px;min-width:0}
+.livret__sur{font-family:var(--f-titre);font-size:11.5px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--marine)}
+.livret h3{font-size:20px;font-weight:800;color:var(--marine)}
+.livret p:not(.livret__sur){font-size:14.5px;line-height:1.5;color:var(--gris)}
+.livret .btn{margin-top:8px}
+.musique__liens{margin-top:18px;font-size:15px}
+.setlist{position:relative;margin-top:12px;padding:36px 30px 28px;background:#FFFDF6;box-shadow:0 26px 50px -26px rgba(6,48,95,.45);rotate:1.6deg}
+.setlist::before{content:"";position:absolute;top:-14px;left:50%;width:110px;height:28px;translate:-50% 0;rotate:-3deg;background:rgba(147,183,217,.6)}
+.setlist__titre{font-family:var(--f-titre);font-size:12px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--rouge);margin-bottom:10px}
+.setlist ul{list-style:none;padding:0}
+.setlist li{padding:3px 0;border-bottom:1px solid var(--ligne);font-family:var(--f-main);font-size:25px;font-weight:700;line-height:1.3;color:var(--marine)}
+.setlist__note{margin-top:12px;font-family:var(--f-main);font-size:22px;font-weight:700;color:var(--rouge)}
+.videos-bloc{position:relative;margin-top:clamp(70px,8vw,100px);text-align:center}
+.videos__titre{font-size:clamp(24px,2.6vw,30px);font-weight:800;color:var(--marine)}
+.annot--video{left:clamp(0px,2vw,20px);top:-30px;flex-direction:column;align-items:flex-start;rotate:-4deg}
+.annot--video .fleche{width:50px;height:40px;margin-left:34px;transform:rotate(98deg)}
+.videos{list-style:none;padding:0;margin-top:40px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:26px;text-align:left}
+.video{position:relative;display:flex;flex-direction:column;height:100%;padding:9px 9px 0;border-radius:4px;background:#fff;color:var(--marine);text-decoration:none;box-shadow:0 26px 44px -26px rgba(6,48,95,.6),0 0 0 1px rgba(6,48,95,.07);rotate:-1.8deg;transition:rotate .35s,translate .35s}
+.videos li:nth-child(2) .video{rotate:1.5deg}
+.videos li:nth-child(3) .video{rotate:-1deg}
+.videos li:nth-child(4) .video{rotate:2deg}
+.video:hover{rotate:0deg;translate:0 -6px}
+.video__visuel{position:relative;display:block;aspect-ratio:16/10;overflow:hidden;background:var(--nuit)}
+.video__visuel img{width:100%;height:100%;object-fit:cover;transition:scale .5s}
+.video:hover .video__visuel img{scale:1.04}
+.video__play{position:absolute;z-index:2;right:12px;bottom:12px;display:flex;align-items:center;justify-content:center;width:48px;height:48px;border-radius:50%;background:var(--rouge);color:#fff;box-shadow:0 10px 24px -8px rgba(198,17,34,.9);transition:scale .3s}
+.video:hover .video__play{scale:1.12}
+.video__play .ico{width:19px;height:19px;fill:currentColor;stroke:none;margin-left:3px}
+.video__texte{display:flex;flex-direction:column;gap:3px;padding:12px 6px 14px}
+.video__texte strong{font-family:var(--f-titre);font-size:15px;font-weight:800;line-height:1.3;color:var(--marine)}
+.video__texte span{font-family:var(--f-main);font-size:19px;font-weight:700;line-height:1.15;color:var(--rouge)}
+.ticket{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;gap:2px;padding:0 70px 0 38px;color:#fff;background:radial-gradient(circle at 20px 0,#fff 9px,transparent 10px),radial-gradient(circle at 20px 100%,#fff 9px,transparent 10px),linear-gradient(135deg,var(--marine-2),var(--nuit))}
+.ticket::before{content:"";position:absolute;left:19px;top:16px;bottom:16px;border-left:2px dashed rgba(255,255,255,.35)}
+.ticket__sur{font-family:var(--f-titre);font-size:10.5px;font-weight:800;letter-spacing:.26em;text-transform:uppercase;color:var(--ciel)}
+.ticket__lieu{font-family:var(--f-titre);font-size:clamp(26px,2.5vw,34px);font-weight:800;letter-spacing:-.01em;line-height:1.05}
+.ticket__date{font-family:var(--f-main);font-size:24px;font-weight:700;line-height:1.1;color:var(--rose)}
+.marie{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;padding:0 60px 0 18px;background:radial-gradient(circle at 42% 30%,#FFFFFF,var(--glace) 58%,#BCD3EA);color:var(--marine)}
+.marie__etoile{width:42px;height:42px;color:#1D5AA8}
+.marie__etoile svg{width:100%;height:100%;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.marie__titre{font-family:var(--f-main);font-size:clamp(27px,2.5vw,33px);font-weight:700;line-height:1;text-align:center}
+.videos__suite{margin-top:26px;font-size:15px;color:var(--gris)}
+
+/* ---------- L'équipe ---------- */
+.section--bulles{isolation:isolate;--bas:clamp(48px,5.6vw,90px)}
+.titre-barre::after{content:"";display:block;width:64px;height:4px;margin:18px auto 0;border-radius:2px;background:var(--rouge-vif)}
+.filet{display:flex;align-items:center;gap:18px;margin-bottom:34px;font-size:12.5px;font-weight:800;letter-spacing:.22em;text-transform:uppercase;color:#fff}
+.filet::before,.filet::after{content:"";flex:1;height:1px;background:rgba(255,255,255,.2)}
+.formation{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,2fr);gap:30px;margin-bottom:clamp(56px,7vw,80px)}
+.formation__groupe{position:relative;display:flex;flex-direction:column;align-items:center;padding:34px 22px 32px;border-radius:26px;background:rgba(147,183,217,.07);border:1px solid rgba(147,183,217,.28)}
+.formation__groupe--co{background:rgba(232,52,66,.08);border-color:rgba(232,52,66,.42)}
+.pastille{position:absolute;z-index:3;top:-34px;right:-16px;display:flex;align-items:center;justify-content:center;width:108px;height:108px;border-radius:50%;rotate:9deg;box-shadow:0 16px 30px -12px rgba(0,0,0,.65)}
+.pastille--ciel{background:var(--ciel);color:var(--nuit)}
+.pastille--rouge{background:var(--rouge);color:#fff;rotate:-8deg}
+.pastille svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.pastille text{font-family:var(--f-titre);font-size:10.5px;font-weight:800;letter-spacing:.04em;fill:currentColor}
+.pastille__coeur{position:relative;display:flex;flex-direction:column;align-items:center;line-height:1}
+.pastille__coeur small{font-family:var(--f-main);font-size:16px;font-weight:700}
+.pastille__coeur b{font-family:var(--f-titre);font-size:22px;font-weight:800}
+.formation__titre{display:flex;flex-direction:column;align-items:center;margin-bottom:30px;text-align:center}
+.formation__titre img{height:clamp(56px,5.6vw,74px);width:auto}
+.formation__titre .souligne{display:block;width:min(220px,70%);height:14px;margin-top:2px;color:var(--ciel)}
+.formation__groupe--co .formation__titre .souligne{color:var(--rouge-vif)}
+.formation__sous{margin-top:4px;font-family:var(--f-main);font-size:24px;font-weight:700;line-height:1.1;color:var(--ciel)}
+.formation__groupe--co .formation__sous{color:#FF9AA3}
+.membres{list-style:none;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:30px 22px;width:100%}
+.formation__groupe--co .membres{grid-template-columns:repeat(2,minmax(0,1fr))}
+.membre{display:flex;flex-direction:column;align-items:center;text-align:center;min-width:0}
+.membre__rond{position:relative;width:min(100%,176px);aspect-ratio:1;margin-bottom:20px;border-radius:50%;box-shadow:0 0 0 4px rgba(147,183,217,.45),0 22px 40px -18px rgba(0,0,0,.75);transition:translate .35s,box-shadow .35s}
+.membre__rond img{width:100%;height:100%;object-fit:cover;border-radius:50%}
+.membre--co .membre__rond{box-shadow:0 0 0 4px rgba(232,52,66,.8),0 22px 40px -18px rgba(0,0,0,.75)}
+.membre:hover .membre__rond{translate:0 -5px;box-shadow:0 0 0 4px rgba(147,183,217,.85),0 28px 46px -18px rgba(0,0,0,.8)}
+.membre--co:hover .membre__rond{box-shadow:0 0 0 4px rgba(232,52,66,1),0 28px 46px -18px rgba(0,0,0,.8)}
+.membre__rond--icone{display:flex;align-items:center;justify-content:center;background:radial-gradient(circle at 50% 32%,#1D5AA8,#0A3A75 72%);color:var(--ciel)}
+.membre__rond--icone .ico{width:64px;height:64px;stroke-width:1.4}
+.membre h4{font-family:var(--f-texte);font-size:19px;font-weight:700;color:#fff}
+.membre__role{margin-top:6px;font-family:var(--f-titre);font-size:11.5px;font-weight:700;letter-spacing:.16em;line-height:1.5;text-transform:uppercase;color:var(--ciel)}
+.membre__bio{margin-top:10px;font-size:15px;line-height:1.55;color:var(--clair-2)}
+.coulisse{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:36px 28px;align-items:start}
+.soundmaker{grid-column:span 3;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);overflow:hidden;border-radius:22px;background:var(--nuit);border:1px solid rgba(255,255,255,.12)}
+.soundmaker__photo{width:100%;height:100%;min-height:280px;object-fit:cover}
+.soundmaker__texte{display:flex;flex-direction:column;gap:10px;min-width:0;padding:26px}
+.soundmaker__logo{width:min(230px,100%);height:auto;margin-bottom:4px}
+.soundmaker__texte .membre__role{text-align:left;margin-top:0}
+.soundmaker__texte p:not(.membre__role){font-size:15px;line-height:1.55}
+
+/* ---------- Témoignages ---------- */
+.section--fondu-blanc{--bas:50px}
+.avis{columns:3 280px;column-gap:28px;padding-top:16px}
+.avi{position:relative;display:block;break-inside:avoid;margin:0 0 30px;padding:30px 26px 22px;border-radius:18px;box-shadow:0 20px 40px -26px rgba(6,48,95,.5);transition:rotate .35s,translate .35s}
+.avi::after{content:"“";position:absolute;top:-20px;left:18px;font-family:var(--f-titre);font-size:72px;font-weight:800;line-height:1;color:var(--rouge)}
+.avi:nth-child(1){rotate:-1.6deg}
+.avi:nth-child(2){rotate:1.3deg}
+.avi:nth-child(3){rotate:-.8deg}
+.avi:nth-child(4){rotate:1.7deg}
+.avi:nth-child(5){rotate:-1.3deg}
+.avi:nth-child(6){rotate:.9deg}
+.avi:nth-child(7){rotate:-1deg}
+.avi:hover{rotate:0deg;translate:0 -4px}
+.avi blockquote p{font-size:15.5px;line-height:1.6;color:var(--encre)}
+.avi figcaption{margin-top:16px;font-size:13.5px;color:var(--gris)}
+.avi figcaption strong{font-family:var(--f-titre);font-size:14px;font-weight:700;color:var(--marine);margin-right:6px}
+.avi--blanc{background:#fff;border:1px solid var(--ligne)}
+.avi--ciel{background:var(--glace)}
+.avi--marine{background:var(--marine)}
+.avi--marine::after{color:var(--ciel)}
+.avi--marine blockquote p,.avi--marine figcaption strong{color:#fff}
+.avi--marine figcaption{color:var(--clair-2)}
+.avi--rouge{background:var(--rouge)}
+.avi--rouge::after{color:rgba(255,255,255,.55)}
+.avi--rouge blockquote p,.avi--rouge figcaption strong{color:#fff}
+.avi--rouge figcaption{color:#FFD9DD}
+.avi--grand blockquote p{font-family:var(--f-main);font-size:27px;font-weight:700;line-height:1.22}
+.avi--scotch::before{content:"";position:absolute;top:-12px;left:50%;width:90px;height:24px;translate:-50% 0;rotate:4deg;background:rgba(147,183,217,.65)}
+.avi--scotch::after{left:auto;right:18px}
+.avi--vous{display:flex;flex-direction:column;align-items:center;text-align:center;background:rgba(255,255,255,.55);border:2px dashed rgba(198,17,34,.5);box-shadow:none}
+.avi--vous::after{content:"?";left:auto;right:20px}
+.avi__question{font-family:var(--f-main);font-size:31px;font-weight:700;line-height:1.05;color:var(--rouge);margin-bottom:10px}
+.avi--vous p:not(.avi__question){font-size:15px;line-height:1.55;color:var(--encre)}
+.avi--vous .btn{margin-top:16px}
+.temoin{margin-top:10px}
+.temoin__form{max-width:840px;margin:0 auto;padding:clamp(22px,3vw,36px);border-radius:24px;background:#fff;border:1px solid var(--ligne);box-shadow:0 30px 60px -36px rgba(6,48,95,.5)}
+.temoin__entete h3{font-size:24px;font-weight:800;color:var(--marine)}
+.temoin__entete p{margin-top:6px;font-size:15.5px;color:var(--gris)}
+.champs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:20px}
+.champ{display:flex;flex-direction:column;gap:6px;min-width:0}
+.champ--large{grid-column:1 / -1}
+.champ>span{font-family:var(--f-titre);font-size:13px;font-weight:700;color:var(--marine)}
+.champ em{margin-left:4px;font-style:normal;font-size:12px;font-weight:600;color:var(--gris)}
+.champ input,.champ textarea{width:100%;padding:12px 14px;border-radius:12px;border:1.5px solid var(--clair-2);background:var(--brume);font:16px/1.5 var(--f-texte);color:var(--encre);transition:border-color .2s,background-color .2s,box-shadow .2s}
+.champ input:focus,.champ textarea:focus{outline:none;border-color:var(--marine);background:#fff;box-shadow:0 0 0 3px rgba(147,183,217,.5)}
+.champ textarea{min-height:132px;resize:vertical}
+.accord{display:flex;align-items:flex-start;gap:10px;margin-top:16px;font-size:14.5px;color:var(--gris);cursor:pointer}
+.accord input{flex:none;width:18px;height:18px;margin-top:3px;accent-color:var(--rouge)}
+.temoin__erreur{margin-top:12px;font-weight:700;color:var(--rouge)}
+.temoin__actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:20px}
+.temoin__suite{display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin-top:18px;padding:16px 18px;border-radius:14px;background:var(--glace);font-size:15px}
+.temoin__adresse{font-weight:700;color:var(--marine)}
+
+/* ---------- Dans la presse ---------- */
+.section--presse .entete-section{margin-bottom:clamp(30px,4vw,44px)}
+.ornement{position:absolute;z-index:3;left:50%;top:0;translate:-50% -50%;display:flex;align-items:center;gap:14px;color:var(--rouge)}
+.ornement span{width:72px;border-top:4px double rgba(6,48,95,.32)}
+.ornement svg{width:26px;height:26px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.coupures-scene{position:relative;padding-top:56px}
+.annot--battice{left:clamp(0px,2vw,24px);top:-6px;flex-direction:column;align-items:flex-start;rotate:-4deg}
+.annot--battice .fleche{width:50px;height:40px;margin-left:44px;transform:rotate(98deg)}
+.coupures{list-style:none;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:34px 28px}
+.coupure a{position:relative;display:flex;flex-direction:column;gap:14px;height:100%;padding:18px 20px 16px;background:#FFFDF7;border:1px solid #E9E2D2;color:#161616;text-decoration:none;box-shadow:0 22px 40px -30px rgba(6,48,95,.55);transition:rotate .35s,translate .35s,box-shadow .35s}
+.coupure:nth-child(3n+1) a{rotate:-1.2deg}
+.coupure:nth-child(3n+2) a{rotate:.8deg}
+.coupure:nth-child(3n) a{rotate:-.5deg}
+.coupure a:hover{rotate:0deg;translate:0 -5px;box-shadow:0 30px 50px -30px rgba(6,48,95,.6)}
+.coupure--une a::before{content:"";position:absolute;z-index:2;top:-12px;left:50%;width:92px;height:24px;translate:-50% 0;rotate:-3deg;background:rgba(232,52,66,.42)}
+.coupure__tete{display:flex;justify-content:space-between;align-items:baseline;gap:10px;padding-bottom:8px;border-bottom:4px double #222}
+.coupure__media{font-family:var(--f-titre);font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--rouge)}
+.coupure__date{font-family:var(--f-journal);font-size:13.5px;font-style:italic;color:#5A5A5A;text-align:right}
+.coupure__corps{display:grid;grid-template-columns:92px minmax(0,1fr);gap:16px;align-items:start}
+.coupure__corps img{width:92px;height:92px;object-fit:cover;filter:grayscale(1) contrast(1.08);transition:filter .4s}
+.coupure a:hover img{filter:none}
+.coupure__titre{font-family:var(--f-journal);font-size:19.5px;font-weight:700;line-height:1.25;color:#141414}
+.coupure__lire{display:inline-flex;align-items:center;gap:6px;margin-top:auto;font-family:var(--f-titre);font-size:13px;font-weight:700;color:var(--marine)}
+.coupure__lire::after{content:"→";transition:translate .25s}
+.coupure a:hover .coupure__lire::after{translate:4px 0}
+.presse__espace{max-width:760px;margin:clamp(40px,5vw,56px) auto 0;text-align:center;font-size:15.5px;color:var(--gris)}
+.presse__espace strong{color:var(--marine)}
+
+/* ---------- Nous inviter ---------- */
+.section--biais-inv{--bas:clamp(44px,5.4vw,86px)}
+.inviter{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:clamp(36px,5vw,64px);align-items:start}
+.flamme{padding:26px 28px;border-radius:22px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.12)}
+.flamme h3,.inviter__titre{font-size:20px;font-weight:800;color:#fff}
+.flamme p{margin-top:10px;font-size:16px}
+.inviter__titre{margin-top:36px;margin-bottom:20px}
+.etapes{list-style:none;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 28px}
+.etapes li{display:flex;gap:14px;align-items:flex-start}
+.etape__num{display:flex;align-items:center;justify-content:center;flex:none;width:30px;height:30px;border-radius:50%;background:var(--rouge);color:#fff;font-family:var(--f-titre);font-size:14px;font-weight:800}
+.etapes li div{display:flex;flex-direction:column;gap:4px}
+.etapes strong{font-family:var(--f-titre);font-size:16px;font-weight:700;color:#fff}
+.etapes li div span{font-size:14.5px;line-height:1.55;color:var(--clair-2)}
+.inviter__cote{display:flex;flex-direction:column;gap:16px;position:sticky;top:90px}
+.contact-carte{display:flex;flex-direction:column;gap:10px;padding:26px;border-radius:20px;background:#fff;color:var(--encre);box-shadow:0 30px 60px -30px rgba(0,0,0,.8)}
+.contact-carte .surtitre{margin-bottom:0;color:var(--rouge)}
+.contact-carte h3{font-size:24px;font-weight:800;color:var(--marine)}
+.contact-carte .contact-carte__role{margin-top:-6px;font-size:14.5px;color:var(--gris)}
+.coord{display:flex;align-items:center;gap:10px;min-width:0;font-weight:700;color:var(--marine)}
+.coord>span{min-width:0;overflow-wrap:anywhere}
+.coord .ico{color:var(--rouge)}
+.copier{display:inline-flex;align-items:center;gap:5px;flex:none;padding:4px 10px;border-radius:8px;border:1px solid var(--ligne);background:var(--brume);color:var(--marine);font:700 12.5px var(--f-titre);cursor:pointer;transition:background-color .2s}
+.copier:hover{background:var(--glace)}
+.copier .ico{width:14px;height:14px}
+.contact-carte .btn{width:100%}
+.contact-carte .btn--rouge{margin-top:8px}
+.contact-carte .contact-carte__fb{font-size:14px;color:var(--gris)}
+.benevoles{padding:24px;border-radius:20px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.14)}
+.benevoles h3{font-size:18px;font-weight:800;color:#fff;margin-bottom:8px}
+.benevoles p{font-size:14.5px;line-height:1.6}
+
+/* ---------- Partenaires et production ---------- */
+.partenaires{text-align:center;padding-block:clamp(64px,8vw,96px) clamp(40px,5vw,60px)}
+.partenaires h2{font-size:clamp(28px,3.4vw,40px)}
+.logos{list-style:none;padding:0;margin-top:34px;display:flex;flex-wrap:wrap;justify-content:center;gap:18px}
+.logo{flex:0 1 180px;height:112px;display:flex;align-items:center;justify-content:center;padding:14px 18px;border-radius:16px;background:#fff;border:1px solid #D5E2F0;box-shadow:0 16px 30px -20px rgba(6,48,95,.4);transition:translate .25s,box-shadow .25s}
+.logo:hover{translate:0 -3px;box-shadow:0 22px 36px -20px rgba(6,48,95,.5)}
+.logo img{width:auto;height:auto;max-width:100%;max-height:64px}
+.logo--rond img{max-height:78px}
+.logo--large img{max-height:48px}
+.production{display:flex;flex-direction:column;align-items:center;gap:12px;margin-top:44px}
+.production__label{font-family:var(--f-main);font-size:26px;font-weight:700;line-height:1;color:var(--rouge)}
+.production__carte{display:flex;align-items:center;gap:22px;padding:18px 30px 18px 22px;border-radius:20px;background:#fff;border:2px solid rgba(198,17,34,.35);box-shadow:0 20px 36px -22px rgba(6,48,95,.45);text-align:left}
+.production__carte img{height:64px;width:auto}
+.production__carte p{display:flex;flex-direction:column;font-size:14.5px;color:var(--gris)}
+.production__carte strong{font-family:var(--f-titre);font-size:19px;font-weight:800;color:var(--marine)}
+
+/* ---------- Psaume : la photo sort de la brume ---------- */
+.psaume{position:relative;overflow:hidden;isolation:isolate;background:var(--marine);color:#fff;text-align:center;padding-block:calc(clamp(100px,12vw,150px) + clamp(110px,12vw,180px)) calc(clamp(100px,12vw,150px) + 50px)}
+.psaume__fond{position:absolute;inset:0;z-index:-3;background:radial-gradient(60% 70% at 50% 58%,rgba(60,120,230,.45),rgba(6,48,95,0) 70%),linear-gradient(180deg,rgba(4,31,62,.5),rgba(6,48,95,.35) 50%,rgba(4,31,62,.7)),url("img/psaume.jpg") center/cover no-repeat}
+.psaume__rayons{position:absolute;z-index:-2;left:50%;top:60%;width:2400px;height:2400px;translate:-50% -50%;background:repeating-conic-gradient(from 0deg,rgba(255,255,255,.075) 0deg 3.5deg,rgba(255,255,255,0) 3.5deg 12deg);-webkit-mask-image:radial-gradient(circle,#000 0,rgba(0,0,0,.6) 18%,transparent 42%);mask-image:radial-gradient(circle,#000 0,rgba(0,0,0,.6) 18%,transparent 42%)}
+.psaume__brume{position:absolute;z-index:-1;left:0;right:0;top:0;height:clamp(240px,27vw,400px);background:linear-gradient(180deg,var(--brume) 0%,rgba(243,247,251,.92) 16%,rgba(220,235,245,.55) 46%,rgba(147,183,217,.16) 76%,rgba(147,183,217,0) 100%)}
+.psaume::after{content:"";position:absolute;z-index:-1;left:0;right:0;bottom:0;height:200px;background:linear-gradient(180deg,rgba(4,31,62,0),var(--nuit))}
+.psaume__in{display:flex;flex-direction:column;align-items:center}
+.psaume blockquote p{font-family:var(--f-main);font-size:clamp(42px,6vw,76px);font-weight:700;line-height:1.12;color:#fff;text-shadow:0 4px 30px rgba(4,31,62,.6)}
+.psaume__ref{display:flex;align-items:center;gap:16px;margin-top:22px;font-family:var(--f-titre);font-size:12.5px;font-weight:700;letter-spacing:.26em;text-transform:uppercase;color:var(--ciel)}
+.psaume__ref::before,.psaume__ref::after{content:"";width:44px;height:1px;background:rgba(147,183,217,.6)}
+
+/* ---------- Pied de page ---------- */
+.pied{background:var(--nuit);color:var(--clair);padding-block:clamp(30px,4vw,48px) 28px}
+.pied__in{display:flex;flex-direction:column;align-items:center;text-align:center}
+.pied__logo{width:clamp(130px,14vw,170px);height:auto;border-radius:50%;box-shadow:0 0 0 6px rgba(255,255,255,.1),0 0 0 14px rgba(147,183,217,.08),0 20px 40px -10px rgba(0,0,0,.6)}
+.pied__devise{margin-top:14px;font-family:var(--f-main);font-size:clamp(30px,3.4vw,40px);font-weight:700;line-height:1.1;color:#fff}
+.pied__reseaux{list-style:none;padding:0;display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:26px}
+.pied__reseaux a{display:flex;align-items:center;justify-content:center;width:46px;height:46px;border-radius:50%;background:rgba(255,255,255,.08);color:#fff;transition:background-color .2s,translate .2s}
+.pied__reseaux a:hover{background:var(--rouge);translate:0 -3px}
+.pied__reseaux svg{width:20px;height:20px;fill:currentColor}
+.pied__nav{display:flex;flex-wrap:wrap;justify-content:center;gap:6px 22px;margin-top:30px;padding-top:24px;border-top:1px solid rgba(255,255,255,.12);width:100%}
+.pied__nav a{color:var(--clair);text-decoration:none;font-family:var(--f-titre);font-size:13.5px;font-weight:600}
+.pied__nav a:hover{color:#fff}
+.pied__copy{margin-top:18px;font-size:13.5px;color:#9FB4CC}
+
+/* ---------- Mouvement : seulement si le visiteur l'accepte ---------- */
+@media (prefers-reduced-motion:no-preference){
+  .hero__fond{animation:respire 26s ease-in-out infinite alternate}
+  .hero__faisceaux span,.faisceaux span{animation:balaie 9s ease-in-out infinite alternate}
+  .hero__faisceaux span:nth-child(2),.faisceaux span:nth-child(2){animation-duration:11s;animation-delay:-3s}
+  .hero__faisceaux span:nth-child(3),.faisceaux span:nth-child(3){animation-duration:10s;animation-delay:-6s}
+  .defile__piste{animation:defile 40s linear infinite}
+  .psaume__rayons{animation:tourne 160s linear infinite}
+  .sep .sep__echo{animation:houle 9s ease-in-out infinite alternate}
+  .eclat{animation:eclat 7s ease-in-out infinite alternate}
+  .eq span{animation:egalise var(--t,1.2s) ease-in-out var(--d,0s) infinite alternate}
+  .pastille svg{animation:tourne 26s linear infinite}
+  .lueur{animation:flotte 16s ease-in-out infinite alternate}
+  .anime .apparait{opacity:0;transform:translateY(26px);transition:opacity .7s cubic-bezier(.2,.7,.2,1) var(--d,0s),transform .7s cubic-bezier(.2,.7,.2,1) var(--d,0s),translate .35s,rotate .35s,box-shadow .35s}
+  .anime .apparait.est-visible{opacity:1;transform:none}
+  .a-dessiner path{transition:stroke-dashoffset 1s cubic-bezier(.6,.1,.3,1)}
+  .a-dessiner.est-visible path{stroke-dashoffset:0!important}
+  .entoure__trait{opacity:0;transition:opacity .6s .6s}
+  .anime .est-visible .entoure__trait{opacity:1}
+}
+@keyframes respire{from{transform:scale(1)}to{transform:scale(1.07)}}
+@keyframes balaie{from{transform:rotate(-7deg)}to{transform:rotate(7deg)}}
+@keyframes defile{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@keyframes tourne{to{rotate:360deg}}
+@keyframes houle{from{transform:translateY(0)}to{transform:translateY(6px)}}
+@keyframes eclat{from{background-position:0% 50%}to{background-position:100% 50%}}
+@keyframes egalise{from{transform:scaleY(1)}to{transform:scaleY(.55)}}
+@keyframes flotte{from{scale:1}to{scale:1.12}}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{transition:none!important}
+}
+
+/* ---------- Adaptations ---------- */
+@media (max-width:1359px){
+  .hero__marque{display:flex;flex-direction:column;align-items:flex-end}
+  .annot--hero{position:relative;left:auto;top:auto;margin:-8px 4% 0 0;flex-direction:row-reverse;align-items:flex-start;font-size:24px}
+  .annot--hero span{width:auto;white-space:nowrap;padding-top:22px;text-align:right}
+  .annot--hero .fleche{width:50px;height:40px;transform:rotate(-100deg) translate(2px,4px)}
+}
+@media (max-width:1239px){
+  .deco{display:none}
+}
+@media (max-width:1100px){
+  .nav a{padding:8px 8px;font-size:13.5px}
+  .nav .nav__cta{padding:10px 16px}
+  .coulisse{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .soundmaker{grid-column:1 / -1}
+  .formation{grid-template-columns:minmax(0,1fr);gap:56px}
+  .formation__groupe .membres{max-width:720px}
+  .formation__groupe--co .membres{max-width:480px}
+  .videos{grid-template-columns:repeat(2,minmax(0,1fr));gap:34px 28px;max-width:820px;margin-inline:auto}
+}
+@media (max-width:980px){
+  .nav{display:none;position:absolute;left:max(20px,env(safe-area-inset-left,0px));right:max(20px,env(safe-area-inset-right,0px));top:calc(100% + 6px);flex-direction:column;align-items:stretch;gap:2px;padding:10px;border-radius:16px;background:var(--nuit);border:1px solid rgba(255,255,255,.16);box-shadow:0 30px 60px -20px rgba(0,0,0,.9)}
+  .entete.est-ouvert .nav{display:flex}
+  .nav a{padding:13px 16px;font-size:16px}
+  .nav .nav__cta{margin:6px 0 0;text-align:center}
+  .nav-bouton{display:inline-flex}
+}
+@media (max-width:900px){
+  .eveque,.duo,.duo--lourdes,.musique,.inviter{grid-template-columns:minmax(0,1fr)}
+  .eveque__visuel{max-width:340px}
+  .eveque__texte{text-align:center}
+  .eveque__preuve{justify-content:center}
+  .valeurs__liste,.temps,.coupures{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .collage{max-width:560px;margin-inline:auto;width:100%}
+  .lourdes__photos{max-width:560px;margin-inline:auto;width:100%}
+  .date-carte{grid-template-columns:160px minmax(0,1fr)}
+  .date-photo{grid-column:1 / -1;min-height:0;aspect-ratio:16/9}
+  .date-photo__vague{display:none}
+  .inviter__cote{position:static}
+  .setlist{max-width:440px;margin-inline:auto}
+  .equation{row-gap:22px}
+}
+@media (max-width:640px){
+  body{font-size:16.5px}
+  .barre__concert{display:none}
+  .barre__in{justify-content:center}
+  .entete__logo img{height:32px}
+  .hero__devise{font-size:15px;letter-spacing:.32em;padding-left:.32em}
+  .hero__intro{font-size:18px}
+  .hero__concert{flex-wrap:wrap;justify-content:center;padding:8px 14px;border-radius:20px;gap:8px}
+  .hero__faisceaux span{width:180px}
+  .annot--hero{margin-right:2%;font-size:22px}
+  .annot--hero .fleche{width:44px;height:34px}
+  .eveque__guillemet{width:62px;height:62px;font-size:38px;left:-8px}
+  .eveque__preuve{flex-direction:column}
+  .annot--preuve{flex-direction:column-reverse}
+  .annot--preuve .fleche{transform:rotate(-84deg);width:40px;height:34px}
+  .chiffres{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .chiffres li{padding:22px 12px 26px}
+  .chiffres li:nth-child(3){border-left:0}
+  .chiffres li:nth-child(n+3){border-top:1px solid var(--ligne)}
+  .defile{rotate:-2.4deg}
+  .reflet{grid-template-columns:minmax(0,1fr)}
+  .reflet__a,.reflet__d{display:none}
+  .faisceaux span{width:180px}
+  .annot--attend{left:auto;right:8px;top:-54px;flex-direction:row;font-size:23px}
+  .annot--attend .fleche{width:50px;height:34px;transform:rotate(60deg) scaleY(-1)}
+  .coupures,.etapes{grid-template-columns:minmax(0,1fr)}
+  .valeurs__liste{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+  .valeur{padding:20px 12px 18px;border-radius:18px}
+  .valeur__ico{width:50px;height:50px;margin-bottom:4px}
+  .valeur__ico .ico{width:23px;height:23px}
+  .valeur strong{font-size:16px}
+  .valeur>span:last-child{font-size:13.5px;line-height:1.5}
+  .coupure a{padding:16px 16px 14px}
+  .vague__point{width:28px;height:28px;font-size:12px;border-width:2px}
+  .temps{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding-bottom:10px;margin-left:calc(-1 * max(20px,env(safe-area-inset-left,0px)));margin-right:calc(-1 * max(20px,env(safe-area-inset-right,0px)));padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px));scroll-padding-inline:max(20px,env(safe-area-inset-left,0px))}
+  .temps::-webkit-scrollbar{display:none}
+  .temps li{flex:0 0 72%;scroll-snap-align:start}
+  .eq span:nth-child(even){display:none}
+  .galerie{grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:42vw}
+  .galerie__a,.galerie__f{grid-column:1 / 3;grid-row:auto}
+  .galerie__a{grid-row:span 2}
+  .galerie__b,.galerie__c,.galerie__d,.galerie__e{grid-column:auto;grid-row:auto}
+  .collage{padding-top:56px}
+  .tirage figcaption{font-size:19px}
+  .lourdes__photos{padding-right:26px}
+  .equation{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);align-items:start;gap:8px}
+  .equation__terme{max-width:none}
+  .equation__terme img{height:46px}
+  .equation__signe--egal,.equation__total{display:none}
+  .equation__signe{width:36px;height:36px;margin-top:6px;font-size:22px}
+  .annot--terme{font-size:20px}
+  .annot--terme .fleche{width:38px;height:34px}
+  .videos{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;max-width:none;margin-top:44px;padding:14px max(20px,env(safe-area-inset-right,0px)) 26px max(20px,env(safe-area-inset-left,0px));margin-left:calc(-1 * max(20px,env(safe-area-inset-left,0px)));margin-right:calc(-1 * max(20px,env(safe-area-inset-right,0px)));scroll-padding-inline:max(20px,env(safe-area-inset-left,0px))}
+  .videos::-webkit-scrollbar{display:none}
+  .videos li{flex:0 0 80%;scroll-snap-align:start}
+  .annot--video{left:auto;right:4px;top:-34px;align-items:flex-end}
+  .annot--video .fleche{margin:0 30px 0 0;transform:rotate(98deg) scaleY(-1)}
+  .formation__groupe{padding:30px 14px 28px}
+  .formation__titre img{height:48px}
+  .pastille{width:88px;height:88px;top:-30px;right:-6px}
+  .pastille text{font-size:10px}
+  .pastille__coeur b{font-size:19px}
+  .membres,.formation__groupe--co .membres,.coulisse{grid-template-columns:repeat(2,minmax(0,1fr));gap:30px 16px}
+  .formation__groupe:not(.formation__groupe--co) .membre:last-child{grid-column:1 / -1}
+  .membre__rond{width:min(100%,148px)}
+  .soundmaker{grid-template-columns:minmax(0,1fr)}
+  .soundmaker__photo{aspect-ratio:3/2;min-height:0;height:auto}
+  .avis{columns:1}
+  .champs{grid-template-columns:minmax(0,1fr)}
+  .coupures-scene{padding-top:60px}
+  .annot--battice{left:auto;right:4px;align-items:flex-end}
+  .annot--battice .fleche{margin:0 40px 0 0;transform:rotate(98deg) scaleY(-1)}
+  .date-carte{grid-template-columns:minmax(0,1fr)}
+  .date-bloc{flex-direction:row;flex-wrap:wrap;gap:6px 12px;padding:18px 22px;justify-content:flex-start;align-items:baseline}
+  .date-bloc__num{font-size:44px}
+  .flamme{padding:22px 20px}
+  .logos{gap:12px}
+  .logo{flex-basis:calc(50% - 6px);height:96px}
+  .production__carte{flex-direction:column;text-align:center;padding:18px 22px}
+  .production__carte p{align-items:center}
+}
+@media (max-width:480px){
+  .membres,.formation__groupe--co .membres,.coulisse{grid-template-columns:minmax(0,1fr);gap:26px}
+  .formation__groupe:not(.formation__groupe--co) .membre:last-child{grid-column:auto}
+  .membre{display:grid;grid-template-columns:100px minmax(0,1fr);column-gap:16px;text-align:left;align-items:start}
+  .membre__rond{grid-row:1 / span 3;width:100px;margin:0}
+  .membre__rond--icone .ico{width:42px;height:42px}
+  .membre h4{margin-top:4px}
+  .defile__creux{-webkit-text-stroke-width:1.2px}
+}
+
+/* ---------- Annotations à la main (v9) : étiquettes, légendes, griffonnages ---------- */
+.griffe{display:inline-block;width:.6em;height:.6em;margin-left:.06em;vertical-align:.55em;color:var(--rouge-vif);line-height:0}
+.griffe svg{display:block;width:100%;height:100%;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;overflow:visible;filter:url(#crayon)}
+.section--nuit .griffe,.section--marine .griffe{color:var(--rose)}
+.griffe--titre{width:.56em;height:.56em;rotate:8deg}
+.griffe--coeur{width:.85em;height:.85em;vertical-align:-.08em;rotate:-8deg}
+.griffe--etoile{width:22px;height:22px;vertical-align:-2px;color:var(--rouge-vif)}
+.setlist .griffe--coeur{width:22px;height:22px;vertical-align:-3px}
+.note-main{display:block;margin-top:12px;font-family:var(--f-main);font-size:27px;font-weight:700;line-height:1.1;color:var(--rouge);rotate:-3deg}
+.note-main--merci{display:inline-block;margin-top:14px;rotate:-4deg}
+.setlist .note-main{display:inline-block;margin:0 0 0 8px;font-size:19px;rotate:-7deg;color:var(--rouge)}
+.etiquette{position:absolute;z-index:3;padding:1px 12px 3px;background:rgba(255,253,246,.94);color:var(--marine);font-family:var(--f-main);font-size:22px;font-weight:700;line-height:1.15;white-space:nowrap;rotate:-4deg;box-shadow:0 8px 16px -8px rgba(4,31,62,.6);pointer-events:none}
+.etiquette::before{content:"";position:absolute;left:50%;top:-8px;width:34px;height:13px;translate:-50% 0;rotate:6deg;background:rgba(147,183,217,.7)}
+.etiquette--a{left:3%;top:15%}
+.etiquette--c{left:51.4%;top:12%;rotate:5deg}
+.etiquette--d{left:35%;bottom:6%;rotate:-6deg}
+.etiquette--e{right:3%;top:10%;rotate:3deg;color:var(--rouge)}
+.etiquette--rond{right:-12%;bottom:6%;font-size:19px;padding:0 10px 2px;rotate:-7deg}
+.etiquette--rose{color:var(--rouge)}
+.legende-main{position:absolute;z-index:2;font-family:var(--f-main);font-weight:700;line-height:1;color:#fff;text-shadow:0 2px 12px rgba(0,0,0,.8)}
+.legende-main--photo{right:16px;bottom:14px;font-size:28px;rotate:-6deg}
+.tirage--d{position:absolute;z-index:3;left:3%;bottom:0;width:47%;rotate:3.5deg}
+.tirage--d::before{left:62%;rotate:-5deg}
+.tirage--d figcaption{font-size:19px}
+.collage{padding:74px 0 190px}
+.tirage--a figcaption{text-align:right;padding-left:46%}
+.annot--oneshot{top:-44px;right:40px;flex-direction:row;color:var(--ciel);font-size:24px;rotate:-4deg}
+.annot--oneshot .fleche{width:52px;height:38px;transform:rotate(120deg) translate(-6px,-10px)}
+.annot--chiffre{position:static;flex-direction:row-reverse;margin-top:4px;font-size:22px;color:var(--rouge);rotate:-4deg}
+.annot--chiffre .fleche{width:40px;height:32px;transform:rotate(-118deg)}
+.chiffres li:nth-child(3){padding-bottom:16px}
+.vague__note{position:absolute;z-index:2;left:calc(var(--x) + var(--dx,30px));top:calc(var(--y) + var(--dy,-30px));font-family:var(--f-main);font-size:22px;font-weight:700;line-height:1;color:var(--rouge);white-space:nowrap;rotate:-4deg;pointer-events:none}
+.soundmaker{position:relative}
+.soundmaker__texte{gap:0}
+.soundmaker__bloc{display:flex;flex-direction:column;align-items:flex-start;gap:8px}
+.soundmaker__bloc+.soundmaker__bloc{margin-top:20px;padding-top:20px;border-top:1px solid rgba(255,255,255,.14)}
+.soundmaker__lien{display:inline-block;align-self:flex-start;border-radius:6px;transition:opacity .2s}
+.soundmaker__lien:hover{opacity:.82}
+.soundmaker__logo--luma{width:auto;height:48px}
+.soundmaker__bloc p:not(.membre__role){font-size:15px;line-height:1.55}
+.annot--regie{left:14px;top:16px;flex-direction:column;align-items:flex-start;color:#fff;font-size:23px;rotate:-5deg;text-shadow:0 2px 10px rgba(0,0,0,.7)}
+.annot--regie .fleche{width:44px;height:40px;margin-left:30px;transform:rotate(90deg)}
+.contact-carte{position:relative}
+.annot--contact{top:-46px;right:12px;flex-direction:row;color:var(--rose);font-size:23px;rotate:-3deg}
+.annot--contact .fleche{width:48px;height:36px;transform:rotate(135deg) translate(-8px,-12px)}
+.logo a{display:flex;align-items:center;justify-content:center;width:100%;height:100%;border-radius:12px}
+.partenaires .note-main--merci{margin-top:6px}
+.psaume__verset{position:relative}
+.griffe--psaume-g,.griffe--psaume-d{position:absolute;margin:0;vertical-align:0}
+.griffe--psaume-g{left:-56px;top:-6px;width:42px;height:42px;color:var(--ciel);rotate:-12deg}
+.griffe--psaume-d{right:-50px;bottom:4px;width:40px;height:40px;color:var(--rose);rotate:10deg}
+.pied{overflow:hidden}
+.pied__marque{position:relative}
+.annot--pied{left:calc(100% + 4px);top:26%;flex-direction:row;color:var(--ciel);font-size:26px;rotate:-6deg}
+.annot--pied .fleche{width:50px;height:36px;transform:scaleX(-1) rotate(-20deg)}
+@media (max-width:900px){
+  .collage{padding-bottom:170px}
+}
+@media (max-width:640px){
+  .etiquette--c,.etiquette--d,.etiquette--e{display:none}
+  .etiquette{font-size:19px}
+  .vague__note{display:none}
+  .collage{padding-bottom:140px}
+  .tirage--a figcaption{padding-left:44%}
+  .tirage--d{width:50%}
+  .annot--oneshot{right:6px;top:-40px;font-size:21px}
+  .griffe--psaume-g{left:-6px;top:-34px;width:30px;height:30px}
+  .griffe--psaume-d{right:-4px;bottom:-30px;width:28px;height:28px}
+  .annot--pied{left:auto;right:calc(100% - 6px);top:-30px;flex-direction:row-reverse;font-size:22px}
+  .annot--pied .fleche{width:40px;height:30px;transform:rotate(30deg)}
+  .annot--contact{right:6px;font-size:21px}
+  .annot--regie{font-size:20px}
+}
+@media (max-width:480px){
+  .etiquette--rond{font-size:15px;right:-18%;bottom:-2%;padding:0 6px 1px}
+}
+
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "MusicGroup", "name": "Jesus'Trip & Co", "alternateName": "Jesus'Trip", "genre": ["Pop-louange", "Musique chrétienne"], "foundingDate": "2014", "foundingLocation": {"@type": "Place", "name": "Verviers, Belgique"}, "description": "Jesus’Trip & Co, groupe belge de pop-louange : des temps de louange festifs et priants dans les églises de Wallonie, de Bruxelles et jusqu’à Lourdes. Invitez-nous chez vous.", "url": "https://jesustripandco.be/", "image": "https://jesustripandco.be/img/partage.jpg", "sameAs": ["https://www.facebook.com/jesustrip.be", "https://www.youtube.com/@jesustrip3223", "https://open.spotify.com/artist/0YSleEpy61th1Lasah1Fnt", "https://www.deezer.com/fr/artist/9116278", "https://music.apple.com/be/artist/jesustrip/1046558283"], "member": [{"@type": "Person", "name": "Luc Mathues"}, {"@type": "Person", "name": "Gaël Haine"}, {"@type": "Person", "name": "Nathan Lamberts"}, {"@type": "Person", "name": "Joanna Verwilghen"}, {"@type": "Person", "name": "Frédéric Kienen"}]}, {"@type": "MusicEvent", "name": "Premier concert de Jesus'Trip & Co", "description": "Premier concert de Jesus'Trip & Co : pour la première fois, deux nouveaux musiciens rejoignent l'aventure Jesus'Trip. Entrée gratuite, verre de l'amitié offert.", "image": "https://jesustripandco.be/img/partage.jpg", "url": "https://jesustripandco.be/#agenda", "startDate": "2027-01-16T20:00:00+01:00", "eventStatus": "https://schema.org/EventScheduled", "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode", "isAccessibleForFree": true, "location": {"@type": "Place", "name": "Église de Battice", "address": {"@type": "PostalAddress", "addressLocality": "Battice", "addressCountry": "BE"}}, "performer": {"@type": "MusicGroup", "name": "Jesus'Trip & Co"}, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "EUR", "availability": "https://schema.org/InStock"}}]}</script>
+</head>
+<body>
+<a class="skip" href="#contenu">Aller au contenu</a>
+
+<svg class="defs" width="0" height="0" aria-hidden="true" focusable="false">
+  <filter id="crayon" x="-15%" y="-15%" width="130%" height="130%"><feTurbulence type="fractalNoise" baseFrequency="0.22" numOctaves="2" seed="4"/><feDisplacementMap in="SourceGraphic" scale="0.9"/></filter>
+  <filter id="crayon-fleche" x="-10%" y="-10%" width="120%" height="120%"><feTurbulence type="fractalNoise" baseFrequency="0.06" numOctaves="2" seed="9"/><feDisplacementMap in="SourceGraphic" scale="2.4"/></filter>
+</svg>
+
+<div class="barre" lang="fr">
+  <div class="wrap barre__in">
+    <a class="barre__concert" href="#agenda"><strong>Premier concert à cinq</strong> · samedi 16 janvier 2027 · église de Battice</a>
+    <ul class="barre__reseaux" aria-label="Jesus’Trip &amp; Co sur les réseaux">
+      <li><a href="https://www.facebook.com/jesustrip.be" target="_blank" rel="noopener" aria-label="Facebook"><svg class="marque" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z"/></svg></a></li>
+      <li><a href="https://www.youtube.com/@jesustrip3223" target="_blank" rel="noopener" aria-label="YouTube"><svg class="marque" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a></li>
+      <li><a href="https://open.spotify.com/artist/0YSleEpy61th1Lasah1Fnt" target="_blank" rel="noopener" aria-label="Spotify"><svg class="marque" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg></a></li>
+      <li><a href="https://www.deezer.com/fr/artist/9116278" target="_blank" rel="noopener" aria-label="Deezer"><svg class="marque" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M18.81 4.16v3.03H24V4.16h-5.19zM6.27 8.38v3.027h5.189V8.38h-5.19zm12.54 0v3.027H24V8.38h-5.19zM6.27 12.594v3.027h5.189v-3.027h-5.19zm6.271 0v3.027h5.19v-3.027h-5.19zm6.27 0v3.027H24v-3.027h-5.19zM0 16.81v3.029h5.19v-3.03H0zm6.27 0v3.029h5.189v-3.03h-5.19zm6.271 0v3.029h5.19v-3.03h-5.19zm6.27 0v3.029H24v-3.03h-5.19Z"/></svg></a></li>
+      <li><a href="https://music.apple.com/be/artist/jesustrip/1046558283" target="_blank" rel="noopener" aria-label="Apple Music"><svg class="marque" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M23.994 6.124a9.23 9.23 0 00-.24-2.19c-.317-1.31-1.062-2.31-2.18-3.043a5.022 5.022 0 00-1.877-.726 10.496 10.496 0 00-1.564-.15c-.04-.003-.083-.01-.124-.013H5.986c-.152.01-.303.017-.455.026-.747.043-1.49.123-2.193.4-1.336.53-2.3 1.452-2.865 2.78-.192.448-.292.925-.363 1.408-.056.392-.088.785-.1 1.18 0 .032-.007.062-.01.093v12.223c.01.14.017.283.027.424.05.815.154 1.624.497 2.373.65 1.42 1.738 2.353 3.234 2.801.42.127.856.187 1.293.228.555.053 1.11.06 1.667.06h11.03a12.5 12.5 0 001.57-.1c.822-.106 1.596-.35 2.295-.81a5.046 5.046 0 001.88-2.207c.186-.42.293-.87.37-1.324.113-.675.138-1.358.137-2.04-.002-3.8 0-7.595-.003-11.393zm-6.423 3.99v5.712c0 .417-.058.827-.244 1.206-.29.59-.76.962-1.388 1.14-.35.1-.706.157-1.07.173-.95.045-1.773-.6-1.943-1.536a1.88 1.88 0 011.038-2.022c.323-.16.67-.25 1.018-.324.378-.082.758-.153 1.134-.24.274-.063.457-.23.51-.516a.904.904 0 00.02-.193c0-1.815 0-3.63-.002-5.443a.725.725 0 00-.026-.185c-.04-.15-.15-.243-.304-.234-.16.01-.318.035-.475.066-.76.15-1.52.303-2.28.456l-2.325.47-1.374.278c-.016.003-.032.01-.048.013-.277.077-.377.203-.39.49-.002.042 0 .086 0 .13-.002 2.602 0 5.204-.003 7.805 0 .42-.047.836-.215 1.227-.278.64-.77 1.04-1.434 1.233-.35.1-.71.16-1.075.172-.96.036-1.755-.6-1.92-1.544-.14-.812.23-1.685 1.154-2.075.357-.15.73-.232 1.108-.31.287-.06.575-.116.86-.177.383-.083.583-.323.6-.714v-.15c0-2.96 0-5.922.002-8.882 0-.123.013-.25.042-.37.07-.285.273-.448.546-.518.255-.066.515-.112.774-.165.733-.15 1.466-.296 2.2-.444l2.27-.46c.67-.134 1.34-.27 2.01-.403.22-.043.442-.088.663-.106.31-.025.523.17.554.482.008.073.012.148.012.223.002 1.91.002 3.822 0 5.732z"/></svg></a></li>
+    </ul>
+  </div>
+</div>
+
+<header class="entete" id="entete" lang="fr">
+  <div class="wrap entete__in">
+    <a class="entete__logo" href="#accueil"><img src="img/logo-blanc.png" alt="Jesus’Trip &amp; Co, retour à l’accueil" width="2122" height="437"></a>
+    <nav class="nav" id="nav" aria-label="Navigation principale">
+      <a href="#agenda">Agenda</a>
+      <a href="#groupe">Le groupe</a>
+      <a href="#soiree">Une soirée</a>
+      <a href="#musique">Musique</a>
+      <a href="#equipe">L’équipe</a>
+      <a href="#temoignages">Témoignages</a>
+      <a href="#presse">Presse</a>
+      <a class="nav__cta" href="#inviter">Nous inviter</a>
+    </nav>
+    <button class="nav-bouton" id="nav-bouton" type="button" aria-expanded="false" aria-controls="nav" aria-label="Ouvrir le menu"><svg class="ico ico--menu" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h16"/></svg><svg class="ico ico--fermer" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+  </div>
+</header>
+
+<main id="contenu" lang="fr">
+
+  <!-- Accueil -->
+  <section class="hero" id="accueil" aria-labelledby="titre-accueil">
+    <div class="hero__fond" aria-hidden="true"></div>
+    <div class="hero__faisceaux" aria-hidden="true"><span></span><span></span><span></span></div>
+    <div class="wrap hero__in">
+      <p class="hero__sur">Groupe belge de pop-louange</p>
+      <div class="hero__marque">
+        <h1 id="titre-accueil"><img class="hero__logo" src="img/logo-blanc.png" alt="Jesus’Trip &amp; Co" width="2122" height="437" fetchpriority="high"></h1>
+        <p class="annot annot--hero"><svg class="fleche trace" viewBox="0 0 100 64" aria-hidden="true" focusable="false"><path d="M8 52C24 22 54 10 88 20"/><path d="M75 8.5l15 12-17.5 6.5"/></svg><span><b>&amp; Co</b> : nos compagnons de route</span></p>
+      </div>
+      <p class="hero__devise">Jump<span aria-hidden="true">•</span>Sing<span aria-hidden="true">•</span>Pray</p>
+      <p class="hero__intro">Des temps de louange festifs et priants, pour faire ensemble l’expérience d’une foi joyeuse. Depuis 2014, dans les églises de Wallonie, de Bruxelles et jusqu’à Lourdes.</p>
+      <div class="hero__actions">
+        <a class="btn btn--rouge" href="#inviter">Nous inviter chez vous</a>
+        <a class="btn btn--clair" href="#groupe">Découvrir le groupe</a>
+      </div>
+      <a class="hero__concert" href="#agenda"><span class="hero__concert-label">Prochain concert</span><span>Samedi 16 janvier 2027 · Église de Battice</span></a>
+    </div>
+    <svg class="sep" style="--sep:#FFFFFF" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path class="sep__echo" d="M0 30C260 64 520 66 760 40S1240 4 1440 22V90H0Z"/><path d="M0 46C220 6 480 2 720 30S1220 74 1440 34V90H0Z"/></svg>
+  </section>
+
+  <!-- Le mot de l'évêque (fondu vers les chiffres) -->
+  <section class="section section--blanc section--fondu-glace" aria-labelledby="titre-eveque">
+    <span class="deco deco--g" style="--y:16%;--r:-12deg;--c:var(--ciel)" data-v="0.22" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3.4 18.6c0-1.4 1.4-2.5 3-2.5 1.2 0 2 .7 2 1.7 0 1.4-1.4 2.5-3 2.5-1.2 0-2-.7-2-1.7zM14.4 16.6c0-1.4 1.4-2.5 3-2.5 1.2 0 2 .7 2 1.7 0 1.4-1.4 2.5-3 2.5-1.2 0-2-.7-2-1.7zM8.4 17.6V6.4l11-2.6v11.6M8.4 9.8l11-2.6"/></svg></span>
+    <span class="deco deco--d" style="--y:58%;--r:14deg;--c:var(--rouge-vif)" data-v="0.32" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2.5c.7 4.6 2.6 6.9 6.8 7.5-4.2.6-6.1 2.9-6.8 7.5-.7-4.6-2.6-6.9-6.8-7.5 4.2-.6 6.1-2.9 6.8-7.5zM19 16.5c.3 1.6 1 2.3 2.5 2.5-1.5.2-2.2.9-2.5 2.5-.3-1.6-1-2.3-2.5-2.5 1.5-.2 2.2-.9 2.5-2.5z"/></svg></span>
+    <div class="wrap eveque">
+      <div class="eveque__visuel">
+        <img class="eveque__photo" src="img/eveque.jpg" alt="Mgr Jean-Pierre Delville, évêque de Liège, sur scène avec Jesus’Trip, pouce levé" width="900" height="675" loading="lazy">
+        <span class="eveque__guillemet" aria-hidden="true">«</span>
+      </div>
+      <div class="eveque__texte">
+        <h2 class="surtitre" id="titre-eveque">Le mot de l’évêque de Liège</h2>
+        <blockquote>
+          <p class="eveque__accroche">« C’est une grande joie pour moi de vous recommander le groupe Jesus’Trip. Grâce à lui, l’Évangile devient musique pour les jeunes. C’est comme si Jésus parlait aujourd’hui en direct.</p>
+          <p>Par la musique, ce groupe de pop-louange crée une ambiance de bonheur et d’amitié. Il relaie tous les sentiments de l’humanité actuelle et les transforme en espérance. <span class="insecable">Allez-y !</span> <span class="insecable">Écoutez-les !</span> Participez aux concerts et aux activités ! Je l’ai fait, j’y ai même chanté ! Je n’ai pas été déçu, j’ai été enchanté ! »</p>
+        </blockquote>
+        <p class="signature"><strong>Mgr Jean-Pierre Delville</strong> évêque de Liège</p>
+        <div class="eveque__preuve">
+          <a class="pilule-video" href="https://www.youtube.com/watch?v=F9vUaTRw-L0" target="_blank" rel="noopener"><span class="pilule-video__play" aria-hidden="true"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 4.5v15l12.5-7.5z"/></svg></span><span><strong>Le voir chanter « Resucito » avec nous</strong><small>Vidéo YouTube<span class="sr">, nouvel onglet</span></small></span></a>
+          <p class="annot annot--preuve" aria-hidden="true"><span>la preuve en vidéo !</span><svg class="fleche trace" viewBox="0 0 100 64" aria-hidden="true" focusable="false"><path d="M8 52C24 22 54 10 88 20"/><path d="M75 8.5l15 12-17.5 6.5"/></svg></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="bande-chiffres">
+    <ul class="wrap chiffres" aria-label="Quelques chiffres">
+      <li><span class="chiffre__n" data-compte="50">50</span><span class="chiffre__l">soirées de louange dans des églises</span></li>
+      <li><span class="chiffre__n" data-compte="500">500</span><span class="chiffre__l">participants en moyenne par soirée</span></li>
+      <li><span class="chiffre__n" data-compte="25000">25&#160;000</span><span class="chiffre__l">personnes rassemblées depuis 2014</span><span class="annot annot--chiffre" aria-hidden="true"><svg class="fleche trace" viewBox="0 0 100 64" aria-hidden="true" focusable="false"><path d="M8 52C24 22 54 10 88 20"/><path d="M75 8.5l15 12-17.5 6.5"/></svg><span>et ce n’est pas fini !</span></span></li>
+      <li><span class="chiffre__n" data-compte="12">12</span><span class="chiffre__l">personnes dans l’équipe, sur scène et en coulisse</span></li>
+    </ul>
+  </div>
+
+  <div class="defile" aria-hidden="true">
+    <div class="defile__piste">
+      <span>Jump</span><i>•</i><span class="defile__creux">Sing</span><i>•</i><span>Pray</span><i>•</i><span class="defile__creux">Louez Dieu</span><i>•</i><span>Alléluia</span><i>•</i><span class="defile__creux">Jesus’Trip &amp; Co</span><i>•</i>
+      <span>Jump</span><i>•</i><span class="defile__creux">Sing</span><i>•</i><span>Pray</span><i>•</i><span class="defile__creux">Louez Dieu</span><i>•</i><span>Alléluia</span><i>•</i><span class="defile__creux">Jesus’Trip &amp; Co</span><i>•</i>
+    </div>
+  </div>
+
+  <div class="galerie" aria-label="Quelques soirées en images">
+    <img class="galerie__a" src="img/galerie-a.jpg" alt="Des centaines de mains levées vers la scène pendant une soirée de Jesus’Trip à Mons" width="960" height="960" loading="lazy">
+    <img class="galerie__b" src="img/galerie-b.jpg" alt="La scène baignée de lumière violette au fond d’une salle comble, à Bruxelles" width="560" height="560" loading="lazy">
+    <img class="galerie__c" src="img/galerie-battice.jpg" alt="L’église de Battice comble en 2017, mains levées, la régie au premier plan" width="700" height="700" loading="lazy">
+    <img class="galerie__d" src="img/galerie-d.jpg" alt="Une église pleine, mains levées vers la scène, à Verviers" width="1000" height="500" loading="lazy">
+    <img class="galerie__e" src="img/galerie-e.jpg" alt="Jesus’Trip sur une grande scène bleue, face au public, à Mons" width="1000" height="500" loading="lazy">
+    <img class="galerie__f" src="img/galerie-f.jpg" alt="Faisceaux de lumière croisés au-dessus du public et du logo Jesus’Trip" width="1000" height="500" loading="lazy">
+    <span class="etiquette etiquette--a" aria-hidden="true">Mons</span>
+    <span class="etiquette etiquette--c" aria-hidden="true">Battice !</span>
+    <span class="etiquette etiquette--d" aria-hidden="true">Verviers</span>
+    <span class="etiquette etiquette--e" aria-hidden="true">ça chante !</span>
+  </div>
+
+  <!-- Prochain concert : les photos se reflètent comme sur un sol de scène -->
+  <section class="section section--nuit section--agenda" id="agenda" aria-labelledby="titre-agenda">
+    <div class="reflet" aria-hidden="true">
+      <img class="reflet__a" src="img/galerie-a.jpg" alt="" width="960" height="960" loading="lazy">
+      <img class="reflet__d" src="img/galerie-d.jpg" alt="" width="1000" height="500" loading="lazy">
+      <img class="reflet__f" src="img/galerie-f.jpg" alt="" width="1000" height="500" loading="lazy">
+    </div>
+    <div class="faisceaux faisceaux--agenda" aria-hidden="true"><span></span><span></span></div>
+    <span class="lueur lueur--g" style="--y:34%;--c:rgba(232,52,66,.32)" data-v="0.12" aria-hidden="true"></span>
+    <span class="lueur lueur--d" style="--y:52%;--c:rgba(80,150,255,.3)" data-v="0.18" aria-hidden="true"></span>
+    <span class="deco deco--g" style="--y:62%;--r:-10deg;--c:var(--ciel)" data-v="0.3" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5.2 18.6c0-1.6 1.6-2.9 3.4-2.9 1.4 0 2.3.8 2.3 1.9 0 1.6-1.6 2.9-3.4 2.9-1.4 0-2.3-.8-2.3-1.9zM10.9 17.4V4.2c.8 2.4 5.6 3.2 5.6 7.6"/></svg></span>
+    <span class="deco deco--d" style="--y:30%;--r:12deg;--c:#FF8C95" data-v="0.25" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 20.3S4.5 15.6 4.5 9.6A4.1 4.1 0 0 1 12 7.3a4.1 4.1 0 0 1 7.5 2.3c0 6-7.5 10.7-7.5 10.7z"/></svg></span>
+    <div class="wrap">
+      <div class="entete-section">
+        <p class="surtitre surtitre--ciel">Agenda</p>
+        <h2 id="titre-agenda">Prochain <span class="eclat">concert</span><span class="griffe griffe--titre" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4.5 10.5 8 12.4M6.6 4.6l2.5 3.6M12.6 3v4.4"/></svg></span></h2>
+      </div>
+      <div class="agenda__scene">
+        <p class="annot annot--attend" aria-hidden="true"><span>On vous attend !</span><svg class="fleche trace" viewBox="0 0 100 64" aria-hidden="true" focusable="false"><path d="M8 52C24 22 54 10 88 20"/><path d="M75 8.5l15 12-17.5 6.5"/></svg></p>
+        <article class="date-carte">
+          <div class="date-bloc" aria-hidden="true">
+            <span class="date-bloc__jour">Sam.</span>
+            <span class="date-bloc__num">16</span>
+            <span class="date-bloc__mois">Janv.</span>
+            <span class="date-bloc__an">2027</span>
+          </div>
+          <div class="date-infos">
+            <h3>Premier concert de Jesus’Trip &amp; Co</h3>
+            <p class="date-intro">C’est la première fois que deux nouveaux musiciens rejoignent l’aventure Jesus’Trip : Joanna Verwilghen au chant et l’abbé Frédéric Kienen à la basse et à la clarinette. Venez découvrir le groupe à cinq !</p>
+            <p class="date-anecdote">Clin d’œil de l’histoire : c’est déjà à Battice, en septembre 2015, que Jesus’Trip présentait son premier album.</p>
+            <dl>
+              <dt>Quand</dt><dd><time datetime="2027-01-16T20:00">Samedi 16 janvier 2027, à 20h</time></dd>
+              <dt>Où</dt><dd>Église de Battice</dd>
+              <dt>Production</dt><dd>LuMa Production</dd>
+            </dl>
+            <ul class="puces">
+              <li class="entoure">Entrée gratuite<svg class="entoure__trait" viewBox="0 0 160 52" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path d="M84 4C40 2 5 11 5 26s30 22 76 22 74-8 74-22S118 3 66 7"/></svg></li>
+              <li>Verre de l’amitié offert</li>
+            </ul>
+            <a class="btn btn--marine btn--petit" href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Premier%20concert%20de%20Jesus%27Trip%20%26%20Co%20%C3%A0%20Battice&amp;dates=20270116T190000Z%2F20270116T210000Z&amp;details=Premier%20concert%20de%20Jesus%27Trip%20%26%20Co%20%3A%20pour%20la%20premi%C3%A8re%20fois%2C%20deux%20nouveaux%20musiciens%20rejoignent%20l%27aventure.%20Entr%C3%A9e%20gratuite%2C%20verre%20de%20l%27amiti%C3%A9%20offert.&amp;location=%C3%89glise%20de%20Battice%2C%20Battice%2C%20Belgique" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg> Ajouter à Google Agenda</a>
+          </div>
+          <div class="date-photo">
+            <img src="img/battice-2017.jpg" alt="L’église de Battice comble en 2017, les mains levées vers la scène où s’affiche le logo Jesus’Trip" width="720" height="900" loading="lazy">
+            <span class="legende-main legende-main--photo" aria-hidden="true">Battice, 2017 !</span>
+            <svg class="date-photo__vague" viewBox="0 0 60 400" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path d="M0 0H38C10 60 54 120 30 200S8 330 40 400H0Z"/></svg>
+          </div>
+        </article>
+      </div>
+      <p class="agenda__suite">Les prochaines dates sont aussi annoncées sur notre <a href="https://www.facebook.com/jesustrip.be" target="_blank" rel="noopener">page Facebook</a>.</p>
+    </div>
+    <svg class="sep sep--biais" style="--sep:#F3F7FB" viewBox="0 0 1440 100" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path d="M0 100L1440 14V100Z"/><path class="sep__trait" d="M0 82L1440 -4"/></svg>
+  </section>
+
+  <!-- Notre histoire (se termine en papier déchiré) -->
+  <section class="section section--glace section--dechiree" id="groupe" aria-labelledby="titre-groupe">
+    <span class="deco deco--g" style="--y:14%;--r:-8deg;--c:var(--marine)" data-v="0.24" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12.2 2.8c-.2 6.4.1 12.4-.3 18.6M6.6 8.3c3.8-.4 7.4-.2 11-.4"/></svg></span>
+    <span class="deco deco--d" style="--y:40%;--r:10deg;--c:var(--rouge-vif)" data-v="0.3" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 12c0-.9.9-1.4 1.6-1 1 .6.9 2.2-.2 2.8-1.6.9-3.6-.2-3.8-2-.3-2.4 1.9-4.3 4.2-4 3 .4 4.7 3.4 4 6.2-.9 3.6-4.9 5.4-8.2 4.2-4.1-1.5-5.7-6.4-4.1-10.2"/></svg></span>
+    <span class="deco deco--g" style="--y:74%;--r:12deg;--c:var(--rouge-vif)" data-v="0.36" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 20.3S4.5 15.6 4.5 9.6A4.1 4.1 0 0 1 12 7.3a4.1 4.1 0 0 1 7.5 2.3c0 6-7.5 10.7-7.5 10.7z"/></svg></span>
+    <div class="wrap">
+      <div class="entete-section">
+        <p class="surtitre">Notre histoire</p>
+        <h2 id="titre-groupe">Trois amis, un <span class="eclat">voyage</span><span class="griffe griffe--titre" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4.5 10.5 8 12.4M6.6 4.6l2.5 3.6M12.6 3v4.4"/></svg></span></h2>
+      </div>
+      <div class="duo">
+        <div class="duo__texte texte-justifie">
+          <p class="chapo">Jesus’Trip, c’est d’abord l’histoire de trois amis, Luc, Gaël et Nathan, que la vie a réunis sur les routes des pèlerinages bien avant de les réunir sur une scène.</p>
+          <p>Leur amitié est née là où beaucoup de jeunes chrétiens se découvrent : au MEJ, dans les camps d’été, sur la colline de Taizé et, surtout, à Lourdes. Le nom, lui, est né d’une boutade. Luc rêvait de créer une agence de voyages pour emmener les jeunes en pèlerinage, et un ami lui a lancé « Jesus’Trip » pour rire. L’agence n’a jamais vu le jour, mais le nom est resté.</p>
+          <p>Au printemps 2014, à Verviers, les trois amis acceptent d’animer une veillée qui ne devait être qu’un « one-shot ». La soirée est si forte, pour le public comme pour eux, que les invitations affluent dès le lendemain. Suivent un premier album, <cite>Dance for God</cite>, puis des tournées qui les mènent de Bruxelles à Mons, d’Esneux à Maredsous, et jusqu’à la basilique Saint-Pie X de Lourdes.</p>
+          <p class="main">Le nom est né d’une boutade, le groupe d’une <span class="souligne-mot">veillée<svg class="souligne trace" viewBox="0 0 200 16" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path d="M3 11C40 5 92 3 140 6s48 3 57 1"/></svg></span>.</p>
+        </div>
+        <div class="collage">
+          <figure class="tirage tirage--a">
+            <img src="img/groupe.jpg" alt="Jesus’Trip sur scène pendant un temps de louange, l’écran affiche « Amen Alléluia »" width="1200" height="900" loading="lazy">
+            <figcaption>Un temps de louange, sous les lumières de Sound-Maker</figcaption>
+          </figure>
+          <figure class="tirage tirage--b">
+            <img src="img/verviers-2015.jpg" alt="Une église de Verviers pleine, les mains levées vers la scène baignée de lumière violette" width="800" height="600" loading="lazy">
+            <figcaption>Verviers, là où tout a commencé</figcaption>
+          </figure>
+          <figure class="tirage tirage--d">
+            <img src="img/lourdes-2016.jpg" alt="Jesus’Trip en concert dans la basilique Saint-Pie X de Lourdes, devant des centaines de pèlerins" width="1000" height="750" loading="lazy">
+            <figcaption>Lourdes, 2016 : la basilique Saint-Pie X</figcaption>
+          </figure>
+        </div>
+      </div>
+      <div class="valeurs">
+        <h3 class="valeurs__titre">Ce qui nous tient à cœur <span class="griffe griffe--coeur" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 20.3S4.5 15.6 4.5 9.6A4.1 4.1 0 0 1 12 7.3a4.1 4.1 0 0 1 7.5 2.3c0 6-7.5 10.7-7.5 10.7z"/></svg></span></h3>
+        <ul class="valeurs__liste">
+          <li class="valeur"><span class="valeur__ico"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M16 12a4 4 0 1 1-8 0 4 4 0 0 1 8 0z"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg></span><strong>Joie</strong><span>Celle du Christ ressuscité, qui se multiplie quand on la chante ensemble.</span></li>
+          <li class="valeur"><span class="valeur__ico"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><path d="M13 7a4 4 0 1 1-8 0 4 4 0 0 1 8 0z"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></span><strong>Fraternité</strong><span>Des soirées qui tissent des liens entre amis, en famille et entre générations.</span></li>
+          <li class="valeur"><span class="valeur__ico"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M13 4h3a2 2 0 0 1 2 2v14M2 20h3M13 20h9M10 12v.01M13 4.56v16.16a1 1 0 0 1-1.24.97L5 20V5.56a2 2 0 0 1 1.52-1.94l4-1A2 2 0 0 1 13 4.56z"/></svg></span><strong>Accueil</strong><span>Chacun est le bienvenu, tel qu’il est : croyant convaincu, curieux ou en recherche.</span></li>
+          <li class="valeur"><span class="valeur__ico"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.07-2.14-.22-4.05 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.15.43-2.29 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg></span><strong>Intériorité</strong><span>La fête mène quelque part : vers soi-même, vers les autres, vers Dieu.</span></li>
+          <li class="valeur"><span class="valeur__ico"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7M7.5 8a2.5 2.5 0 0 1 0-5C10 3 12 8 12 8s2-5 4.5-5a2.5 2.5 0 0 1 0 5"/></svg></span><strong>Gratuité</strong><span>Nos musiciens et notre manageuse sont bénévoles, sans cachet ni défraiement.</span></li>
+          <li class="valeur"><span class="valeur__ico"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M18 8A6 6 0 1 1 6 8a6 6 0 0 1 12 0z"/><path d="M15.48 12.89 17 22l-5-3-5 3 1.52-9.11"/></svg></span><strong>Exigence</strong><span>Chaque soirée est préparée avec soin, entourés de professionnels.</span></li>
+        </ul>
+      </div>
+    </div>
+    <svg class="sep sep--dechirure" style="--sep:#041F3E" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path class="sep__fibre" d="M0 22.9L0.0 22.9L19.0 28.0L36.4 24.4L55.8 21.2L74.0 24.6L96.7 18.8L111.5 18.2L134.5 23.0L145.2 25.5L170.6 23.0L190.4 19.5L200.7 23.5L211.6 21.3L225.5 20.9L242.9 26.1L266.4 28.4L286.7 29.1L307.3 28.9L321.7 33.5L347.6 30.7L369.0 24.2L382.6 22.7L393.8 25.9L410.2 25.1L426.4 24.8L449.9 14.9L463.3 22.7L480.8 23.2L497.1 15.2L517.2 22.2L531.5 16.5L546.9 25.0L569.0 17.9L582.9 17.9L593.9 24.0L606.7 21.5L623.9 17.4L645.6 15.2L665.9 13.2L682.6 12.4L696.9 17.9L719.8 10.2L744.0 8.3L760.3 13.9L780.5 7.6L806.4 10.1L820.5 16.2L835.8 13.1L846.9 12.1L866.3 14.8L885.9 16.9L903.1 22.7L920.9 19.2L944.7 15.1L957.2 21.2L980.3 14.2L993.3 18.1L1018.4 12.6L1043.6 19.1L1063.2 15.8L1074.9 13.2L1100.3 17.3L1121.6 19.8L1144.7 25.2L1159.4 22.7L1181.0 23.2L1194.6 28.1L1218.3 28.7L1232.7 31.1L1246.0 22.4L1260.3 25.5L1271.3 22.4L1287.2 25.0L1299.3 22.5L1323.5 27.1L1344.0 24.2L1363.4 19.5L1374.0 18.8L1398.5 26.2L1423.9 21.5L1440.0 22.0V60H0Z"/><path d="M0 26.8L0.0 26.8L6.3 30.0L12.6 30.6L19.0 31.9L27.7 33.0L36.4 33.3L46.1 30.7L55.8 29.5L64.9 31.9L74.0 28.6L81.6 29.0L89.1 24.7L96.7 28.0L101.6 22.3L106.6 24.9L111.5 25.5L123.0 26.4L134.5 30.2L139.8 28.3L145.2 35.0L157.9 33.1L170.6 28.9L177.2 29.8L183.8 27.7L190.4 25.8L193.9 27.6L197.3 28.8L200.7 28.9L206.2 26.4L211.6 26.2L218.6 28.8L225.5 29.1L231.3 30.1L237.1 30.8L242.9 31.8L254.7 31.6L266.4 35.0L276.5 36.8L286.7 36.6L293.5 35.2L300.4 37.8L307.3 34.9L312.1 35.5L316.9 39.3L321.7 42.3L334.7 37.9L347.6 35.5L354.7 32.9L361.9 32.0L369.0 32.0L375.8 32.7L382.6 31.1L386.3 28.0L390.1 31.2L393.8 34.4L402.0 31.3L410.2 32.7L415.6 32.8L421.0 33.5L426.4 30.3L434.2 30.0L442.1 23.4L449.9 22.5L456.6 24.0L463.3 28.0L469.1 31.1L474.9 26.6L480.8 29.1L489.0 23.8L497.1 20.2L503.8 21.9L510.5 23.7L517.2 28.4L524.4 26.6L531.5 25.8L536.6 27.0L541.7 26.9L546.9 30.0L554.2 30.4L561.6 28.3L569.0 22.5L576.0 23.0L582.9 24.6L586.6 29.1L590.2 28.5L593.9 29.9L600.3 31.0L606.7 25.6L615.3 28.5L623.9 21.6L631.1 22.9L638.4 23.2L645.6 21.0L655.7 21.1L665.9 19.5L671.5 20.3L677.0 17.4L682.6 17.2L689.8 24.1L696.9 27.3L708.4 20.7L719.8 15.2L727.8 17.3L735.9 12.5L744.0 12.0L752.1 16.7L760.3 22.0L767.0 18.2L773.8 13.4L780.5 13.7L793.4 12.6L806.4 17.7L811.1 21.1L815.8 20.5L820.5 25.3L825.6 21.6L830.7 23.3L835.8 21.1L841.3 18.7L846.9 20.6L853.4 19.9L859.8 18.4L866.3 20.2L872.8 21.3L879.3 24.8L885.9 22.3L894.5 24.2L903.1 29.6L909.0 26.2L915.0 27.1L920.9 26.3L932.8 20.8L944.7 21.7L951.0 24.0L957.2 27.6L968.7 25.3L980.3 23.3L986.8 22.4L993.3 23.2L1001.7 22.6L1010.0 18.7L1018.4 21.5L1026.8 23.9L1035.2 26.0L1043.6 23.2L1050.1 24.0L1056.7 20.6L1063.2 20.1L1067.1 23.1L1071.0 17.7L1074.9 17.6L1087.6 18.8L1100.3 22.8L1107.4 23.8L1114.5 26.2L1121.6 26.3L1133.2 29.5L1144.7 33.0L1149.6 32.1L1154.5 32.3L1159.4 28.5L1170.2 28.9L1181.0 29.9L1187.8 34.3L1194.6 34.8L1206.4 37.0L1218.3 33.6L1225.5 37.8L1232.7 40.0L1237.2 33.6L1241.6 30.7L1246.0 27.2L1253.2 33.4L1260.3 29.8L1265.8 28.9L1271.3 27.5L1279.2 27.8L1287.2 31.8L1291.2 31.9L1295.2 28.0L1299.3 26.5L1311.4 31.7L1323.5 36.0L1330.4 35.4L1337.2 29.4L1344.0 30.7L1350.5 30.3L1356.9 25.7L1363.4 25.9L1368.7 22.8L1374.0 23.2L1382.1 25.9L1390.3 28.4L1398.5 35.6L1411.2 32.9L1423.9 28.5L1432.0 26.1L1440.0 30.0V60H0Z"/></svg>
+  </section>
+
+  <!-- Le « & Co » (se termine par une aube) -->
+  <section class="section section--nuit section--aube" id="lourdes" aria-labelledby="titre-lourdes">
+    <span class="lueur lueur--g" style="--y:8%;--c:rgba(80,150,255,.28)" data-v="0.14" aria-hidden="true"></span>
+    <span class="lueur lueur--d" style="--y:46%;--c:rgba(232,52,66,.26)" data-v="0.2" aria-hidden="true"></span>
+    <span class="deco deco--g" style="--y:46%;--r:-14deg;--c:var(--ciel)" data-v="0.28" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2.5c.7 4.6 2.6 6.9 6.8 7.5-4.2.6-6.1 2.9-6.8 7.5-.7-4.6-2.6-6.9-6.8-7.5 4.2-.6 6.1-2.9 6.8-7.5zM19 16.5c.3 1.6 1 2.3 2.5 2.5-1.5.2-2.2.9-2.5 2.5-.3-1.6-1-2.3-2.5-2.5 1.5-.2 2.2-.9 2.5-2.5z"/></svg></span>
+    <span class="deco deco--d" style="--y:16%;--r:8deg;--c:var(--ciel)" data-v="0.22" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5.2 18.6c0-1.6 1.6-2.9 3.4-2.9 1.4 0 2.3.8 2.3 1.9 0 1.6-1.6 2.9-3.4 2.9-1.4 0-2.3-.8-2.3-1.9zM10.9 17.4V4.2c.8 2.4 5.6 3.2 5.6 7.6"/></svg></span>
+    <div class="wrap">
+      <div class="entete-section">
+        <p class="surtitre surtitre--ciel">Et le « &amp; Co » ?</p>
+        <h2 id="titre-lourdes">Une histoire née à <span class="eclat">Lourdes</span><span class="griffe griffe--titre" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4.5 10.5 8 12.4M6.6 4.6l2.5 3.6M12.6 3v4.4"/></svg></span></h2>
+      </div>
+      <div class="equation">
+        <figure class="equation__terme">
+          <img src="img/logo-jesustrip.png" alt="Jesus’Trip" width="446" height="150" loading="lazy">
+          <figcaption class="annot annot--terme"><svg class="fleche trace" viewBox="0 0 100 64" aria-hidden="true" focusable="false"><path d="M8 52C24 22 54 10 88 20"/><path d="M75 8.5l15 12-17.5 6.5"/></svg><span>les trois amis du début</span></figcaption>
+        </figure>
+        <span class="equation__signe" aria-hidden="true">+</span>
+        <figure class="equation__terme equation__terme--co">
+          <img src="img/logo-co.png" alt="&amp; Co" width="344" height="150" loading="lazy">
+          <figcaption class="annot annot--terme"><svg class="fleche trace" viewBox="0 0 100 64" aria-hidden="true" focusable="false"><path d="M8 52C24 22 54 10 88 20"/><path d="M75 8.5l15 12-17.5 6.5"/></svg><span>nos nouveaux compagnons de route, rejoints à Lourdes</span></figcaption>
+        </figure>
+        <span class="equation__signe equation__signe--egal" aria-hidden="true">=</span>
+        <p class="equation__total"><strong>5</strong><span>musiciens sur scène</span></p>
+      </div>
+      <div class="duo duo--lourdes">
+        <div class="lourdes__photos">
+          <figure class="tirage tirage--c">
+            <img src="img/lourdes-live.jpg" alt="Le groupe J’aime &amp; Co anime la messe d’ouverture du pèlerinage diocésain dans la basilique Saint-Pie X" width="1400" height="933" loading="lazy">
+            <figcaption>J’aime &amp; Co à Lourdes</figcaption>
+          </figure>
+          <p class="annot annot--oneshot" aria-hidden="true"><span>encore un one-shot… qui dure !</span><svg class="fleche trace" viewBox="0 0 100 64" aria-hidden="true" focusable="false"><path d="M8 52C24 22 54 10 88 20"/><path d="M75 8.5l15 12-17.5 6.5"/></svg></p>
+          <figure class="polaroid">
+            <img src="img/lourdes-selfie.jpg" alt="Luc, Joanna et Nathan devant la basilique de Lourdes, de nuit" width="800" height="1000" loading="lazy">
+            <figcaption>Luc, Joanna et Nathan à Lourdes</figcaption>
+          </figure>
+        </div>
+        <div class="duo__texte texte-justifie">
+          <p>Pendant des années, Jesus’Trip s’est conjugué à trois. Puis, en 2026, un appel arrive en urgence : il faut animer le pèlerinage du diocèse de Liège à Lourdes. Gaël ne peut pas être du voyage. Luc et Nathan font alors appel à deux amis qu’ils connaissent bien, Joanna Verwilghen et l’abbé Frédéric Kienen, pour former un groupe éphémère baptisé « J’aime &amp; Co ».</p>
+          <p>Encore une fois, ce devait être un one-shot. Mais à Lourdes, dès la messe d’ouverture dans la basilique Saint-Pie X, les liens se tissent, et la musique aussi. Au retour, une évidence : nous avons décidé de prolonger l’aventure ensemble. Jesus’Trip garde son nom, y ajoute le « &amp; Co » de Lourdes et compte désormais cinq musiciens sur scène.</p>
+          <p class="exergue">« Co » comme compagnie, comme compagnons de route : on ne marche jamais seul vers Dieu.</p>
+          <p class="main main--ciel">Une fois de plus, tout s’est joué à Lourdes.</p>
+        </div>
+      </div>
+    </div>
+    <div class="aube" aria-hidden="true"></div>
+  </section>
+
+  <!-- Une soirée (se termine par un égaliseur) -->
+  <section class="section section--ciel section--egaliseur" id="soiree" aria-labelledby="titre-soiree">
+    <span class="deco deco--g" style="--y:12%;--r:-10deg;--c:var(--marine)" data-v="0.26" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M15.8 12a3.8 3.8 0 1 1-7.6 0 3.8 3.8 0 0 1 7.6 0zM12 2.5v2.6M12 18.9v2.6M2.5 12h2.6M18.9 12h2.6M5.3 5.3l1.8 1.8M16.9 16.9l1.8 1.8M5.3 18.7l1.8-1.8M16.9 7.1l1.8-1.8"/></svg></span>
+    <span class="deco deco--d" style="--y:44%;--r:12deg;--c:var(--rouge-vif)" data-v="0.32" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3.4 18.6c0-1.4 1.4-2.5 3-2.5 1.2 0 2 .7 2 1.7 0 1.4-1.4 2.5-3 2.5-1.2 0-2-.7-2-1.7zM14.4 16.6c0-1.4 1.4-2.5 3-2.5 1.2 0 2 .7 2 1.7 0 1.4-1.4 2.5-3 2.5-1.2 0-2-.7-2-1.7zM8.4 17.6V6.4l11-2.6v11.6M8.4 9.8l11-2.6"/></svg></span>
+    <span class="deco deco--g" style="--y:66%;--r:8deg;--c:var(--rouge-vif)" data-v="0.36" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 20.3S4.5 15.6 4.5 9.6A4.1 4.1 0 0 1 12 7.3a4.1 4.1 0 0 1 7.5 2.3c0 6-7.5 10.7-7.5 10.7z"/></svg></span>
+    <span class="deco deco--d" style="--y:80%;--r:-10deg;--c:var(--marine)" data-v="0.28" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12.2 2.8c-.2 6.4.1 12.4-.3 18.6M6.6 8.3c3.8-.4 7.4-.2 11-.4"/></svg></span>
+    <div class="wrap">
+      <div class="entete-section">
+        <p class="surtitre">Une soirée avec nous</p>
+        <h2 id="titre-soiree">Jump, Sing &amp; <span class="eclat">Pray</span><span class="griffe griffe--titre" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4.5 10.5 8 12.4M6.6 4.6l2.5 3.6M12.6 3v4.4"/></svg></span></h2>
+        <p class="chapo">Ce que nous proposons n’est pas un concert : c’est un temps de louange et de témoignage. Nous voulons faire vivre à chacun l’expérience de la louange, mais aussi celle de la prière, avec autant de joie que de profondeur. Chaque soirée se déroule comme une vague.</p>
+      </div>
+      <div class="vague" aria-hidden="true">
+        <svg viewBox="0 0 1000 170" preserveAspectRatio="none" focusable="false">
+          <defs>
+            <linearGradient id="degrade-vague" x1="0" x2="1" y1="0" y2="0">
+              <stop offset="0" stop-color="#93B7D9"/>
+              <stop offset="1" stop-color="#06305F"/>
+            </linearGradient>
+          </defs>
+          <path d="M0 150C40 150 70 40 125 40S300 140 375 140 540 18 625 18 800 92 875 96 970 108 1000 112V170H0z" fill="#F3F7FB"/>
+          <path d="M0 150C40 150 70 40 125 40S300 140 375 140 540 18 625 18 800 92 875 96 970 108 1000 112" fill="none" stroke="url(#degrade-vague)" stroke-width="4" stroke-linecap="round"/>
+        </svg>
+        <span class="vague__point" style="--x:12.5%;--y:23.5%">1</span>
+        <span class="vague__point" style="--x:37.5%;--y:82.4%">2</span>
+        <span class="vague__point" style="--x:62.5%;--y:10.6%">3</span>
+        <span class="vague__point" style="--x:87.5%;--y:56.5%">4</span>
+        <span class="vague__note" style="--x:12.5%;--y:23.5%;--dx:30px;--dy:-30px">ça monte !</span>
+        <span class="vague__note" style="--x:37.5%;--y:82.4%;--dx:30px;--dy:-8px">silence et prière</span>
+        <span class="vague__note" style="--x:62.5%;--y:10.6%;--dx:28px;--dy:-40px">la joie éclate !</span>
+        <span class="vague__note" style="--x:87.5%;--y:56.5%;--dx:-40px;--dy:-52px">avec Marie</span>
+      </div>
+      <ol class="temps">
+        <li>
+          <img class="temps__photo" src="img/temps-1.jpg" alt="Des jeunes chantent à pleine voix au pied de la scène, à Battice" width="900" height="600" loading="lazy" style="object-position:28% 50%">
+          <h3>La vague monte</h3>
+          <p class="temps__sous">l’accueil</p>
+          <p>On commence fort : des chants entraînants mettent toute l’assemblée debout. Si chanter, c’est prier deux fois, et danser, prier quatre fois, nous vous ferons prier huit fois !</p>
+        </li>
+        <li>
+          <img class="temps__photo" src="img/temps-2.jpg" alt="Gaël à la guitare, seul dans un rai de lumière" width="900" height="600" loading="lazy">
+          <h3>La prière</h3>
+          <p class="temps__sous">la profondeur</p>
+          <p>La vague redescend, la lumière baisse, le silence s’installe : un temps d’intériorité et de prière, souvent porté par un témoignage.</p>
+        </li>
+        <li>
+          <img class="temps__photo" src="img/temps-3.jpg" alt="Pluie de confettis sous les projecteurs, au-dessus du public, à Esneux" width="900" height="600" loading="lazy">
+          <h3>La résurrection</h3>
+          <p class="temps__sous">la louange éclate</p>
+          <p>Après la prière, la vague remonte plus fort que jamais : une joie libératrice. Il n’y a pas de vraie joie sans ce passage par l’intériorité.</p>
+        </li>
+        <li>
+          <img class="temps__photo" src="img/temps-4.jpg" alt="Le groupe sur scène dans une lumière dorée, vu depuis le public, à Mons" width="900" height="600" loading="lazy">
+          <h3>Avec Marie</h3>
+          <p class="temps__sous">l’envoi</p>
+          <p>Nous terminons toujours par un chant à Marie : un clin d’œil à Lourdes, le lieu qui nous a tous réunis, et une manière de repartir en paix.</p>
+        </li>
+      </ol>
+      <figure class="citation">
+        <blockquote><p>« La prière est la source de ma joie. »</p></blockquote>
+        <figcaption>Luc Mathues, fondateur du groupe</figcaption>
+      </figure>
+    </div>
+    <div class="eq" aria-hidden="true"><span style="--h:0.31;--t:1.19s;--d:-0.55s"></span><span style="--h:0.49;--t:1.25s;--d:-0.10s"></span><span style="--h:0.36;--t:1.42s;--d:-0.39s"></span><span style="--h:0.50;--t:1.55s;--d:-0.71s"></span><span style="--h:0.77;--t:1.13s;--d:-0.96s"></span><span style="--h:0.59;--t:1.26s;--d:-1.30s"></span><span style="--h:0.75;--t:1.34s;--d:-1.01s"></span><span style="--h:0.61;--t:1.36s;--d:-0.89s"></span><span style="--h:0.68;--t:0.77s;--d:-1.30s"></span><span style="--h:0.72;--t:1.33s;--d:-1.32s"></span><span style="--h:0.76;--t:1.49s;--d:-0.59s"></span><span style="--h:0.74;--t:1.11s;--d:-1.40s"></span><span style="--h:0.73;--t:0.83s;--d:-0.20s"></span><span style="--h:0.46;--t:1.52s;--d:-0.65s"></span><span style="--h:0.57;--t:0.99s;--d:-0.76s"></span><span style="--h:0.48;--t:1.03s;--d:-0.88s"></span><span style="--h:0.56;--t:1.47s;--d:-1.02s"></span><span style="--h:0.70;--t:1.44s;--d:-1.49s"></span><span style="--h:0.66;--t:0.88s;--d:-1.29s"></span><span style="--h:0.81;--t:1.47s;--d:-0.85s"></span><span style="--h:0.79;--t:0.92s;--d:-1.25s"></span><span style="--h:0.80;--t:0.98s;--d:-0.10s"></span><span style="--h:0.95;--t:1.54s;--d:-0.13s"></span><span style="--h:0.97;--t:1.08s;--d:-0.23s"></span><span style="--h:0.81;--t:1.37s;--d:-1.31s"></span><span style="--h:0.73;--t:1.24s;--d:-0.07s"></span><span style="--h:0.94;--t:1.01s;--d:-1.32s"></span><span style="--h:0.99;--t:1.15s;--d:-1.50s"></span><span style="--h:0.71;--t:0.81s;--d:-0.90s"></span><span style="--h:0.56;--t:0.91s;--d:-0.61s"></span><span style="--h:0.70;--t:0.87s;--d:-0.06s"></span><span style="--h:0.74;--t:1.00s;--d:-1.44s"></span><span style="--h:0.71;--t:1.05s;--d:-0.69s"></span><span style="--h:0.57;--t:1.27s;--d:-0.89s"></span><span style="--h:0.58;--t:1.25s;--d:-1.41s"></span><span style="--h:0.58;--t:1.09s;--d:-1.08s"></span><span style="--h:0.53;--t:0.99s;--d:-1.47s"></span><span style="--h:0.67;--t:1.19s;--d:-0.02s"></span><span style="--h:0.68;--t:1.21s;--d:-0.03s"></span><span style="--h:0.80;--t:1.26s;--d:-0.09s"></span><span style="--h:0.84;--t:1.12s;--d:-1.02s"></span><span style="--h:0.77;--t:1.32s;--d:-1.11s"></span><span style="--h:0.66;--t:0.80s;--d:-1.01s"></span><span style="--h:0.96;--t:0.95s;--d:-0.68s"></span><span style="--h:0.80;--t:1.01s;--d:-0.55s"></span><span style="--h:0.65;--t:1.05s;--d:-0.89s"></span><span style="--h:0.58;--t:1.05s;--d:-1.16s"></span><span style="--h:0.42;--t:1.21s;--d:-1.10s"></span><span style="--h:0.45;--t:0.93s;--d:-1.21s"></span><span style="--h:0.37;--t:0.90s;--d:-0.65s"></span><span style="--h:0.49;--t:0.83s;--d:-0.48s"></span><span style="--h:0.34;--t:1.42s;--d:-0.66s"></span><span style="--h:0.52;--t:0.89s;--d:-0.51s"></span><span style="--h:0.47;--t:1.46s;--d:-0.68s"></span><span style="--h:0.35;--t:0.85s;--d:-0.79s"></span><span style="--h:0.38;--t:1.40s;--d:-1.26s"></span></div>
+  </section>
+
+  <!-- Musique (se termine par une arche de scène) -->
+  <section class="section section--blanc section--arche" id="musique" aria-labelledby="titre-musique">
+    <span class="deco deco--g" style="--y:10%;--r:-12deg;--c:var(--rouge-vif)" data-v="0.26" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5.2 18.6c0-1.6 1.6-2.9 3.4-2.9 1.4 0 2.3.8 2.3 1.9 0 1.6-1.6 2.9-3.4 2.9-1.4 0-2.3-.8-2.3-1.9zM10.9 17.4V4.2c.8 2.4 5.6 3.2 5.6 7.6"/></svg></span>
+    <span class="deco deco--d" style="--y:30%;--r:10deg;--c:var(--marine)" data-v="0.3" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3.4 18.6c0-1.4 1.4-2.5 3-2.5 1.2 0 2 .7 2 1.7 0 1.4-1.4 2.5-3 2.5-1.2 0-2-.7-2-1.7zM14.4 16.6c0-1.4 1.4-2.5 3-2.5 1.2 0 2 .7 2 1.7 0 1.4-1.4 2.5-3 2.5-1.2 0-2-.7-2-1.7zM8.4 17.6V6.4l11-2.6v11.6M8.4 9.8l11-2.6"/></svg></span>
+    <span class="deco deco--g" style="--y:70%;--r:8deg;--c:var(--marine)" data-v="0.34" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4.5 10.5 8 12.4M6.6 4.6l2.5 3.6M12.6 3v4.4"/></svg></span>
+    <div class="wrap">
+      <div class="entete-section">
+        <p class="surtitre">Notre répertoire</p>
+        <h2 id="titre-musique">Nos chants, nos <span class="eclat">compositions</span><span class="griffe griffe--titre" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4.5 10.5 8 12.4M6.6 4.6l2.5 3.6M12.6 3v4.4"/></svg></span></h2>
+        <p class="chapo">Le cœur de Jesus’Trip, ce sont ses propres chansons : une trentaine de compositions, écrites pour la plupart par Gaël, quelques-unes par Luc, et arrangées à trois avec Nathan.</p>
+      </div>
+      <div class="musique">
+        <div class="musique__texte">
+          <p>Quelques reprises s’y glissent aussi. Côté sonorités, on passe volontiers du latino à l’électro, avec un détour par la country. Les thèmes sont ceux qui nous font vivre : la joie, la résurrection, la miséricorde, la rencontre personnelle avec Dieu, les Béatitudes et la confiance en Marie. Avec le « &amp; Co », la basse, la clarinette et une voix féminine viennent enrichir les arrangements.</p>
+          <div class="livret">
+            <img class="livret__couverture" src="img/livret-2017.jpg" alt="Couverture du livret de partitions Jesus’Trip 2017" width="300" height="424" loading="lazy">
+            <div class="livret__infos">
+              <p class="livret__sur">Chantez-les chez vous</p>
+              <h3>Le livret de partitions</h3>
+              <p>Pour les animateurs, les chorales et les groupes de jeunes : mélodies, paroles et accords de quatre de nos chants (Alléluia, il est ressuscité !, Génération François 1er, Je te salue, Marie et Louez Dieu).</p>
+              <a class="btn btn--marine btn--petit" href="livret-partitions-jesustrip-2017.pdf" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4M10 9H8M16 13H8M16 17H8"/></svg> Télécharger le livret (PDF)</a>
+            </div>
+          </div>
+          <p class="musique__liens">Notre premier album, <cite>Dance for God</cite> (2015), reste en écoute sur <a href="https://open.spotify.com/artist/0YSleEpy61th1Lasah1Fnt" target="_blank" rel="noopener">Spotify</a>, <a href="https://www.deezer.com/fr/artist/9116278" target="_blank" rel="noopener">Deezer</a> et <a href="https://music.apple.com/be/artist/jesustrip/1046558283" target="_blank" rel="noopener">Apple Music</a>.</p>
+        </div>
+        <figure class="setlist">
+          <figcaption class="setlist__titre">Au programme le 16 janvier</figcaption>
+          <ul>
+            <li>Génération François 1er</li>
+            <li>Louez Dieu <span class="note-main">le clip !</span></li>
+            <li>Alléluia, il est ressuscité !</li>
+            <li>Tu as touché mon cœur</li>
+            <li>Par toutes les nations</li>
+            <li>Il est mon Dieu</li>
+            <li>Pour le chanter</li>
+            <li>Notre Dieu miséricordieux</li>
+            <li>Heureux les pauvres de cœur</li>
+            <li>Revivre de ton amour</li>
+            <li>Réveillez nos cœurs <span class="griffe griffe--etoile" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2.5c.7 4.6 2.6 6.9 6.8 7.5-4.2.6-6.1 2.9-6.8 7.5-.7-4.6-2.6-6.9-6.8-7.5 4.2-.6 6.1-2.9 6.8-7.5zM19 16.5c.3 1.6 1 2.3 2.5 2.5-1.5.2-2.2.9-2.5 2.5-.3-1.6-1-2.3-2.5-2.5 1.5-.2 2.2-.9 2.5-2.5z"/></svg></span></li>
+            <li>En couleurs <span class="griffe griffe--etoile" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2.5c.7 4.6 2.6 6.9 6.8 7.5-4.2.6-6.1 2.9-6.8 7.5-.7-4.6-2.6-6.9-6.8-7.5 4.2-.6 6.1-2.9 6.8-7.5zM19 16.5c.3 1.6 1 2.3 2.5 2.5-1.5.2-2.2.9-2.5 2.5-.3-1.6-1-2.3-2.5-2.5 1.5-.2 2.2-.9 2.5-2.5z"/></svg></span></li>
+            <li>Country Dieu</li>
+            <li>Je te salue, Marie <span class="griffe griffe--coeur" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 20.3S4.5 15.6 4.5 9.6A4.1 4.1 0 0 1 12 7.3a4.1 4.1 0 0 1 7.5 2.3c0 6-7.5 10.7-7.5 10.7z"/></svg></span></li>
+          </ul>
+          <p class="setlist__note">… et quelques surprises !</p>
+        </figure>
+      </div>
+      <div class="videos-bloc">
+        <h3 class="videos__titre">En vidéo</h3>
+        <p class="annot annot--video" aria-hidden="true"><span>à voir absolument !</span><svg class="fleche trace" viewBox="0 0 100 64" aria-hidden="true" focusable="false"><path d="M8 52C24 22 54 10 88 20"/><path d="M75 8.5l15 12-17.5 6.5"/></svg></p>
+        <ul class="videos">
+          <li>
+            <a class="video" href="https://www.youtube.com/watch?v=F9vUaTRw-L0" target="_blank" rel="noopener">
+              <span class="video__visuel"><img src="img/video-eveque.jpg" alt="" width="1000" height="625" loading="lazy"><span class="video__play" aria-hidden="true"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 4.5v15l12.5-7.5z"/></svg></span></span>
+              <span class="video__texte"><strong>L’évêque de Liège chante « Resucito » avec nous</strong><span>sur notre chaîne YouTube</span><span class="sr"> (nouvel onglet)</span></span>
+            </a>
+          </li>
+          <li>
+            <a class="video" href="https://www.youtube.com/watch?v=9ONzL5WnU8o" target="_blank" rel="noopener">
+              <span class="video__visuel"><img src="img/inviter.jpg" alt="" width="1400" height="788" loading="lazy"><span class="video__play" aria-hidden="true"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 4.5v15l12.5-7.5z"/></svg></span></span>
+              <span class="video__texte"><strong>Louez Dieu</strong><span>notre clip officiel</span><span class="sr"> (YouTube, nouvel onglet)</span></span>
+            </a>
+          </li>
+          <li>
+            <a class="video video--ticket" href="https://www.youtube.com/watch?v=CsdWlnWYvxM&amp;t=2450s" target="_blank" rel="noopener">
+              <span class="video__visuel"><span class="ticket"><span class="ticket__sur">En concert</span><span class="ticket__lieu">Lourdes</span><span class="ticket__date">21 août 2019</span></span><span class="video__play" aria-hidden="true"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 4.5v15l12.5-7.5z"/></svg></span></span>
+              <span class="video__texte"><strong>Le résumé de notre concert à Lourdes</strong><span>une vidéo de Jonas DLM</span><span class="sr"> (YouTube, nouvel onglet)</span></span>
+            </a>
+          </li>
+          <li>
+            <a class="video video--marie" href="https://www.youtube.com/watch?v=CWqWVxAhsUs" target="_blank" rel="noopener">
+              <span class="video__visuel"><span class="marie"><span class="marie__etoile"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2.5c.7 4.6 2.6 6.9 6.8 7.5-4.2.6-6.1 2.9-6.8 7.5-.7-4.6-2.6-6.9-6.8-7.5 4.2-.6 6.1-2.9 6.8-7.5zM19 16.5c.3 1.6 1 2.3 2.5 2.5-1.5.2-2.2.9-2.5 2.5-.3-1.6-1-2.3-2.5-2.5 1.5-.2 2.2-.9 2.5-2.5z"/></svg></span><span class="marie__titre">Je te salue, Marie</span></span><span class="video__play" aria-hidden="true"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 4.5v15l12.5-7.5z"/></svg></span></span>
+              <span class="video__texte"><strong>« Je te salue, Marie » en concert</strong><span>une vidéo de Patrick Cannard</span><span class="sr"> (YouTube, nouvel onglet)</span></span>
+            </a>
+          </li>
+        </ul>
+        <p class="videos__suite">Toutes nos vidéos sont sur notre <a href="https://www.youtube.com/@jesustrip3223" target="_blank" rel="noopener">chaîne YouTube</a>.</p>
+      </div>
+    </div>
+    <svg class="sep sep--arche" style="--sep:#06305F" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path class="sep__echo" d="M-20 120C300 -10 1140 -10 1460 120Z"/><path d="M0 120C340 18 1100 18 1440 120Z"/></svg>
+  </section>
+
+  <!-- L'équipe (sous les projecteurs, se termine en bulles) -->
+  <section class="section section--marine section--bulles" id="equipe" aria-labelledby="titre-equipe">
+    <div class="faisceaux faisceaux--equipe" aria-hidden="true"><span></span><span></span><span></span></div>
+    <span class="deco deco--g" style="--y:30%;--r:-12deg;--c:var(--ciel)" data-v="0.26" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2.5c.7 4.6 2.6 6.9 6.8 7.5-4.2.6-6.1 2.9-6.8 7.5-.7-4.6-2.6-6.9-6.8-7.5 4.2-.6 6.1-2.9 6.8-7.5zM19 16.5c.3 1.6 1 2.3 2.5 2.5-1.5.2-2.2.9-2.5 2.5-.3-1.6-1-2.3-2.5-2.5 1.5-.2 2.2-.9 2.5-2.5z"/></svg></span>
+    <span class="deco deco--d" style="--y:56%;--r:10deg;--c:#FF8C95" data-v="0.3" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 20.3S4.5 15.6 4.5 9.6A4.1 4.1 0 0 1 12 7.3a4.1 4.1 0 0 1 7.5 2.3c0 6-7.5 10.7-7.5 10.7z"/></svg></span>
+    <div class="wrap">
+      <div class="entete-section">
+        <p class="surtitre surtitre--ciel">L’équipe</p>
+        <h2 class="titre-barre" id="titre-equipe">Sur scène et en <span class="eclat">coulisse</span><span class="griffe griffe--titre" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4.5 10.5 8 12.4M6.6 4.6l2.5 3.6M12.6 3v4.4"/></svg></span></h2>
+        <p class="chapo">Jesus’Trip &amp; Co, ce sont 12 personnes : cinq musiciens et une manageuse, tous bénévoles, notre équipe technique et les professionnels de Sound-Maker. Des laïcs et un prêtre, des amis de longue date et de nouveaux compagnons de route.</p>
+      </div>
+      <h3 class="filet">Sur scène</h3>
+      <div class="formation">
+        <div class="formation__groupe">
+          <span class="pastille pastille--ciel" aria-hidden="true">
+            <svg viewBox="0 0 100 100" focusable="false"><path id="cercle-jt" d="M50 50m-38 0a38 38 0 1 1 76 0a38 38 0 1 1-76 0" fill="none"/><text><textPath href="#cercle-jt" textLength="232" lengthAdjust="spacing">JESUS’TRIP • LES TROIS AMIS • </textPath></text></svg>
+            <span class="pastille__coeur"><small>depuis</small><b>2014</b></span>
+          </span>
+          <div class="formation__titre">
+            <img src="img/logo-jesustrip.png" alt="Jesus’Trip" width="446" height="150">
+            <svg class="souligne trace" viewBox="0 0 200 16" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path d="M3 11C40 5 92 3 140 6s48 3 57 1"/></svg>
+            <p class="formation__sous">les trois amis du début</p>
+          </div>
+          <ul class="membres">
+            <li class="membre">
+              <div class="membre__rond"><img src="img/rond-luc.jpg" alt="Luc Mathues, éclatant de rire" width="560" height="560" loading="lazy"><span class="etiquette etiquette--rond" aria-hidden="true">le fondateur !</span></div>
+              <h4>Luc Mathues</h4>
+              <p class="membre__role">Animation et chant · fondateur</p>
+              <p class="membre__bio">Il a donné son nom au groupe et en tient la barre. Tout a basculé à quinze ans, à Taizé ; le MEJ lui a donné le goût de l’engagement. Sur scène, il anime, chante et embarque la salle.</p>
+            </li>
+            <li class="membre">
+              <div class="membre__rond"><img src="img/rond-gael.jpg" alt="Gaël Haine, guitare en main, devant son micro" width="560" height="560" loading="lazy"><span class="etiquette etiquette--rond" aria-hidden="true">la plume !</span></div>
+              <h4>Gaël Haine</h4>
+              <p class="membre__role">Guitare, chant et composition</p>
+              <p class="membre__bio">La plume du groupe : il a écrit la plupart des chansons. Les rencontres du MEJ, puis Taizé, vécu comme un électrochoc, ont tout changé pour lui.</p>
+            </li>
+            <li class="membre">
+              <div class="membre__rond"><img src="img/rond-nathan.jpg" alt="Nathan Lamberts, chapeau de paille et bretelles" width="560" height="560" loading="lazy"></div>
+              <h4>Nathan Lamberts</h4>
+              <p class="membre__role">Claviers</p>
+              <p class="membre__bio">Il tient les claviers et cosigne tous les arrangements. C’est à Lourdes qu’il a rencontré Gaël ; il sera plus tard responsable de camps au MEJ.</p>
+            </li>
+          </ul>
+        </div>
+        <div class="formation__groupe formation__groupe--co">
+          <span class="pastille pastille--rouge" aria-hidden="true">
+            <svg viewBox="0 0 100 100" focusable="false"><path id="cercle-co" d="M50 50m-38 0a38 38 0 1 1 76 0a38 38 0 1 1-76 0" fill="none"/><text><textPath href="#cercle-co" textLength="232" lengthAdjust="spacing">&amp; CO • COMPAGNONS DE ROUTE • </textPath></text></svg>
+            <span class="pastille__coeur"><small>Lourdes</small><b>2026</b></span>
+          </span>
+          <div class="formation__titre">
+            <img src="img/logo-co.png" alt="&amp; Co" width="344" height="150">
+            <svg class="souligne trace" viewBox="0 0 200 16" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path d="M3 11C40 5 92 3 140 6s48 3 57 1"/></svg>
+            <p class="formation__sous">nos nouveaux compagnons de route, rejoints à Lourdes</p>
+          </div>
+          <ul class="membres">
+            <li class="membre membre--co">
+              <div class="membre__rond"><img src="img/rond-joanna.jpg" alt="Joanna Verwilghen, souriante, lunettes de soleil" width="560" height="560" loading="lazy"></div>
+              <h4>Joanna Verwilghen</h4>
+              <p class="membre__role">Chant</p>
+              <p class="membre__bio">Benjamine de la scène et coprésidente du MEJ. Appelée en renfort pour Lourdes, elle est restée : les refrains se chantent désormais à voix mêlées.</p>
+            </li>
+            <li class="membre membre--co">
+              <div class="membre__rond"><img src="img/rond-fred.jpg" alt="L’abbé Frédéric Kienen, les deux pouces levés" width="560" height="560" loading="lazy"><span class="etiquette etiquette--rond etiquette--rose" aria-hidden="true">basse &amp; clarinette !</span></div>
+              <h4>Abbé Frédéric Kienen</h4>
+              <p class="membre__role">Basse et clarinette</p>
+              <p class="membre__bio">Prêtre du diocèse de Liège et bassiste de longue date, il a lui aussi rejoint l’aventure à Lourdes. Chez nous, laïcs et prêtre louent Dieu d’une même voix.</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <h3 class="filet">En coulisse</h3>
+      <div class="coulisse">
+        <article class="membre">
+          <div class="membre__rond"><img src="img/rond-manon.jpg" alt="Manon Franssen, tout sourire" width="560" height="560" loading="lazy"><span class="etiquette etiquette--rond" aria-hidden="true">tient l’agenda !</span></div>
+          <h4>Manon Franssen</h4>
+          <p class="membre__role">Manageuse</p>
+          <p class="membre__bio">Coprésidente du MEJ aux côtés de Joanna, elle tient l’agenda et fait le lien avec les organisateurs, du premier coup de fil au dernier accord.</p>
+        </article>
+        <article class="membre">
+          <div class="membre__rond"><img src="img/rond-anais-quentin.jpg" alt="Anaïs et Quentin, tout sourire, elle sur son dos" width="560" height="560" loading="lazy"><span class="etiquette etiquette--rond" aria-hidden="true">la technique !</span></div>
+          <h4>Anaïs et Quentin</h4>
+          <p class="membre__role">Équipe technique</p>
+          <p class="membre__bio">Ils accompagnent le groupe d’une soirée à l’autre, en lien avec Sound-Maker, pour que la technique serve toujours la louange.</p>
+        </article>
+        <article class="soundmaker">
+          <img class="soundmaker__photo" src="img/coulisse-luma.jpg" alt="De dos, à la régie face à la scène illuminée d’une église : un technicien de Sound-Maker et un membre de LuMa Production" width="750" height="1000" loading="lazy">
+          <div class="soundmaker__texte">
+            <div class="soundmaker__bloc">
+              <h4 class="sr">Sound-Maker</h4>
+              <a class="soundmaker__lien" href="https://www.soundmaker.be/" target="_blank" rel="noopener"><img class="soundmaker__logo" src="img/soundmaker-blanc.png" alt="Sound-Maker, sonorisation et éclairage : voir leur site (nouvel onglet)" width="640" height="202" loading="lazy"></a>
+              <p class="membre__role">Notre équipe technique depuis le début · Verviers</p>
+              <p>À chaque soirée depuis nos débuts : transport, montage, son, lumière et régie vidéo, de la petite église de village à la grande nef. Leur savoir-faire fait de chaque temps de louange un vrai concert.</p>
+            </div>
+            <div class="soundmaker__bloc">
+              <h4 class="sr">LuMa Production</h4>
+              <img class="soundmaker__logo soundmaker__logo--luma" src="img/luma-clair.png" alt="LuMa Production" width="328" height="160" loading="lazy">
+              <p class="membre__role">Producteur du groupe</p>
+              <p>LuMa Production produit Jesus’Trip &amp; Co : elle organise les concerts et assure la gestion du groupe.</p>
+            </div>
+          </div>
+          <p class="annot annot--regie" aria-hidden="true"><span>les deux t-shirts !</span><svg class="fleche trace" viewBox="0 0 100 64" aria-hidden="true" focusable="false"><path d="M8 52C24 22 54 10 88 20"/><path d="M75 8.5l15 12-17.5 6.5"/></svg></p>
+        </article>
+      </div>
+    </div>
+    <svg class="sep sep--bulles" style="--sep:#F3F7FB" viewBox="0 0 1440 120" preserveAspectRatio="xMidYMax slice" aria-hidden="true" focusable="false"><circle cx="-40" cy="109" r="59"/><circle cx="44" cy="122" r="72"/><circle cx="133" cy="73" r="35"/><circle cx="222" cy="117" r="60"/><circle cx="279" cy="80" r="53"/><circle cx="353" cy="74" r="57"/><circle cx="413" cy="103" r="45"/><circle cx="496" cy="93" r="40"/><circle cx="554" cy="81" r="59"/><circle cx="606" cy="94" r="69"/><circle cx="666" cy="129" r="73"/><circle cx="730" cy="113" r="72"/><circle cx="809" cy="101" r="42"/><circle cx="889" cy="130" r="73"/><circle cx="953" cy="72" r="48"/><circle cx="1010" cy="66" r="37"/><circle cx="1086" cy="81" r="34"/><circle cx="1152" cy="100" r="46"/><circle cx="1223" cy="85" r="47"/><circle cx="1303" cy="97" r="36"/><circle cx="1356" cy="119" r="64"/><circle cx="1409" cy="98" r="66"/><circle cx="1484" cy="53" r="34"/><circle class="sep__bulle" cx="1321" cy="8" r="6.8"/><circle class="sep__bulle" cx="1287" cy="21" r="4.7"/><circle class="sep__bulle" cx="528" cy="13" r="6.9"/><circle class="sep__bulle" cx="203" cy="17" r="7.0"/><circle class="sep__bulle" cx="1195" cy="5" r="7.7"/><circle class="sep__bulle" cx="180" cy="10" r="6.1"/><rect x="-60" y="74" width="1560" height="60"/></svg>
+  </section>
+
+  <!-- Témoignages (fondu vers la presse) -->
+  <section class="section section--glace section--fondu-blanc" id="temoignages" aria-labelledby="titre-temoignages">
+    <span class="deco deco--g" style="--y:20%;--r:-10deg;--c:var(--rouge-vif)" data-v="0.26" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 20.3S4.5 15.6 4.5 9.6A4.1 4.1 0 0 1 12 7.3a4.1 4.1 0 0 1 7.5 2.3c0 6-7.5 10.7-7.5 10.7z"/></svg></span>
+    <span class="deco deco--d" style="--y:48%;--r:14deg;--c:var(--marine)" data-v="0.3" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2.5c.7 4.6 2.6 6.9 6.8 7.5-4.2.6-6.1 2.9-6.8 7.5-.7-4.6-2.6-6.9-6.8-7.5 4.2-.6 6.1-2.9 6.8-7.5zM19 16.5c.3 1.6 1 2.3 2.5 2.5-1.5.2-2.2.9-2.5 2.5-.3-1.6-1-2.3-2.5-2.5 1.5-.2 2.2-.9 2.5-2.5z"/></svg></span>
+    <div class="wrap">
+      <div class="entete-section">
+        <p class="surtitre">Témoignages</p>
+        <h2 id="titre-temoignages">Ils l’ont <span class="eclat">vécu</span><span class="griffe griffe--titre" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4.5 10.5 8 12.4M6.6 4.6l2.5 3.6M12.6 3v4.4"/></svg></span></h2>
+        <p class="chapo">Participants, élèves, organisateurs : quelques mots reçus au fil des soirées.</p>
+        <p class="note-main note-main--merci" aria-hidden="true">merci pour vos mots ! <span class="griffe griffe--coeur"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 20.3S4.5 15.6 4.5 9.6A4.1 4.1 0 0 1 12 7.3a4.1 4.1 0 0 1 7.5 2.3c0 6-7.5 10.7-7.5 10.7z"/></svg></span></p>
+      </div>
+      <div class="avis">
+        <figure class="avi avi--blanc"><blockquote><p>« L’ambiance que vous avez donnée à ce temps de louange était incroyable ! Merci, et franchement, vous assurez ! »</p></blockquote><figcaption><strong>Allan</strong> 19 ans, Liège</figcaption></figure>
+        <figure class="avi avi--marine"><blockquote><p>« Au-delà de la qualité de votre animation, il y a votre témoignage, qui nous a profondément touchés. Bravo à toute l’équipe ! »</p></blockquote><figcaption><strong>Myriam</strong> jeune adulte, Verviers</figcaption></figure>
+        <figure class="avi avi--ciel avi--grand"><blockquote><p>« Je ne savais pas du tout à quoi m’attendre, et je ne fus pas déçu ! La musique fut tout simplement magnifique. Invitez-les dans votre paroisse : vous ne le regretterez pas ! »</p></blockquote><figcaption><strong>Bastien</strong> 20 ans, Nivelles</figcaption></figure>
+        <figure class="avi avi--blanc avi--scotch"><blockquote><p>« J’ai eu les larmes aux yeux lors du moment de prière, mais très vite la joie est revenue. Tout sentait l’improvisation, mais j’ai remarqué tout le travail derrière. »</p></blockquote><figcaption><strong>Serge</strong> 60 ans, Verviers</figcaption></figure>
+        <figure class="avi avi--rouge"><blockquote><p>« Nous avons passé pendant cette soirée un chouette moment de prière avec des super musiciens et une ambiance de fou. Tout le collège était rassemblé pour chanter, danser et louer Dieu tous ensemble. »</p></blockquote><figcaption><strong>Collège de Maredsous</strong> après une soirée au collège</figcaption></figure>
+        <figure class="avi avi--blanc avi--grand"><blockquote><p>« Le professionnalisme des jeunes a marqué les esprits. Chacun a pu apprécier leur témoignage vivant, rempli d’enthousiasme et de vérité. »</p></blockquote><figcaption><strong>Jeunes Cathos Liège</strong> après le Ressucito Day à Verviers</figcaption></figure>
+        <div class="avi avi--vous">
+          <p class="avi__question">Et vous, vous l’avez vécu ?</p>
+          <p>Une soirée, un chant, un moment de prière qui vous a marqué ? Racontez-le-nous : avec votre accord, votre témoignage pourra rejoindre ce mur.</p>
+          <button class="btn btn--rouge btn--petit" type="button" id="temoin-ouvrir" aria-expanded="false" aria-controls="temoin"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 20h9"/><path d="M16.38 3.62a1 1 0 0 1 3 3L7.37 18.64a2 2 0 0 1-.86.5l-2.87.84a.5.5 0 0 1-.62-.62l.84-2.87a2 2 0 0 1 .5-.86z"/></svg> Écrire mon témoignage</button>
+        </div>
+      </div>
+      <div class="temoin" id="temoin" hidden>
+        <form class="temoin__form" id="temoin-form" novalidate>
+          <div class="temoin__entete">
+            <h3>Votre témoignage</h3>
+            <p>Quelques lignes suffisent. Le formulaire prépare un e-mail adressé à Luc, que vous n’avez plus qu’à envoyer.</p>
+          </div>
+          <div class="champs">
+            <label class="champ"><span>Prénom</span><input type="text" name="prenom" autocomplete="given-name" required></label>
+            <label class="champ"><span>Âge <em>facultatif</em></span><input type="text" name="age" inputmode="numeric" maxlength="3"></label>
+            <label class="champ"><span>Ville ou paroisse <em>facultatif</em></span><input type="text" name="ville" autocomplete="address-level2"></label>
+            <label class="champ champ--large"><span>Où nous avez-vous vus ? <em>facultatif</em></span><input type="text" name="ou" placeholder="Par exemple : à Verviers, au Ressucito Day"></label>
+            <label class="champ champ--large"><span>Votre témoignage</span><textarea name="texte" rows="5" required></textarea></label>
+          </div>
+          <label class="accord"><input type="checkbox" name="accord"><span>J’accepte que ce témoignage soit publié sur le site de Jesus’Trip &amp; Co, avec mon prénom, mon âge et ma ville.</span></label>
+          <p class="temoin__erreur" id="temoin-erreur" role="alert" hidden></p>
+          <div class="temoin__actions">
+            <button class="btn btn--rouge" type="submit"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M14.54 21.69a.5.5 0 0 0 .94-.03l6.5-19a.5.5 0 0 0-.64-.63l-19 6.5a.5.5 0 0 0-.02.93l7.93 3.18a2 2 0 0 1 1.11 1.11z"/><path d="m21.85 2.15-10.94 10.94"/></svg> Préparer l’e-mail</button>
+            <button class="btn btn--contour-marine" type="button" id="temoin-fermer">Annuler</button>
+          </div>
+          <div class="temoin__suite" id="temoin-suite" hidden>
+            <p><strong>Votre messagerie s’ouvre avec le message prêt à partir.</strong> Rien ne s’ouvre ? Copiez votre témoignage et envoyez-le à <span class="temoin__adresse">luc@mathues.pro</span>.</p>
+            <button class="copier" type="button" id="temoin-copier"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect width="14" height="14" x="8" y="8" rx="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg><span class="copier__etat">Copier mon témoignage</span></button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Dans la presse -->
+  <section class="section section--blanc section--presse" id="presse" aria-labelledby="titre-presse">
+    <div class="ornement" aria-hidden="true"><span></span><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12.2 2.8c-.2 6.4.1 12.4-.3 18.6M6.6 8.3c3.8-.4 7.4-.2 11-.4"/></svg><span></span></div>
+    <span class="deco deco--g" style="--y:34%;--r:-8deg;--c:var(--marine)" data-v="0.24" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 12c0-.9.9-1.4 1.6-1 1 .6.9 2.2-.2 2.8-1.6.9-3.6-.2-3.8-2-.3-2.4 1.9-4.3 4.2-4 3 .4 4.7 3.4 4 6.2-.9 3.6-4.9 5.4-8.2 4.2-4.1-1.5-5.7-6.4-4.1-10.2"/></svg></span>
+    <span class="deco deco--d" style="--y:22%;--r:12deg;--c:var(--rouge-vif)" data-v="0.3" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4.5 10.5 8 12.4M6.6 4.6l2.5 3.6M12.6 3v4.4"/></svg></span>
+    <span class="deco deco--d" style="--y:66%;--r:-8deg;--c:var(--marine)" data-v="0.34" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5.2 18.6c0-1.6 1.6-2.9 3.4-2.9 1.4 0 2.3.8 2.3 1.9 0 1.6-1.6 2.9-3.4 2.9-1.4 0-2.3-.8-2.3-1.9zM10.9 17.4V4.2c.8 2.4 5.6 3.2 5.6 7.6"/></svg></span>
+    <span class="deco deco--g" style="--y:78%;--r:10deg;--c:var(--rouge-vif)" data-v="0.28" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2.5c.7 4.6 2.6 6.9 6.8 7.5-4.2.6-6.1 2.9-6.8 7.5-.7-4.6-2.6-6.9-6.8-7.5 4.2-.6 6.1-2.9 6.8-7.5zM19 16.5c.3 1.6 1 2.3 2.5 2.5-1.5.2-2.2.9-2.5 2.5-.3-1.6-1-2.3-2.5-2.5 1.5-.2 2.2-.9 2.5-2.5z"/></svg></span>
+    <div class="wrap">
+      <div class="entete-section">
+        <p class="surtitre">Dans la presse</p>
+        <h2 id="titre-presse">Ils parlent <span class="eclat">de nous</span><span class="griffe griffe--titre" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4.5 10.5 8 12.4M6.6 4.6l2.5 3.6M12.6 3v4.4"/></svg></span></h2>
+        <p class="chapo">Cathobel, L’Avenir, le collège de Maredsous : quelques articles parus depuis nos débuts.</p>
+      </div>
+      <div class="coupures-scene">
+        <p class="annot annot--battice" aria-hidden="true"><span>déjà à Battice en 2015 !</span><svg class="fleche trace" viewBox="0 0 100 64" aria-hidden="true" focusable="false"><path d="M8 52C24 22 54 10 88 20"/><path d="M75 8.5l15 12-17.5 6.5"/></svg></p>
+        <ul class="coupures">
+          <li class="coupure coupure--une"><a href="https://www.cathobel.be/2015/09/pop-louange-a-battice-avec-jesustrip/" target="_blank" rel="noopener"><span class="coupure__tete"><span class="coupure__media">Cathobel</span><span class="coupure__date">septembre 2015</span></span><span class="coupure__corps"><img src="img/presse-2.jpg" alt="" width="240" height="240" loading="lazy"><span class="coupure__titre">Pop louange à Battice avec Jesus’Trip !</span></span><span class="coupure__lire">Lire l’article<span class="sr"> (nouvel onglet)</span></span></a></li>
+          <li class="coupure"><a href="https://www.cathobel.be/2018/02/jesustrip-partage-foi-scene/" target="_blank" rel="noopener"><span class="coupure__tete"><span class="coupure__media">Cathobel</span><span class="coupure__date">février 2018</span></span><span class="coupure__corps"><img src="img/presse-1.jpg" alt="" width="240" height="240" loading="lazy"><span class="coupure__titre">Jesus’Trip partage sa foi sur scène</span></span><span class="coupure__lire">Lire l’article<span class="sr"> (nouvel onglet)</span></span></a></li>
+          <li class="coupure"><a href="https://www.lavenir.net/regions/2015/09/24/chanter-dieu-cest-vraiment-son-trip-D7D5F2N3P5D6TCRJSIU5JW63RU/" target="_blank" rel="noopener"><span class="coupure__tete"><span class="coupure__media">L’Avenir</span><span class="coupure__date">24 septembre 2015</span></span><span class="coupure__corps"><img src="img/presse-4.jpg" alt="" width="240" height="240" loading="lazy"><span class="coupure__titre">Chanter Dieu, c’est vraiment son trip</span></span><span class="coupure__lire">Lire l’article<span class="sr"> (nouvel onglet)</span></span></a></li>
+          <li class="coupure"><a href="https://www.cathobel.be/2015/03/jesustrip-partager-la-joie/" target="_blank" rel="noopener"><span class="coupure__tete"><span class="coupure__media">Cathobel</span><span class="coupure__date">mars 2015</span></span><span class="coupure__corps"><img src="img/presse-3.jpg" alt="" width="240" height="240" loading="lazy"><span class="coupure__titre">Jesus’Trip : partager la joie !</span></span><span class="coupure__lire">Lire l’article<span class="sr"> (nouvel onglet)</span></span></a></li>
+          <li class="coupure"><a href="https://www.lavenir.net/cnt/dmf20140602_019" target="_blank" rel="noopener"><span class="coupure__tete"><span class="coupure__media">L’Avenir</span><span class="coupure__date">2 juin 2014</span></span><span class="coupure__corps"><img src="img/presse-5.jpg" alt="" width="240" height="240" loading="lazy"><span class="coupure__titre">Jesus’Trip, groupe de pop-louange verviétois, chante sa foi catholique</span></span><span class="coupure__lire">Lire l’article<span class="sr"> (nouvel onglet)</span></span></a></li>
+          <li class="coupure"><a href="https://college.maredsous.be/page/concert-de-jesus-trip-a-l-abbaye.html" target="_blank" rel="noopener"><span class="coupure__tete"><span class="coupure__media">Collège de Maredsous</span><span class="coupure__date">à l’abbaye</span></span><span class="coupure__corps"><img src="img/presse-6.jpg" alt="" width="240" height="240" loading="lazy"><span class="coupure__titre">Concert de Jesus’Trip</span></span><span class="coupure__lire">Lire l’article<span class="sr"> (nouvel onglet)</span></span></a></li>
+        </ul>
+      </div>
+      <p class="presse__espace"><strong>Journalistes</strong> : notre <a href="dossier-presentation-jesustrip-and-co.pdf" target="_blank" rel="noopener">dossier de présentation (PDF)</a> rassemble l’histoire, l’équipe et les chiffres ; photos sur demande auprès de Luc Mathues.</p>
+    </div>
+    <svg class="sep" style="--sep:#041F3E" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path class="sep__echo" d="M0 52C300 18 560 14 800 36S1260 70 1440 50V90H0Z"/><path d="M0 34C240 70 520 72 760 44S1230 8 1440 40V90H0Z"/></svg>
+  </section>
+
+  <!-- Nous inviter (se termine en biais) -->
+  <section class="section section--nuit section--biais-inv" id="inviter" aria-labelledby="titre-inviter">
+    <span class="lueur lueur--d" style="--y:18%;--c:rgba(232,52,66,.26)" data-v="0.16" aria-hidden="true"></span>
+    <span class="deco deco--g" style="--y:24%;--r:-10deg;--c:#FF8C95" data-v="0.26" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 21.5c-3.7 0-6.2-2.5-6.2-5.8 0-3.6 2.7-5.4 3.5-8.7 2.3 1.5 2.9 3.6 2.7 5.2 1.3-.9 2.1-2.5 2.1-4.4 2.5 1.9 4.1 4.6 4.1 7.9 0 3.3-2.5 5.8-6.2 5.8zM12 21.5c-1.5 0-2.5-1-2.5-2.4 0-1.6 1.3-2.4 2-3.9 1.4 1 2.9 2.2 2.9 3.9 0 1.4-1 2.4-2.4 2.4z"/></svg></span>
+    <span class="deco deco--d" style="--y:64%;--r:8deg;--c:var(--ciel)" data-v="0.3" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12.2 2.8c-.2 6.4.1 12.4-.3 18.6M6.6 8.3c3.8-.4 7.4-.2 11-.4"/></svg></span>
+    <div class="wrap">
+      <div class="entete-section">
+        <p class="surtitre surtitre--ciel">Nous inviter</p>
+        <h2 id="titre-inviter">Et si c’était <span class="eclat">chez vous</span> ?<span class="griffe griffe--titre" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4.5 10.5 8 12.4M6.6 4.6l2.5 3.6M12.6 3v4.4"/></svg></span></h2>
+        <p class="chapo">Paroisses, unités pastorales, mouvements de jeunesse, écoles, pèlerinages : chaque soirée est portée par un organisateur local, et nous venons partout où l’on a envie de louer Dieu ensemble, dans une église, une salle ou un sanctuaire.</p>
+      </div>
+      <div class="inviter">
+        <div class="inviter__texte">
+          <div class="flamme">
+            <h3>Allumer une flamme</h3>
+            <p>Une soirée avec nous prend tout son sens lorsqu’elle s’inscrit dans une vision. Nous aimons être invités pour lancer ou relancer quelque chose : une année pastorale, la préparation d’un groupe de confirmands, un rassemblement de jeunes, le renouveau d’une communauté. Notre souhait n’est pas de passer, mais d’allumer un feu qui continue de brûler bien après la dernière chanson.</p>
+          </div>
+          <h3 class="inviter__titre">Comment ça se passe ?</h3>
+          <ol class="etapes">
+            <li><span class="etape__num">1</span><div><strong>On fait connaissance</strong><span>Vous nous parlez de votre projet, de votre communauté et de votre public : la soirée s’inscrit dans votre vision, pas l’inverse.</span></div></li>
+            <li><span class="etape__num">2</span><div><strong>On prépare ensemble</strong><span>Déroulé, témoignages, place des jeunes, technique avec Sound-Maker, communication : nous construisons la soirée avec vous.</span></div></li>
+            <li><span class="etape__num">3</span><div><strong>Le jour J</strong><span>Montage, balances, puis place à la louange ! Sound-Maker assure la technique du début à la fin.</span></div></li>
+            <li><span class="etape__num">4</span><div><strong>Et après, tout commence</strong><span>La soirée n’est pas une fin mais un point de départ. Nous la relisons avec vous, pour que la flamme continue de grandir.</span></div></li>
+          </ol>
+        </div>
+        <aside class="inviter__cote" aria-label="Contact et informations pratiques">
+          <div class="contact-carte">
+            <p class="annot annot--contact" aria-hidden="true"><span>c’est lui qui vous répond !</span><svg class="fleche trace" viewBox="0 0 100 64" aria-hidden="true" focusable="false"><path d="M8 52C24 22 54 10 88 20"/><path d="M75 8.5l15 12-17.5 6.5"/></svg></p>
+            <p class="surtitre">Contact</p>
+            <h3>Luc Mathues</h3>
+            <p class="contact-carte__role">Responsable du groupe</p>
+            <p class="coord"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg><span id="coord-tel">+32 471 25 14 62</span><button class="copier" type="button" data-copier="+32 471 25 14 62" data-cible="coord-tel"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect width="14" height="14" x="8" y="8" rx="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg><span class="copier__etat">Copier</span><span class="sr"> le numéro</span></button></p>
+            <p class="coord"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg><span id="coord-mail">luc@mathues.pro</span><button class="copier" type="button" data-copier="luc@mathues.pro" data-cible="coord-mail"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect width="14" height="14" x="8" y="8" rx="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg><span class="copier__etat">Copier</span><span class="sr"> l’adresse e-mail</span></button></p>
+            <a class="btn btn--rouge" href="mailto:luc@mathues.pro?subject=Invitation%20Jesus%27Trip%20%26%20Co&amp;body=Bonjour%20Luc%2C%0A%0ANous%20aimerions%20accueillir%20Jesus%27Trip%20%26%20Co.%0A%0AOrganisateur%20%3A%0ALieu%20%3A%0ADate%28s%29%20envisag%C3%A9e%28s%29%20%3A%0APublic%20attendu%20%3A%0ANotre%20projet%20%28ann%C3%A9e%20pastorale%2C%20confirmands%2C%20rassemblement...%29%20%3A%0A%0AMerci%20et%20%C3%A0%20bient%C3%B4t%20%21">Écrire une invitation</a>
+            <a class="btn btn--contour-marine" href="dossier-presentation-jesustrip-and-co.pdf" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4M10 9H8M16 13H8M16 17H8"/></svg> Dossier de présentation (PDF)</a>
+            <p class="contact-carte__fb">Vous pouvez aussi nous écrire sur <a href="https://www.facebook.com/jesustrip.be" target="_blank" rel="noopener">Facebook</a>.</p>
+          </div>
+          <div class="benevoles">
+            <h3>Des musiciens bénévoles</h3>
+            <p>Nos cinq musiciens et notre manageuse ne demandent ni cachet ni défraiement, et prennent eux-mêmes en charge leurs déplacements : c’est leur manière de témoigner et de vivre leur foi. Les frais d’une soirée couvrent avant tout l’équipe technique professionnelle de Sound-Maker, qui en représente la plus grande part, ainsi que les frais obligatoires liés à tout événement, comme les droits d’auteur.</p>
+          </div>
+        </aside>
+      </div>
+    </div>
+    <svg class="sep sep--biais" style="--sep:#F3F7FB" viewBox="0 0 1440 100" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path d="M0 14L1440 100H0Z"/><path class="sep__trait" d="M0 -4L1440 82"/></svg>
+  </section>
+
+  <section class="section section--glace partenaires" aria-labelledby="titre-partenaires">
+    <span class="deco deco--g" style="--y:22%;--r:-10deg;--c:var(--rouge-vif)" data-v="0.22" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 20.3S4.5 15.6 4.5 9.6A4.1 4.1 0 0 1 12 7.3a4.1 4.1 0 0 1 7.5 2.3c0 6-7.5 10.7-7.5 10.7z"/></svg></span>
+    <span class="deco deco--d" style="--y:48%;--r:12deg;--c:var(--marine)" data-v="0.26" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2.5c.7 4.6 2.6 6.9 6.8 7.5-4.2.6-6.1 2.9-6.8 7.5-.7-4.6-2.6-6.9-6.8-7.5 4.2-.6 6.1-2.9 6.8-7.5zM19 16.5c.3 1.6 1 2.3 2.5 2.5-1.5.2-2.2.9-2.5 2.5-.3-1.6-1-2.3-2.5-2.5 1.5-.2 2.2-.9 2.5-2.5z"/></svg></span>
+    <div class="wrap">
+      <p class="surtitre">Nos partenaires</p>
+      <h2 id="titre-partenaires">Ils nous <span class="eclat">accompagnent</span><span class="griffe griffe--titre" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4.5 10.5 8 12.4M6.6 4.6l2.5 3.6M12.6 3v4.4"/></svg></span></h2>
+      <p class="note-main note-main--merci" aria-hidden="true">merci à eux ! <span class="griffe griffe--coeur"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 20.3S4.5 15.6 4.5 9.6A4.1 4.1 0 0 1 12 7.3a4.1 4.1 0 0 1 7.5 2.3c0 6-7.5 10.7-7.5 10.7z"/></svg></span></p>
+      <ul class="logos">
+        <li class="logo logo--rond"><a href="https://www.evechedeliege.be/" target="_blank" rel="noopener"><img src="img/partenaire-diocese.png" alt="Diocèse de Liège : voir le site (nouvel onglet)" width="300" height="300" loading="lazy"></a></li>
+        <li class="logo"><a href="https://rcf.be/category/liege" target="_blank" rel="noopener"><img src="img/partenaire-rcf.png" alt="RCF Liège : voir le site (nouvel onglet)" width="221" height="160" loading="lazy"></a></li>
+        <li class="logo logo--rond"><img src="img/partenaire-mej.png" alt="MEJ Belgique, Mouvement eucharistique des jeunes" width="145" height="160" loading="lazy"></li>
+        <li class="logo logo--large"><a href="https://www.soundmaker.be/" target="_blank" rel="noopener"><img src="img/partenaire-soundmaker.png" alt="Sound Maker, sonorisation et éclairage : voir le site (nouvel onglet)" width="468" height="160" loading="lazy"></a></li>
+      </ul>
+      <div class="production">
+        <p class="production__label">Une production</p>
+        <div class="production__carte">
+          <img src="img/partenaire-luma.png" alt="LuMa Production" width="328" height="160" loading="lazy">
+          <p><strong>LuMa Production</strong> producteur du groupe : production, organisation des concerts et gestion du groupe</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Le verset : la photo sort de la brume -->
+  <section class="psaume" aria-labelledby="titre-psaume">
+    <div class="psaume__fond" aria-hidden="true"></div>
+    <div class="psaume__rayons" aria-hidden="true"></div>
+    <div class="psaume__brume" aria-hidden="true"></div>
+    <div class="wrap psaume__in">
+      <h2 class="surtitre surtitre--ciel" id="titre-psaume">Notre verset</h2>
+      <blockquote class="psaume__verset"><p>« Dirige ton chemin<br> vers le Seigneur,<br> fais-lui confiance,<br> et lui, il agira. »</p><span class="griffe griffe--psaume-g" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2.5c.7 4.6 2.6 6.9 6.8 7.5-4.2.6-6.1 2.9-6.8 7.5-.7-4.6-2.6-6.9-6.8-7.5 4.2-.6 6.1-2.9 6.8-7.5zM19 16.5c.3 1.6 1 2.3 2.5 2.5-1.5.2-2.2.9-2.5 2.5-.3-1.6-1-2.3-2.5-2.5 1.5-.2 2.2-.9 2.5-2.5z"/></svg></span><span class="griffe griffe--psaume-d" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4.5 10.5 8 12.4M6.6 4.6l2.5 3.6M12.6 3v4.4"/></svg></span></blockquote>
+      <p class="psaume__ref">Psaume 37, 5</p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="pied" lang="fr">
+  <div class="wrap pied__in">
+    <div class="pied__marque">
+      <img class="pied__logo" src="img/logo-rond.png" alt="Jesus’Trip &amp; Co, groupe de pop-louange" width="360" height="360" loading="lazy">
+      <p class="annot annot--pied" aria-hidden="true"><svg class="fleche trace" viewBox="0 0 100 64" aria-hidden="true" focusable="false"><path d="M8 52C24 22 54 10 88 20"/><path d="M75 8.5l15 12-17.5 6.5"/></svg><span>à bientôt !</span></p>
+    </div>
+    <p class="pied__devise">Osons de grandes choses pour Dieu !</p>
+    <ul class="pied__reseaux" aria-label="Jesus’Trip &amp; Co sur les réseaux">
+      <li><a href="https://www.facebook.com/jesustrip.be" target="_blank" rel="noopener" aria-label="Facebook"><svg class="marque" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z"/></svg></a></li>
+      <li><a href="https://www.youtube.com/@jesustrip3223" target="_blank" rel="noopener" aria-label="YouTube"><svg class="marque" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a></li>
+      <li><a href="https://open.spotify.com/artist/0YSleEpy61th1Lasah1Fnt" target="_blank" rel="noopener" aria-label="Spotify"><svg class="marque" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg></a></li>
+      <li><a href="https://www.deezer.com/fr/artist/9116278" target="_blank" rel="noopener" aria-label="Deezer"><svg class="marque" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M18.81 4.16v3.03H24V4.16h-5.19zM6.27 8.38v3.027h5.189V8.38h-5.19zm12.54 0v3.027H24V8.38h-5.19zM6.27 12.594v3.027h5.189v-3.027h-5.19zm6.271 0v3.027h5.19v-3.027h-5.19zm6.27 0v3.027H24v-3.027h-5.19zM0 16.81v3.029h5.19v-3.03H0zm6.27 0v3.029h5.189v-3.03h-5.19zm6.271 0v3.029h5.19v-3.03h-5.19zm6.27 0v3.029H24v-3.03h-5.19Z"/></svg></a></li>
+      <li><a href="https://music.apple.com/be/artist/jesustrip/1046558283" target="_blank" rel="noopener" aria-label="Apple Music"><svg class="marque" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M23.994 6.124a9.23 9.23 0 00-.24-2.19c-.317-1.31-1.062-2.31-2.18-3.043a5.022 5.022 0 00-1.877-.726 10.496 10.496 0 00-1.564-.15c-.04-.003-.083-.01-.124-.013H5.986c-.152.01-.303.017-.455.026-.747.043-1.49.123-2.193.4-1.336.53-2.3 1.452-2.865 2.78-.192.448-.292.925-.363 1.408-.056.392-.088.785-.1 1.18 0 .032-.007.062-.01.093v12.223c.01.14.017.283.027.424.05.815.154 1.624.497 2.373.65 1.42 1.738 2.353 3.234 2.801.42.127.856.187 1.293.228.555.053 1.11.06 1.667.06h11.03a12.5 12.5 0 001.57-.1c.822-.106 1.596-.35 2.295-.81a5.046 5.046 0 001.88-2.207c.186-.42.293-.87.37-1.324.113-.675.138-1.358.137-2.04-.002-3.8 0-7.595-.003-11.393zm-6.423 3.99v5.712c0 .417-.058.827-.244 1.206-.29.59-.76.962-1.388 1.14-.35.1-.706.157-1.07.173-.95.045-1.773-.6-1.943-1.536a1.88 1.88 0 011.038-2.022c.323-.16.67-.25 1.018-.324.378-.082.758-.153 1.134-.24.274-.063.457-.23.51-.516a.904.904 0 00.02-.193c0-1.815 0-3.63-.002-5.443a.725.725 0 00-.026-.185c-.04-.15-.15-.243-.304-.234-.16.01-.318.035-.475.066-.76.15-1.52.303-2.28.456l-2.325.47-1.374.278c-.016.003-.032.01-.048.013-.277.077-.377.203-.39.49-.002.042 0 .086 0 .13-.002 2.602 0 5.204-.003 7.805 0 .42-.047.836-.215 1.227-.278.64-.77 1.04-1.434 1.233-.35.1-.71.16-1.075.172-.96.036-1.755-.6-1.92-1.544-.14-.812.23-1.685 1.154-2.075.357-.15.73-.232 1.108-.31.287-.06.575-.116.86-.177.383-.083.583-.323.6-.714v-.15c0-2.96 0-5.922.002-8.882 0-.123.013-.25.042-.37.07-.285.273-.448.546-.518.255-.066.515-.112.774-.165.733-.15 1.466-.296 2.2-.444l2.27-.46c.67-.134 1.34-.27 2.01-.403.22-.043.442-.088.663-.106.31-.025.523.17.554.482.008.073.012.148.012.223.002 1.91.002 3.822 0 5.732z"/></svg></a></li>
+    </ul>
+    <nav class="pied__nav" aria-label="Plan du site">
+      <a href="#agenda">Agenda</a><a href="#groupe">Le groupe</a><a href="#soiree">Une soirée</a><a href="#musique">Musique</a><a href="#equipe">L’équipe</a><a href="#temoignages">Témoignages</a><a href="#presse">Presse</a><a href="#inviter">Nous inviter</a>
+    </nav>
+    <p class="pied__copy">© 2026 Jesus’Trip &amp; Co · Ce site ne dépose aucun cookie.</p>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var entete = document.getElementById('entete');
+  var bouton = document.getElementById('nav-bouton');
+  var nav = document.getElementById('nav');
+  function fermer() {
+    entete.classList.remove('est-ouvert');
+    bouton.setAttribute('aria-expanded', 'false');
+    bouton.setAttribute('aria-label', 'Ouvrir le menu');
+  }
+  if (bouton && nav && entete) {
+    bouton.addEventListener('click', function () {
+      var ouvert = entete.classList.toggle('est-ouvert');
+      bouton.setAttribute('aria-expanded', ouvert ? 'true' : 'false');
+      bouton.setAttribute('aria-label', ouvert ? 'Fermer le menu' : 'Ouvrir le menu');
+    });
+    nav.addEventListener('click', function (e) { if (e.target.closest('a')) fermer(); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && entete.classList.contains('est-ouvert')) { fermer(); bouton.focus(); } });
+  }
+
+  function copierTexte(valeur, etat, cible, repos) {
+    function afficher(texte) {
+      etat.textContent = texte;
+      clearTimeout(etat._minuterie);
+      etat._minuterie = setTimeout(function () { etat.textContent = repos; }, 2200);
+    }
+    function selectionner() {
+      if (!cible) { afficher('Copie impossible'); return; }
+      var plage = document.createRange();
+      plage.selectNodeContents(cible);
+      var sel = window.getSelection();
+      sel.removeAllRanges();
+      sel.addRange(plage);
+      afficher('Sélectionné');
+    }
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(valeur).then(function () { afficher('Copié'); }, selectionner);
+    } else {
+      selectionner();
+    }
+  }
+  document.querySelectorAll('[data-copier]').forEach(function (b) {
+    b.addEventListener('click', function () {
+      copierTexte(b.getAttribute('data-copier'), b.querySelector('.copier__etat'), document.getElementById(b.getAttribute('data-cible')), 'Copier');
+    });
+  });
+
+  // Témoignage : le formulaire prépare un e-mail (rien n'est envoyé ni stocké par le site)
+  var ouvrir = document.getElementById('temoin-ouvrir');
+  var panneau = document.getElementById('temoin');
+  var form = document.getElementById('temoin-form');
+  if (ouvrir && panneau && form) {
+    var erreur = document.getElementById('temoin-erreur');
+    var suite = document.getElementById('temoin-suite');
+    var message = '';
+    var apercu = document.createElement('pre');
+    apercu.className = 'sr';
+    suite.appendChild(apercu);
+    ouvrir.addEventListener('click', function () {
+      panneau.hidden = false;
+      ouvrir.setAttribute('aria-expanded', 'true');
+      panneau.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      setTimeout(function () { form.elements.prenom.focus({ preventScroll: true }); }, 450);
+    });
+    document.getElementById('temoin-fermer').addEventListener('click', function () {
+      panneau.hidden = true;
+      ouvrir.setAttribute('aria-expanded', 'false');
+      ouvrir.focus();
+    });
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var f = form.elements;
+      var prenom = f.prenom.value.trim(), texte = f.texte.value.trim();
+      if (!prenom || !texte) {
+        erreur.textContent = !prenom ? 'Indiquez votre prénom, s’il vous plaît.' : 'Écrivez quelques mots de témoignage, s’il vous plaît.';
+        erreur.hidden = false;
+        (!prenom ? f.prenom : f.texte).focus();
+        return;
+      }
+      erreur.hidden = true;
+      var lignes = ['Bonjour Luc,', '', 'Voici mon témoignage pour le site de Jesus’Trip & Co :', '', '« ' + texte + ' »', '', 'Prénom : ' + prenom];
+      if (f.age.value.trim()) lignes.push('Âge : ' + f.age.value.trim());
+      if (f.ville.value.trim()) lignes.push('Ville ou paroisse : ' + f.ville.value.trim());
+      if (f.ou.value.trim()) lignes.push('Où je vous ai vus : ' + f.ou.value.trim());
+      lignes.push('Publication sur le site : ' + (f.accord.checked ? 'oui, j’accepte' : 'non, merci de ne pas le publier'));
+      message = lignes.join('\n');
+      apercu.textContent = message;
+      suite.hidden = false;
+      var sujet = 'Témoignage pour Jesus’Trip & Co (' + prenom + ')';
+      window.location.href = 'mailto:luc@mathues.pro?subject=' + encodeURIComponent(sujet) + '&body=' + encodeURIComponent(message);
+    });
+    document.getElementById('temoin-copier').addEventListener('click', function () {
+      copierTexte(message + '\n\nÀ envoyer à : luc@mathues.pro', this.querySelector('.copier__etat'), apercu, 'Copier mon témoignage');
+    });
+  }
+
+  function defileTete() { entete.classList.toggle('est-defile', window.scrollY > 40); }
+  if (entete) { defileTete(); window.addEventListener('scroll', defileTete, { passive: true }); }
+
+  // Apparitions, traits dessinés, parallaxe et compteurs : seulement si le visiteur accepte les animations
+  var reduit = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduit || !('IntersectionObserver' in window)) return;
+  document.documentElement.classList.add('anime');
+  var cibles = '.entete-section, .eveque > *, .chiffres li, .duo > *, .valeur, .valeurs__titre, .equation > *, .temps li, .citation, .galerie img, .musique > *, .video, .setlist, .formation__groupe, .membre, .soundmaker, .avi, .coupure, .date-carte, .flamme, .etapes li, .contact-carte, .benevoles, .logo, .production, .psaume__in > *';
+  var rangs = [];
+  document.querySelectorAll(cibles).forEach(function (el) {
+    var parent = el.parentElement, i = 0, k;
+    for (k = 0; k < rangs.length; k++) { if (rangs[k][0] === parent) { i = ++rangs[k][1]; break; } }
+    if (k === rangs.length) rangs.push([parent, 0]);
+    el.classList.add('apparait');
+    el.style.setProperty('--d', (Math.min(i, 6) * 0.08).toFixed(2) + 's');
+  });
+  // Les traits à la main se dessinent quand ils entrent à l'écran
+  document.querySelectorAll('.trace, .deco svg, .griffe svg').forEach(function (svg) {
+    var delai = 0.35;
+    svg.querySelectorAll('path').forEach(function (p) {
+      var l = Math.ceil(p.getTotalLength ? p.getTotalLength() : 0) + 2;
+      if (!l || l < 3) return;
+      p.style.strokeDasharray = l;
+      p.style.strokeDashoffset = l;
+      p.style.transitionDelay = delai.toFixed(2) + 's';
+      delai += 0.45;
+    });
+    svg.classList.add('a-dessiner');
+  });
+  function formate(n) { return n.toLocaleString('fr-BE').replace(/\s/g, ' '); }
+  function compter(el) {
+    var fin = parseInt(el.getAttribute('data-compte'), 10), t0 = null;
+    function pas(t) {
+      if (t0 === null) t0 = t;
+      var p = Math.min((t - t0) / 1400, 1), e = 1 - Math.pow(1 - p, 3);
+      el.textContent = formate(Math.round(fin * e));
+      if (p < 1) requestAnimationFrame(pas);
+    }
+    requestAnimationFrame(pas);
+  }
+  var io = new IntersectionObserver(function (entrees) {
+    entrees.forEach(function (en) {
+      if (!en.isIntersecting) return;
+      en.target.classList.add('est-visible');
+      en.target.querySelectorAll('[data-compte]').forEach(compter);
+      io.unobserve(en.target);
+    });
+  }, { rootMargin: '0px 0px -8% 0px', threshold: 0.1 });
+  document.querySelectorAll('.apparait, .a-dessiner').forEach(function (el) { io.observe(el); });
+
+  // Parallaxe douce des dessins et des lueurs sur les côtés
+  var flottants = Array.prototype.slice.call(document.querySelectorAll('[data-v]'));
+  var attente = false;
+  function parallaxe() {
+    attente = false;
+    var mi = window.innerHeight / 2;
+    flottants.forEach(function (el) {
+      var r = el.parentElement.getBoundingClientRect();
+      if (r.bottom < -200 || r.top > window.innerHeight + 200) return;
+      var v = parseFloat(el.getAttribute('data-v')) || 0;
+      el.style.transform = 'translate3d(0,' + ((r.top + r.height / 2 - mi) * -v).toFixed(1) + 'px,0)';
+    });
+  }
+  window.addEventListener('scroll', function () { if (!attente) { attente = true; requestAnimationFrame(parallaxe); } }, { passive: true });
+  parallaxe();
+})();
+</script>
+
+</body>
+</html>
