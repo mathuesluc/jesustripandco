@@ -858,6 +858,27 @@ cite{font-style:italic}
   .annot--pied .fleche{width:34px;height:26px;margin-left:-4px;transform:rotate(155deg)}
 }
 .pied__legal span{display:inline-block}
+/* ---------- v12 : coulisse en blocs centrés, comme les musiciens ---------- */
+.formation--coulisse{grid-template-columns:minmax(0,1fr) minmax(0,1fr);margin-bottom:0}
+.formation__groupe--equipe{background:rgba(147,183,217,.05);border-style:dashed}
+.formation__groupe--pros{background:rgba(4,31,62,.5);border-color:rgba(255,154,163,.3)}
+.formation__groupe--equipe .membres,.formation__groupe--pros .membres{grid-template-columns:repeat(2,minmax(0,1fr))}
+.formation__nom{margin:0;font-family:var(--f-main);font-size:clamp(38px,3.6vw,48px);font-weight:700;line-height:1;color:#fff}
+.formation__groupe--pros .formation__titre .souligne,.formation__groupe--pros .formation__sous{color:#FF9AA3}
+.membre--pro .membre__rond{box-shadow:0 0 0 4px rgba(255,154,163,.7),0 22px 40px -18px rgba(0,0,0,.75)}
+.membre--pro:hover .membre__rond{box-shadow:0 0 0 4px rgba(255,154,163,1),0 28px 46px -18px rgba(0,0,0,.8)}
+.membre__lien{color:inherit;text-decoration:underline;text-decoration-color:rgba(255,154,163,.65);text-decoration-thickness:2px;text-underline-offset:5px;transition:color .2s}
+.membre__lien:hover{color:#FF9AA3}
+@media (max-width:1100px){
+  .formation--coulisse{grid-template-columns:minmax(0,1fr)}
+  .formation__groupe--equipe .membres,.formation__groupe--pros .membres{max-width:560px}
+}
+@media (max-width:640px){
+  .formation__groupe--equipe .membre:last-child,.formation__groupe--pros .membre:last-child{grid-column:auto}
+}
+@media (max-width:480px){
+  .formation__groupe--equipe .membres,.formation__groupe--pros .membres{grid-template-columns:minmax(0,1fr)}
+}
 
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "MusicGroup", "name": "Jesus'Trip & Co", "alternateName": "Jesus'Trip", "genre": ["Pop-louange", "Musique chrétienne"], "foundingDate": "2014", "foundingLocation": {"@type": "Place", "name": "Verviers, Belgique"}, "description": "Jesus’Trip & Co, groupe belge de pop-louange : des temps de louange festifs et priants dans les églises de Wallonie, de Bruxelles et jusqu’à Lourdes. Invitez-nous chez vous.", "url": "https://jesustripandco.be/", "image": "https://jesustripandco.be/img/partage.jpg", "sameAs": ["https://www.facebook.com/jesustrip.be", "https://www.youtube.com/@jesustrip3223", "https://open.spotify.com/artist/0YSleEpy61th1Lasah1Fnt", "https://www.deezer.com/fr/artist/9116278", "https://music.apple.com/be/artist/jesustrip/1046558283"], "member": [{"@type": "Person", "name": "Luc Mathues"}, {"@type": "Person", "name": "Gaël Haine"}, {"@type": "Person", "name": "Nathan Lamberts"}, {"@type": "Person", "name": "Joanna Verwilghen"}, {"@type": "Person", "name": "Frédéric Kienen"}]}, {"@type": "MusicEvent", "name": "Premier concert de Jesus'Trip & Co", "description": "Premier concert de Jesus'Trip & Co : pour la première fois, deux nouveaux musiciens rejoignent l'aventure Jesus'Trip. Entrée gratuite, verre de l'amitié offert.", "image": "https://jesustripandco.be/img/partage.jpg", "url": "https://jesustripandco.be/#agenda", "startDate": "2027-01-16T20:00:00+01:00", "eventStatus": "https://schema.org/EventScheduled", "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode", "isAccessibleForFree": true, "location": {"@type": "Place", "name": "Église de Battice", "address": {"@type": "PostalAddress", "addressLocality": "Battice", "addressCountry": "BE"}}, "performer": {"@type": "MusicGroup", "name": "Jesus'Trip & Co"}, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "EUR", "availability": "https://schema.org/InStock"}}]}</script>
@@ -1362,37 +1383,49 @@ cite{font-style:italic}
         </div>
       </div>
       <h3 class="filet">En coulisse</h3>
-      <div class="coulisse">
-        <article class="membre">
-          <div class="membre__rond"><img src="img/rond-manon.jpg" alt="Manon Franssen, tout sourire" width="560" height="560" loading="lazy"><span class="etiquette etiquette--rond" aria-hidden="true">tient l’agenda !</span></div>
-          <h4>Manon Franssen</h4>
-          <p class="membre__role">Manageuse</p>
-          <p class="membre__bio">Coprésidente du MEJ aux côtés de Joanna, elle tient l’agenda et fait le lien avec les organisateurs, du premier coup de fil au dernier accord.</p>
-        </article>
-        <article class="membre">
-          <div class="membre__rond"><img src="img/rond-anais-quentin.jpg" alt="Anaïs et Quentin, tout sourire, elle sur son dos" width="560" height="560" loading="lazy"><span class="etiquette etiquette--rond" aria-hidden="true">la technique !</span></div>
-          <h4>Anaïs et Quentin</h4>
-          <p class="membre__role">Équipe technique</p>
-          <p class="membre__bio">Ils accompagnent le groupe d’une soirée à l’autre, en lien avec Sound-Maker, pour que la technique serve toujours la louange.</p>
-        </article>
-        <article class="soundmaker">
-          <img class="soundmaker__photo" src="img/coulisse-luma.jpg" alt="De dos, à la régie face à la scène illuminée d’une église : un technicien de Sound-Maker et un membre de LuMa Production" width="750" height="1000" loading="lazy">
-          <div class="soundmaker__texte">
-            <div class="soundmaker__bloc">
-              <h4 class="sr">Sound-Maker</h4>
-              <a class="soundmaker__lien" href="https://www.soundmaker.be/" target="_blank" rel="noopener"><img class="soundmaker__logo" src="img/soundmaker-blanc.png" alt="Sound-Maker, sonorisation et éclairage : voir leur site (nouvel onglet)" width="640" height="202" loading="lazy"></a>
-              <p class="membre__role">Notre équipe technique depuis le début · Verviers</p>
-              <p>À chaque soirée depuis nos débuts : transport, montage, son, lumière et régie vidéo, de la petite église de village à la grande nef. Leur savoir-faire fait de chaque temps de louange un vrai concert.</p>
-            </div>
-            <div class="soundmaker__bloc">
-              <h4 class="sr">LuMa Production</h4>
-              <img class="soundmaker__logo soundmaker__logo--luma" src="img/luma-clair.png" alt="LuMa Production" width="328" height="160" loading="lazy">
-              <p class="membre__role">Producteur du groupe</p>
-              <p>LuMa Production produit Jesus’Trip &amp; Co : elle organise les concerts et assure la gestion du groupe.</p>
-            </div>
+      <div class="formation formation--coulisse">
+        <div class="formation__groupe formation__groupe--equipe">
+          <div class="formation__titre">
+            <p class="formation__nom">L’équipe de l’ombre</p>
+            <svg class="souligne trace" viewBox="0 0 200 16" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path d="M3 11C40 5 92 3 140 6s48 3 57 1"/></svg>
+            <p class="formation__sous">sans eux, pas de concert !</p>
           </div>
-          <p class="annot annot--regie" aria-hidden="true"><span>les deux t-shirts !</span><svg class="fleche trace" viewBox="0 0 100 64" aria-hidden="true" focusable="false"><path d="M8 52C24 22 54 10 88 20"/><path d="M75 8.5l15 12-17.5 6.5"/></svg></p>
-        </article>
+          <ul class="membres">
+            <li class="membre">
+              <div class="membre__rond"><img src="img/rond-manon.jpg" alt="Manon Franssen, tout sourire" width="560" height="560" loading="lazy"><span class="etiquette etiquette--rond" aria-hidden="true">tient l’agenda !</span></div>
+              <h4>Manon Franssen</h4>
+              <p class="membre__role">Manageuse</p>
+              <p class="membre__bio">Coprésidente du MEJ aux côtés de Joanna, elle tient l’agenda et fait le lien avec les organisateurs, du premier coup de fil au dernier accord.</p>
+            </li>
+            <li class="membre">
+              <div class="membre__rond"><img src="img/rond-anais-quentin.jpg" alt="Anaïs et Quentin, tout sourire, elle sur son dos" width="560" height="560" loading="lazy"><span class="etiquette etiquette--rond" aria-hidden="true">la régie vidéo !</span></div>
+              <h4>Anaïs et Quentin</h4>
+              <p class="membre__role">Régie vidéo et paroles</p>
+              <p class="membre__bio">Un précieux coup de main pour le groupe, notamment à la régie vidéo : ce sont eux qui projettent les paroles pendant les concerts, pour que toute l’assemblée puisse chanter.</p>
+            </li>
+          </ul>
+        </div>
+        <div class="formation__groupe formation__groupe--pros">
+          <div class="formation__titre">
+            <p class="formation__nom">Les pros</p>
+            <svg class="souligne trace" viewBox="0 0 200 16" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path d="M3 11C40 5 92 3 140 6s48 3 57 1"/></svg>
+            <p class="formation__sous">son, lumière et production</p>
+          </div>
+          <ul class="membres">
+            <li class="membre membre--pro">
+              <div class="membre__rond"><img src="img/rond-soundmaker.jpg" alt="De dos à la régie, un technicien de Sound-Maker, le nom de l’entreprise imprimé sur son t-shirt" width="560" height="560" loading="lazy"><span class="etiquette etiquette--rond etiquette--rose" aria-hidden="true">son &amp; lumière !</span></div>
+              <h4><a class="membre__lien" href="https://www.soundmaker.be/" target="_blank" rel="noopener">Sound-Maker<span class="sr"> : voir leur site (nouvel onglet)</span></a></h4>
+              <p class="membre__role">Son, lumière et vidéo&nbsp;·&nbsp;Verviers</p>
+              <p class="membre__bio">Notre équipe technique depuis le début : transport, montage, son, lumière et vidéo, de la petite église de village à la grande nef. Leur savoir-faire fait de chaque temps de louange un vrai concert.</p>
+            </li>
+            <li class="membre membre--pro">
+              <div class="membre__rond"><img src="img/rond-luma.jpg" alt="De dos face à la scène, un membre de LuMa Production, le nom imprimé sur son t-shirt" width="560" height="560" loading="lazy"><span class="etiquette etiquette--rond etiquette--rose" aria-hidden="true">la prod !</span></div>
+              <h4>LuMa Production</h4>
+              <p class="membre__role">Producteur du groupe</p>
+              <p class="membre__bio">LuMa Production produit Jesus’Trip &amp; Co : elle organise les concerts et assure la gestion du groupe.</p>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
     <svg class="sep sep--bulles" style="--sep:#F3F7FB" viewBox="0 0 1440 120" preserveAspectRatio="xMidYMax slice" aria-hidden="true" focusable="false"><circle cx="-40" cy="109" r="59"/><circle cx="44" cy="122" r="72"/><circle cx="133" cy="73" r="35"/><circle cx="222" cy="117" r="60"/><circle cx="279" cy="80" r="53"/><circle cx="353" cy="74" r="57"/><circle cx="413" cy="103" r="45"/><circle cx="496" cy="93" r="40"/><circle cx="554" cy="81" r="59"/><circle cx="606" cy="94" r="69"/><circle cx="666" cy="129" r="73"/><circle cx="730" cy="113" r="72"/><circle cx="809" cy="101" r="42"/><circle cx="889" cy="130" r="73"/><circle cx="953" cy="72" r="48"/><circle cx="1010" cy="66" r="37"/><circle cx="1086" cy="81" r="34"/><circle cx="1152" cy="100" r="46"/><circle cx="1223" cy="85" r="47"/><circle cx="1303" cy="97" r="36"/><circle cx="1356" cy="119" r="64"/><circle cx="1409" cy="98" r="66"/><circle cx="1484" cy="53" r="34"/><circle class="sep__bulle" cx="1321" cy="8" r="6.8"/><circle class="sep__bulle" cx="1287" cy="21" r="4.7"/><circle class="sep__bulle" cx="528" cy="13" r="6.9"/><circle class="sep__bulle" cx="203" cy="17" r="7.0"/><circle class="sep__bulle" cx="1195" cy="5" r="7.7"/><circle class="sep__bulle" cx="180" cy="10" r="6.1"/><rect x="-60" y="74" width="1560" height="60"/></svg>
