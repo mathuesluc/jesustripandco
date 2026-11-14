@@ -834,25 +834,10 @@ cite{font-style:italic}
 @media (max-width:480px){
   .etiquette--rond{font-size:15px;right:-18%;bottom:-2%;padding:0 6px 1px}
 }
-/* ---------- v12 : carnet de Lourdes, mentions légales ---------- */
-.carnet{position:relative;margin-top:clamp(64px,7vw,96px);text-align:center}
-.note-main--carnet{display:inline-block;margin:0;font-size:clamp(28px,2.8vw,34px);color:var(--rose);rotate:-3deg}
-.carnet__liste{list-style:none;padding:0;margin:22px auto 0;max-width:960px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(22px,3.4vw,46px)}
-.cliche{rotate:var(--r,0deg);transition:rotate .35s ease,translate .35s ease}
-.cliche:hover{rotate:0deg;translate:0 -6px}
-.cliche figure{margin:0;padding:10px 10px 0;background:#fff;border-radius:3px;box-shadow:0 24px 50px -18px rgba(0,0,0,.75)}
-.cliche img{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover}
-.cliche figcaption{padding:9px 4px 13px;font-family:var(--f-main);font-size:21px;font-weight:700;line-height:1.15;text-align:center;color:var(--marine)}
+/* ---------- v12 : mentions légales, pied de page ---------- */
 .pied__legal{max-width:760px;margin-top:6px;font-size:12.5px;line-height:1.55;color:#8EA6C0}
 .pied__legal a{color:inherit;text-decoration:underline;text-underline-offset:2px}
-@media (prefers-reduced-motion:reduce){
-  .cliche{transition:none}
-  .cliche:hover{translate:none}
-}
 @media (max-width:640px){
-  .carnet__liste{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;max-width:none;padding:14px max(20px,env(safe-area-inset-right,0px)) 28px max(20px,env(safe-area-inset-left,0px));margin-left:calc(-1 * max(20px,env(safe-area-inset-left,0px)));margin-right:calc(-1 * max(20px,env(safe-area-inset-right,0px)));scroll-padding-inline:max(20px,env(safe-area-inset-left,0px))}
-  .carnet__liste::-webkit-scrollbar{display:none}
-  .cliche{flex:0 0 66%;scroll-snap-align:start}
   .annot--pied{left:calc(100% - 14px);right:auto;top:-24px;flex-direction:column-reverse;align-items:flex-start;gap:0;font-size:clamp(17px,5.4vw,20px);rotate:-5deg}
   .annot--pied span{white-space:normal;width:6.4em;text-align:left}
   .annot--pied .fleche{width:34px;height:26px;margin-left:-4px;transform:rotate(155deg)}
@@ -878,6 +863,44 @@ cite{font-style:italic}
 }
 @media (max-width:480px){
   .formation__groupe--equipe .membres,.formation__groupe--pros .membres{grid-template-columns:minmax(0,1fr)}
+}
+/* ---------- v13 : collage de Lourdes, les pros, flèches et annotations ---------- */
+.polaroid--ukulele{right:auto;bottom:auto;left:-22px;top:-34px;width:27%;rotate:-8deg;z-index:3}
+.polaroid--ukulele figcaption{font-size:18px}
+.pros{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:24px;align-items:center;width:100%}
+.pros__photo{position:relative;margin:0;overflow:hidden;border-radius:18px;box-shadow:0 22px 40px -22px rgba(0,0,0,.8)}
+.pros__photo img{display:block;width:100%;height:auto;aspect-ratio:3/4;object-fit:cover}
+.pros__infos{display:flex;flex-direction:column;min-width:0;text-align:center}
+.pro{display:flex;flex-direction:column;align-items:center}
+.pro+.pro{margin-top:18px;padding-top:18px;border-top:1px solid rgba(255,255,255,.14)}
+.pro__logo{display:flex;align-items:center;justify-content:center;height:54px;margin-bottom:10px;border-radius:6px;transition:opacity .2s}
+a.pro__logo:hover{opacity:.82}
+.pro__logo img{width:auto;max-width:min(210px,100%);max-height:100%}
+.pro .membre__role{margin-top:0}
+.date-action{position:relative;display:inline-flex}
+.annot--agenda{left:calc(100% - 10px);top:-4px;flex-direction:row;color:var(--rouge);font-size:24px;rotate:-5deg}
+.annot--agenda .fleche{width:48px;height:32px;transform:scaleX(-1) rotate(-24deg)}
+.date-infos .souligne-mot .souligne{color:var(--rouge-vif)}
+.duo--lourdes .souligne-mot .souligne{color:var(--rose)}
+.entoure--mot{display:inline-block;white-space:nowrap}
+.entoure--mot .entoure__trait{left:-9px;top:-6px;width:calc(100% + 18px);height:calc(100% + 12px);stroke:var(--rose)}
+@media (max-width:640px){
+  .pros{grid-template-columns:minmax(0,1fr)}
+  .pros__photo img{aspect-ratio:4/3;object-position:50% 70%}
+  .annot--agenda{display:none}
+  .polaroid--ukulele{left:-10px;top:-26px;width:30%}
+  .polaroid--ukulele figcaption{font-size:15px}
+}
+.annot--attend{left:107px;top:-60px;flex-direction:row;color:var(--rose);rotate:-4deg}
+.annot--attend .fleche--crochet{position:absolute;left:calc(100% - 20px);top:14px;width:60px;height:108px;transform:none}
+@media (min-width:641px){
+  .annot--pied{left:calc(100% - 20px)}
+}
+@media (max-width:900px){
+  .annot--attend{left:84px}
+}
+@media (max-width:640px){
+  .annot--attend{left:auto;right:34px;top:-58px;font-size:23px}
 }
 
 </style>
@@ -1012,10 +1035,10 @@ cite{font-style:italic}
     <div class="wrap">
       <div class="entete-section">
         <p class="surtitre surtitre--ciel">Agenda</p>
-        <h2 id="titre-agenda">Prochain <span class="eclat">concert</span><span class="griffe griffe--titre" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4.5 10.5 8 12.4M6.6 4.6l2.5 3.6M12.6 3v4.4"/></svg></span></h2>
+        <h2 id="titre-agenda">Prochain <span class="eclat">concert</span></h2>
       </div>
       <div class="agenda__scene">
-        <p class="annot annot--attend" aria-hidden="true"><span>On vous attend !</span><svg class="fleche trace" viewBox="0 0 100 64" aria-hidden="true" focusable="false"><path d="M8 52C24 22 54 10 88 20"/><path d="M75 8.5l15 12-17.5 6.5"/></svg></p>
+        <p class="annot annot--attend" aria-hidden="true"><span>On vous attend !</span><svg class="fleche fleche--crochet trace" viewBox="0 0 60 108" aria-hidden="true" focusable="false"><path d="M24 4C56 28 50 80 8 100"/><path d="M20.8 102.1L8 100l6.4-11.3"/></svg></p>
         <article class="date-carte">
           <div class="date-bloc" aria-hidden="true">
             <span class="date-bloc__jour">Sam.</span>
@@ -1028,14 +1051,14 @@ cite{font-style:italic}
             <p class="date-intro">C’est la première fois que deux nouveaux musiciens rejoignent l’aventure Jesus’Trip : Joanna Verwilghen au chant et l’abbé Frédéric Kienen à la basse et à la clarinette. Venez découvrir le groupe à cinq !</p>
             <p class="date-anecdote">Clin d’œil de l’histoire : c’est déjà à Battice, en septembre 2015, que Jesus’Trip présentait son premier album.</p>
             <dl>
-              <dt>Quand</dt><dd><time datetime="2027-01-16T20:00">Samedi 16 janvier 2027, à 20h</time></dd>
+              <dt>Quand</dt><dd><time datetime="2027-01-16T20:00"><span class="souligne-mot">Samedi 16 janvier 2027<svg class="souligne trace" viewBox="0 0 200 16" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path d="M3 11C40 5 92 3 140 6s48 3 57 1"/></svg></span>, à 20h</time></dd>
               <dt>Où</dt><dd>Église de Battice</dd>
             </dl>
             <ul class="puces">
               <li class="entoure">Entrée gratuite<svg class="entoure__trait" viewBox="0 0 160 52" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path d="M84 4C40 2 5 11 5 26s30 22 76 22 74-8 74-22S118 3 66 7"/></svg></li>
-              <li>Verre de l’amitié offert</li>
+              <li>Verre de l’amitié offert <span class="griffe griffe--coeur" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 20.3S4.5 15.6 4.5 9.6A4.1 4.1 0 0 1 12 7.3a4.1 4.1 0 0 1 7.5 2.3c0 6-7.5 10.7-7.5 10.7z"/></svg></span></li>
             </ul>
-            <a class="btn btn--marine btn--petit" href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Premier%20concert%20de%20Jesus%27Trip%20%26%20Co%20%C3%A0%20Battice&amp;dates=20270116T190000Z%2F20270116T210000Z&amp;details=Premier%20concert%20de%20Jesus%27Trip%20%26%20Co%20%3A%20pour%20la%20premi%C3%A8re%20fois%2C%20deux%20nouveaux%20musiciens%20rejoignent%20l%27aventure.%20Entr%C3%A9e%20gratuite%2C%20verre%20de%20l%27amiti%C3%A9%20offert.&amp;location=%C3%89glise%20de%20Battice%2C%20Battice%2C%20Belgique" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg> Ajouter à Google Agenda</a>
+            <div class="date-action"><a class="btn btn--marine btn--petit" href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Premier%20concert%20de%20Jesus%27Trip%20%26%20Co%20%C3%A0%20Battice&amp;dates=20270116T190000Z%2F20270116T210000Z&amp;details=Premier%20concert%20de%20Jesus%27Trip%20%26%20Co%20%3A%20pour%20la%20premi%C3%A8re%20fois%2C%20deux%20nouveaux%20musiciens%20rejoignent%20l%27aventure.%20Entr%C3%A9e%20gratuite%2C%20verre%20de%20l%27amiti%C3%A9%20offert.&amp;location=%C3%89glise%20de%20Battice%2C%20Battice%2C%20Belgique" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg> Ajouter à Google Agenda</a><p class="annot annot--agenda" aria-hidden="true"><svg class="fleche trace" viewBox="0 0 100 64" aria-hidden="true" focusable="false"><path d="M8 52C24 22 54 10 88 20"/><path d="M75 8.5l15 12-17.5 6.5"/></svg><span>réservez la date !</span></p></div>
           </div>
           <div class="date-photo">
             <img src="img/battice-2017.jpg" alt="L’église de Battice comble, les mains levées vers la scène où s’affiche le logo Jesus’Trip" width="720" height="900" loading="lazy">
@@ -1056,7 +1079,7 @@ cite{font-style:italic}
     <div class="wrap">
       <div class="entete-section">
         <p class="surtitre">Notre histoire</p>
-        <h2 id="titre-groupe">Trois amis, un <span class="eclat">voyage</span><span class="griffe griffe--titre" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4.5 10.5 8 12.4M6.6 4.6l2.5 3.6M12.6 3v4.4"/></svg></span></h2>
+        <h2 id="titre-groupe">Trois amis, un <span class="eclat">voyage</span></h2>
       </div>
       <div class="duo">
         <div class="duo__texte texte-justifie">
@@ -1104,20 +1127,20 @@ cite{font-style:italic}
     <div class="wrap">
       <div class="entete-section">
         <p class="surtitre surtitre--ciel">Et le « &amp; Co » ?</p>
-        <h2 id="titre-lourdes">Une histoire née à <span class="eclat">Lourdes</span><span class="griffe griffe--titre" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4.5 10.5 8 12.4M6.6 4.6l2.5 3.6M12.6 3v4.4"/></svg></span></h2>
+        <h2 id="titre-lourdes">Une histoire née à <span class="eclat">Lourdes</span></h2>
       </div>
       <div class="equation">
         <figure class="equation__terme">
           <img src="img/logo-jesustrip.png" alt="Jesus’Trip" width="446" height="150" loading="lazy">
-          <figcaption class="annot annot--terme"><svg class="fleche trace" viewBox="0 0 100 64" aria-hidden="true" focusable="false"><path d="M8 52C24 22 54 10 88 20"/><path d="M75 8.5l15 12-17.5 6.5"/></svg><span>les trois amis du début</span></figcaption>
+          <figcaption class="annot annot--terme"><svg class="fleche trace" viewBox="0 0 100 64" aria-hidden="true" focusable="false"><path d="M8 52C24 22 54 10 88 20"/><path d="M75 8.5l15 12-17.5 6.5"/></svg><span>les 3 amis du début</span></figcaption>
         </figure>
         <span class="equation__signe" aria-hidden="true">+</span>
         <figure class="equation__terme equation__terme--co">
           <img src="img/logo-co.png" alt="&amp; Co" width="344" height="150" loading="lazy">
-          <figcaption class="annot annot--terme"><svg class="fleche trace" viewBox="0 0 100 64" aria-hidden="true" focusable="false"><path d="M8 52C24 22 54 10 88 20"/><path d="M75 8.5l15 12-17.5 6.5"/></svg><span>nos nouveaux compagnons de route, rejoints à Lourdes</span></figcaption>
+          <figcaption class="annot annot--terme"><svg class="fleche trace" viewBox="0 0 100 64" aria-hidden="true" focusable="false"><path d="M8 52C24 22 54 10 88 20"/><path d="M75 8.5l15 12-17.5 6.5"/></svg><span>2 nouveaux compagnons de route, rejoints au pèlerinage à Lourdes</span></figcaption>
         </figure>
         <span class="equation__signe equation__signe--egal" aria-hidden="true">=</span>
-        <p class="equation__total"><strong>5</strong><span>musiciens sur scène</span></p>
+        <p class="equation__total"><strong>5</strong><span>musiciens</span></p>
       </div>
       <div class="duo duo--lourdes">
         <div class="lourdes__photos">
@@ -1126,6 +1149,10 @@ cite{font-style:italic}
             <figcaption>J’aime &amp; Co à Lourdes</figcaption>
           </figure>
           <p class="annot annot--oneshot" aria-hidden="true"><span>encore un one-shot… qui dure !</span><svg class="fleche trace" viewBox="0 0 100 64" aria-hidden="true" focusable="false"><path d="M8 52C24 22 54 10 88 20"/><path d="M75 8.5l15 12-17.5 6.5"/></svg></p>
+          <figure class="polaroid polaroid--ukulele">
+            <img src="img/lourdes-grotte.jpg" alt="Au micro, un musicien en col romain chante en jouant d’un ukulélé basse devant la roche" width="512" height="640" loading="lazy">
+            <figcaption>au ukulélé basse !</figcaption>
+          </figure>
           <figure class="polaroid">
             <img src="img/lourdes-selfie.jpg" alt="Luc, Joanna et Nathan devant la basilique de Lourdes, de nuit" width="800" height="1000" loading="lazy">
             <figcaption>Luc, Joanna et Nathan à Lourdes</figcaption>
@@ -1133,33 +1160,10 @@ cite{font-style:italic}
         </div>
         <div class="duo__texte texte-justifie">
           <p>Pendant des années, Jesus’Trip s’est conjugué à trois. Puis, en 2026, un appel arrive en urgence : il faut animer le pèlerinage du diocèse de Liège à Lourdes. Gaël ne peut pas être du voyage. Luc et Nathan font alors appel à deux amis qu’ils connaissent bien, Joanna Verwilghen et l’abbé Frédéric Kienen, pour former un groupe éphémère baptisé « J’aime &amp; Co ».</p>
-          <p>Encore une fois, ce devait être un one-shot. Mais à Lourdes, dès la messe d’ouverture dans la basilique Saint-Pie X, les liens se tissent, et la musique aussi. Au retour, une évidence : nous avons décidé de prolonger l’aventure ensemble. Jesus’Trip garde son nom, y ajoute le « &amp; Co » de Lourdes et compte désormais cinq musiciens sur scène.</p>
+          <p>Encore une fois, ce devait être un one-shot. Mais à Lourdes, dès la messe d’ouverture dans la basilique Saint-Pie X, les liens se tissent, et la musique aussi. Au retour, une évidence : nous avons décidé de prolonger l’aventure <span class="souligne-mot">ensemble<svg class="souligne trace" viewBox="0 0 200 16" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path d="M3 11C40 5 92 3 140 6s48 3 57 1"/></svg></span>. Jesus’Trip garde son nom, y ajoute le « &amp; Co » de Lourdes et compte désormais cinq musiciens sur scène.</p>
           <p class="exergue">« Co » comme compagnie, comme compagnons de route : on ne marche jamais seul vers Dieu.</p>
           <p class="main main--ciel">Une fois de plus, tout s’est joué à Lourdes.</p>
         </div>
-      </div>
-      <div class="carnet">
-        <p class="note-main note-main--carnet" aria-hidden="true">Souvenirs de Lourdes…</p>
-        <ul class="carnet__liste" aria-label="Souvenirs du pèlerinage à Lourdes">
-          <li class="cliche" style="--r:-3deg">
-            <figure>
-              <img src="img/lourdes-grotte.jpg" alt="Au micro, un musicien en col romain chante en jouant d’un ukulélé basse devant la roche" width="512" height="640" loading="lazy">
-              <figcaption>au ukulélé basse !</figcaption>
-            </figure>
-          </li>
-          <li class="cliche" style="--r:2.5deg">
-            <figure>
-              <img src="img/lourdes-toit.jpg" alt="Deux musiciens du pèlerinage, foulard rouge au cou, sur le toit de la basilique du Rosaire, sous la couronne dorée" width="800" height="1000" loading="lazy">
-              <figcaption>sur le toit de la basilique !</figcaption>
-            </figure>
-          </li>
-          <li class="cliche" style="--r:-1.5deg">
-            <figure>
-              <img src="img/lourdes-flambeaux.jpg" alt="Nathan, foulard du pèlerinage et badge du groupe musical, le regard posé sur son flambeau pendant la procession" width="800" height="1000" loading="lazy">
-              <figcaption>aux flambeaux</figcaption>
-            </figure>
-          </li>
-        </ul>
       </div>
     </div>
     <div class="aube" aria-hidden="true"></div>
@@ -1174,7 +1178,7 @@ cite{font-style:italic}
     <div class="wrap">
       <div class="entete-section">
         <p class="surtitre">Une soirée avec nous</p>
-        <h2 id="titre-soiree">Jump, Sing &amp; <span class="eclat">Pray</span><span class="griffe griffe--titre" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4.5 10.5 8 12.4M6.6 4.6l2.5 3.6M12.6 3v4.4"/></svg></span></h2>
+        <h2 id="titre-soiree">Jump, Sing &amp; <span class="eclat">Pray</span></h2>
         <p class="chapo">Ce que nous proposons n’est pas un concert : c’est un temps de louange et de témoignage. Nous voulons faire vivre à chacun l’expérience de la louange, mais aussi celle de la prière, avec autant de joie que de profondeur. Chaque soirée se déroule comme une vague.</p>
       </div>
       <div class="vague" aria-hidden="true">
@@ -1235,11 +1239,11 @@ cite{font-style:italic}
   <section class="section section--blanc section--arche" id="musique" aria-labelledby="titre-musique">
     <span class="deco deco--g" style="--y:10%;--r:-12deg;--c:var(--rouge-vif)" data-v="0.26" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5.2 18.6c0-1.6 1.6-2.9 3.4-2.9 1.4 0 2.3.8 2.3 1.9 0 1.6-1.6 2.9-3.4 2.9-1.4 0-2.3-.8-2.3-1.9zM10.9 17.4V4.2c.8 2.4 5.6 3.2 5.6 7.6"/></svg></span>
     <span class="deco deco--d" style="--y:30%;--r:10deg;--c:var(--marine)" data-v="0.3" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3.4 18.6c0-1.4 1.4-2.5 3-2.5 1.2 0 2 .7 2 1.7 0 1.4-1.4 2.5-3 2.5-1.2 0-2-.7-2-1.7zM14.4 16.6c0-1.4 1.4-2.5 3-2.5 1.2 0 2 .7 2 1.7 0 1.4-1.4 2.5-3 2.5-1.2 0-2-.7-2-1.7zM8.4 17.6V6.4l11-2.6v11.6M8.4 9.8l11-2.6"/></svg></span>
-    <span class="deco deco--g" style="--y:70%;--r:8deg;--c:var(--marine)" data-v="0.34" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4.5 10.5 8 12.4M6.6 4.6l2.5 3.6M12.6 3v4.4"/></svg></span>
+    <span class="deco deco--g" style="--y:70%;--r:8deg;--c:var(--marine)" data-v="0.34" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5.2 18.6c0-1.6 1.6-2.9 3.4-2.9 1.4 0 2.3.8 2.3 1.9 0 1.6-1.6 2.9-3.4 2.9-1.4 0-2.3-.8-2.3-1.9zM10.9 17.4V4.2c.8 2.4 5.6 3.2 5.6 7.6"/></svg></span>
     <div class="wrap">
       <div class="entete-section">
         <p class="surtitre">Notre répertoire</p>
-        <h2 id="titre-musique">Nos chants, nos <span class="eclat">compositions</span><span class="griffe griffe--titre" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4.5 10.5 8 12.4M6.6 4.6l2.5 3.6M12.6 3v4.4"/></svg></span></h2>
+        <h2 id="titre-musique">Nos chants, nos <span class="eclat">compositions</span></h2>
         <p class="chapo">Le cœur de Jesus’Trip, ce sont ses propres chansons : une trentaine de compositions, écrites pour la plupart par Gaël, quelques-unes par Luc, et arrangées à trois avec Nathan.</p>
       </div>
       <div class="musique">
@@ -1269,8 +1273,8 @@ cite{font-style:italic}
             <li>Notre Dieu miséricordieux</li>
             <li>Heureux les pauvres de cœur</li>
             <li>Revivre de ton amour</li>
-            <li>Réveillez nos cœurs <span class="griffe griffe--etoile" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2.5c.7 4.6 2.6 6.9 6.8 7.5-4.2.6-6.1 2.9-6.8 7.5-.7-4.6-2.6-6.9-6.8-7.5 4.2-.6 6.1-2.9 6.8-7.5zM19 16.5c.3 1.6 1 2.3 2.5 2.5-1.5.2-2.2.9-2.5 2.5-.3-1.6-1-2.3-2.5-2.5 1.5-.2 2.2-.9 2.5-2.5z"/></svg></span></li>
-            <li>En couleurs <span class="griffe griffe--etoile" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2.5c.7 4.6 2.6 6.9 6.8 7.5-4.2.6-6.1 2.9-6.8 7.5-.7-4.6-2.6-6.9-6.8-7.5 4.2-.6 6.1-2.9 6.8-7.5zM19 16.5c.3 1.6 1 2.3 2.5 2.5-1.5.2-2.2.9-2.5 2.5-.3-1.6-1-2.3-2.5-2.5 1.5-.2 2.2-.9 2.5-2.5z"/></svg></span></li>
+            <li>Réveillez nos cœurs <span class="griffe griffe--etoile" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2.5c.7 4.6 2.6 6.9 6.8 7.5-4.2.6-6.1 2.9-6.8 7.5-.7-4.6-2.6-6.9-6.8-7.5 4.2-.6 6.1-2.9 6.8-7.5zM19 16.5c.3 1.6 1 2.3 2.5 2.5-1.5.2-2.2.9-2.5 2.5-.3-1.6-1-2.3-2.5-2.5 1.5-.2 2.2-.9 2.5-2.5z"/></svg></span><span class="note-main" aria-hidden="true">nouveau !</span></li>
+            <li>En couleurs <span class="griffe griffe--etoile" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2.5c.7 4.6 2.6 6.9 6.8 7.5-4.2.6-6.1 2.9-6.8 7.5-.7-4.6-2.6-6.9-6.8-7.5 4.2-.6 6.1-2.9 6.8-7.5zM19 16.5c.3 1.6 1 2.3 2.5 2.5-1.5.2-2.2.9-2.5 2.5-.3-1.6-1-2.3-2.5-2.5 1.5-.2 2.2-.9 2.5-2.5z"/></svg></span><span class="note-main" aria-hidden="true">nouveau !</span></li>
             <li>Country Dieu</li>
             <li>Je te salue, Marie <span class="griffe griffe--coeur" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 20.3S4.5 15.6 4.5 9.6A4.1 4.1 0 0 1 12 7.3a4.1 4.1 0 0 1 7.5 2.3c0 6-7.5 10.7-7.5 10.7z"/></svg></span></li>
           </ul>
@@ -1320,8 +1324,8 @@ cite{font-style:italic}
     <div class="wrap">
       <div class="entete-section">
         <p class="surtitre surtitre--ciel">L’équipe</p>
-        <h2 class="titre-barre" id="titre-equipe">Sur scène et en <span class="eclat">coulisse</span><span class="griffe griffe--titre" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4.5 10.5 8 12.4M6.6 4.6l2.5 3.6M12.6 3v4.4"/></svg></span></h2>
-        <p class="chapo">Jesus’Trip &amp; Co, ce sont 12 personnes : cinq musiciens et une manageuse, tous bénévoles, notre équipe technique et les professionnels de Sound-Maker. Des laïcs et un prêtre, des amis de longue date et de nouveaux compagnons de route.</p>
+        <h2 class="titre-barre" id="titre-equipe">Sur scène et en <span class="eclat">coulisse</span></h2>
+        <p class="chapo">Jesus’Trip &amp; Co, ce sont <span class="entoure entoure--mot">12 personnes<svg class="entoure__trait" viewBox="0 0 160 52" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path d="M84 4C40 2 5 11 5 26s30 22 76 22 74-8 74-22S118 3 66 7"/></svg></span> : cinq musiciens et une manageuse, tous bénévoles, notre équipe technique et les professionnels de Sound-Maker. Des laïcs et un prêtre, des amis de longue date et de nouveaux compagnons de route.</p>
       </div>
       <h3 class="filet">Sur scène</h3>
       <div class="formation">
@@ -1333,7 +1337,7 @@ cite{font-style:italic}
           <div class="formation__titre">
             <img src="img/logo-jesustrip.png" alt="Jesus’Trip" width="446" height="150">
             <svg class="souligne trace" viewBox="0 0 200 16" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path d="M3 11C40 5 92 3 140 6s48 3 57 1"/></svg>
-            <p class="formation__sous">les trois amis du début</p>
+            <p class="formation__sous">les 3 amis du début</p>
           </div>
           <ul class="membres">
             <li class="membre">
@@ -1349,7 +1353,7 @@ cite{font-style:italic}
               <p class="membre__bio">La plume du groupe : il a écrit la plupart des chansons. Les rencontres du MEJ, puis Taizé, vécu comme un électrochoc, ont tout changé pour lui.</p>
             </li>
             <li class="membre">
-              <div class="membre__rond"><img src="img/rond-nathan.jpg" alt="Nathan Lamberts, chapeau de paille et bretelles" width="560" height="560" loading="lazy"></div>
+              <div class="membre__rond"><img src="img/rond-nathan.jpg" alt="Nathan Lamberts, foulard rouge du pèlerinage, le regard posé sur son flambeau" width="560" height="560" loading="lazy"><span class="etiquette etiquette--rond" aria-hidden="true">aux claviers !</span></div>
               <h4>Nathan Lamberts</h4>
               <p class="membre__role">Claviers</p>
               <p class="membre__bio">Il tient les claviers et cosigne tous les arrangements. C’est à Lourdes qu’il a rencontré Gaël ; il sera plus tard responsable de camps au MEJ.</p>
@@ -1364,7 +1368,7 @@ cite{font-style:italic}
           <div class="formation__titre">
             <img src="img/logo-co.png" alt="&amp; Co" width="344" height="150">
             <svg class="souligne trace" viewBox="0 0 200 16" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path d="M3 11C40 5 92 3 140 6s48 3 57 1"/></svg>
-            <p class="formation__sous">nos nouveaux compagnons de route, rejoints à Lourdes</p>
+            <p class="formation__sous">2 nouveaux compagnons de route, rejoints au pèlerinage à Lourdes</p>
           </div>
           <ul class="membres">
             <li class="membre membre--co">
@@ -1398,10 +1402,10 @@ cite{font-style:italic}
               <p class="membre__bio">Coprésidente du MEJ aux côtés de Joanna, elle tient l’agenda et fait le lien avec les organisateurs, du premier coup de fil au dernier accord.</p>
             </li>
             <li class="membre">
-              <div class="membre__rond"><img src="img/rond-anais-quentin.jpg" alt="Anaïs et Quentin, tout sourire, elle sur son dos" width="560" height="560" loading="lazy"><span class="etiquette etiquette--rond" aria-hidden="true">la régie vidéo !</span></div>
+              <div class="membre__rond"><img src="img/rond-anais-quentin.jpg" alt="Anaïs et Quentin, tout sourire, elle sur son dos" width="560" height="560" loading="lazy"><span class="etiquette etiquette--rond" aria-hidden="true">à la régie !</span></div>
               <h4>Anaïs et Quentin</h4>
-              <p class="membre__role">Régie vidéo et paroles</p>
-              <p class="membre__bio">Un précieux coup de main pour le groupe, notamment à la régie vidéo : ce sont eux qui projettent les paroles pendant les concerts, pour que toute l’assemblée puisse chanter.</p>
+              <p class="membre__role">Régie technique et régie vidéo</p>
+              <p class="membre__bio">Un précieux coup de main pour le groupe, à la régie technique et à la régie vidéo : ce sont eux qui projettent les paroles pendant les concerts, pour que toute l’assemblée puisse chanter.</p>
             </li>
           </ul>
         </div>
@@ -1411,20 +1415,26 @@ cite{font-style:italic}
             <svg class="souligne trace" viewBox="0 0 200 16" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path d="M3 11C40 5 92 3 140 6s48 3 57 1"/></svg>
             <p class="formation__sous">son, lumière et production</p>
           </div>
-          <ul class="membres">
-            <li class="membre membre--pro">
-              <div class="membre__rond"><img src="img/rond-soundmaker.jpg" alt="De dos à la régie, un technicien de Sound-Maker, le nom de l’entreprise imprimé sur son t-shirt" width="560" height="560" loading="lazy"><span class="etiquette etiquette--rond etiquette--rose" aria-hidden="true">son &amp; lumière !</span></div>
-              <h4><a class="membre__lien" href="https://www.soundmaker.be/" target="_blank" rel="noopener">Sound-Maker<span class="sr"> : voir leur site (nouvel onglet)</span></a></h4>
-              <p class="membre__role">Son, lumière et vidéo&nbsp;·&nbsp;Verviers</p>
-              <p class="membre__bio">Notre équipe technique depuis le début : transport, montage, son, lumière et vidéo, de la petite église de village à la grande nef. Leur savoir-faire fait de chaque temps de louange un vrai concert.</p>
-            </li>
-            <li class="membre membre--pro">
-              <div class="membre__rond"><img src="img/rond-luma.jpg" alt="De dos face à la scène, un membre de LuMa Production, le nom imprimé sur son t-shirt" width="560" height="560" loading="lazy"><span class="etiquette etiquette--rond etiquette--rose" aria-hidden="true">la prod !</span></div>
-              <h4>LuMa Production</h4>
-              <p class="membre__role">Producteur du groupe</p>
-              <p class="membre__bio">LuMa Production produit Jesus’Trip &amp; Co : elle organise les concerts et assure la gestion du groupe.</p>
-            </li>
-          </ul>
+          <div class="pros">
+            <figure class="pros__photo">
+              <img src="img/coulisse-luma.jpg" alt="De dos, à la régie face à la scène illuminée d’une église : un technicien de Sound-Maker et un membre de LuMa Production" width="750" height="1000" loading="lazy">
+              <p class="annot annot--regie" aria-hidden="true"><span>les deux t-shirts !</span><svg class="fleche trace" viewBox="0 0 100 64" aria-hidden="true" focusable="false"><path d="M8 52C24 22 54 10 88 20"/><path d="M75 8.5l15 12-17.5 6.5"/></svg></p>
+            </figure>
+            <div class="pros__infos">
+              <div class="pro">
+                <h4 class="sr">Sound-Maker</h4>
+                <a class="pro__logo" href="https://www.soundmaker.be/" target="_blank" rel="noopener"><img src="img/soundmaker-blanc.png" alt="Sound-Maker, sonorisation et éclairage : voir leur site (nouvel onglet)" width="640" height="202" loading="lazy"></a>
+                <p class="membre__role">Son, lumière et vidéo&nbsp;·&nbsp;Verviers</p>
+                <p class="membre__bio">Notre équipe technique depuis le début : transport, montage, son, lumière et vidéo, de la petite église de village à la grande nef. Leur savoir-faire fait de chaque temps de louange un vrai concert.</p>
+              </div>
+              <div class="pro">
+                <h4 class="sr">LuMa Production</h4>
+                <span class="pro__logo"><img src="img/luma-clair.png" alt="LuMa Production" width="328" height="160" loading="lazy"></span>
+                <p class="membre__role">Producteur du groupe</p>
+                <p class="membre__bio">LuMa Production produit Jesus’Trip &amp; Co : elle organise les concerts et assure la gestion du groupe.</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -1438,7 +1448,7 @@ cite{font-style:italic}
     <div class="wrap">
       <div class="entete-section">
         <p class="surtitre">Témoignages</p>
-        <h2 id="titre-temoignages">Ils l’ont <span class="eclat">vécu</span><span class="griffe griffe--titre" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4.5 10.5 8 12.4M6.6 4.6l2.5 3.6M12.6 3v4.4"/></svg></span></h2>
+        <h2 id="titre-temoignages">Ils l’ont <span class="eclat">vécu</span></h2>
         <p class="chapo">Participants, élèves, organisateurs : quelques mots reçus au fil des soirées.</p>
         <p class="note-main note-main--merci" aria-hidden="true">merci pour vos mots ! <span class="griffe griffe--coeur"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 20.3S4.5 15.6 4.5 9.6A4.1 4.1 0 0 1 12 7.3a4.1 4.1 0 0 1 7.5 2.3c0 6-7.5 10.7-7.5 10.7z"/></svg></span></p>
       </div>
@@ -1487,13 +1497,13 @@ cite{font-style:italic}
   <section class="section section--blanc section--presse" id="presse" aria-labelledby="titre-presse">
     <div class="ornement" aria-hidden="true"><span></span><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12.2 2.8c-.2 6.4.1 12.4-.3 18.6M6.6 8.3c3.8-.4 7.4-.2 11-.4"/></svg><span></span></div>
     <span class="deco deco--g" style="--y:34%;--r:-8deg;--c:var(--marine)" data-v="0.24" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 12c0-.9.9-1.4 1.6-1 1 .6.9 2.2-.2 2.8-1.6.9-3.6-.2-3.8-2-.3-2.4 1.9-4.3 4.2-4 3 .4 4.7 3.4 4 6.2-.9 3.6-4.9 5.4-8.2 4.2-4.1-1.5-5.7-6.4-4.1-10.2"/></svg></span>
-    <span class="deco deco--d" style="--y:22%;--r:12deg;--c:var(--rouge-vif)" data-v="0.3" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4.5 10.5 8 12.4M6.6 4.6l2.5 3.6M12.6 3v4.4"/></svg></span>
+    <span class="deco deco--d" style="--y:22%;--r:12deg;--c:var(--rouge-vif)" data-v="0.3" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2.5c.7 4.6 2.6 6.9 6.8 7.5-4.2.6-6.1 2.9-6.8 7.5-.7-4.6-2.6-6.9-6.8-7.5 4.2-.6 6.1-2.9 6.8-7.5zM19 16.5c.3 1.6 1 2.3 2.5 2.5-1.5.2-2.2.9-2.5 2.5-.3-1.6-1-2.3-2.5-2.5 1.5-.2 2.2-.9 2.5-2.5z"/></svg></span>
     <span class="deco deco--d" style="--y:66%;--r:-8deg;--c:var(--marine)" data-v="0.34" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5.2 18.6c0-1.6 1.6-2.9 3.4-2.9 1.4 0 2.3.8 2.3 1.9 0 1.6-1.6 2.9-3.4 2.9-1.4 0-2.3-.8-2.3-1.9zM10.9 17.4V4.2c.8 2.4 5.6 3.2 5.6 7.6"/></svg></span>
     <span class="deco deco--g" style="--y:78%;--r:10deg;--c:var(--rouge-vif)" data-v="0.28" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2.5c.7 4.6 2.6 6.9 6.8 7.5-4.2.6-6.1 2.9-6.8 7.5-.7-4.6-2.6-6.9-6.8-7.5 4.2-.6 6.1-2.9 6.8-7.5zM19 16.5c.3 1.6 1 2.3 2.5 2.5-1.5.2-2.2.9-2.5 2.5-.3-1.6-1-2.3-2.5-2.5 1.5-.2 2.2-.9 2.5-2.5z"/></svg></span>
     <div class="wrap">
       <div class="entete-section">
         <p class="surtitre">Dans la presse</p>
-        <h2 id="titre-presse">Ils parlent <span class="eclat">de nous</span><span class="griffe griffe--titre" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4.5 10.5 8 12.4M6.6 4.6l2.5 3.6M12.6 3v4.4"/></svg></span></h2>
+        <h2 id="titre-presse">Ils parlent <span class="eclat">de nous</span></h2>
         <p class="chapo">Cathobel, L’Avenir, le collège de Maredsous : quelques articles parus depuis nos débuts.</p>
       </div>
       <div class="coupures-scene">
@@ -1520,7 +1530,7 @@ cite{font-style:italic}
     <div class="wrap">
       <div class="entete-section">
         <p class="surtitre surtitre--ciel">Nous inviter</p>
-        <h2 id="titre-inviter">Et si c’était <span class="eclat">chez vous</span> ?<span class="griffe griffe--titre" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4.5 10.5 8 12.4M6.6 4.6l2.5 3.6M12.6 3v4.4"/></svg></span></h2>
+        <h2 id="titre-inviter">Et si c’était <span class="eclat">chez vous</span> ?</h2>
         <p class="chapo">Paroisses, unités pastorales, mouvements de jeunesse, écoles, pèlerinages : chaque soirée est portée par un organisateur local, et nous venons partout où l’on a envie de louer Dieu ensemble, dans une église, une salle ou un sanctuaire.</p>
       </div>
       <div class="inviter">
@@ -1564,7 +1574,7 @@ cite{font-style:italic}
     <span class="deco deco--d" style="--y:48%;--r:12deg;--c:var(--marine)" data-v="0.26" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2.5c.7 4.6 2.6 6.9 6.8 7.5-4.2.6-6.1 2.9-6.8 7.5-.7-4.6-2.6-6.9-6.8-7.5 4.2-.6 6.1-2.9 6.8-7.5zM19 16.5c.3 1.6 1 2.3 2.5 2.5-1.5.2-2.2.9-2.5 2.5-.3-1.6-1-2.3-2.5-2.5 1.5-.2 2.2-.9 2.5-2.5z"/></svg></span>
     <div class="wrap">
       <p class="surtitre">Nos partenaires</p>
-      <h2 id="titre-partenaires">Ils nous <span class="eclat">accompagnent</span><span class="griffe griffe--titre" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4.5 10.5 8 12.4M6.6 4.6l2.5 3.6M12.6 3v4.4"/></svg></span></h2>
+      <h2 id="titre-partenaires">Ils nous <span class="eclat">accompagnent</span></h2>
       <p class="note-main note-main--merci" aria-hidden="true">merci à eux ! <span class="griffe griffe--coeur"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 20.3S4.5 15.6 4.5 9.6A4.1 4.1 0 0 1 12 7.3a4.1 4.1 0 0 1 7.5 2.3c0 6-7.5 10.7-7.5 10.7z"/></svg></span></p>
       <ul class="logos">
         <li class="logo logo--rond"><a href="https://www.evechedeliege.be/" target="_blank" rel="noopener"><img src="img/partenaire-diocese.png" alt="Diocèse de Liège : voir le site (nouvel onglet)" width="300" height="300" loading="lazy"></a></li>
@@ -1589,7 +1599,7 @@ cite{font-style:italic}
     <div class="psaume__brume" aria-hidden="true"></div>
     <div class="wrap psaume__in">
       <h2 class="surtitre surtitre--ciel" id="titre-psaume">Notre verset</h2>
-      <blockquote class="psaume__verset"><p>« Dirige ton chemin<br> vers le Seigneur,<br> fais-lui confiance,<br> et lui, il agira. »</p><span class="griffe griffe--psaume-g" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2.5c.7 4.6 2.6 6.9 6.8 7.5-4.2.6-6.1 2.9-6.8 7.5-.7-4.6-2.6-6.9-6.8-7.5 4.2-.6 6.1-2.9 6.8-7.5zM19 16.5c.3 1.6 1 2.3 2.5 2.5-1.5.2-2.2.9-2.5 2.5-.3-1.6-1-2.3-2.5-2.5 1.5-.2 2.2-.9 2.5-2.5z"/></svg></span><span class="griffe griffe--psaume-d" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4.5 10.5 8 12.4M6.6 4.6l2.5 3.6M12.6 3v4.4"/></svg></span></blockquote>
+      <blockquote class="psaume__verset"><p>« Dirige ton chemin<br> vers le Seigneur,<br> fais-lui confiance,<br> et lui, il agira. »</p><span class="griffe griffe--psaume-g" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2.5c.7 4.6 2.6 6.9 6.8 7.5-4.2.6-6.1 2.9-6.8 7.5-.7-4.6-2.6-6.9-6.8-7.5 4.2-.6 6.1-2.9 6.8-7.5zM19 16.5c.3 1.6 1 2.3 2.5 2.5-1.5.2-2.2.9-2.5 2.5-.3-1.6-1-2.3-2.5-2.5 1.5-.2 2.2-.9 2.5-2.5z"/></svg></span><span class="griffe griffe--psaume-d" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 20.3S4.5 15.6 4.5 9.6A4.1 4.1 0 0 1 12 7.3a4.1 4.1 0 0 1 7.5 2.3c0 6-7.5 10.7-7.5 10.7z"/></svg></span></blockquote>
       <p class="psaume__ref">Psaume 37, 5</p>
     </div>
   </section>
