@@ -939,6 +939,13 @@ a.pro__logo:hover{opacity:.82}
 @media (max-width:640px){ .annot--attend{left:132px;right:auto} }
 /* coordonnées : une adresse e-mail trop longue se coupe après l'@, jamais au milieu d'un mot */
 #coord-mail{overflow-wrap:normal}
+/* Contact : photo ronde de la personne de contact, à gauche du nom ; le nom reste sur une ligne */
+.contact-carte__qui{display:flex;align-items:center;gap:14px;min-width:0}
+.contact-carte__photo{flex:none;width:64px;height:64px;border-radius:50%;object-fit:cover;box-shadow:0 0 0 3px rgba(147,183,217,.9),0 10px 18px -8px rgba(4,22,48,.55)}
+.contact-carte__ident{display:flex;flex-direction:column;gap:2px;min-width:0}
+.contact-carte h3{white-space:nowrap;font-size:clamp(19px,5.4vw,24px)}
+.contact-carte .contact-carte__role{margin-top:0}
+@media (max-width:400px){ .contact-carte__photo{width:56px;height:56px} .contact-carte__qui{gap:12px} }
 
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "MusicGroup", "name": "Jesus'Trip & Co", "alternateName": "Jesus'Trip", "genre": ["Pop-louange", "Musique chrétienne"], "foundingDate": "2014", "foundingLocation": {"@type": "Place", "name": "Verviers, Belgique"}, "description": "Jesus’Trip & Co, groupe belge de pop-louange : des temps de louange festifs et priants dans les églises de Wallonie, de Bruxelles et jusqu’à Lourdes. Invitez-nous chez vous.", "url": "https://jesustripandco.be/", "image": "https://jesustripandco.be/img/partage.jpg", "sameAs": ["https://www.facebook.com/jesustrip.be", "https://www.instagram.com/jesustrip/", "https://www.youtube.com/@jesustrip3223", "https://open.spotify.com/artist/0YSleEpy61th1Lasah1Fnt", "https://www.deezer.com/fr/artist/9116278", "https://music.apple.com/be/artist/jesustrip/1046558283"], "member": [{"@type": "Person", "name": "Luc Mathues"}, {"@type": "Person", "name": "Gaël Haine"}, {"@type": "Person", "name": "Nathan Lamberts"}, {"@type": "Person", "name": "Joanna Verwilghen"}, {"@type": "Person", "name": "Frédéric Kienen"}]}, {"@type": "MusicEvent", "name": "Premier concert de Jesus'Trip & Co", "description": "Premier concert de Jesus'Trip & Co : pour la première fois, deux nouveaux musiciens rejoignent l'aventure Jesus'Trip. Entrée gratuite, verre de l'amitié offert.", "image": "https://jesustripandco.be/img/partage.jpg", "url": "https://jesustripandco.be/#agenda", "startDate": "2027-01-16T20:00:00+01:00", "eventStatus": "https://schema.org/EventScheduled", "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode", "isAccessibleForFree": true, "location": {"@type": "Place", "name": "Église de Battice", "address": {"@type": "PostalAddress", "addressLocality": "Battice", "addressCountry": "BE"}}, "performer": {"@type": "MusicGroup", "name": "Jesus'Trip & Co"}, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "EUR", "availability": "https://schema.org/InStock"}}]}</script>
@@ -1584,11 +1591,16 @@ a.pro__logo:hover{opacity:.82}
         <aside class="inviter__cote" aria-label="Contact et informations pratiques">
           <div class="contact-carte">
             <p class="surtitre">Contact</p>
-            <div class="contact-carte__nom">
-              <h3>Manon Franssen</h3>
-              <p class="annot annot--contact" aria-hidden="true"><span>c’est elle qui vous répond !</span><svg class="fleche fleche--crochet trace" viewBox="0 0 60 108" aria-hidden="true" focusable="false"><path d="M24 4C56 28 50 80 8 100"/><path d="M20.8 102.1L8 100l6.4-11.3"/></svg></p>
+            <div class="contact-carte__qui">
+              <img class="contact-carte__photo" src="img/rond-manon.jpg" alt="" width="560" height="560" loading="lazy">
+              <div class="contact-carte__ident">
+                <div class="contact-carte__nom">
+                  <h3>Manon Franssen</h3>
+                  <p class="annot annot--contact" aria-hidden="true"><span>c’est elle qui vous répond !</span><svg class="fleche fleche--crochet trace" viewBox="0 0 60 108" aria-hidden="true" focusable="false"><path d="M24 4C56 28 50 80 8 100"/><path d="M20.8 102.1L8 100l6.4-11.3"/></svg></p>
+                </div>
+                <p class="contact-carte__role">Manageuse du groupe</p>
+              </div>
             </div>
-            <p class="contact-carte__role">Manageuse du groupe</p>
             <p class="coord"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg><span id="coord-tel">+32 479 11 05 54</span><button class="copier" type="button" data-copier="+32 479 11 05 54" data-cible="coord-tel"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect width="14" height="14" x="8" y="8" rx="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg><span class="copier__etat">Copier</span><span class="sr"> le numéro</span></button></p>
             <p class="coord"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg><span id="coord-mail">manonf2407@<wbr>gmail.com</span><button class="copier" type="button" data-copier="manonf2407@gmail.com" data-cible="coord-mail"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect width="14" height="14" x="8" y="8" rx="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg><span class="copier__etat">Copier</span><span class="sr"> l’adresse e-mail</span></button></p>
             <a class="btn btn--rouge" href="mailto:manonf2407@gmail.com?subject=Invitation%20Jesus%27Trip%20%26%20Co&amp;body=Bonjour%20Manon%2C%0A%0ANous%20aimerions%20accueillir%20Jesus%27Trip%20%26%20Co.%0A%0AOrganisateur%20%3A%0ALieu%20%3A%0ADate%28s%29%20envisag%C3%A9e%28s%29%20%3A%0APublic%20attendu%20%3A%0ANotre%20projet%20%28ann%C3%A9e%20pastorale%2C%20confirmands%2C%20rassemblement...%29%20%3A%0A%0AMerci%20et%20%C3%A0%20bient%C3%B4t%20%21">Écrire une invitation</a>
