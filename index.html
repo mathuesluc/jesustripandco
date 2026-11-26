@@ -17,7 +17,7 @@
 <link rel="canonical" href="https://jesustripandco.be/">
 <meta name="google-site-verification" content="Wbb0UQDKWvVvGdrjt1T8WMinWfKnobWEkROZe0e_rto">
 <meta property="og:url" content="https://jesustripandco.be/">
-<meta property="og:image" content="https://jesustripandco.be/img/partage.jpg">
+<meta property="og:image" content="https://jesustripandco.be/img/partage.jpg?v=2">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
@@ -1130,8 +1130,72 @@ a.pro__logo:hover{opacity:.82}
   .jeu__badge{width:24px;height:24px;right:-6px;bottom:-6px}
   .jeu__badge svg{width:14px;height:14px}
 }
+
+/* ---------- 27/11 : le jeu dans sa propre section, transitions, tarif, logos ---------- */
+.section--equipe{isolation:isolate}
+.section.section--fondu-brume{background:linear-gradient(180deg,#FFFFFF 0,#FFFFFF calc(100% - 220px),var(--brume) 100%)}
+.section--fondu-brume{--bas:40px}
+.section.section--egaliseur{background:var(--glace)}
+/* nuages : jamais coupés en haut (hauteur proportionnelle à la largeur) */
+.sep--bulles{height:max(54px,calc(100vw / 12))}
+.section--bulles{--bas:max(48px,calc(100vw / 13.7))}
+.section--jeu{background:radial-gradient(52% 36% at 50% 52%,rgba(232,52,66,.62),rgba(232,52,66,0) 100%),var(--rouge);color:#fff}
+.section--jeu > .wrap{position:relative;z-index:1}
+.section--jeu .jeu{margin-top:0}
+.section--jeu .surtitre{color:#FFD3D7}
+.section--jeu .jeu__titre{font-size:clamp(36px,5vw,58px)}
+.section--jeu .eclat{background-image:linear-gradient(100deg,#FFFFFF 0%,#FFD3D7 26%,#FFFFFF 50%,#FFB3BB 74%,#FFFFFF 100%);color:#fff}
+.jeu-deco{position:absolute;inset:0;z-index:0;overflow:hidden;pointer-events:none}
+.jeu-deco span{position:absolute;font:700 var(--t,120px)/1 var(--f-main);color:#fff;opacity:var(--o,.12);rotate:var(--r,0deg)}
+@media (max-width:640px){
+  .jeu-deco span{font-size:calc(var(--t,120px) * .55)}
+  .jeu-deco span:nth-child(n+5){display:none}
+}
+/* tarif */
+.benevoles__prix{display:flex;flex-direction:column;gap:2px;margin:2px 0 12px}
+.benevoles .benevoles__prix strong{font-family:var(--f-titre);font-size:clamp(26px,2.8vw,32px);font-weight:800;line-height:1.1;color:#fff}
+.benevoles .benevoles__prix span{font-size:14.5px;color:var(--clair)}
+.benevoles .benevoles__loin{margin-top:10px;font-weight:700;color:#fff}
+/* espace logos */
+.kit-logo{margin:clamp(44px,5.4vw,64px) auto 0;text-align:center;scroll-margin-top:24px}
+.kit-logo__titre{font-family:var(--f-main);font-size:clamp(30px,3.2vw,36px);font-weight:700;line-height:1.1;letter-spacing:0;color:var(--marine);rotate:-1.5deg}
+.kit-logo__titre .griffe{color:var(--rouge-vif);font-size:.7em;vertical-align:.25em}
+.kit-logo__texte{max-width:640px;margin:8px auto 0;font-size:15.5px;color:var(--gris);text-wrap:balance}
+.kit-logo__liste{list-style:none;padding:0;margin:24px auto 0;max-width:1000px;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:14px}
+.logo-carte{grid-column:span 2;display:flex;flex-direction:column;align-items:center;gap:12px;padding:16px 14px 16px;border:1px solid var(--ligne);border-radius:20px;background:#fff;box-shadow:0 14px 30px -24px rgba(6,48,95,.45)}
+.logo-carte--large,.logo-carte--fonce{grid-column:span 3}
+.logo-carte__apercu{display:grid;place-items:center;width:100%;height:150px;border-radius:14px;background:var(--brume)}
+.logo-carte--fonce .logo-carte__apercu{background:var(--marine)}
+.logo-carte__apercu img{width:auto;height:auto;max-width:min(124px,80%);max-height:124px}
+.logo-carte--large .logo-carte__apercu img,.logo-carte--fonce .logo-carte__apercu img{max-width:min(300px,84%)}
+.logo-carte__nom{display:flex;flex-direction:column;gap:1px;line-height:1.25}
+.logo-carte__nom strong{font-family:var(--f-titre);font-size:15px;font-weight:700;color:var(--marine)}
+.logo-carte__nom small{font-size:13px;color:var(--gris)}
+.logo-carte__formats{display:flex;flex-wrap:wrap;justify-content:center;gap:6px}
+.logo-carte__formats a{min-width:52px;padding:7px 10px;border-radius:999px;border:1.5px solid var(--marine);color:var(--marine);font:700 12.5px/1 var(--f-titre);letter-spacing:.06em;text-decoration:none;transition:background-color .2s,color .2s}
+.logo-carte__formats a:hover,.logo-carte__formats a:focus-visible{background:var(--marine);color:#fff}
+.kit-logo__aide{max-width:720px;margin:18px auto 0;font-size:13.5px;color:var(--gris);text-wrap:balance}
+.kit-logo__aide strong{color:var(--marine)}
+.kit-logo__tout{margin-top:16px}
+@media (max-width:760px){
+  .kit-logo__liste{grid-template-columns:minmax(0,1fr);gap:10px;max-width:520px}
+  .logo-carte,.logo-carte--large,.logo-carte--fonce{grid-column:auto;display:grid;grid-template-columns:96px minmax(0,1fr);column-gap:14px;row-gap:8px;align-items:center;padding:12px;text-align:left}
+  .logo-carte__apercu{grid-row:1 / span 2;width:96px;height:84px}
+  .logo-carte__apercu img{max-width:62px;max-height:62px}
+  .logo-carte--large .logo-carte__apercu img,.logo-carte--fonce .logo-carte__apercu img{max-width:84px}
+  .logo-carte__nom{grid-column:2;align-self:end}
+  .logo-carte__formats{grid-column:2;justify-content:flex-start;align-self:start}
+}
+@media (max-width:380px){
+  .logo-carte,.logo-carte--large,.logo-carte--fonce{grid-template-columns:78px minmax(0,1fr);column-gap:12px}
+  .logo-carte__apercu{width:78px;height:76px}
+  .logo-carte__apercu img{max-width:54px;max-height:54px}
+  .logo-carte--large .logo-carte__apercu img,.logo-carte--fonce .logo-carte__apercu img{max-width:68px}
+  .logo-carte__formats a{min-width:46px;padding:7px 8px}
+}
+@media (prefers-reduced-motion:reduce){.logo-carte__formats a{transition:none}}
 </style>
-<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "MusicGroup", "name": "Jesus'Trip & Co", "alternateName": "Jesus'Trip", "genre": ["Pop-louange", "Musique chrétienne"], "foundingDate": "2014", "foundingLocation": {"@type": "Place", "name": "Verviers, Belgique"}, "description": "Jesus’Trip & Co, groupe belge de pop-louange : des temps de louange festifs et priants dans les églises de Wallonie, de Bruxelles et jusqu’à Lourdes. Invitez-nous chez vous.", "url": "https://jesustripandco.be/", "image": "https://jesustripandco.be/img/partage.jpg", "sameAs": ["https://www.facebook.com/jesustrip.be", "https://www.instagram.com/jesustripandco/", "https://www.youtube.com/@jesustrip3223", "https://open.spotify.com/artist/0YSleEpy61th1Lasah1Fnt", "https://www.deezer.com/fr/artist/9116278", "https://music.apple.com/be/artist/jesustrip/1046558283"], "member": [{"@type": "Person", "name": "Luc Mathues"}, {"@type": "Person", "name": "Gaël Haine"}, {"@type": "Person", "name": "Nathan Lamberts"}, {"@type": "Person", "name": "Joanna Verwilghen"}, {"@type": "Person", "name": "Frédéric Kienen"}]}, {"@type": "MusicEvent", "name": "Premier concert de Jesus'Trip & Co", "description": "Premier concert de Jesus'Trip & Co : pour la première fois, deux nouveaux musiciens rejoignent l'aventure Jesus'Trip. Entrée gratuite, verre de l'amitié offert.", "image": ["https://jesustripandco.be/telechargements/JesusTrip-and-Co_Concert-Battice_carre.jpg", "https://jesustripandco.be/telechargements/JesusTrip-and-Co_Concert-Battice_publication-4x5.jpg", "https://jesustripandco.be/img/partage.jpg"], "url": "https://jesustripandco.be/#agenda", "startDate": "2027-01-16T20:00:00+01:00", "eventStatus": "https://schema.org/EventScheduled", "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode", "isAccessibleForFree": true, "location": {"@type": "Place", "name": "Église de Battice", "address": {"@type": "PostalAddress", "addressLocality": "Battice", "addressCountry": "BE"}}, "performer": {"@type": "MusicGroup", "name": "Jesus'Trip & Co"}, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "EUR", "availability": "https://schema.org/InStock"}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "MusicGroup", "name": "Jesus'Trip & Co", "alternateName": "Jesus'Trip", "genre": ["Pop-louange", "Musique chrétienne"], "foundingDate": "2014", "foundingLocation": {"@type": "Place", "name": "Verviers, Belgique"}, "description": "Jesus’Trip & Co, groupe belge de pop-louange : des temps de louange festifs et priants dans les églises de Wallonie, de Bruxelles et jusqu’à Lourdes. Invitez-nous chez vous.", "url": "https://jesustripandco.be/", "image": "https://jesustripandco.be/img/partage.jpg?v=2", "sameAs": ["https://www.facebook.com/jesustrip.be", "https://www.instagram.com/jesustripandco/", "https://www.youtube.com/@jesustrip3223", "https://open.spotify.com/artist/0YSleEpy61th1Lasah1Fnt", "https://www.deezer.com/fr/artist/9116278", "https://music.apple.com/be/artist/jesustrip/1046558283"], "member": [{"@type": "Person", "name": "Luc Mathues"}, {"@type": "Person", "name": "Gaël Haine"}, {"@type": "Person", "name": "Nathan Lamberts"}, {"@type": "Person", "name": "Joanna Verwilghen"}, {"@type": "Person", "name": "Frédéric Kienen"}]}, {"@type": "MusicEvent", "name": "Jesus'Trip & Co en concert", "description": "Jesus'Trip & Co en concert à l'église de Battice : pour la première fois, deux nouveaux musiciens rejoignent l'aventure Jesus'Trip. Entrée gratuite, verre de l'amitié offert.", "image": ["https://jesustripandco.be/telechargements/JesusTrip-and-Co_Concert-Battice_carre.jpg", "https://jesustripandco.be/telechargements/JesusTrip-and-Co_Concert-Battice_publication-4x5.jpg", "https://jesustripandco.be/img/partage.jpg?v=2"], "url": "https://jesustripandco.be/#agenda", "startDate": "2027-01-16T20:00:00+01:00", "eventStatus": "https://schema.org/EventScheduled", "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode", "isAccessibleForFree": true, "location": {"@type": "Place", "name": "Église de Battice", "address": {"@type": "PostalAddress", "addressLocality": "Battice", "addressCountry": "BE"}}, "performer": {"@type": "MusicGroup", "name": "Jesus'Trip & Co"}, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "EUR", "availability": "https://schema.org/InStock"}}]}</script>
 </head>
 <body>
 <a class="skip" href="#contenu">Aller au contenu</a>
@@ -1143,7 +1207,7 @@ a.pro__logo:hover{opacity:.82}
 
 <div class="barre" lang="fr">
   <div class="wrap barre__in">
-    <a class="barre__concert" href="#agenda"><strong>Premier concert à cinq</strong> · samedi 16 janvier 2027 · église de Battice</a>
+    <a class="barre__concert" href="#agenda"><strong>Prochain concert</strong> · samedi 16 janvier 2027 · église de Battice</a>
     <ul class="barre__reseaux" aria-label="Jesus’Trip &amp; Co sur les réseaux">
       <li><a href="https://www.facebook.com/jesustrip.be" target="_blank" rel="noopener" aria-label="Facebook"><svg class="marque" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z"/></svg></a></li>
       <li><a href="https://www.instagram.com/jesustripandco/" target="_blank" rel="noopener" aria-label="Instagram"><svg class="marque" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"/></svg></a></li>
@@ -1161,10 +1225,10 @@ a.pro__logo:hover{opacity:.82}
     <nav class="nav" id="nav" aria-label="Navigation principale">
       <a href="#agenda">Agenda</a>
       <a href="#groupe">Le groupe</a>
-      <a href="#soiree">Une soirée</a>
-      <a href="#musique">Musique</a>
       <a href="#equipe">L’équipe</a>
       <a class="nav__jeu" href="#jeu">Le jeu<span class="nav__pastille" aria-hidden="true">?</span></a>
+      <a href="#soiree">Une soirée</a>
+      <a href="#musique">Musique</a>
       <a href="#temoignages">Témoignages</a>
       <a href="#presse">Presse</a>
       <a class="nav__cta" href="#inviter">Nous inviter</a>
@@ -1272,7 +1336,7 @@ a.pro__logo:hover{opacity:.82}
             <span class="date-bloc__an">2027</span>
           </div>
           <div class="date-infos">
-            <h3>Premier concert de Jesus’Trip &amp; Co</h3>
+            <h3>Jesus’Trip &amp; Co en concert</h3>
             <p class="date-intro">C’est la première fois que deux nouveaux musiciens rejoignent l’aventure Jesus’Trip : Joanna Verwilghen au chant et l’abbé Frédéric Kienen à la basse et à la clarinette. Venez découvrir le groupe à cinq !</p>
             <p class="date-anecdote">Clin d’œil de l’histoire : c’est déjà à Battice, en septembre 2015, que Jesus’Trip présentait son premier album.</p>
             <dl>
@@ -1283,7 +1347,7 @@ a.pro__logo:hover{opacity:.82}
               <li class="entoure">Entrée gratuite<svg class="entoure__trait" viewBox="0 0 160 52" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path d="M84 4C40 2 5 11 5 26s30 22 76 22 74-8 74-22S118 3 66 7"/></svg></li>
               <li>Verre de l’amitié offert <span class="griffe griffe--coeur" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 20.3S4.5 15.6 4.5 9.6A4.1 4.1 0 0 1 12 7.3a4.1 4.1 0 0 1 7.5 2.3c0 6-7.5 10.7-7.5 10.7z"/></svg></span></li>
             </ul>
-            <div class="date-action"><a class="btn btn--marine btn--petit" href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Premier%20concert%20de%20Jesus%27Trip%20%26%20Co%20%C3%A0%20Battice&amp;dates=20270116T190000Z%2F20270116T210000Z&amp;details=Premier%20concert%20de%20Jesus%27Trip%20%26%20Co%20%3A%20pour%20la%20premi%C3%A8re%20fois%2C%20deux%20nouveaux%20musiciens%20rejoignent%20l%27aventure.%20Entr%C3%A9e%20gratuite%2C%20verre%20de%20l%27amiti%C3%A9%20offert.&amp;location=%C3%89glise%20de%20Battice%2C%20Battice%2C%20Belgique" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg> Ajouter à Google Agenda</a><p class="annot annot--agenda" aria-hidden="true"><svg class="fleche trace" viewBox="0 0 100 64" aria-hidden="true" focusable="false"><path d="M8 52C24 22 54 10 88 20"/><path d="M75 8.5l15 12-17.5 6.5"/></svg><span>réservez la date !</span></p></div>
+            <div class="date-action"><a class="btn btn--marine btn--petit" href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Jesus%27Trip%20%26%20Co%20en%20concert%20%C3%A0%20Battice&amp;dates=20270116T190000Z%2F20270116T210000Z&amp;details=Jesus%27Trip%20%26%20Co%20en%20concert%20%3A%20pour%20la%20premi%C3%A8re%20fois%2C%20deux%20nouveaux%20musiciens%20rejoignent%20l%27aventure.%20Entr%C3%A9e%20gratuite%2C%20verre%20de%20l%27amiti%C3%A9%20offert.&amp;location=%C3%89glise%20de%20Battice%2C%20Battice%2C%20Belgique" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg> Ajouter à Google Agenda</a><p class="annot annot--agenda" aria-hidden="true"><svg class="fleche trace" viewBox="0 0 100 64" aria-hidden="true" focusable="false"><path d="M8 52C24 22 54 10 88 20"/><path d="M75 8.5l15 12-17.5 6.5"/></svg><span>réservez la date !</span></p></div>
           </div>
           <div class="date-photo date-photo--affiche">
             <a class="affiche" href="telechargements/JesusTrip-and-Co_Concert-Battice_publication-4x5.jpg" target="_blank" rel="noopener"><img src="img/affiche-battice-640.jpg" srcset="img/affiche-battice-640.jpg 640w, img/affiche-battice-960.jpg 960w" sizes="(max-width: 640px) calc(100vw - 84px), 340px" alt="L’affiche du concert : Jesus’Trip &amp; Co, groupe de pop-louange, en concert le samedi 16 janvier 2027 à 20 h à l’église de Battice, entrée gratuite ; Gaël, Joanna, Luc, Fred et Nathan sur scène" width="640" height="800" loading="lazy"><span class="sr"> (voir l’affiche en grand, nouvel onglet)</span></a>
@@ -1352,8 +1416,8 @@ a.pro__logo:hover{opacity:.82}
     <svg class="sep sep--dechirure" style="--sep:#041F3E" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path class="sep__fibre" d="M0 22.9L0.0 22.9L19.0 28.0L36.4 24.4L55.8 21.2L74.0 24.6L96.7 18.8L111.5 18.2L134.5 23.0L145.2 25.5L170.6 23.0L190.4 19.5L200.7 23.5L211.6 21.3L225.5 20.9L242.9 26.1L266.4 28.4L286.7 29.1L307.3 28.9L321.7 33.5L347.6 30.7L369.0 24.2L382.6 22.7L393.8 25.9L410.2 25.1L426.4 24.8L449.9 14.9L463.3 22.7L480.8 23.2L497.1 15.2L517.2 22.2L531.5 16.5L546.9 25.0L569.0 17.9L582.9 17.9L593.9 24.0L606.7 21.5L623.9 17.4L645.6 15.2L665.9 13.2L682.6 12.4L696.9 17.9L719.8 10.2L744.0 8.3L760.3 13.9L780.5 7.6L806.4 10.1L820.5 16.2L835.8 13.1L846.9 12.1L866.3 14.8L885.9 16.9L903.1 22.7L920.9 19.2L944.7 15.1L957.2 21.2L980.3 14.2L993.3 18.1L1018.4 12.6L1043.6 19.1L1063.2 15.8L1074.9 13.2L1100.3 17.3L1121.6 19.8L1144.7 25.2L1159.4 22.7L1181.0 23.2L1194.6 28.1L1218.3 28.7L1232.7 31.1L1246.0 22.4L1260.3 25.5L1271.3 22.4L1287.2 25.0L1299.3 22.5L1323.5 27.1L1344.0 24.2L1363.4 19.5L1374.0 18.8L1398.5 26.2L1423.9 21.5L1440.0 22.0V60H0Z"/><path d="M0 26.8L0.0 26.8L6.3 30.0L12.6 30.6L19.0 31.9L27.7 33.0L36.4 33.3L46.1 30.7L55.8 29.5L64.9 31.9L74.0 28.6L81.6 29.0L89.1 24.7L96.7 28.0L101.6 22.3L106.6 24.9L111.5 25.5L123.0 26.4L134.5 30.2L139.8 28.3L145.2 35.0L157.9 33.1L170.6 28.9L177.2 29.8L183.8 27.7L190.4 25.8L193.9 27.6L197.3 28.8L200.7 28.9L206.2 26.4L211.6 26.2L218.6 28.8L225.5 29.1L231.3 30.1L237.1 30.8L242.9 31.8L254.7 31.6L266.4 35.0L276.5 36.8L286.7 36.6L293.5 35.2L300.4 37.8L307.3 34.9L312.1 35.5L316.9 39.3L321.7 42.3L334.7 37.9L347.6 35.5L354.7 32.9L361.9 32.0L369.0 32.0L375.8 32.7L382.6 31.1L386.3 28.0L390.1 31.2L393.8 34.4L402.0 31.3L410.2 32.7L415.6 32.8L421.0 33.5L426.4 30.3L434.2 30.0L442.1 23.4L449.9 22.5L456.6 24.0L463.3 28.0L469.1 31.1L474.9 26.6L480.8 29.1L489.0 23.8L497.1 20.2L503.8 21.9L510.5 23.7L517.2 28.4L524.4 26.6L531.5 25.8L536.6 27.0L541.7 26.9L546.9 30.0L554.2 30.4L561.6 28.3L569.0 22.5L576.0 23.0L582.9 24.6L586.6 29.1L590.2 28.5L593.9 29.9L600.3 31.0L606.7 25.6L615.3 28.5L623.9 21.6L631.1 22.9L638.4 23.2L645.6 21.0L655.7 21.1L665.9 19.5L671.5 20.3L677.0 17.4L682.6 17.2L689.8 24.1L696.9 27.3L708.4 20.7L719.8 15.2L727.8 17.3L735.9 12.5L744.0 12.0L752.1 16.7L760.3 22.0L767.0 18.2L773.8 13.4L780.5 13.7L793.4 12.6L806.4 17.7L811.1 21.1L815.8 20.5L820.5 25.3L825.6 21.6L830.7 23.3L835.8 21.1L841.3 18.7L846.9 20.6L853.4 19.9L859.8 18.4L866.3 20.2L872.8 21.3L879.3 24.8L885.9 22.3L894.5 24.2L903.1 29.6L909.0 26.2L915.0 27.1L920.9 26.3L932.8 20.8L944.7 21.7L951.0 24.0L957.2 27.6L968.7 25.3L980.3 23.3L986.8 22.4L993.3 23.2L1001.7 22.6L1010.0 18.7L1018.4 21.5L1026.8 23.9L1035.2 26.0L1043.6 23.2L1050.1 24.0L1056.7 20.6L1063.2 20.1L1067.1 23.1L1071.0 17.7L1074.9 17.6L1087.6 18.8L1100.3 22.8L1107.4 23.8L1114.5 26.2L1121.6 26.3L1133.2 29.5L1144.7 33.0L1149.6 32.1L1154.5 32.3L1159.4 28.5L1170.2 28.9L1181.0 29.9L1187.8 34.3L1194.6 34.8L1206.4 37.0L1218.3 33.6L1225.5 37.8L1232.7 40.0L1237.2 33.6L1241.6 30.7L1246.0 27.2L1253.2 33.4L1260.3 29.8L1265.8 28.9L1271.3 27.5L1279.2 27.8L1287.2 31.8L1291.2 31.9L1295.2 28.0L1299.3 26.5L1311.4 31.7L1323.5 36.0L1330.4 35.4L1337.2 29.4L1344.0 30.7L1350.5 30.3L1356.9 25.7L1363.4 25.9L1368.7 22.8L1374.0 23.2L1382.1 25.9L1390.3 28.4L1398.5 35.6L1411.2 32.9L1423.9 28.5L1432.0 26.1L1440.0 30.0V60H0Z"/></svg>
   </section>
 
-  <!-- Le « & Co » (se termine par une aube) -->
-  <section class="section section--nuit section--aube" id="lourdes" aria-labelledby="titre-lourdes">
+  <!-- Le « & Co » (se termine par une arche de scène, vers l’équipe) -->
+  <section class="section section--nuit section--arche" id="lourdes" aria-labelledby="titre-lourdes">
     <span class="lueur lueur--g" style="--y:8%;--c:rgba(80,150,255,.28)" data-v="0.14" aria-hidden="true"></span>
     <span class="lueur lueur--d" style="--y:46%;--c:rgba(232,52,66,.26)" data-v="0.2" aria-hidden="true"></span>
     <span class="deco deco--g" style="--y:46%;--r:-14deg;--c:var(--ciel)" data-v="0.28" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2.5c.7 4.6 2.6 6.9 6.8 7.5-4.2.6-6.1 2.9-6.8 7.5-.7-4.6-2.6-6.9-6.8-7.5 4.2-.6 6.1-2.9 6.8-7.5zM19 16.5c.3 1.6 1 2.3 2.5 2.5-1.5.2-2.2.9-2.5 2.5-.3-1.6-1-2.3-2.5-2.5 1.5-.2 2.2-.9 2.5-2.5z"/></svg></span>
@@ -1400,158 +1464,11 @@ a.pro__logo:hover{opacity:.82}
         </div>
       </div>
     </div>
-    <div class="aube" aria-hidden="true"></div>
-  </section>
-
-  <!-- Une soirée (se termine par un égaliseur) -->
-  <section class="section section--ciel section--egaliseur" id="soiree" aria-labelledby="titre-soiree">
-    <span class="deco deco--g" style="--y:12%;--r:-10deg;--c:var(--marine)" data-v="0.26" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M15.8 12a3.8 3.8 0 1 1-7.6 0 3.8 3.8 0 0 1 7.6 0zM12 2.5v2.6M12 18.9v2.6M2.5 12h2.6M18.9 12h2.6M5.3 5.3l1.8 1.8M16.9 16.9l1.8 1.8M5.3 18.7l1.8-1.8M16.9 7.1l1.8-1.8"/></svg></span>
-    <span class="deco deco--d" style="--y:44%;--r:12deg;--c:var(--rouge-vif)" data-v="0.32" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3.4 18.6c0-1.4 1.4-2.5 3-2.5 1.2 0 2 .7 2 1.7 0 1.4-1.4 2.5-3 2.5-1.2 0-2-.7-2-1.7zM14.4 16.6c0-1.4 1.4-2.5 3-2.5 1.2 0 2 .7 2 1.7 0 1.4-1.4 2.5-3 2.5-1.2 0-2-.7-2-1.7zM8.4 17.6V6.4l11-2.6v11.6M8.4 9.8l11-2.6"/></svg></span>
-    <span class="deco deco--g" style="--y:66%;--r:8deg;--c:var(--rouge-vif)" data-v="0.36" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 20.3S4.5 15.6 4.5 9.6A4.1 4.1 0 0 1 12 7.3a4.1 4.1 0 0 1 7.5 2.3c0 6-7.5 10.7-7.5 10.7z"/></svg></span>
-    <span class="deco deco--d" style="--y:80%;--r:-10deg;--c:var(--marine)" data-v="0.28" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12.2 2.8c-.2 6.4.1 12.4-.3 18.6M6.6 8.3c3.8-.4 7.4-.2 11-.4"/></svg></span>
-    <div class="wrap">
-      <div class="entete-section">
-        <p class="surtitre">Une soirée avec nous</p>
-        <h2 id="titre-soiree">Jump, Sing &amp; <span class="eclat">Pray</span></h2>
-        <p class="chapo">Ce que nous proposons n’est pas un concert : c’est un temps de louange et de témoignage. Nous voulons faire vivre à chacun l’expérience de la louange, mais aussi celle de la prière, avec autant de joie que de profondeur. Chaque soirée se déroule comme une vague.</p>
-      </div>
-      <div class="vague" aria-hidden="true">
-        <svg viewBox="0 0 1000 170" preserveAspectRatio="none" focusable="false">
-          <defs>
-            <linearGradient id="degrade-vague" x1="0" x2="1" y1="0" y2="0">
-              <stop offset="0" stop-color="#93B7D9"/>
-              <stop offset="1" stop-color="#06305F"/>
-            </linearGradient>
-          </defs>
-          <path d="M0 150C40 150 70 40 125 40S300 140 375 140 540 18 625 18 800 92 875 96 970 108 1000 112V170H0z" fill="#F3F7FB"/>
-          <path d="M0 150C40 150 70 40 125 40S300 140 375 140 540 18 625 18 800 92 875 96 970 108 1000 112" fill="none" stroke="url(#degrade-vague)" stroke-width="4" stroke-linecap="round"/>
-        </svg>
-        <span class="vague__point" style="--x:12.5%;--y:23.5%">1</span>
-        <span class="vague__point" style="--x:37.5%;--y:82.4%">2</span>
-        <span class="vague__point" style="--x:62.5%;--y:10.6%">3</span>
-        <span class="vague__point" style="--x:87.5%;--y:56.5%">4</span>
-        <span class="vague__note" style="--x:12.5%;--y:23.5%;--dx:30px;--dy:-30px">ça monte !</span>
-        <span class="vague__note" style="--x:37.5%;--y:82.4%;--dx:30px;--dy:-8px">silence et prière</span>
-        <span class="vague__note" style="--x:62.5%;--y:10.6%;--dx:28px;--dy:-40px">la joie éclate !</span>
-        <span class="vague__note" style="--x:87.5%;--y:56.5%;--dx:-40px;--dy:-52px">avec Marie</span>
-      </div>
-      <ol class="temps">
-        <li>
-          <img class="temps__photo" src="img/temps-1.jpg" alt="Des jeunes chantent à pleine voix au pied de la scène, à Battice" width="900" height="600" loading="lazy" style="object-position:28% 50%">
-          <h3>La vague monte</h3>
-          <p class="temps__sous">l’accueil</p>
-          <p>On commence fort : des chants entraînants mettent toute l’assemblée debout. Si chanter, c’est prier deux fois, et danser, prier quatre fois, nous vous ferons prier huit fois !</p>
-        </li>
-        <li>
-          <img class="temps__photo" src="img/temps-2.jpg" alt="Gaël à la guitare, seul dans un rai de lumière" width="900" height="600" loading="lazy">
-          <h3>La prière</h3>
-          <p class="temps__sous">la profondeur</p>
-          <p>La vague redescend, la lumière baisse, le silence s’installe : un temps d’intériorité et de prière, souvent porté par un témoignage.</p>
-        </li>
-        <li>
-          <img class="temps__photo" src="img/temps-3.jpg" alt="Pluie de confettis sous les projecteurs, au-dessus du public, à Esneux" width="900" height="600" loading="lazy">
-          <h3>La résurrection</h3>
-          <p class="temps__sous">la louange éclate</p>
-          <p>Après la prière, la vague remonte plus fort que jamais : une joie libératrice. Il n’y a pas de vraie joie sans ce passage par l’intériorité.</p>
-        </li>
-        <li>
-          <img class="temps__photo" src="img/temps-4.jpg" alt="Le groupe sur scène dans une lumière dorée, vu depuis le public, à Mons" width="900" height="600" loading="lazy">
-          <h3>Avec Marie</h3>
-          <p class="temps__sous">l’envoi</p>
-          <p>Nous terminons toujours par un chant à Marie : un clin d’œil à Lourdes, le lieu qui nous a tous réunis, et une manière de repartir en paix.</p>
-        </li>
-      </ol>
-      <figure class="citation">
-        <blockquote><p>« La prière est la source de ma joie. »</p></blockquote>
-        <figcaption>Luc Mathues, fondateur du groupe</figcaption>
-      </figure>
-    </div>
-    <div class="eq" aria-hidden="true"><span style="--h:0.31;--t:1.19s;--d:-0.55s"></span><span style="--h:0.49;--t:1.25s;--d:-0.10s"></span><span style="--h:0.36;--t:1.42s;--d:-0.39s"></span><span style="--h:0.50;--t:1.55s;--d:-0.71s"></span><span style="--h:0.77;--t:1.13s;--d:-0.96s"></span><span style="--h:0.59;--t:1.26s;--d:-1.30s"></span><span style="--h:0.75;--t:1.34s;--d:-1.01s"></span><span style="--h:0.61;--t:1.36s;--d:-0.89s"></span><span style="--h:0.68;--t:0.77s;--d:-1.30s"></span><span style="--h:0.72;--t:1.33s;--d:-1.32s"></span><span style="--h:0.76;--t:1.49s;--d:-0.59s"></span><span style="--h:0.74;--t:1.11s;--d:-1.40s"></span><span style="--h:0.73;--t:0.83s;--d:-0.20s"></span><span style="--h:0.46;--t:1.52s;--d:-0.65s"></span><span style="--h:0.57;--t:0.99s;--d:-0.76s"></span><span style="--h:0.48;--t:1.03s;--d:-0.88s"></span><span style="--h:0.56;--t:1.47s;--d:-1.02s"></span><span style="--h:0.70;--t:1.44s;--d:-1.49s"></span><span style="--h:0.66;--t:0.88s;--d:-1.29s"></span><span style="--h:0.81;--t:1.47s;--d:-0.85s"></span><span style="--h:0.79;--t:0.92s;--d:-1.25s"></span><span style="--h:0.80;--t:0.98s;--d:-0.10s"></span><span style="--h:0.95;--t:1.54s;--d:-0.13s"></span><span style="--h:0.97;--t:1.08s;--d:-0.23s"></span><span style="--h:0.81;--t:1.37s;--d:-1.31s"></span><span style="--h:0.73;--t:1.24s;--d:-0.07s"></span><span style="--h:0.94;--t:1.01s;--d:-1.32s"></span><span style="--h:0.99;--t:1.15s;--d:-1.50s"></span><span style="--h:0.71;--t:0.81s;--d:-0.90s"></span><span style="--h:0.56;--t:0.91s;--d:-0.61s"></span><span style="--h:0.70;--t:0.87s;--d:-0.06s"></span><span style="--h:0.74;--t:1.00s;--d:-1.44s"></span><span style="--h:0.71;--t:1.05s;--d:-0.69s"></span><span style="--h:0.57;--t:1.27s;--d:-0.89s"></span><span style="--h:0.58;--t:1.25s;--d:-1.41s"></span><span style="--h:0.58;--t:1.09s;--d:-1.08s"></span><span style="--h:0.53;--t:0.99s;--d:-1.47s"></span><span style="--h:0.67;--t:1.19s;--d:-0.02s"></span><span style="--h:0.68;--t:1.21s;--d:-0.03s"></span><span style="--h:0.80;--t:1.26s;--d:-0.09s"></span><span style="--h:0.84;--t:1.12s;--d:-1.02s"></span><span style="--h:0.77;--t:1.32s;--d:-1.11s"></span><span style="--h:0.66;--t:0.80s;--d:-1.01s"></span><span style="--h:0.96;--t:0.95s;--d:-0.68s"></span><span style="--h:0.80;--t:1.01s;--d:-0.55s"></span><span style="--h:0.65;--t:1.05s;--d:-0.89s"></span><span style="--h:0.58;--t:1.05s;--d:-1.16s"></span><span style="--h:0.42;--t:1.21s;--d:-1.10s"></span><span style="--h:0.45;--t:0.93s;--d:-1.21s"></span><span style="--h:0.37;--t:0.90s;--d:-0.65s"></span><span style="--h:0.49;--t:0.83s;--d:-0.48s"></span><span style="--h:0.34;--t:1.42s;--d:-0.66s"></span><span style="--h:0.52;--t:0.89s;--d:-0.51s"></span><span style="--h:0.47;--t:1.46s;--d:-0.68s"></span><span style="--h:0.35;--t:0.85s;--d:-0.79s"></span><span style="--h:0.38;--t:1.40s;--d:-1.26s"></span></div>
-  </section>
-
-  <!-- Musique (se termine par une arche de scène) -->
-  <section class="section section--blanc section--arche" id="musique" aria-labelledby="titre-musique">
-    <span class="deco deco--g" style="--y:10%;--r:-12deg;--c:var(--rouge-vif)" data-v="0.26" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5.2 18.6c0-1.6 1.6-2.9 3.4-2.9 1.4 0 2.3.8 2.3 1.9 0 1.6-1.6 2.9-3.4 2.9-1.4 0-2.3-.8-2.3-1.9zM10.9 17.4V4.2c.8 2.4 5.6 3.2 5.6 7.6"/></svg></span>
-    <span class="deco deco--d" style="--y:30%;--r:10deg;--c:var(--marine)" data-v="0.3" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3.4 18.6c0-1.4 1.4-2.5 3-2.5 1.2 0 2 .7 2 1.7 0 1.4-1.4 2.5-3 2.5-1.2 0-2-.7-2-1.7zM14.4 16.6c0-1.4 1.4-2.5 3-2.5 1.2 0 2 .7 2 1.7 0 1.4-1.4 2.5-3 2.5-1.2 0-2-.7-2-1.7zM8.4 17.6V6.4l11-2.6v11.6M8.4 9.8l11-2.6"/></svg></span>
-    <span class="deco deco--g" style="--y:70%;--r:8deg;--c:var(--marine)" data-v="0.34" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5.2 18.6c0-1.6 1.6-2.9 3.4-2.9 1.4 0 2.3.8 2.3 1.9 0 1.6-1.6 2.9-3.4 2.9-1.4 0-2.3-.8-2.3-1.9zM10.9 17.4V4.2c.8 2.4 5.6 3.2 5.6 7.6"/></svg></span>
-    <div class="wrap">
-      <div class="entete-section">
-        <p class="surtitre">Notre répertoire</p>
-        <h2 id="titre-musique">Nos chants, nos <span class="eclat">compositions</span></h2>
-        <p class="chapo">Le cœur de Jesus’Trip, ce sont ses propres chansons : une trentaine de compositions, écrites pour la plupart par Gaël, quelques-unes par Luc, et arrangées à trois avec Nathan.</p>
-      </div>
-      <div class="musique">
-        <div class="musique__texte">
-          <p>Quelques reprises s’y glissent aussi. Côté sonorités, on passe volontiers du latino à l’électro, avec un détour par la country. Les thèmes sont ceux qui nous font vivre : la joie, la résurrection, la miséricorde, la rencontre personnelle avec Dieu, les Béatitudes et la confiance en Marie. Avec le « &amp; Co », la basse, la clarinette et une voix féminine viennent enrichir les arrangements.</p>
-          <div class="livret">
-            <img class="livret__couverture" src="img/livret-2017.jpg" alt="Couverture du livret de partitions Jesus’Trip 2017" width="300" height="424" loading="lazy">
-            <div class="livret__infos">
-              <p class="livret__sur">Chantez-les chez vous</p>
-              <h3>Le livret de partitions</h3>
-              <p>Pour les animateurs, les chorales et les groupes de jeunes : mélodies, paroles et accords de quatre de nos chants (Alléluia, il est ressuscité !, Génération François 1er, Je te salue, Marie et Louez Dieu).</p>
-              <a class="btn btn--marine btn--petit" href="livret-partitions-jesustrip-2017.pdf" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4M10 9H8M16 13H8M16 17H8"/></svg> Télécharger le livret (PDF)</a>
-            </div>
-          </div>
-          <p class="musique__liens">Notre premier album, <cite>Dance for God</cite> (2015), reste en écoute sur <a href="https://open.spotify.com/artist/0YSleEpy61th1Lasah1Fnt" target="_blank" rel="noopener">Spotify</a>, <a href="https://www.deezer.com/fr/artist/9116278" target="_blank" rel="noopener">Deezer</a> et <a href="https://music.apple.com/be/artist/jesustrip/1046558283" target="_blank" rel="noopener">Apple Music</a>.</p>
-        </div>
-        <figure class="setlist">
-          <figcaption class="setlist__titre">Au programme le 16 janvier</figcaption>
-          <ul>
-            <li>Génération François 1er</li>
-            <li>Louez Dieu <span class="note-main">le clip !</span></li>
-            <li>Alléluia, il est ressuscité !</li>
-            <li>Tu as touché mon cœur</li>
-            <li>Par toutes les nations</li>
-            <li>Il est mon Dieu</li>
-            <li>Pour le chanter</li>
-            <li>Notre Dieu miséricordieux</li>
-            <li>Heureux les pauvres de cœur</li>
-            <li>Revivre de ton amour</li>
-            <li>Réveillez nos cœurs <span class="griffe griffe--etoile" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2.5c.7 4.6 2.6 6.9 6.8 7.5-4.2.6-6.1 2.9-6.8 7.5-.7-4.6-2.6-6.9-6.8-7.5 4.2-.6 6.1-2.9 6.8-7.5zM19 16.5c.3 1.6 1 2.3 2.5 2.5-1.5.2-2.2.9-2.5 2.5-.3-1.6-1-2.3-2.5-2.5 1.5-.2 2.2-.9 2.5-2.5z"/></svg></span><span class="note-main" aria-hidden="true">nouveau !</span></li>
-            <li>En couleurs <span class="griffe griffe--etoile" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2.5c.7 4.6 2.6 6.9 6.8 7.5-4.2.6-6.1 2.9-6.8 7.5-.7-4.6-2.6-6.9-6.8-7.5 4.2-.6 6.1-2.9 6.8-7.5zM19 16.5c.3 1.6 1 2.3 2.5 2.5-1.5.2-2.2.9-2.5 2.5-.3-1.6-1-2.3-2.5-2.5 1.5-.2 2.2-.9 2.5-2.5z"/></svg></span><span class="note-main" aria-hidden="true">nouveau !</span></li>
-            <li>Country Dieu</li>
-            <li>Je te salue, Marie <span class="griffe griffe--coeur" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 20.3S4.5 15.6 4.5 9.6A4.1 4.1 0 0 1 12 7.3a4.1 4.1 0 0 1 7.5 2.3c0 6-7.5 10.7-7.5 10.7z"/></svg></span></li>
-          </ul>
-          <p class="setlist__note">… et quelques surprises !</p>
-        </figure>
-      </div>
-      <div class="videos-bloc">
-        <h3 class="videos__titre">En vidéo</h3>
-        <ul class="videos">
-          <li>
-            <p class="annot annot--video" aria-hidden="true"><span>à voir absolument !</span><svg class="fleche trace" viewBox="0 0 100 64" aria-hidden="true" focusable="false"><path d="M8 52C24 22 54 10 88 20"/><path d="M75 8.5l15 12-17.5 6.5"/></svg></p>
-            <a class="video" href="https://www.youtube.com/watch?v=F9vUaTRw-L0" target="_blank" rel="noopener">
-              <span class="video__visuel"><img src="img/video-eveque.jpg" alt="" width="1000" height="625" loading="lazy"><span class="video__play" aria-hidden="true"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 4.5v15l12.5-7.5z"/></svg></span></span>
-              <span class="video__texte"><strong>L’évêque de Liège chante « Resucito » avec nous</strong><span>sur notre chaîne YouTube</span><span class="sr"> (nouvel onglet)</span></span>
-            </a>
-          </li>
-          <li>
-            <a class="video" href="https://www.youtube.com/watch?v=9ONzL5WnU8o" target="_blank" rel="noopener">
-              <span class="video__visuel"><img src="img/inviter.jpg" alt="" width="1400" height="788" loading="lazy"><span class="video__play" aria-hidden="true"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 4.5v15l12.5-7.5z"/></svg></span></span>
-              <span class="video__texte"><strong>Louez Dieu</strong><span>notre clip officiel</span><span class="sr"> (YouTube, nouvel onglet)</span></span>
-            </a>
-          </li>
-          <li>
-            <a class="video video--ticket" href="https://www.youtube.com/watch?v=CsdWlnWYvxM&amp;t=2450s" target="_blank" rel="noopener">
-              <span class="video__visuel"><span class="ticket"><span class="ticket__sur">En concert</span><span class="ticket__lieu">Lourdes</span><span class="ticket__date">21 août 2019</span></span><span class="video__play" aria-hidden="true"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 4.5v15l12.5-7.5z"/></svg></span></span>
-              <span class="video__texte"><strong>Le résumé de notre concert à Lourdes</strong><span>une vidéo de Jonas DLM</span><span class="sr"> (YouTube, nouvel onglet)</span></span>
-            </a>
-          </li>
-          <li>
-            <a class="video video--marie" href="https://www.youtube.com/watch?v=CWqWVxAhsUs" target="_blank" rel="noopener">
-              <span class="video__visuel"><span class="marie"><span class="marie__etoile"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2.5c.7 4.6 2.6 6.9 6.8 7.5-4.2.6-6.1 2.9-6.8 7.5-.7-4.6-2.6-6.9-6.8-7.5 4.2-.6 6.1-2.9 6.8-7.5zM19 16.5c.3 1.6 1 2.3 2.5 2.5-1.5.2-2.2.9-2.5 2.5-.3-1.6-1-2.3-2.5-2.5 1.5-.2 2.2-.9 2.5-2.5z"/></svg></span><span class="marie__titre">Je te salue, Marie</span></span><span class="video__play" aria-hidden="true"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 4.5v15l12.5-7.5z"/></svg></span></span>
-              <span class="video__texte"><strong>« Je te salue, Marie » en concert</strong><span>une vidéo de Patrick Cannard</span><span class="sr"> (YouTube, nouvel onglet)</span></span>
-            </a>
-          </li>
-        </ul>
-        <p class="videos__suite">Toutes nos vidéos sont sur notre <a href="https://www.youtube.com/@jesustrip3223" target="_blank" rel="noopener">chaîne YouTube</a>.</p>
-      </div>
-    </div>
     <svg class="sep sep--arche" style="--sep:#06305F" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path class="sep__echo" d="M-20 120C300 -10 1140 -10 1460 120Z"/><path d="M0 120C340 18 1100 18 1440 120Z"/></svg>
   </section>
 
-  <!-- L'équipe (sous les projecteurs, se termine en bulles) -->
-  <section class="section section--marine section--bulles" id="equipe" aria-labelledby="titre-equipe">
+  <!-- L'équipe (sous les projecteurs, se termine par une vague rouge) -->
+  <section class="section section--marine section--equipe" id="equipe" aria-labelledby="titre-equipe">
     <div class="faisceaux faisceaux--equipe" aria-hidden="true"><span></span><span></span><span></span></div>
     <span class="deco deco--g" style="--y:30%;--r:-12deg;--c:var(--ciel)" data-v="0.26" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2.5c.7 4.6 2.6 6.9 6.8 7.5-4.2.6-6.1 2.9-6.8 7.5-.7-4.6-2.6-6.9-6.8-7.5 4.2-.6 6.1-2.9 6.8-7.5zM19 16.5c.3 1.6 1 2.3 2.5 2.5-1.5.2-2.2.9-2.5 2.5-.3-1.6-1-2.3-2.5-2.5 1.5-.2 2.2-.9 2.5-2.5z"/></svg></span>
     <span class="deco deco--d" style="--y:56%;--r:10deg;--c:#FF8C95" data-v="0.3" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 20.3S4.5 15.6 4.5 9.6A4.1 4.1 0 0 1 12 7.3a4.1 4.1 0 0 1 7.5 2.3c0 6-7.5 10.7-7.5 10.7z"/></svg></span>
@@ -1671,10 +1588,18 @@ a.pro__logo:hover{opacity:.82}
           </div>
         </div>
       </div>
+    </div>
+    <svg class="sep" style="--sep:#C61122" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path d="M0 34C240 70 520 72 760 44S1230 8 1440 40V90H0Z"/></svg>
+  </section>
+
+  <!-- Le jeu « Qui est qui ? » (section rouge, se termine en nuages) -->
+  <section class="section section--jeu section--bulles" aria-labelledby="titre-jeu">
+    <div class="jeu-deco" aria-hidden="true"><span style="left:4%;top:9%;--t:150px;--r:-14deg;--o:0.13">?</span><span style="right:5%;top:7%;--t:120px;--r:16deg;--o:0.12">?</span><span style="left:7%;top:70%;--t:120px;--r:-6deg;--o:0.12">?</span><span style="right:4%;top:72%;--t:104px;--r:9deg;--o:0.11">?</span><span style="left:15%;top:44%;--t:88px;--r:12deg;--o:0.09">?</span><span style="right:13%;top:38%;--t:160px;--r:-10deg;--o:0.13">?</span><span style="left:27%;top:3%;--t:66px;--r:20deg;--o:0.08">?</span><span style="right:27%;top:4%;--t:60px;--r:-18deg;--o:0.08">?</span></div>
+    <div class="wrap">
       <div class="jeu" id="jeu" data-jeu>
         <div class="jeu__entete">
-          <p class="surtitre surtitre--ciel">Le jeu</p>
-          <h3 class="jeu__titre">Qui est <span class="eclat">qui</span> ?</h3>
+          <p class="surtitre">Le jeu</p>
+          <h2 class="jeu__titre" id="titre-jeu">Qui est <span class="eclat">qui</span> ?</h2>
         </div>
         <ol class="jeu__liste">
             <li data-qui="gael" data-revelation="C’était Gaël, la plume du groupe !"><p class="jeu__texte">« Plus de 90 % des chants du groupe sont sortis de ma plume. Certains, je les ai écrits en moins d’une heure. »</p><details><summary>Voir la réponse</summary><p>C’était Gaël, la plume du groupe !</p></details></li>
@@ -1740,7 +1665,153 @@ a.pro__logo:hover{opacity:.82}
         </div>
       </div>
     </div>
-    <svg class="sep sep--bulles" style="--sep:#F3F7FB" viewBox="0 0 1440 120" preserveAspectRatio="xMidYMax slice" aria-hidden="true" focusable="false"><circle cx="-40" cy="109" r="59"/><circle cx="44" cy="122" r="72"/><circle cx="133" cy="73" r="35"/><circle cx="222" cy="117" r="60"/><circle cx="279" cy="80" r="53"/><circle cx="353" cy="74" r="57"/><circle cx="413" cy="103" r="45"/><circle cx="496" cy="93" r="40"/><circle cx="554" cy="81" r="59"/><circle cx="606" cy="94" r="69"/><circle cx="666" cy="129" r="73"/><circle cx="730" cy="113" r="72"/><circle cx="809" cy="101" r="42"/><circle cx="889" cy="130" r="73"/><circle cx="953" cy="72" r="48"/><circle cx="1010" cy="66" r="37"/><circle cx="1086" cy="81" r="34"/><circle cx="1152" cy="100" r="46"/><circle cx="1223" cy="85" r="47"/><circle cx="1303" cy="97" r="36"/><circle cx="1356" cy="119" r="64"/><circle cx="1409" cy="98" r="66"/><circle cx="1484" cy="53" r="34"/><circle class="sep__bulle" cx="1321" cy="8" r="6.8"/><circle class="sep__bulle" cx="1287" cy="21" r="4.7"/><circle class="sep__bulle" cx="528" cy="13" r="6.9"/><circle class="sep__bulle" cx="203" cy="17" r="7.0"/><circle class="sep__bulle" cx="1195" cy="5" r="7.7"/><circle class="sep__bulle" cx="180" cy="10" r="6.1"/><rect x="-60" y="74" width="1560" height="60"/></svg>
+    <svg class="sep sep--bulles" style="--sep:#DCEBF5" viewBox="0 0 1440 120" preserveAspectRatio="xMidYMax slice" aria-hidden="true" focusable="false"><circle cx="-40" cy="109" r="59"/><circle cx="44" cy="122" r="72"/><circle cx="133" cy="73" r="35"/><circle cx="222" cy="117" r="60"/><circle cx="279" cy="80" r="53"/><circle cx="353" cy="74" r="57"/><circle cx="413" cy="103" r="45"/><circle cx="496" cy="93" r="40"/><circle cx="554" cy="81" r="59"/><circle cx="606" cy="94" r="69"/><circle cx="666" cy="129" r="73"/><circle cx="730" cy="113" r="72"/><circle cx="809" cy="101" r="42"/><circle cx="889" cy="130" r="73"/><circle cx="953" cy="72" r="48"/><circle cx="1010" cy="66" r="37"/><circle cx="1086" cy="81" r="34"/><circle cx="1152" cy="100" r="46"/><circle cx="1223" cy="85" r="47"/><circle cx="1303" cy="97" r="36"/><circle cx="1356" cy="119" r="64"/><circle cx="1409" cy="98" r="66"/><circle cx="1484" cy="53" r="34"/><circle class="sep__bulle" cx="1321" cy="8" r="6.8"/><circle class="sep__bulle" cx="1287" cy="21" r="4.7"/><circle class="sep__bulle" cx="528" cy="13" r="6.9"/><circle class="sep__bulle" cx="203" cy="17" r="7.0"/><circle class="sep__bulle" cx="1195" cy="10" r="7.7"/><circle class="sep__bulle" cx="180" cy="10" r="6.1"/><rect x="-60" y="74" width="1560" height="60"/></svg>
+  </section>
+
+  <!-- Une soirée (se termine par un égaliseur) -->
+  <section class="section section--ciel section--egaliseur" id="soiree" aria-labelledby="titre-soiree">
+    <span class="deco deco--g" style="--y:12%;--r:-10deg;--c:var(--marine)" data-v="0.26" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M15.8 12a3.8 3.8 0 1 1-7.6 0 3.8 3.8 0 0 1 7.6 0zM12 2.5v2.6M12 18.9v2.6M2.5 12h2.6M18.9 12h2.6M5.3 5.3l1.8 1.8M16.9 16.9l1.8 1.8M5.3 18.7l1.8-1.8M16.9 7.1l1.8-1.8"/></svg></span>
+    <span class="deco deco--d" style="--y:44%;--r:12deg;--c:var(--rouge-vif)" data-v="0.32" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3.4 18.6c0-1.4 1.4-2.5 3-2.5 1.2 0 2 .7 2 1.7 0 1.4-1.4 2.5-3 2.5-1.2 0-2-.7-2-1.7zM14.4 16.6c0-1.4 1.4-2.5 3-2.5 1.2 0 2 .7 2 1.7 0 1.4-1.4 2.5-3 2.5-1.2 0-2-.7-2-1.7zM8.4 17.6V6.4l11-2.6v11.6M8.4 9.8l11-2.6"/></svg></span>
+    <span class="deco deco--g" style="--y:66%;--r:8deg;--c:var(--rouge-vif)" data-v="0.36" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 20.3S4.5 15.6 4.5 9.6A4.1 4.1 0 0 1 12 7.3a4.1 4.1 0 0 1 7.5 2.3c0 6-7.5 10.7-7.5 10.7z"/></svg></span>
+    <span class="deco deco--d" style="--y:80%;--r:-10deg;--c:var(--marine)" data-v="0.28" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12.2 2.8c-.2 6.4.1 12.4-.3 18.6M6.6 8.3c3.8-.4 7.4-.2 11-.4"/></svg></span>
+    <div class="wrap">
+      <div class="entete-section">
+        <p class="surtitre">Une soirée avec nous</p>
+        <h2 id="titre-soiree">Jump, Sing &amp; <span class="eclat">Pray</span></h2>
+        <p class="chapo">Ce que nous proposons n’est pas un concert : c’est un temps de louange et de témoignage. Nous voulons faire vivre à chacun l’expérience de la louange, mais aussi celle de la prière, avec autant de joie que de profondeur. Chaque soirée se déroule comme une vague.</p>
+      </div>
+      <div class="vague" aria-hidden="true">
+        <svg viewBox="0 0 1000 170" preserveAspectRatio="none" focusable="false">
+          <defs>
+            <linearGradient id="degrade-vague" x1="0" x2="1" y1="0" y2="0">
+              <stop offset="0" stop-color="#93B7D9"/>
+              <stop offset="1" stop-color="#06305F"/>
+            </linearGradient>
+          </defs>
+          <path d="M0 150C40 150 70 40 125 40S300 140 375 140 540 18 625 18 800 92 875 96 970 108 1000 112V170H0z" fill="#F3F7FB"/>
+          <path d="M0 150C40 150 70 40 125 40S300 140 375 140 540 18 625 18 800 92 875 96 970 108 1000 112" fill="none" stroke="url(#degrade-vague)" stroke-width="4" stroke-linecap="round"/>
+        </svg>
+        <span class="vague__point" style="--x:12.5%;--y:23.5%">1</span>
+        <span class="vague__point" style="--x:37.5%;--y:82.4%">2</span>
+        <span class="vague__point" style="--x:62.5%;--y:10.6%">3</span>
+        <span class="vague__point" style="--x:87.5%;--y:56.5%">4</span>
+        <span class="vague__note" style="--x:12.5%;--y:23.5%;--dx:30px;--dy:-30px">ça monte !</span>
+        <span class="vague__note" style="--x:37.5%;--y:82.4%;--dx:30px;--dy:-8px">silence et prière</span>
+        <span class="vague__note" style="--x:62.5%;--y:10.6%;--dx:28px;--dy:-40px">la joie éclate !</span>
+        <span class="vague__note" style="--x:87.5%;--y:56.5%;--dx:-40px;--dy:-52px">avec Marie</span>
+      </div>
+      <ol class="temps">
+        <li>
+          <img class="temps__photo" src="img/temps-1.jpg" alt="Des jeunes chantent à pleine voix au pied de la scène, à Battice" width="900" height="600" loading="lazy" style="object-position:28% 50%">
+          <h3>La vague monte</h3>
+          <p class="temps__sous">l’accueil</p>
+          <p>On commence fort : des chants entraînants mettent toute l’assemblée debout. Si chanter, c’est prier deux fois, et danser, prier quatre fois, nous vous ferons prier huit fois !</p>
+        </li>
+        <li>
+          <img class="temps__photo" src="img/temps-2.jpg" alt="Gaël à la guitare, seul dans un rai de lumière" width="900" height="600" loading="lazy">
+          <h3>La prière</h3>
+          <p class="temps__sous">la profondeur</p>
+          <p>La vague redescend, la lumière baisse, le silence s’installe : un temps d’intériorité et de prière, souvent porté par un témoignage.</p>
+        </li>
+        <li>
+          <img class="temps__photo" src="img/temps-3.jpg" alt="Pluie de confettis sous les projecteurs, au-dessus du public, à Esneux" width="900" height="600" loading="lazy">
+          <h3>La résurrection</h3>
+          <p class="temps__sous">la louange éclate</p>
+          <p>Après la prière, la vague remonte plus fort que jamais : une joie libératrice. Il n’y a pas de vraie joie sans ce passage par l’intériorité.</p>
+        </li>
+        <li>
+          <img class="temps__photo" src="img/temps-4.jpg" alt="Le groupe sur scène dans une lumière dorée, vu depuis le public, à Mons" width="900" height="600" loading="lazy">
+          <h3>Avec Marie</h3>
+          <p class="temps__sous">l’envoi</p>
+          <p>Nous terminons toujours par un chant à Marie : un clin d’œil à Lourdes, le lieu qui nous a tous réunis, et une manière de repartir en paix.</p>
+        </li>
+      </ol>
+      <figure class="citation">
+        <blockquote><p>« La prière est la source de ma joie. »</p></blockquote>
+        <figcaption>Luc Mathues, fondateur du groupe</figcaption>
+      </figure>
+    </div>
+    <div class="eq" aria-hidden="true"><span style="--h:0.31;--t:1.19s;--d:-0.55s"></span><span style="--h:0.49;--t:1.25s;--d:-0.10s"></span><span style="--h:0.36;--t:1.42s;--d:-0.39s"></span><span style="--h:0.50;--t:1.55s;--d:-0.71s"></span><span style="--h:0.77;--t:1.13s;--d:-0.96s"></span><span style="--h:0.59;--t:1.26s;--d:-1.30s"></span><span style="--h:0.75;--t:1.34s;--d:-1.01s"></span><span style="--h:0.61;--t:1.36s;--d:-0.89s"></span><span style="--h:0.68;--t:0.77s;--d:-1.30s"></span><span style="--h:0.72;--t:1.33s;--d:-1.32s"></span><span style="--h:0.76;--t:1.49s;--d:-0.59s"></span><span style="--h:0.74;--t:1.11s;--d:-1.40s"></span><span style="--h:0.73;--t:0.83s;--d:-0.20s"></span><span style="--h:0.46;--t:1.52s;--d:-0.65s"></span><span style="--h:0.57;--t:0.99s;--d:-0.76s"></span><span style="--h:0.48;--t:1.03s;--d:-0.88s"></span><span style="--h:0.56;--t:1.47s;--d:-1.02s"></span><span style="--h:0.70;--t:1.44s;--d:-1.49s"></span><span style="--h:0.66;--t:0.88s;--d:-1.29s"></span><span style="--h:0.81;--t:1.47s;--d:-0.85s"></span><span style="--h:0.79;--t:0.92s;--d:-1.25s"></span><span style="--h:0.80;--t:0.98s;--d:-0.10s"></span><span style="--h:0.95;--t:1.54s;--d:-0.13s"></span><span style="--h:0.97;--t:1.08s;--d:-0.23s"></span><span style="--h:0.81;--t:1.37s;--d:-1.31s"></span><span style="--h:0.73;--t:1.24s;--d:-0.07s"></span><span style="--h:0.94;--t:1.01s;--d:-1.32s"></span><span style="--h:0.99;--t:1.15s;--d:-1.50s"></span><span style="--h:0.71;--t:0.81s;--d:-0.90s"></span><span style="--h:0.56;--t:0.91s;--d:-0.61s"></span><span style="--h:0.70;--t:0.87s;--d:-0.06s"></span><span style="--h:0.74;--t:1.00s;--d:-1.44s"></span><span style="--h:0.71;--t:1.05s;--d:-0.69s"></span><span style="--h:0.57;--t:1.27s;--d:-0.89s"></span><span style="--h:0.58;--t:1.25s;--d:-1.41s"></span><span style="--h:0.58;--t:1.09s;--d:-1.08s"></span><span style="--h:0.53;--t:0.99s;--d:-1.47s"></span><span style="--h:0.67;--t:1.19s;--d:-0.02s"></span><span style="--h:0.68;--t:1.21s;--d:-0.03s"></span><span style="--h:0.80;--t:1.26s;--d:-0.09s"></span><span style="--h:0.84;--t:1.12s;--d:-1.02s"></span><span style="--h:0.77;--t:1.32s;--d:-1.11s"></span><span style="--h:0.66;--t:0.80s;--d:-1.01s"></span><span style="--h:0.96;--t:0.95s;--d:-0.68s"></span><span style="--h:0.80;--t:1.01s;--d:-0.55s"></span><span style="--h:0.65;--t:1.05s;--d:-0.89s"></span><span style="--h:0.58;--t:1.05s;--d:-1.16s"></span><span style="--h:0.42;--t:1.21s;--d:-1.10s"></span><span style="--h:0.45;--t:0.93s;--d:-1.21s"></span><span style="--h:0.37;--t:0.90s;--d:-0.65s"></span><span style="--h:0.49;--t:0.83s;--d:-0.48s"></span><span style="--h:0.34;--t:1.42s;--d:-0.66s"></span><span style="--h:0.52;--t:0.89s;--d:-0.51s"></span><span style="--h:0.47;--t:1.46s;--d:-0.68s"></span><span style="--h:0.35;--t:0.85s;--d:-0.79s"></span><span style="--h:0.38;--t:1.40s;--d:-1.26s"></span></div>
+  </section>
+
+  <!-- Musique (fondu vers les témoignages) -->
+  <section class="section section--blanc section--fondu-brume" id="musique" aria-labelledby="titre-musique">
+    <span class="deco deco--g" style="--y:10%;--r:-12deg;--c:var(--rouge-vif)" data-v="0.26" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5.2 18.6c0-1.6 1.6-2.9 3.4-2.9 1.4 0 2.3.8 2.3 1.9 0 1.6-1.6 2.9-3.4 2.9-1.4 0-2.3-.8-2.3-1.9zM10.9 17.4V4.2c.8 2.4 5.6 3.2 5.6 7.6"/></svg></span>
+    <span class="deco deco--d" style="--y:30%;--r:10deg;--c:var(--marine)" data-v="0.3" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3.4 18.6c0-1.4 1.4-2.5 3-2.5 1.2 0 2 .7 2 1.7 0 1.4-1.4 2.5-3 2.5-1.2 0-2-.7-2-1.7zM14.4 16.6c0-1.4 1.4-2.5 3-2.5 1.2 0 2 .7 2 1.7 0 1.4-1.4 2.5-3 2.5-1.2 0-2-.7-2-1.7zM8.4 17.6V6.4l11-2.6v11.6M8.4 9.8l11-2.6"/></svg></span>
+    <span class="deco deco--g" style="--y:70%;--r:8deg;--c:var(--marine)" data-v="0.34" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5.2 18.6c0-1.6 1.6-2.9 3.4-2.9 1.4 0 2.3.8 2.3 1.9 0 1.6-1.6 2.9-3.4 2.9-1.4 0-2.3-.8-2.3-1.9zM10.9 17.4V4.2c.8 2.4 5.6 3.2 5.6 7.6"/></svg></span>
+    <div class="wrap">
+      <div class="entete-section">
+        <p class="surtitre">Notre répertoire</p>
+        <h2 id="titre-musique">Nos chants, nos <span class="eclat">compositions</span></h2>
+        <p class="chapo">Le cœur de Jesus’Trip, ce sont ses propres chansons : une trentaine de compositions, écrites pour la plupart par Gaël, quelques-unes par Luc, et arrangées à trois avec Nathan.</p>
+      </div>
+      <div class="musique">
+        <div class="musique__texte">
+          <p>Quelques reprises s’y glissent aussi. Côté sonorités, on passe volontiers du latino à l’électro, avec un détour par la country. Les thèmes sont ceux qui nous font vivre : la joie, la résurrection, la miséricorde, la rencontre personnelle avec Dieu, les Béatitudes et la confiance en Marie. Avec le « &amp; Co », la basse, la clarinette et une voix féminine viennent enrichir les arrangements.</p>
+          <div class="livret">
+            <img class="livret__couverture" src="img/livret-2017.jpg" alt="Couverture du livret de partitions Jesus’Trip 2017" width="300" height="424" loading="lazy">
+            <div class="livret__infos">
+              <p class="livret__sur">Chantez-les chez vous</p>
+              <h3>Le livret de partitions</h3>
+              <p>Pour les animateurs, les chorales et les groupes de jeunes : mélodies, paroles et accords de quatre de nos chants (Alléluia, il est ressuscité !, Génération François 1er, Je te salue, Marie et Louez Dieu).</p>
+              <a class="btn btn--marine btn--petit" href="livret-partitions-jesustrip-2017.pdf" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4M10 9H8M16 13H8M16 17H8"/></svg> Télécharger le livret (PDF)</a>
+            </div>
+          </div>
+          <p class="musique__liens">Notre premier album, <cite>Dance for God</cite> (2015), reste en écoute sur <a href="https://open.spotify.com/artist/0YSleEpy61th1Lasah1Fnt" target="_blank" rel="noopener">Spotify</a>, <a href="https://www.deezer.com/fr/artist/9116278" target="_blank" rel="noopener">Deezer</a> et <a href="https://music.apple.com/be/artist/jesustrip/1046558283" target="_blank" rel="noopener">Apple Music</a>.</p>
+        </div>
+        <figure class="setlist">
+          <figcaption class="setlist__titre">Au programme le 16 janvier</figcaption>
+          <ul>
+            <li>Génération François 1er</li>
+            <li>Louez Dieu <span class="note-main">le clip !</span></li>
+            <li>Alléluia, il est ressuscité !</li>
+            <li>Tu as touché mon cœur</li>
+            <li>Par toutes les nations</li>
+            <li>Il est mon Dieu</li>
+            <li>Pour le chanter</li>
+            <li>Notre Dieu miséricordieux</li>
+            <li>Heureux les pauvres de cœur</li>
+            <li>Revivre de ton amour</li>
+            <li>Réveillez nos cœurs <span class="griffe griffe--etoile" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2.5c.7 4.6 2.6 6.9 6.8 7.5-4.2.6-6.1 2.9-6.8 7.5-.7-4.6-2.6-6.9-6.8-7.5 4.2-.6 6.1-2.9 6.8-7.5zM19 16.5c.3 1.6 1 2.3 2.5 2.5-1.5.2-2.2.9-2.5 2.5-.3-1.6-1-2.3-2.5-2.5 1.5-.2 2.2-.9 2.5-2.5z"/></svg></span><span class="note-main" aria-hidden="true">nouveau !</span></li>
+            <li>En couleurs <span class="griffe griffe--etoile" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2.5c.7 4.6 2.6 6.9 6.8 7.5-4.2.6-6.1 2.9-6.8 7.5-.7-4.6-2.6-6.9-6.8-7.5 4.2-.6 6.1-2.9 6.8-7.5zM19 16.5c.3 1.6 1 2.3 2.5 2.5-1.5.2-2.2.9-2.5 2.5-.3-1.6-1-2.3-2.5-2.5 1.5-.2 2.2-.9 2.5-2.5z"/></svg></span><span class="note-main" aria-hidden="true">nouveau !</span></li>
+            <li>Country Dieu</li>
+            <li>Je te salue, Marie <span class="griffe griffe--coeur" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 20.3S4.5 15.6 4.5 9.6A4.1 4.1 0 0 1 12 7.3a4.1 4.1 0 0 1 7.5 2.3c0 6-7.5 10.7-7.5 10.7z"/></svg></span></li>
+          </ul>
+          <p class="setlist__note">… et quelques surprises !</p>
+        </figure>
+      </div>
+      <div class="videos-bloc">
+        <h3 class="videos__titre">En vidéo</h3>
+        <ul class="videos">
+          <li>
+            <p class="annot annot--video" aria-hidden="true"><span>à voir absolument !</span><svg class="fleche trace" viewBox="0 0 100 64" aria-hidden="true" focusable="false"><path d="M8 52C24 22 54 10 88 20"/><path d="M75 8.5l15 12-17.5 6.5"/></svg></p>
+            <a class="video" href="https://www.youtube.com/watch?v=F9vUaTRw-L0" target="_blank" rel="noopener">
+              <span class="video__visuel"><img src="img/video-eveque.jpg" alt="" width="1000" height="625" loading="lazy"><span class="video__play" aria-hidden="true"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 4.5v15l12.5-7.5z"/></svg></span></span>
+              <span class="video__texte"><strong>L’évêque de Liège chante « Resucito » avec nous</strong><span>sur notre chaîne YouTube</span><span class="sr"> (nouvel onglet)</span></span>
+            </a>
+          </li>
+          <li>
+            <a class="video" href="https://www.youtube.com/watch?v=9ONzL5WnU8o" target="_blank" rel="noopener">
+              <span class="video__visuel"><img src="img/inviter.jpg" alt="" width="1400" height="788" loading="lazy"><span class="video__play" aria-hidden="true"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 4.5v15l12.5-7.5z"/></svg></span></span>
+              <span class="video__texte"><strong>Louez Dieu</strong><span>notre clip officiel</span><span class="sr"> (YouTube, nouvel onglet)</span></span>
+            </a>
+          </li>
+          <li>
+            <a class="video video--ticket" href="https://www.youtube.com/watch?v=CsdWlnWYvxM&amp;t=2450s" target="_blank" rel="noopener">
+              <span class="video__visuel"><span class="ticket"><span class="ticket__sur">En concert</span><span class="ticket__lieu">Lourdes</span><span class="ticket__date">21 août 2019</span></span><span class="video__play" aria-hidden="true"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 4.5v15l12.5-7.5z"/></svg></span></span>
+              <span class="video__texte"><strong>Le résumé de notre concert à Lourdes</strong><span>une vidéo de Jonas DLM</span><span class="sr"> (YouTube, nouvel onglet)</span></span>
+            </a>
+          </li>
+          <li>
+            <a class="video video--marie" href="https://www.youtube.com/watch?v=CWqWVxAhsUs" target="_blank" rel="noopener">
+              <span class="video__visuel"><span class="marie"><span class="marie__etoile"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2.5c.7 4.6 2.6 6.9 6.8 7.5-4.2.6-6.1 2.9-6.8 7.5-.7-4.6-2.6-6.9-6.8-7.5 4.2-.6 6.1-2.9 6.8-7.5zM19 16.5c.3 1.6 1 2.3 2.5 2.5-1.5.2-2.2.9-2.5 2.5-.3-1.6-1-2.3-2.5-2.5 1.5-.2 2.2-.9 2.5-2.5z"/></svg></span><span class="marie__titre">Je te salue, Marie</span></span><span class="video__play" aria-hidden="true"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 4.5v15l12.5-7.5z"/></svg></span></span>
+              <span class="video__texte"><strong>« Je te salue, Marie » en concert</strong><span>une vidéo de Patrick Cannard</span><span class="sr"> (YouTube, nouvel onglet)</span></span>
+            </a>
+          </li>
+        </ul>
+        <p class="videos__suite">Toutes nos vidéos sont sur notre <a href="https://www.youtube.com/@jesustrip3223" target="_blank" rel="noopener">chaîne YouTube</a>.</p>
+      </div>
+    </div>
   </section>
 
   <!-- Témoignages (fondu vers la presse) -->
@@ -1820,11 +1891,23 @@ a.pro__logo:hover{opacity:.82}
         </ul>
       </div>
       <div class="presse__espace">
-        <p><strong>Journalistes</strong> : notre dossier de présentation rassemble l’histoire, l’équipe et les chiffres, et notre logo existe dans tous les formats ; photos sur demande auprès de Luc Mathues.</p>
+        <p><strong>Journalistes</strong> : notre dossier de présentation rassemble l’histoire, l’équipe et les chiffres ; photos sur demande auprès de Luc Mathues.</p>
         <div class="presse__boutons">
           <a class="btn btn--contour-marine btn--petit" href="dossier-presentation-jesustrip-and-co.pdf?v=12c" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4M10 9H8M16 13H8M16 17H8"/></svg> Dossier de présentation (PDF)</a>
-          <a class="btn btn--marine btn--petit" href="telechargements/Logo_JesusTrip-and-Co_kit.zip" download type="application/zip"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg> Notre logo (SVG, PDF, PNG)</a>
         </div>
+      </div>
+      <div class="kit-logo" id="logos">
+        <h3 class="kit-logo__titre">Nos logos, à télécharger <span class="griffe griffe--etoile" aria-hidden="true">✦</span></h3>
+        <p class="kit-logo__texte">Pour votre affiche, votre site ou votre article : choisissez la version, puis le format qu’il vous faut.</p>
+        <ul class="kit-logo__liste" aria-label="Versions du logo">
+          <li class="logo-carte logo-carte--rond"><span class="logo-carte__apercu"><img src="img/logos/rond.png" alt="" width="240" height="240" loading="lazy"></span><span class="logo-carte__nom"><strong>Logo rond</strong><small>la version principale</small></span><span class="logo-carte__formats" role="group" aria-label="Télécharger : Logo rond"><a href="telechargements/logo/JesusTrip-and-Co_rond.png" download type="image/png"><span class="sr">Logo rond, </span>PNG</a><a href="telechargements/logo/JesusTrip-and-Co_rond.svg" download type="image/svg+xml"><span class="sr">Logo rond, </span>SVG</a><a href="telechargements/logo/JesusTrip-and-Co_rond.pdf" download type="application/pdf"><span class="sr">Logo rond, </span>PDF</a></span></li>
+          <li class="logo-carte logo-carte--rond"><span class="logo-carte__apercu"><img src="img/logos/rond-contour-rouge.png" alt="" width="240" height="240" loading="lazy"></span><span class="logo-carte__nom"><strong>Contour rouge</strong><small>anneau au rouge du « &amp; »</small></span><span class="logo-carte__formats" role="group" aria-label="Télécharger : Contour rouge"><a href="telechargements/logo/JesusTrip-and-Co_rond_contour-rouge.png" download type="image/png"><span class="sr">Contour rouge, </span>PNG</a><a href="telechargements/logo/JesusTrip-and-Co_rond_contour-rouge.svg" download type="image/svg+xml"><span class="sr">Contour rouge, </span>SVG</a><a href="telechargements/logo/JesusTrip-and-Co_rond_contour-rouge.pdf" download type="application/pdf"><span class="sr">Contour rouge, </span>PDF</a></span></li>
+          <li class="logo-carte logo-carte--rond"><span class="logo-carte__apercu"><img src="img/logos/rond-contour-bleu-clair.png" alt="" width="240" height="240" loading="lazy"></span><span class="logo-carte__nom"><strong>Contour bleu clair</strong><small>anneau au bleu du sous-titre</small></span><span class="logo-carte__formats" role="group" aria-label="Télécharger : Contour bleu clair"><a href="telechargements/logo/JesusTrip-and-Co_rond_contour-bleu-clair.png" download type="image/png"><span class="sr">Contour bleu clair, </span>PNG</a><a href="telechargements/logo/JesusTrip-and-Co_rond_contour-bleu-clair.svg" download type="image/svg+xml"><span class="sr">Contour bleu clair, </span>SVG</a><a href="telechargements/logo/JesusTrip-and-Co_rond_contour-bleu-clair.pdf" download type="application/pdf"><span class="sr">Contour bleu clair, </span>PDF</a></span></li>
+          <li class="logo-carte logo-carte--large"><span class="logo-carte__apercu"><img src="img/logos/horizontal-couleur.png" alt="" width="440" height="90" loading="lazy"></span><span class="logo-carte__nom"><strong>Horizontal couleur</strong><small>pour les fonds clairs</small></span><span class="logo-carte__formats" role="group" aria-label="Télécharger : Horizontal couleur"><a href="telechargements/logo/JesusTrip-and-Co_horizontal_couleur.png" download type="image/png"><span class="sr">Horizontal couleur, </span>PNG</a><a href="telechargements/logo/JesusTrip-and-Co_horizontal_couleur.svg" download type="image/svg+xml"><span class="sr">Horizontal couleur, </span>SVG</a><a href="telechargements/logo/JesusTrip-and-Co_horizontal_couleur.pdf" download type="application/pdf"><span class="sr">Horizontal couleur, </span>PDF</a></span></li>
+          <li class="logo-carte logo-carte--fonce"><span class="logo-carte__apercu"><img src="img/logos/horizontal-blanc.png" alt="" width="440" height="90" loading="lazy"></span><span class="logo-carte__nom"><strong>Horizontal blanc</strong><small>pour les fonds foncés</small></span><span class="logo-carte__formats" role="group" aria-label="Télécharger : Horizontal blanc"><a href="telechargements/logo/JesusTrip-and-Co_horizontal_blanc.png" download type="image/png"><span class="sr">Horizontal blanc, </span>PNG</a><a href="telechargements/logo/JesusTrip-and-Co_horizontal_blanc.svg" download type="image/svg+xml"><span class="sr">Horizontal blanc, </span>SVG</a><a href="telechargements/logo/JesusTrip-and-Co_horizontal_blanc.pdf" download type="application/pdf"><span class="sr">Horizontal blanc, </span>PDF</a></span></li>
+        </ul>
+        <p class="kit-logo__aide"><strong>PNG</strong> : réseaux sociaux, Word, mails <span aria-hidden="true">·</span> <strong>SVG</strong> : site web, Canva <span aria-hidden="true">·</span> <strong>PDF</strong> : imprimeur (bâche, t-shirts, autocollants)</p>
+        <a class="btn btn--marine btn--petit kit-logo__tout" href="telechargements/Logo_JesusTrip-and-Co_kit.zip" download type="application/zip"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg> Tout le kit (.zip)</a>
       </div>
     </div>
     <svg class="sep" style="--sep:#041F3E" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path class="sep__echo" d="M0 52C300 18 560 14 800 36S1260 70 1440 50V90H0Z"/><path d="M0 34C240 70 520 72 760 44S1230 8 1440 40V90H0Z"/></svg>
@@ -1872,12 +1955,14 @@ a.pro__logo:hover{opacity:.82}
             <p class="coord"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg><span id="coord-mail">manonf2407@<wbr>gmail.com</span><button class="copier" type="button" data-copier="manonf2407@gmail.com" data-cible="coord-mail"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect width="14" height="14" x="8" y="8" rx="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg><span class="copier__etat">Copier</span><span class="sr"> l’adresse e-mail</span></button></p>
             <a class="btn btn--rouge" href="mailto:manonf2407@gmail.com?subject=Invitation%20Jesus%27Trip%20%26%20Co&amp;body=Bonjour%20Manon%2C%0A%0ANous%20aimerions%20accueillir%20Jesus%27Trip%20%26%20Co.%0A%0AOrganisateur%20%3A%0ALieu%20%3A%0ADate%28s%29%20envisag%C3%A9e%28s%29%20%3A%0APublic%20attendu%20%3A%0ANotre%20projet%20%28ann%C3%A9e%20pastorale%2C%20confirmands%2C%20rassemblement...%29%20%3A%0A%0AMerci%20et%20%C3%A0%20bient%C3%B4t%20%21">Écrire une invitation</a>
             <a class="btn btn--contour-marine" href="dossier-presentation-jesustrip-and-co.pdf?v=12c" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4M10 9H8M16 13H8M16 17H8"/></svg> Dossier de présentation (PDF)</a>
-            <a class="contact-carte__logo" href="telechargements/Logo_JesusTrip-and-Co_kit.zip" download type="application/zip"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg><span>Notre logo pour votre affiche <small>SVG, PDF, PNG</small></span></a>
+            <a class="contact-carte__logo" href="#logos"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg><span>Notre logo pour votre affiche <small>SVG, PDF, PNG</small></span></a>
             <p class="contact-carte__fb">Vous pouvez aussi nous écrire sur <a href="https://www.facebook.com/jesustrip.be" target="_blank" rel="noopener">Facebook</a> ou sur <a href="https://www.instagram.com/jesustripandco/" target="_blank" rel="noopener">Instagram</a>.</p>
           </div>
           <div class="benevoles">
-            <h3>Des musiciens bénévoles</h3>
-            <p>Nos cinq musiciens et notre manageuse ne demandent ni cachet ni défraiement, et prennent eux-mêmes en charge leurs déplacements : c’est leur manière de témoigner et de vivre leur foi. Les frais d’une soirée couvrent avant tout l’équipe technique professionnelle de Sound-Maker, qui en représente la plus grande part, ainsi que les frais obligatoires liés à tout événement, comme les droits d’auteur.</p>
+            <h3>Combien ça coûte ?</h3>
+            <p class="benevoles__prix"><strong>Moins de 2 000 €</strong> <span>technique comprise, pour une soirée à moins de 100 km de Liège</span></p>
+            <p>Nos cinq musiciens, notre manageuse et nos régisseurs sont entièrement bénévoles : personne ne demande de cachet ni de défraiement, et chacun prend en charge ses déplacements. C’est leur manière de témoigner et de vivre leur foi. Le budget couvre uniquement les frais techniques (l’équipe professionnelle de Sound-Maker, qui en représente la plus grande part) et les frais de gestion du groupe.</p>
+            <p class="benevoles__loin">Plus loin de Liège ? Parlons-en !</p>
           </div>
         </aside>
       </div>
@@ -1928,7 +2013,7 @@ a.pro__logo:hover{opacity:.82}
       <img class="pied__logo" src="img/logo-rond.png" alt="Jesus’Trip &amp; Co, groupe de pop-louange" width="360" height="360" loading="lazy">
       <p class="annot annot--pied" aria-hidden="true"><svg class="fleche trace" viewBox="0 0 100 64" aria-hidden="true" focusable="false"><path d="M8 52C24 22 54 10 88 20"/><path d="M75 8.5l15 12-17.5 6.5"/></svg><span>notre nouveau logo !</span></p>
     </div>
-    <a class="pied__logo-dl" href="telechargements/Logo_JesusTrip-and-Co_kit.zip" download type="application/zip"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg> Télécharger le logo</a>
+    <a class="pied__logo-dl" href="#logos"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg> Télécharger le logo</a>
     <p class="pied__devise">Osons de grandes choses pour Dieu !</p>
     <ul class="pied__reseaux" aria-label="Jesus’Trip &amp; Co sur les réseaux">
       <li><a href="https://www.facebook.com/jesustrip.be" target="_blank" rel="noopener" aria-label="Facebook"><svg class="marque" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z"/></svg></a></li>
@@ -1939,7 +2024,7 @@ a.pro__logo:hover{opacity:.82}
       <li><a href="https://music.apple.com/be/artist/jesustrip/1046558283" target="_blank" rel="noopener" aria-label="Apple Music"><svg class="marque" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M23.994 6.124a9.23 9.23 0 00-.24-2.19c-.317-1.31-1.062-2.31-2.18-3.043a5.022 5.022 0 00-1.877-.726 10.496 10.496 0 00-1.564-.15c-.04-.003-.083-.01-.124-.013H5.986c-.152.01-.303.017-.455.026-.747.043-1.49.123-2.193.4-1.336.53-2.3 1.452-2.865 2.78-.192.448-.292.925-.363 1.408-.056.392-.088.785-.1 1.18 0 .032-.007.062-.01.093v12.223c.01.14.017.283.027.424.05.815.154 1.624.497 2.373.65 1.42 1.738 2.353 3.234 2.801.42.127.856.187 1.293.228.555.053 1.11.06 1.667.06h11.03a12.5 12.5 0 001.57-.1c.822-.106 1.596-.35 2.295-.81a5.046 5.046 0 001.88-2.207c.186-.42.293-.87.37-1.324.113-.675.138-1.358.137-2.04-.002-3.8 0-7.595-.003-11.393zm-6.423 3.99v5.712c0 .417-.058.827-.244 1.206-.29.59-.76.962-1.388 1.14-.35.1-.706.157-1.07.173-.95.045-1.773-.6-1.943-1.536a1.88 1.88 0 011.038-2.022c.323-.16.67-.25 1.018-.324.378-.082.758-.153 1.134-.24.274-.063.457-.23.51-.516a.904.904 0 00.02-.193c0-1.815 0-3.63-.002-5.443a.725.725 0 00-.026-.185c-.04-.15-.15-.243-.304-.234-.16.01-.318.035-.475.066-.76.15-1.52.303-2.28.456l-2.325.47-1.374.278c-.016.003-.032.01-.048.013-.277.077-.377.203-.39.49-.002.042 0 .086 0 .13-.002 2.602 0 5.204-.003 7.805 0 .42-.047.836-.215 1.227-.278.64-.77 1.04-1.434 1.233-.35.1-.71.16-1.075.172-.96.036-1.755-.6-1.92-1.544-.14-.812.23-1.685 1.154-2.075.357-.15.73-.232 1.108-.31.287-.06.575-.116.86-.177.383-.083.583-.323.6-.714v-.15c0-2.96 0-5.922.002-8.882 0-.123.013-.25.042-.37.07-.285.273-.448.546-.518.255-.066.515-.112.774-.165.733-.15 1.466-.296 2.2-.444l2.27-.46c.67-.134 1.34-.27 2.01-.403.22-.043.442-.088.663-.106.31-.025.523.17.554.482.008.073.012.148.012.223.002 1.91.002 3.822 0 5.732z"/></svg></a></li>
     </ul>
     <nav class="pied__nav" aria-label="Plan du site">
-      <a href="#agenda">Agenda</a><a href="#groupe">Le groupe</a><a href="#soiree">Une soirée</a><a href="#musique">Musique</a><a href="#equipe">L’équipe</a><a href="#jeu">Le jeu</a><a href="#temoignages">Témoignages</a><a href="#presse">Presse</a><a href="#inviter">Nous inviter</a>
+      <a href="#agenda">Agenda</a><a href="#groupe">Le groupe</a><a href="#equipe">L’équipe</a><a href="#jeu">Le jeu</a><a href="#soiree">Une soirée</a><a href="#musique">Musique</a><a href="#temoignages">Témoignages</a><a href="#presse">Presse</a><a href="#inviter">Nous inviter</a>
     </nav>
     <p class="pied__copy">© 2026 Jesus’Trip &amp; Co · Ce site ne dépose aucun cookie.</p>
     <p class="pied__legal"><span>Éditeur du site : LuMa Production (Luc Mathues), Quai de Rome 55, bte 021, 4000 Liège (Belgique)</span> <span>TVA BE 0635.590.718 · <a href="mailto:luc@mathues.pro">luc@mathues.pro</a> · Hébergement : GitHub Pages</span></p>
