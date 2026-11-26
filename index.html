@@ -1013,44 +1013,85 @@ a.pro__logo:hover{opacity:.82}
 @media (max-width:480px){
   .etiquette--rond{right:-12%}
 }
-/* ---------- Le jeu : qui est qui ? (26/11) ---------- */
-.filet--jeu{margin-top:clamp(64px,8vw,100px);scroll-margin-top:110px}
-.jeu{max-width:780px;margin:0 auto;text-align:center}
-.jeu__intro{font-size:18px;line-height:1.6;color:var(--clair);text-wrap:balance}
+/* ---------- Le jeu : qui est qui ? (26/11, version 2 : accueil, bonus) ---------- */
+.jeu{max-width:780px;margin:clamp(70px,9vw,110px) auto 0;text-align:center;scroll-margin-top:96px}
+.jeu__entete .surtitre{display:inline-flex;align-items:center;gap:12px}
+.jeu__entete .surtitre::before,.jeu__entete .surtitre::after{content:"";width:26px;height:2px;border-radius:2px;background:currentColor;opacity:.55}
+.jeu__titre{font-size:clamp(32px,4vw,46px);font-weight:800;letter-spacing:-.01em;line-height:1.1;color:#fff}
 .jeu__liste{list-style:none;padding:0;margin:26px 0 0;display:grid;gap:12px;text-align:left}
 .jeu__liste li{padding:16px 20px;border-radius:14px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);color:var(--clair)}
 .jeu__liste details{margin-top:8px}
 .jeu__liste summary{cursor:pointer;font-family:var(--f-titre);font-size:13px;font-weight:700;color:var(--ciel)}
+.jeu__liste details p+p{margin-top:6px}
 .jeu.est-actif .jeu__liste{display:none}
 .jeu__plateau{margin-top:34px}
-.jeu__carte{position:relative;max-width:620px;margin:0 auto;padding:30px clamp(20px,4.5vw,44px) 30px;border-radius:6px;background:#FFFDF6;color:var(--encre);rotate:-1deg;box-shadow:0 28px 50px -24px rgba(0,0,0,.85)}
+.jeu__carte{position:relative;max-width:640px;margin:0 auto;padding:30px clamp(20px,4.5vw,44px);border-radius:6px;background:#FFFDF6;color:var(--encre);rotate:-1deg;box-shadow:0 28px 50px -24px rgba(0,0,0,.85)}
 .jeu__carte::before{content:"";position:absolute;left:50%;top:-12px;width:110px;height:26px;translate:-50% 0;rotate:3deg;background:rgba(147,183,217,.75);box-shadow:0 2px 4px rgba(0,0,0,.1)}
-.jeu__haut{display:flex;justify-content:space-between;gap:12px;font-family:var(--f-titre);font-size:11.5px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--gris)}
+/* accueil */
+.jeu__accueil{padding:8px 0 4px}
+.jeu__nouveau{right:-22px;top:-20px;rotate:7deg;color:var(--rouge)}
+.jeu__pret{font-family:var(--f-titre);font-size:clamp(30px,4.4vw,42px);font-weight:800;line-height:1.1;color:var(--marine)}
+.jeu__devine{margin-top:6px;font-family:var(--f-main);font-size:clamp(30px,3.6vw,36px);font-weight:700;line-height:1;color:var(--rouge);rotate:-3deg}
+.jeu__regle{max-width:430px;margin:16px auto 0;font-size:16.5px;line-height:1.55;color:var(--gris);text-wrap:balance}
+.jeu__teaser{list-style:none;display:flex;justify-content:center;margin:20px 0 0;padding:0}
+.jeu__teaser li{position:relative;width:58px;height:58px;margin-left:-10px;border-radius:50%;box-shadow:0 0 0 3px #FFFDF6,0 8px 16px -8px rgba(4,31,62,.5)}
+.jeu__teaser li:first-child{margin-left:0}
+.jeu__teaser img{display:block;width:100%;height:100%;object-fit:cover;border-radius:50%}
+.jeu__teaser li::after{content:"?";position:absolute;z-index:2;right:-5px;top:-7px;width:22px;height:22px;border-radius:50%;background:var(--rouge);color:#fff;font:800 13px/22px var(--f-titre);text-align:center}
+.jeu__teaser li:nth-child(even){top:5px}
+.jeu__go{position:relative;display:inline-flex;margin-top:26px}
+.jeu__jouer{min-height:58px;padding:0 32px;font-size:17px}
+.jeu__jouer .ico{width:20px;height:20px}
+.annot--jouer{left:calc(100% - 6px);top:-10px;flex-direction:row;color:var(--rouge);font-size:25px;rotate:-5deg}
+.annot--jouer .fleche{width:48px;height:32px;transform:scaleX(-1) rotate(-24deg)}
+/* partie */
+.jeu__haut{display:flex;flex-wrap:wrap;justify-content:space-between;gap:4px 12px;font-family:var(--f-titre);font-size:11.5px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--gris)}
 .jeu__points{color:var(--rouge)}
-.jeu__note{right:-20px;top:-18px;rotate:6deg;color:var(--rouge)}
+.jeu__compteur,.jeu__points{white-space:nowrap}
+.jeu__note{right:-22px;top:-20px;rotate:6deg;color:var(--rouge)}
 .jeu__anecdote{margin:20px 0 0;font-size:clamp(18.5px,2.3vw,22px);font-style:italic;line-height:1.55;color:var(--marine);text-wrap:pretty}
 .jeu__anecdote:focus{outline:none}
 .jeu__qui{margin-top:14px;font-family:var(--f-main);font-size:31px;font-weight:700;line-height:1;color:var(--rouge);rotate:-3deg}
 .jeu__verdict{margin-top:14px;font-size:17px;line-height:1.5;color:var(--encre)}
-.jeu__verdict:empty{display:none}
-.jeu__verdict b{margin-right:8px;font-family:var(--f-main);font-size:30px;line-height:1}
-.jeu__verdict .jeu__bien{color:#17804F}
-.jeu__verdict .jeu__rate{color:var(--rouge)}
+.jeu__verdict:empty,.jeu__bonus-verdict:empty{display:none}
+.jeu__verdict b,.jeu__bonus-verdict b{margin-right:8px;font-family:var(--f-main);font-size:30px;line-height:1}
+.jeu__bien{color:#17804F}
+.jeu__rate{color:var(--rouge)}
+.jeu__bonus{margin-top:16px;padding:16px 16px 14px;border:2px dashed rgba(198,17,34,.35);border-radius:14px;background:rgba(232,52,66,.05)}
+.jeu__bonus-q{font-size:17px;font-weight:700;line-height:1.4;color:var(--marine)}
+.jeu__bonus-tag{display:inline-block;margin-right:6px;padding:3px 10px;border-radius:999px;background:var(--rouge);color:#fff;font:800 11px/1.4 var(--f-titre);letter-spacing:.12em;text-transform:uppercase;vertical-align:2px}
+.jeu__puces{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-top:12px}
+.jeu__puce{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 16px 0 6px;border:2px solid var(--marine);border-radius:999px;background:#fff;color:var(--marine);font:700 14.5px/1.2 var(--f-titre);cursor:pointer;transition:background-color .2s,color .2s,opacity .2s}
+.jeu__puce--texte{padding:0 16px}
+.jeu__puce img{width:30px;height:30px;border-radius:50%;object-fit:cover}
+.jeu__puce:focus-visible{outline:3px solid var(--ciel);outline-offset:2px}
+.jeu__puce:disabled{cursor:default}
+.jeu__puce.est-bon{background:#17804F;border-color:#17804F;color:#fff}
+.jeu__puce.est-faux{background:var(--rouge);border-color:var(--rouge);color:#fff}
+.jeu__puces.a-repondu .jeu__puce:not(.est-bon):not(.est-faux){opacity:.45}
+.jeu__bonus-verdict{margin-top:12px;font-size:16.5px;line-height:1.5}
 .jeu__suivant{margin-top:18px}
-.jeu__score{font-family:var(--f-titre);font-size:15px;font-weight:700;color:var(--gris)}
-.jeu__score b{display:block;margin-bottom:4px;font-size:46px;font-weight:800;line-height:1.05;color:var(--marine)}
+.jeu__suivant:hover{translate:none}
+/* fin */
+.jeu__resultat{font-family:var(--f-titre);font-size:11.5px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--gris)}
+.jeu__score{margin-top:10px;font-family:var(--f-titre);font-size:15px;font-weight:700;color:var(--gris)}
+.jeu__score b{display:block;margin-bottom:4px;font-size:48px;font-weight:800;line-height:1.05;color:var(--marine)}
 .jeu__score:focus{outline:none}
-.jeu__message{margin-top:12px;font-family:var(--f-main);font-size:27px;font-weight:700;line-height:1.15;color:var(--rouge);rotate:-2deg;text-wrap:balance}
+.jeu__score-bonus{margin-top:6px;font-family:var(--f-titre);font-size:14.5px;font-weight:800;color:var(--rouge)}
+.jeu__score-bonus:empty{display:none}
+.jeu__message{margin-top:14px;font-family:var(--f-main);font-size:27px;font-weight:700;line-height:1.15;color:var(--rouge);rotate:-2deg;text-wrap:balance}
 .jeu__boutons{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:20px}
-.jeu__choix{list-style:none;padding:0;margin:30px auto 0;max-width:600px;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px}
-.jeu__membre{display:flex;flex-direction:column;align-items:center;gap:9px;width:100%;padding:6px 0;border:0;border-radius:14px;background:none;color:#fff;font:700 14px/1.2 var(--f-titre);cursor:pointer}
+/* portraits à cliquer */
+.jeu__choix{list-style:none;padding:0;margin:22px auto 0;max-width:500px;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px}
+.jeu__membre{display:flex;flex-direction:column;align-items:center;gap:8px;width:100%;padding:6px 0;border:0;border-radius:14px;background:none;color:var(--marine);font:700 14px/1.2 var(--f-titre);cursor:pointer}
 .jeu__membre:focus-visible{outline:3px solid var(--ciel);outline-offset:2px}
 .jeu__membre:disabled{cursor:default}
-.jeu__photo{position:relative;display:block;width:min(100%,86px);aspect-ratio:1;border-radius:50%;box-shadow:0 0 0 3px rgba(147,183,217,.6),0 14px 26px -14px rgba(0,0,0,.8);transition:translate .25s,box-shadow .25s,opacity .25s,filter .25s}
-.jeu__membre--co .jeu__photo{box-shadow:0 0 0 3px rgba(232,52,66,.85),0 14px 26px -14px rgba(0,0,0,.8)}
+.jeu__photo{position:relative;display:block;width:min(100%,76px);aspect-ratio:1;border-radius:50%;box-shadow:0 0 0 3px var(--ciel),0 10px 18px -10px rgba(4,31,62,.5);transition:translate .25s,box-shadow .25s,opacity .25s,filter .25s}
+.jeu__membre--co .jeu__photo{box-shadow:0 0 0 3px var(--rouge-vif),0 10px 18px -10px rgba(4,31,62,.5)}
 .jeu__photo img{display:block;width:100%;height:100%;object-fit:cover;border-radius:50%}
 @media (hover:hover){
-  .jeu__membre:not(:disabled):hover .jeu__photo{translate:0 -4px;box-shadow:0 0 0 3px #fff,0 18px 30px -14px rgba(0,0,0,.85)}
+  .jeu__membre:not(:disabled):hover .jeu__photo{translate:0 -4px;box-shadow:0 0 0 3px var(--marine),0 14px 22px -10px rgba(4,31,62,.55)}
+  .jeu__puce:not(:disabled):hover{background:var(--marine);color:#fff}
 }
 .jeu__badge{position:absolute;right:-5px;bottom:-5px;display:grid;place-items:center;width:28px;height:28px;border-radius:50%;opacity:0;scale:.5;transition:opacity .2s,scale .2s}
 .jeu__badge svg{width:17px;height:17px;fill:none;stroke:#fff;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
@@ -1059,19 +1100,26 @@ a.pro__logo:hover{opacity:.82}
 .est-bon .jeu__ok{display:inline}
 .est-faux .jeu__badge{opacity:1;scale:1;background:var(--rouge)}
 .est-faux .jeu__ko{display:inline}
-.est-bon .jeu__photo{box-shadow:0 0 0 4px #fff,0 18px 30px -14px rgba(0,0,0,.85)}
+.jeu__membre.est-bon .jeu__photo{box-shadow:0 0 0 4px #17804F,0 10px 18px -10px rgba(4,31,62,.5)}
 .jeu__choix.a-repondu .jeu__membre:not(.est-bon):not(.est-faux) .jeu__photo{opacity:.38;filter:grayscale(.7)}
 .jeu__choix.a-repondu .jeu__membre:not(.est-bon):not(.est-faux) .jeu__prenom{opacity:.5}
 @media (prefers-reduced-motion:no-preference){
   .jeu__carte.est-neuve{animation:jeu-carte .45s ease}
+  .jeu__jouer{animation:jeu-pouls 2.4s ease-in-out 1.2s infinite}
 }
 @keyframes jeu-carte{from{opacity:0;translate:0 10px}to{opacity:1;translate:0 0}}
+@keyframes jeu-pouls{0%,100%{box-shadow:0 12px 28px -12px rgba(198,17,34,.8)}50%{box-shadow:0 12px 28px -12px rgba(198,17,34,.8),0 0 0 9px rgba(232,52,66,.18)}}
 @media (max-width:640px){
   .jeu__carte{rotate:-.6deg;padding-top:28px}
-  .jeu__note{right:-6px;top:-20px;font-size:18px}
+  .jeu__nouveau,.jeu__note{right:-6px;top:-20px;font-size:18px}
+  .jeu__teaser li{width:48px;height:48px}
+  .jeu__go{flex-direction:column;align-items:center}
+  .annot--jouer{position:static;order:-1;margin-bottom:8px;font-size:23px;rotate:-4deg}
+  .annot--jouer .fleche{display:none}
   .jeu__qui{font-size:28px}
-  .jeu__choix{gap:6px;margin-top:26px}
-  .jeu__membre{font-size:12.5px;gap:7px}
+  .jeu__haut{font-size:10.5px;letter-spacing:.07em}
+  .jeu__choix{gap:4px;margin-top:20px}
+  .jeu__membre{font-size:12px;gap:7px}
   .jeu__badge{width:24px;height:24px;right:-6px;bottom:-6px}
   .jeu__badge svg{width:14px;height:14px}
 }
@@ -1615,31 +1663,65 @@ a.pro__logo:hover{opacity:.82}
           </div>
         </div>
       </div>
-      <h3 class="filet filet--jeu" id="jeu">Le jeu : qui est qui ?</h3>
-      <div class="jeu" data-jeu>
-        <p class="jeu__intro">Huit anecdotes, cinq musiciens. À vous de deviner qui se cache derrière chacune !</p>
+      <div class="jeu" id="jeu" data-jeu>
+        <div class="jeu__entete">
+          <p class="surtitre surtitre--ciel">Le jeu</p>
+          <h3 class="jeu__titre">Qui est <span class="eclat">qui</span> ?</h3>
+        </div>
         <ol class="jeu__liste">
-          <li data-qui="gael" data-revelation="C’était Gaël, la plume du groupe !"><p class="jeu__texte">« Plus de 90 % des chants du groupe sont sortis de ma plume. Certains, je les ai écrits en moins d’une heure. »</p><details><summary>Voir la réponse</summary><p>C’était Gaël, la plume du groupe !</p></details></li>
-          <li data-qui="nathan" data-revelation="C’était Nathan, aux claviers… officiellement !"><p class="jeu__texte">« Officiellement, je ne sais pas chanter. Mais quand je prends mon pied, on n’entend plus que moi ! »</p><details><summary>Voir la réponse</summary><p>C’était Nathan, aux claviers… officiellement !</p></details></li>
-          <li data-qui="fred" data-revelation="C’était l’abbé Fred : du métal à l’autel !"><p class="jeu__texte">« J’ai fait partie d’un groupe de métal avant de passer à la louange… et même de donner ma vie à Dieu. »</p><details><summary>Voir la réponse</summary><p>C’était l’abbé Fred : du métal à l’autel !</p></details></li>
-          <li data-qui="luc" data-revelation="C’était Luc, le fondateur !"><p class="jeu__texte">« Au départ, je voulais faire de Jesus’Trip une agence de voyages (d’où le nom !). Un soir, entre amis musiciens, j’ai lancé ce nom à un journaliste… et il est resté. »</p><details><summary>Voir la réponse</summary><p>C’était Luc, le fondateur !</p></details></li>
-          <li data-qui="nathan" data-revelation="C’était Nathan : des vaches et des robots… aux claviers !"><p class="jeu__texte">« Au quotidien, je suis loin de la musique : plutôt au milieu des vaches et des robots. »</p><details><summary>Voir la réponse</summary><p>C’était Nathan : des vaches et des robots… aux claviers !</p></details></li>
-          <li data-qui="joanna" data-revelation="C’était Joanna : de fan à chanteuse !" data-note="facile, celle-là !"><p class="jeu__texte">« À 14 ans, je venais les voir en concert. J’ai grandi avec leurs chants dans ma playlist Spotify… et aujourd’hui, je les chante avec eux sur scène ! »</p><details><summary>Voir la réponse</summary><p>C’était Joanna : de fan à chanteuse !</p></details></li>
-          <li data-qui="gael" data-revelation="C’était Gaël… et l’autre membre, c’est Luc !"><p class="jeu__texte">« J’ai fait découvrir Lourdes, Taizé et le MEJ à un autre membre du groupe. »</p><details><summary>Voir la réponse</summary><p>C’était Gaël… et l’autre membre, c’est Luc !</p></details></li>
-          <li data-qui="nathan" data-revelation="C’était Nathan. Et c’est aussi à Lourdes qu’il a rencontré Gaël."><p class="jeu__texte">« J’ai découvert la foi à Lourdes, pendant un voyage offert par ma grand-mère… en me demandant ce que je venais bien faire là-bas ! »</p><details><summary>Voir la réponse</summary><p>C’était Nathan. Et c’est aussi à Lourdes qu’il a rencontré Gaël.</p></details></li>
+            <li data-qui="gael" data-revelation="C’était Gaël, la plume du groupe !"><p class="jeu__texte">« Plus de 90 % des chants du groupe sont sortis de ma plume. Certains, je les ai écrits en moins d’une heure. »</p><details><summary>Voir la réponse</summary><p>C’était Gaël, la plume du groupe !</p></details></li>
+            <li data-qui="fred" data-revelation="C’était l’abbé Fred : un prêtre tatoué, eh oui !"><p class="jeu__texte">« Je suis le seul membre du groupe à avoir des tatouages. »</p><details><summary>Voir la réponse</summary><p>C’était l’abbé Fred : un prêtre tatoué, eh oui !</p></details></li>
+            <li data-qui="nathan" data-revelation="C’était Nathan, aux claviers… officiellement !"><p class="jeu__texte">« Officiellement, je ne sais pas chanter. Mais quand je kiffe, on n’entend plus que moi ! »</p><details><summary>Voir la réponse</summary><p>C’était Nathan, aux claviers… officiellement !</p></details></li>
+            <li data-qui="luc" data-revelation="C’était Luc, le fondateur !"><p class="jeu__texte">« Au départ, je voulais faire de Jesus’Trip une agence de voyages (d’où le nom !). Un soir, entre amis musiciens, j’ai lancé ce nom à un journaliste… et il est resté. »</p><details><summary>Voir la réponse</summary><p>C’était Luc, le fondateur !</p></details></li>
+            <li data-qui="joanna" data-revelation="C’était Joanna : de fan à chanteuse !" data-note="facile, celle-là !"><p class="jeu__texte">« À 14 ans, je venais déjà les voir en concert, et leurs chants tournaient en boucle dans ma playlist Spotify. »</p><details><summary>Voir la réponse</summary><p>C’était Joanna : de fan à chanteuse !</p></details></li>
+            <li data-qui="fred" data-revelation="C’était Fred, à la basse et à la clarinette !" data-bonus="Et son troisième instrument, c’est… ?" data-bonus-choix="Le violon|L’accordéon|La trompette|La batterie" data-bonus-reponse="L’accordéon" data-bonus-solution="Son troisième instrument, c’est l’accordéon !"><p class="jeu__texte">« C’est moi qui joue le plus d’instruments dans le groupe : deux sur scène… et un troisième en plus. »</p><details><summary>Voir la réponse</summary><p>C’était Fred, à la basse et à la clarinette !</p><p><strong>Bonus :</strong> Et son troisième instrument, c’est… ? Son troisième instrument, c’est l’accordéon !</p></details></li>
+            <li data-qui="gael" data-revelation="C’était Gaël : gare aux fausses notes !"><p class="jeu__texte">« Dans le groupe, c’est moi l’oreille la plus exigeante : je ne tolère ni la moindre fausse note, ni la moindre petite rature. »</p><details><summary>Voir la réponse</summary><p>C’était Gaël : gare aux fausses notes !</p></details></li>
+            <li data-qui="nathan" data-revelation="C’était Nathan : des vaches et des robots… aux claviers !"><p class="jeu__texte">« Au quotidien, je suis loin de la musique : plutôt au milieu des vaches et des robots. »</p><details><summary>Voir la réponse</summary><p>C’était Nathan : des vaches et des robots… aux claviers !</p></details></li>
+            <li data-qui="luc" data-revelation="C’était Luc : un vrai cadeau de Noël !"><p class="jeu__texte">« J’ai composé “Génération François 1er” en pyjama, dans mon lit, un matin de Noël. »</p><details><summary>Voir la réponse</summary><p>C’était Luc : un vrai cadeau de Noël !</p></details></li>
+            <li data-qui="joanna" data-revelation="C’était Joanna : du public à la scène, en passant par la régie !"><p class="jeu__texte">« Dans ce groupe, j’aurai tout fait : d’abord dans le public, puis à la régie vidéo, ensuite aux lumières… et maintenant sur scène ! »</p><details><summary>Voir la réponse</summary><p>C’était Joanna : du public à la scène, en passant par la régie !</p></details></li>
+            <li data-qui="gael" data-revelation="C’était Gaël !" data-bonus="À qui les a-t-il fait découvrir ?" data-bonus-choix="Luc|Nathan|Joanna|Fred" data-bonus-reponse="Luc" data-bonus-solution="C’est à Luc qu’il les a fait découvrir !"><p class="jeu__texte">« J’ai fait découvrir Lourdes, Taizé et le MEJ à un autre membre du groupe. »</p><details><summary>Voir la réponse</summary><p>C’était Gaël !</p><p><strong>Bonus :</strong> À qui les a-t-il fait découvrir ? C’est à Luc qu’il les a fait découvrir !</p></details></li>
+            <li data-qui="fred" data-revelation="C’était l’abbé Fred : du métal à l’autel !"><p class="jeu__texte">« J’ai fait partie d’un groupe de métal avant de passer à la louange… et même de donner ma vie à Dieu. »</p><details><summary>Voir la réponse</summary><p>C’était l’abbé Fred : du métal à l’autel !</p></details></li>
+            <li data-qui="nathan" data-revelation="C’était Nathan. Et c’est aussi à Lourdes qu’il a rencontré Gaël."><p class="jeu__texte">« J’ai découvert la foi à Lourdes, pendant un voyage offert par ma grand-mère… en me demandant ce que je venais bien faire là-bas ! »</p><details><summary>Voir la réponse</summary><p>C’était Nathan. Et c’est aussi à Lourdes qu’il a rencontré Gaël.</p></details></li>
         </ol>
         <div class="jeu__plateau" hidden>
           <div class="jeu__carte">
-            <div class="jeu__haut"><span class="jeu__compteur"></span><span class="jeu__points"></span></div>
-            <span class="etiquette jeu__note" aria-hidden="true" hidden></span>
-            <div class="jeu__question">
-              <blockquote class="jeu__anecdote" tabindex="-1"></blockquote>
-              <p class="jeu__qui">Qui suis-je ?</p>
+            <div class="jeu__accueil">
+              <span class="etiquette jeu__nouveau" aria-hidden="true">nouveau !</span>
+              <p class="jeu__pret">Prêts à jouer ?</p>
+              <p class="jeu__devine">Devinez qui est qui !</p>
+              <p class="jeu__regle"><span class="jeu__nb">13</span> anecdotes sur nos 5 musiciens, et des questions bonus. Lisez l’anecdote, puis cliquez sur la bonne personne !</p>
+              <ul class="jeu__teaser" aria-hidden="true"><li><img src="img/rond-luc.jpg" alt="" width="560" height="560" loading="lazy"></li><li><img src="img/rond-gael.jpg" alt="" width="560" height="560" loading="lazy"></li><li><img src="img/rond-nathan.jpg" alt="" width="560" height="560" loading="lazy"></li><li><img src="img/rond-joanna.jpg?v=2" alt="" width="560" height="560" loading="lazy"></li><li><img src="img/rond-fred.jpg" alt="" width="560" height="560" loading="lazy"></li></ul>
+              <div class="jeu__go">
+                <button type="button" class="btn btn--rouge jeu__jouer"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg> OK, on joue !</button>
+                <p class="annot annot--jouer" aria-hidden="true"><svg class="fleche trace" viewBox="0 0 100 64" aria-hidden="true" focusable="false"><path d="M8 52C24 22 54 10 88 20"/><path d="M75 8.5l15 12-17.5 6.5"/></svg><span>allez, prêts ?</span></p>
+              </div>
             </div>
-            <p class="jeu__verdict" role="status" aria-live="polite"></p>
-            <button type="button" class="btn btn--rouge btn--petit jeu__suivant" hidden>Anecdote suivante</button>
+            <div class="jeu__partie" hidden>
+              <div class="jeu__haut"><span class="jeu__compteur"></span><span class="jeu__points"></span></div>
+              <span class="etiquette jeu__note" aria-hidden="true" hidden></span>
+              <div class="jeu__question">
+                <blockquote class="jeu__anecdote" tabindex="-1"></blockquote>
+                <p class="jeu__qui">Qui suis-je ?</p>
+              </div>
+              <ul class="jeu__choix" aria-label="Qui se cache derrière cette anecdote ?">
+                <li><button type="button" class="jeu__membre" data-qui="luc"><span class="jeu__photo"><img src="img/rond-luc.jpg" alt="" width="560" height="560" loading="lazy"><span class="jeu__badge" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path class="jeu__ok" d="M5.5 12.5l4.2 4.2L18.5 7.8"/><path class="jeu__ko" d="M7.5 7.5l9 9M16.5 7.5l-9 9"/></svg></span></span><span class="jeu__prenom">Luc</span></button></li>
+                <li><button type="button" class="jeu__membre" data-qui="gael"><span class="jeu__photo"><img src="img/rond-gael.jpg" alt="" width="560" height="560" loading="lazy"><span class="jeu__badge" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path class="jeu__ok" d="M5.5 12.5l4.2 4.2L18.5 7.8"/><path class="jeu__ko" d="M7.5 7.5l9 9M16.5 7.5l-9 9"/></svg></span></span><span class="jeu__prenom">Gaël</span></button></li>
+                <li><button type="button" class="jeu__membre" data-qui="nathan"><span class="jeu__photo"><img src="img/rond-nathan.jpg" alt="" width="560" height="560" loading="lazy"><span class="jeu__badge" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path class="jeu__ok" d="M5.5 12.5l4.2 4.2L18.5 7.8"/><path class="jeu__ko" d="M7.5 7.5l9 9M16.5 7.5l-9 9"/></svg></span></span><span class="jeu__prenom">Nathan</span></button></li>
+                <li><button type="button" class="jeu__membre jeu__membre--co" data-qui="joanna"><span class="jeu__photo"><img src="img/rond-joanna.jpg?v=2" alt="" width="560" height="560" loading="lazy"><span class="jeu__badge" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path class="jeu__ok" d="M5.5 12.5l4.2 4.2L18.5 7.8"/><path class="jeu__ko" d="M7.5 7.5l9 9M16.5 7.5l-9 9"/></svg></span></span><span class="jeu__prenom">Joanna</span></button></li>
+                <li><button type="button" class="jeu__membre jeu__membre--co" data-qui="fred"><span class="jeu__photo"><img src="img/rond-fred.jpg" alt="" width="560" height="560" loading="lazy"><span class="jeu__badge" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path class="jeu__ok" d="M5.5 12.5l4.2 4.2L18.5 7.8"/><path class="jeu__ko" d="M7.5 7.5l9 9M16.5 7.5l-9 9"/></svg></span></span><span class="jeu__prenom">Fred</span></button></li>
+              </ul>
+              <p class="jeu__verdict" role="status" aria-live="polite"></p>
+              <div class="jeu__bonus" hidden>
+                <p class="jeu__bonus-q" id="jeu-bonus-q"><span class="jeu__bonus-tag">Question bonus</span> <span class="jeu__bonus-texte"></span></p>
+                <div class="jeu__puces" role="group" aria-labelledby="jeu-bonus-q"></div>
+                <p class="jeu__bonus-verdict" role="status" aria-live="polite"></p>
+              </div>
+              <button type="button" class="btn btn--rouge btn--petit jeu__suivant" hidden>Anecdote suivante</button>
+            </div>
             <div class="jeu__fin" hidden>
+              <p class="jeu__resultat">Résultat</p>
               <p class="jeu__score" tabindex="-1"></p>
+              <p class="jeu__score-bonus"></p>
               <p class="jeu__message"></p>
               <div class="jeu__boutons">
                 <button type="button" class="btn btn--contour-marine btn--petit jeu__rejouer">Rejouer</button>
@@ -1647,13 +1729,6 @@ a.pro__logo:hover{opacity:.82}
               </div>
             </div>
           </div>
-          <ul class="jeu__choix" aria-label="Qui se cache derrière cette anecdote ?">
-          <li><button type="button" class="jeu__membre" data-qui="luc"><span class="jeu__photo"><img src="img/rond-luc.jpg" alt="" width="560" height="560" loading="lazy"><span class="jeu__badge" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path class="jeu__ok" d="M5.5 12.5l4.2 4.2L18.5 7.8"/><path class="jeu__ko" d="M7.5 7.5l9 9M16.5 7.5l-9 9"/></svg></span></span><span class="jeu__prenom">Luc</span></button></li>
-          <li><button type="button" class="jeu__membre" data-qui="gael"><span class="jeu__photo"><img src="img/rond-gael.jpg" alt="" width="560" height="560" loading="lazy"><span class="jeu__badge" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path class="jeu__ok" d="M5.5 12.5l4.2 4.2L18.5 7.8"/><path class="jeu__ko" d="M7.5 7.5l9 9M16.5 7.5l-9 9"/></svg></span></span><span class="jeu__prenom">Gaël</span></button></li>
-          <li><button type="button" class="jeu__membre" data-qui="nathan"><span class="jeu__photo"><img src="img/rond-nathan.jpg" alt="" width="560" height="560" loading="lazy"><span class="jeu__badge" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path class="jeu__ok" d="M5.5 12.5l4.2 4.2L18.5 7.8"/><path class="jeu__ko" d="M7.5 7.5l9 9M16.5 7.5l-9 9"/></svg></span></span><span class="jeu__prenom">Nathan</span></button></li>
-          <li><button type="button" class="jeu__membre jeu__membre--co" data-qui="joanna"><span class="jeu__photo"><img src="img/rond-joanna.jpg?v=2" alt="" width="560" height="560" loading="lazy"><span class="jeu__badge" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path class="jeu__ok" d="M5.5 12.5l4.2 4.2L18.5 7.8"/><path class="jeu__ko" d="M7.5 7.5l9 9M16.5 7.5l-9 9"/></svg></span></span><span class="jeu__prenom">Joanna</span></button></li>
-          <li><button type="button" class="jeu__membre jeu__membre--co" data-qui="fred"><span class="jeu__photo"><img src="img/rond-fred.jpg" alt="" width="560" height="560" loading="lazy"><span class="jeu__badge" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path class="jeu__ok" d="M5.5 12.5l4.2 4.2L18.5 7.8"/><path class="jeu__ko" d="M7.5 7.5l9 9M16.5 7.5l-9 9"/></svg></span></span><span class="jeu__prenom">Fred</span></button></li>
-          </ul>
         </div>
       </div>
     </div>
@@ -2034,56 +2109,102 @@ a.pro__logo:hover{opacity:.82}
   if (!jeu) return;
   var NB = '\u00a0';
   var questions = [].slice.call(jeu.querySelectorAll('.jeu__liste > li')).map(function (li) {
-    return {
+    var q = {
       texte: li.querySelector('.jeu__texte').textContent,
       qui: li.getAttribute('data-qui'),
       revelation: li.getAttribute('data-revelation'),
       note: li.getAttribute('data-note') || ''
     };
+    if (li.hasAttribute('data-bonus')) {
+      q.bonus = {
+        question: li.getAttribute('data-bonus'),
+        choix: li.getAttribute('data-bonus-choix').split('|'),
+        reponse: li.getAttribute('data-bonus-reponse'),
+        solution: li.getAttribute('data-bonus-solution')
+      };
+    }
+    return q;
   });
   if (!questions.length) return;
-  var plateau = jeu.querySelector('.jeu__plateau');
-  var carte = jeu.querySelector('.jeu__carte');
-  var compteur = jeu.querySelector('.jeu__compteur');
-  var points = jeu.querySelector('.jeu__points');
-  var note = jeu.querySelector('.jeu__note');
-  var zone = jeu.querySelector('.jeu__question');
-  var anecdote = jeu.querySelector('.jeu__anecdote');
-  var verdict = jeu.querySelector('.jeu__verdict');
-  var suivant = jeu.querySelector('.jeu__suivant');
-  var fin = jeu.querySelector('.jeu__fin');
-  var score = jeu.querySelector('.jeu__score');
-  var message = jeu.querySelector('.jeu__message');
-  var choix = jeu.querySelector('.jeu__choix');
+  var nbBonus = questions.filter(function (q) { return q.bonus; }).length;
+  function $(sel) { return jeu.querySelector(sel); }
+  var plateau = $('.jeu__plateau'), carte = $('.jeu__carte');
+  var accueil = $('.jeu__accueil'), partie = $('.jeu__partie'), fin = $('.jeu__fin');
+  var compteur = $('.jeu__compteur'), points = $('.jeu__points'), note = $('.jeu__note');
+  var anecdote = $('.jeu__anecdote'), verdict = $('.jeu__verdict'), suivant = $('.jeu__suivant');
+  var zoneBonus = $('.jeu__bonus'), texteBonus = $('.jeu__bonus-texte'), puces = $('.jeu__puces'), verdictBonus = $('.jeu__bonus-verdict');
+  var score = $('.jeu__score'), scoreBonus = $('.jeu__score-bonus'), message = $('.jeu__message');
+  var choix = $('.jeu__choix');
   var boutons = [].slice.call(jeu.querySelectorAll('.jeu__membre'));
-  var i = 0, bons = 0, repondu = false;
+  var portraits = {};
+  boutons.forEach(function (b) { portraits[b.querySelector('.jeu__prenom').textContent] = b.querySelector('img').getAttribute('src'); });
+  $('.jeu__nb').textContent = questions.length;
+  var i = 0, bons = 0, bonus = 0, repondu = false;
 
-  function animer() {
-    carte.classList.remove('est-neuve');
-    void carte.offsetWidth;
-    carte.classList.add('est-neuve');
+  function animer() { carte.classList.remove('est-neuve'); void carte.offsetWidth; carte.classList.add('est-neuve'); }
+  function majPoints() {
+    points.textContent = 'Score' + NB + ': ' + bons + (bonus ? ' + ' + bonus + ' bonus' : '');
+  }
+  function ecrireVerdict(el, juste, motJuste, motFaux, texte) {
+    el.textContent = '';
+    var b = document.createElement('b');
+    b.className = juste ? 'jeu__bien' : 'jeu__rate';
+    b.textContent = juste ? motJuste : motFaux;
+    el.appendChild(b);
+    el.appendChild(document.createTextNode(' ' + texte));
   }
   function afficher(focus) {
     var q = questions[i];
     repondu = false;
+    accueil.hidden = true; fin.hidden = true; partie.hidden = false; choix.hidden = false;
     compteur.textContent = 'Anecdote ' + (i + 1) + ' / ' + questions.length;
-    points.textContent = 'Score' + NB + ': ' + bons;
+    majPoints();
     anecdote.textContent = q.texte;
-    note.textContent = q.note;
-    note.hidden = !q.note;
+    note.textContent = q.note; note.hidden = !q.note;
     verdict.textContent = '';
+    zoneBonus.hidden = true; puces.textContent = ''; puces.classList.remove('a-repondu'); verdictBonus.textContent = '';
     suivant.hidden = true;
-    zone.hidden = false;
-    fin.hidden = true;
-    choix.hidden = false;
     choix.classList.remove('a-repondu');
-    boutons.forEach(function (b) {
-      b.disabled = false;
-      b.classList.remove('est-bon', 'est-faux');
-      b.removeAttribute('aria-describedby');
-    });
+    boutons.forEach(function (b) { b.disabled = false; b.classList.remove('est-bon', 'est-faux'); });
     animer();
     if (focus) anecdote.focus();
+  }
+  function montrerSuivant() {
+    suivant.textContent = i < questions.length - 1 ? 'Anecdote suivante' : 'Voir mon score';
+    suivant.hidden = false;
+    suivant.focus();
+  }
+  function poserBonus(q) {
+    texteBonus.textContent = q.bonus.question;
+    q.bonus.choix.forEach(function (c) {
+      var p = document.createElement('button');
+      p.type = 'button';
+      p.className = 'jeu__puce' + (portraits[c] ? '' : ' jeu__puce--texte');
+      if (portraits[c]) {
+        var img = document.createElement('img');
+        img.src = portraits[c]; img.alt = ''; img.width = 60; img.height = 60;
+        p.appendChild(img);
+      }
+      p.appendChild(document.createTextNode(c));
+      p.addEventListener('click', function () { repondreBonus(q, p, c); });
+      puces.appendChild(p);
+    });
+    zoneBonus.hidden = false;
+    puces.querySelector('button').focus();
+  }
+  function repondreBonus(q, p, c) {
+    if (puces.classList.contains('a-repondu')) return;
+    var juste = c === q.bonus.reponse;
+    if (juste) bonus++;
+    [].slice.call(puces.querySelectorAll('button')).forEach(function (x) {
+      x.disabled = true;
+      if (x.textContent === q.bonus.reponse) x.classList.add('est-bon');
+    });
+    if (!juste) p.classList.add('est-faux');
+    puces.classList.add('a-repondu');
+    ecrireVerdict(verdictBonus, juste, 'Bonus gagné' + NB + '!', 'Raté pour le bonus' + NB + '!', q.bonus.solution);
+    majPoints();
+    montrerSuivant();
   }
   function repondre(b) {
     if (repondu) return;
@@ -2097,46 +2218,33 @@ a.pro__logo:hover{opacity:.82}
     });
     if (!juste) b.classList.add('est-faux');
     choix.classList.add('a-repondu');
-    points.textContent = 'Score' + NB + ': ' + bons;
-    verdict.textContent = '';
-    var mot = document.createElement('b');
-    mot.className = juste ? 'jeu__bien' : 'jeu__rate';
-    mot.textContent = juste ? 'Bien vu' + NB + '!' : 'Raté' + NB + '!';
-    verdict.appendChild(mot);
-    verdict.appendChild(document.createTextNode(' ' + q.revelation));
-    suivant.textContent = i < questions.length - 1 ? 'Anecdote suivante' : 'Voir mon score';
-    suivant.hidden = false;
-    suivant.focus();
+    majPoints();
+    var texte = q.revelation + (!juste && q.bonus ? ' ' + q.bonus.solution : '');
+    ecrireVerdict(verdict, juste, 'Bien vu' + NB + '!', 'Raté' + NB + '!', texte);
+    if (juste && q.bonus) poserBonus(q); else montrerSuivant();
   }
   function terminer() {
     var n = questions.length;
-    zone.hidden = true;
-    note.hidden = true;
-    verdict.textContent = '';
-    suivant.hidden = true;
-    choix.hidden = true;
-    compteur.textContent = 'Résultat';
-    points.textContent = '';
+    partie.hidden = true; choix.hidden = true; fin.hidden = false;
     score.textContent = '';
     var b = document.createElement('b');
     b.textContent = bons + ' / ' + n;
     score.appendChild(b);
     score.appendChild(document.createTextNode(bons > 1 ? 'bonnes réponses' : 'bonne réponse'));
+    scoreBonus.textContent = nbBonus ? '+ ' + bonus + ' bonus sur ' + nbBonus : '';
     if (bons === n) message.textContent = 'Sans faute' + NB + '! Vous connaissez Jesus’Trip & Co par cœur.';
-    else if (bons * 2 >= n) message.textContent = 'Bien joué' + NB + '! Il ne vous reste plus qu’à venir nous écouter en vrai.';
+    else if (bons >= Math.ceil(n * 0.6)) message.textContent = 'Bien joué' + NB + '! Il ne vous reste plus qu’à venir nous écouter en vrai.';
     else message.textContent = 'On a encore plein de choses à se raconter' + NB + ': venez nous rencontrer en concert' + NB + '!';
-    fin.hidden = false;
     animer();
     score.focus();
   }
+  function commencer() { i = 0; bons = 0; bonus = 0; afficher(true); }
   boutons.forEach(function (b) { b.addEventListener('click', function () { repondre(b); }); });
-  suivant.addEventListener('click', function () {
-    if (i < questions.length - 1) { i++; afficher(true); } else { terminer(); }
-  });
-  jeu.querySelector('.jeu__rejouer').addEventListener('click', function () { i = 0; bons = 0; afficher(true); });
+  suivant.addEventListener('click', function () { if (i < questions.length - 1) { i++; afficher(true); } else { terminer(); } });
+  $('.jeu__jouer').addEventListener('click', commencer);
+  $('.jeu__rejouer').addEventListener('click', commencer);
   jeu.classList.add('est-actif');
   plateau.hidden = false;
-  afficher(false);
 })();
 </script>
 </body>
