@@ -1013,6 +1013,68 @@ a.pro__logo:hover{opacity:.82}
 @media (max-width:480px){
   .etiquette--rond{right:-12%}
 }
+/* ---------- Le jeu : qui est qui ? (26/11) ---------- */
+.filet--jeu{margin-top:clamp(64px,8vw,100px);scroll-margin-top:110px}
+.jeu{max-width:780px;margin:0 auto;text-align:center}
+.jeu__intro{font-size:18px;line-height:1.6;color:var(--clair);text-wrap:balance}
+.jeu__liste{list-style:none;padding:0;margin:26px 0 0;display:grid;gap:12px;text-align:left}
+.jeu__liste li{padding:16px 20px;border-radius:14px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);color:var(--clair)}
+.jeu__liste details{margin-top:8px}
+.jeu__liste summary{cursor:pointer;font-family:var(--f-titre);font-size:13px;font-weight:700;color:var(--ciel)}
+.jeu.est-actif .jeu__liste{display:none}
+.jeu__plateau{margin-top:34px}
+.jeu__carte{position:relative;max-width:620px;margin:0 auto;padding:30px clamp(20px,4.5vw,44px) 30px;border-radius:6px;background:#FFFDF6;color:var(--encre);rotate:-1deg;box-shadow:0 28px 50px -24px rgba(0,0,0,.85)}
+.jeu__carte::before{content:"";position:absolute;left:50%;top:-12px;width:110px;height:26px;translate:-50% 0;rotate:3deg;background:rgba(147,183,217,.75);box-shadow:0 2px 4px rgba(0,0,0,.1)}
+.jeu__haut{display:flex;justify-content:space-between;gap:12px;font-family:var(--f-titre);font-size:11.5px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--gris)}
+.jeu__points{color:var(--rouge)}
+.jeu__note{right:-20px;top:-18px;rotate:6deg;color:var(--rouge)}
+.jeu__anecdote{margin:20px 0 0;font-size:clamp(18.5px,2.3vw,22px);font-style:italic;line-height:1.55;color:var(--marine);text-wrap:pretty}
+.jeu__anecdote:focus{outline:none}
+.jeu__qui{margin-top:14px;font-family:var(--f-main);font-size:31px;font-weight:700;line-height:1;color:var(--rouge);rotate:-3deg}
+.jeu__verdict{margin-top:14px;font-size:17px;line-height:1.5;color:var(--encre)}
+.jeu__verdict:empty{display:none}
+.jeu__verdict b{margin-right:8px;font-family:var(--f-main);font-size:30px;line-height:1}
+.jeu__verdict .jeu__bien{color:#17804F}
+.jeu__verdict .jeu__rate{color:var(--rouge)}
+.jeu__suivant{margin-top:18px}
+.jeu__score{font-family:var(--f-titre);font-size:15px;font-weight:700;color:var(--gris)}
+.jeu__score b{display:block;margin-bottom:4px;font-size:46px;font-weight:800;line-height:1.05;color:var(--marine)}
+.jeu__score:focus{outline:none}
+.jeu__message{margin-top:12px;font-family:var(--f-main);font-size:27px;font-weight:700;line-height:1.15;color:var(--rouge);rotate:-2deg;text-wrap:balance}
+.jeu__boutons{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:20px}
+.jeu__choix{list-style:none;padding:0;margin:30px auto 0;max-width:600px;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px}
+.jeu__membre{display:flex;flex-direction:column;align-items:center;gap:9px;width:100%;padding:6px 0;border:0;border-radius:14px;background:none;color:#fff;font:700 14px/1.2 var(--f-titre);cursor:pointer}
+.jeu__membre:focus-visible{outline:3px solid var(--ciel);outline-offset:2px}
+.jeu__membre:disabled{cursor:default}
+.jeu__photo{position:relative;display:block;width:min(100%,86px);aspect-ratio:1;border-radius:50%;box-shadow:0 0 0 3px rgba(147,183,217,.6),0 14px 26px -14px rgba(0,0,0,.8);transition:translate .25s,box-shadow .25s,opacity .25s,filter .25s}
+.jeu__membre--co .jeu__photo{box-shadow:0 0 0 3px rgba(232,52,66,.85),0 14px 26px -14px rgba(0,0,0,.8)}
+.jeu__photo img{display:block;width:100%;height:100%;object-fit:cover;border-radius:50%}
+@media (hover:hover){
+  .jeu__membre:not(:disabled):hover .jeu__photo{translate:0 -4px;box-shadow:0 0 0 3px #fff,0 18px 30px -14px rgba(0,0,0,.85)}
+}
+.jeu__badge{position:absolute;right:-5px;bottom:-5px;display:grid;place-items:center;width:28px;height:28px;border-radius:50%;opacity:0;scale:.5;transition:opacity .2s,scale .2s}
+.jeu__badge svg{width:17px;height:17px;fill:none;stroke:#fff;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+.jeu__ok,.jeu__ko{display:none}
+.est-bon .jeu__badge{opacity:1;scale:1;background:#17804F}
+.est-bon .jeu__ok{display:inline}
+.est-faux .jeu__badge{opacity:1;scale:1;background:var(--rouge)}
+.est-faux .jeu__ko{display:inline}
+.est-bon .jeu__photo{box-shadow:0 0 0 4px #fff,0 18px 30px -14px rgba(0,0,0,.85)}
+.jeu__choix.a-repondu .jeu__membre:not(.est-bon):not(.est-faux) .jeu__photo{opacity:.38;filter:grayscale(.7)}
+.jeu__choix.a-repondu .jeu__membre:not(.est-bon):not(.est-faux) .jeu__prenom{opacity:.5}
+@media (prefers-reduced-motion:no-preference){
+  .jeu__carte.est-neuve{animation:jeu-carte .45s ease}
+}
+@keyframes jeu-carte{from{opacity:0;translate:0 10px}to{opacity:1;translate:0 0}}
+@media (max-width:640px){
+  .jeu__carte{rotate:-.6deg;padding-top:28px}
+  .jeu__note{right:-6px;top:-20px;font-size:18px}
+  .jeu__qui{font-size:28px}
+  .jeu__choix{gap:6px;margin-top:26px}
+  .jeu__membre{font-size:12.5px;gap:7px}
+  .jeu__badge{width:24px;height:24px;right:-6px;bottom:-6px}
+  .jeu__badge svg{width:14px;height:14px}
+}
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "MusicGroup", "name": "Jesus'Trip & Co", "alternateName": "Jesus'Trip", "genre": ["Pop-louange", "Musique chrétienne"], "foundingDate": "2014", "foundingLocation": {"@type": "Place", "name": "Verviers, Belgique"}, "description": "Jesus’Trip & Co, groupe belge de pop-louange : des temps de louange festifs et priants dans les églises de Wallonie, de Bruxelles et jusqu’à Lourdes. Invitez-nous chez vous.", "url": "https://jesustripandco.be/", "image": "https://jesustripandco.be/img/partage.jpg", "sameAs": ["https://www.facebook.com/jesustrip.be", "https://www.instagram.com/jesustripandco/", "https://www.youtube.com/@jesustrip3223", "https://open.spotify.com/artist/0YSleEpy61th1Lasah1Fnt", "https://www.deezer.com/fr/artist/9116278", "https://music.apple.com/be/artist/jesustrip/1046558283"], "member": [{"@type": "Person", "name": "Luc Mathues"}, {"@type": "Person", "name": "Gaël Haine"}, {"@type": "Person", "name": "Nathan Lamberts"}, {"@type": "Person", "name": "Joanna Verwilghen"}, {"@type": "Person", "name": "Frédéric Kienen"}]}, {"@type": "MusicEvent", "name": "Premier concert de Jesus'Trip & Co", "description": "Premier concert de Jesus'Trip & Co : pour la première fois, deux nouveaux musiciens rejoignent l'aventure Jesus'Trip. Entrée gratuite, verre de l'amitié offert.", "image": ["https://jesustripandco.be/telechargements/JesusTrip-and-Co_Concert-Battice_carre.jpg", "https://jesustripandco.be/telechargements/JesusTrip-and-Co_Concert-Battice_publication-4x5.jpg", "https://jesustripandco.be/img/partage.jpg"], "url": "https://jesustripandco.be/#agenda", "startDate": "2027-01-16T20:00:00+01:00", "eventStatus": "https://schema.org/EventScheduled", "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode", "isAccessibleForFree": true, "location": {"@type": "Place", "name": "Église de Battice", "address": {"@type": "PostalAddress", "addressLocality": "Battice", "addressCountry": "BE"}}, "performer": {"@type": "MusicGroup", "name": "Jesus'Trip & Co"}, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "EUR", "availability": "https://schema.org/InStock"}}]}</script>
 </head>
@@ -1553,6 +1615,47 @@ a.pro__logo:hover{opacity:.82}
           </div>
         </div>
       </div>
+      <h3 class="filet filet--jeu" id="jeu">Le jeu : qui est qui ?</h3>
+      <div class="jeu" data-jeu>
+        <p class="jeu__intro">Huit anecdotes, cinq musiciens. À vous de deviner qui se cache derrière chacune !</p>
+        <ol class="jeu__liste">
+          <li data-qui="gael" data-revelation="C’était Gaël, la plume du groupe !"><p class="jeu__texte">« Plus de 90 % des chants du groupe sont sortis de ma plume. Certains, je les ai écrits en moins d’une heure. »</p><details><summary>Voir la réponse</summary><p>C’était Gaël, la plume du groupe !</p></details></li>
+          <li data-qui="nathan" data-revelation="C’était Nathan, aux claviers… officiellement !"><p class="jeu__texte">« Officiellement, je ne sais pas chanter. Mais quand je prends mon pied, on n’entend plus que moi ! »</p><details><summary>Voir la réponse</summary><p>C’était Nathan, aux claviers… officiellement !</p></details></li>
+          <li data-qui="fred" data-revelation="C’était l’abbé Fred : du métal à l’autel !"><p class="jeu__texte">« J’ai fait partie d’un groupe de métal avant de passer à la louange… et même de donner ma vie à Dieu. »</p><details><summary>Voir la réponse</summary><p>C’était l’abbé Fred : du métal à l’autel !</p></details></li>
+          <li data-qui="luc" data-revelation="C’était Luc, le fondateur !"><p class="jeu__texte">« Au départ, je voulais faire de Jesus’Trip une agence de voyages (d’où le nom !). Un soir, entre amis musiciens, j’ai lancé ce nom à un journaliste… et il est resté. »</p><details><summary>Voir la réponse</summary><p>C’était Luc, le fondateur !</p></details></li>
+          <li data-qui="nathan" data-revelation="C’était Nathan : des vaches et des robots… aux claviers !"><p class="jeu__texte">« Au quotidien, je suis loin de la musique : plutôt au milieu des vaches et des robots. »</p><details><summary>Voir la réponse</summary><p>C’était Nathan : des vaches et des robots… aux claviers !</p></details></li>
+          <li data-qui="joanna" data-revelation="C’était Joanna : de fan à chanteuse !" data-note="facile, celle-là !"><p class="jeu__texte">« À 14 ans, je venais les voir en concert. J’ai grandi avec leurs chants dans ma playlist Spotify… et aujourd’hui, je les chante avec eux sur scène ! »</p><details><summary>Voir la réponse</summary><p>C’était Joanna : de fan à chanteuse !</p></details></li>
+          <li data-qui="gael" data-revelation="C’était Gaël… et l’autre membre, c’est Luc !"><p class="jeu__texte">« J’ai fait découvrir Lourdes, Taizé et le MEJ à un autre membre du groupe. »</p><details><summary>Voir la réponse</summary><p>C’était Gaël… et l’autre membre, c’est Luc !</p></details></li>
+          <li data-qui="nathan" data-revelation="C’était Nathan. Et c’est aussi à Lourdes qu’il a rencontré Gaël."><p class="jeu__texte">« J’ai découvert la foi à Lourdes, pendant un voyage offert par ma grand-mère… en me demandant ce que je venais bien faire là-bas ! »</p><details><summary>Voir la réponse</summary><p>C’était Nathan. Et c’est aussi à Lourdes qu’il a rencontré Gaël.</p></details></li>
+        </ol>
+        <div class="jeu__plateau" hidden>
+          <div class="jeu__carte">
+            <div class="jeu__haut"><span class="jeu__compteur"></span><span class="jeu__points"></span></div>
+            <span class="etiquette jeu__note" aria-hidden="true" hidden></span>
+            <div class="jeu__question">
+              <blockquote class="jeu__anecdote" tabindex="-1"></blockquote>
+              <p class="jeu__qui">Qui suis-je ?</p>
+            </div>
+            <p class="jeu__verdict" role="status" aria-live="polite"></p>
+            <button type="button" class="btn btn--rouge btn--petit jeu__suivant" hidden>Anecdote suivante</button>
+            <div class="jeu__fin" hidden>
+              <p class="jeu__score" tabindex="-1"></p>
+              <p class="jeu__message"></p>
+              <div class="jeu__boutons">
+                <button type="button" class="btn btn--contour-marine btn--petit jeu__rejouer">Rejouer</button>
+                <a class="btn btn--rouge btn--petit" href="#agenda">Nous voir en concert</a>
+              </div>
+            </div>
+          </div>
+          <ul class="jeu__choix" aria-label="Qui se cache derrière cette anecdote ?">
+          <li><button type="button" class="jeu__membre" data-qui="luc"><span class="jeu__photo"><img src="img/rond-luc.jpg" alt="" width="560" height="560" loading="lazy"><span class="jeu__badge" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path class="jeu__ok" d="M5.5 12.5l4.2 4.2L18.5 7.8"/><path class="jeu__ko" d="M7.5 7.5l9 9M16.5 7.5l-9 9"/></svg></span></span><span class="jeu__prenom">Luc</span></button></li>
+          <li><button type="button" class="jeu__membre" data-qui="gael"><span class="jeu__photo"><img src="img/rond-gael.jpg" alt="" width="560" height="560" loading="lazy"><span class="jeu__badge" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path class="jeu__ok" d="M5.5 12.5l4.2 4.2L18.5 7.8"/><path class="jeu__ko" d="M7.5 7.5l9 9M16.5 7.5l-9 9"/></svg></span></span><span class="jeu__prenom">Gaël</span></button></li>
+          <li><button type="button" class="jeu__membre" data-qui="nathan"><span class="jeu__photo"><img src="img/rond-nathan.jpg" alt="" width="560" height="560" loading="lazy"><span class="jeu__badge" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path class="jeu__ok" d="M5.5 12.5l4.2 4.2L18.5 7.8"/><path class="jeu__ko" d="M7.5 7.5l9 9M16.5 7.5l-9 9"/></svg></span></span><span class="jeu__prenom">Nathan</span></button></li>
+          <li><button type="button" class="jeu__membre jeu__membre--co" data-qui="joanna"><span class="jeu__photo"><img src="img/rond-joanna.jpg?v=2" alt="" width="560" height="560" loading="lazy"><span class="jeu__badge" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path class="jeu__ok" d="M5.5 12.5l4.2 4.2L18.5 7.8"/><path class="jeu__ko" d="M7.5 7.5l9 9M16.5 7.5l-9 9"/></svg></span></span><span class="jeu__prenom">Joanna</span></button></li>
+          <li><button type="button" class="jeu__membre jeu__membre--co" data-qui="fred"><span class="jeu__photo"><img src="img/rond-fred.jpg" alt="" width="560" height="560" loading="lazy"><span class="jeu__badge" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path class="jeu__ok" d="M5.5 12.5l4.2 4.2L18.5 7.8"/><path class="jeu__ko" d="M7.5 7.5l9 9M16.5 7.5l-9 9"/></svg></span></span><span class="jeu__prenom">Fred</span></button></li>
+          </ul>
+        </div>
+      </div>
     </div>
     <svg class="sep sep--bulles" style="--sep:#F3F7FB" viewBox="0 0 1440 120" preserveAspectRatio="xMidYMax slice" aria-hidden="true" focusable="false"><circle cx="-40" cy="109" r="59"/><circle cx="44" cy="122" r="72"/><circle cx="133" cy="73" r="35"/><circle cx="222" cy="117" r="60"/><circle cx="279" cy="80" r="53"/><circle cx="353" cy="74" r="57"/><circle cx="413" cy="103" r="45"/><circle cx="496" cy="93" r="40"/><circle cx="554" cy="81" r="59"/><circle cx="606" cy="94" r="69"/><circle cx="666" cy="129" r="73"/><circle cx="730" cy="113" r="72"/><circle cx="809" cy="101" r="42"/><circle cx="889" cy="130" r="73"/><circle cx="953" cy="72" r="48"/><circle cx="1010" cy="66" r="37"/><circle cx="1086" cy="81" r="34"/><circle cx="1152" cy="100" r="46"/><circle cx="1223" cy="85" r="47"/><circle cx="1303" cy="97" r="36"/><circle cx="1356" cy="119" r="64"/><circle cx="1409" cy="98" r="66"/><circle cx="1484" cy="53" r="34"/><circle class="sep__bulle" cx="1321" cy="8" r="6.8"/><circle class="sep__bulle" cx="1287" cy="21" r="4.7"/><circle class="sep__bulle" cx="528" cy="13" r="6.9"/><circle class="sep__bulle" cx="203" cy="17" r="7.0"/><circle class="sep__bulle" cx="1195" cy="5" r="7.7"/><circle class="sep__bulle" cx="180" cy="10" r="6.1"/><rect x="-60" y="74" width="1560" height="60"/></svg>
   </section>
@@ -1924,5 +2027,117 @@ a.pro__logo:hover{opacity:.82}
 })();
 </script>
 
+<script>
+/* Le jeu « Qui est qui ? » : construit à partir de la liste .jeu__liste (version sans JavaScript) */
+(function () {
+  var jeu = document.querySelector('[data-jeu]');
+  if (!jeu) return;
+  var NB = '\u00a0';
+  var questions = [].slice.call(jeu.querySelectorAll('.jeu__liste > li')).map(function (li) {
+    return {
+      texte: li.querySelector('.jeu__texte').textContent,
+      qui: li.getAttribute('data-qui'),
+      revelation: li.getAttribute('data-revelation'),
+      note: li.getAttribute('data-note') || ''
+    };
+  });
+  if (!questions.length) return;
+  var plateau = jeu.querySelector('.jeu__plateau');
+  var carte = jeu.querySelector('.jeu__carte');
+  var compteur = jeu.querySelector('.jeu__compteur');
+  var points = jeu.querySelector('.jeu__points');
+  var note = jeu.querySelector('.jeu__note');
+  var zone = jeu.querySelector('.jeu__question');
+  var anecdote = jeu.querySelector('.jeu__anecdote');
+  var verdict = jeu.querySelector('.jeu__verdict');
+  var suivant = jeu.querySelector('.jeu__suivant');
+  var fin = jeu.querySelector('.jeu__fin');
+  var score = jeu.querySelector('.jeu__score');
+  var message = jeu.querySelector('.jeu__message');
+  var choix = jeu.querySelector('.jeu__choix');
+  var boutons = [].slice.call(jeu.querySelectorAll('.jeu__membre'));
+  var i = 0, bons = 0, repondu = false;
+
+  function animer() {
+    carte.classList.remove('est-neuve');
+    void carte.offsetWidth;
+    carte.classList.add('est-neuve');
+  }
+  function afficher(focus) {
+    var q = questions[i];
+    repondu = false;
+    compteur.textContent = 'Anecdote ' + (i + 1) + ' / ' + questions.length;
+    points.textContent = 'Score' + NB + ': ' + bons;
+    anecdote.textContent = q.texte;
+    note.textContent = q.note;
+    note.hidden = !q.note;
+    verdict.textContent = '';
+    suivant.hidden = true;
+    zone.hidden = false;
+    fin.hidden = true;
+    choix.hidden = false;
+    choix.classList.remove('a-repondu');
+    boutons.forEach(function (b) {
+      b.disabled = false;
+      b.classList.remove('est-bon', 'est-faux');
+      b.removeAttribute('aria-describedby');
+    });
+    animer();
+    if (focus) anecdote.focus();
+  }
+  function repondre(b) {
+    if (repondu) return;
+    repondu = true;
+    var q = questions[i];
+    var juste = b.getAttribute('data-qui') === q.qui;
+    if (juste) bons++;
+    boutons.forEach(function (x) {
+      x.disabled = true;
+      if (x.getAttribute('data-qui') === q.qui) x.classList.add('est-bon');
+    });
+    if (!juste) b.classList.add('est-faux');
+    choix.classList.add('a-repondu');
+    points.textContent = 'Score' + NB + ': ' + bons;
+    verdict.textContent = '';
+    var mot = document.createElement('b');
+    mot.className = juste ? 'jeu__bien' : 'jeu__rate';
+    mot.textContent = juste ? 'Bien vu' + NB + '!' : 'Raté' + NB + '!';
+    verdict.appendChild(mot);
+    verdict.appendChild(document.createTextNode(' ' + q.revelation));
+    suivant.textContent = i < questions.length - 1 ? 'Anecdote suivante' : 'Voir mon score';
+    suivant.hidden = false;
+    suivant.focus();
+  }
+  function terminer() {
+    var n = questions.length;
+    zone.hidden = true;
+    note.hidden = true;
+    verdict.textContent = '';
+    suivant.hidden = true;
+    choix.hidden = true;
+    compteur.textContent = 'Résultat';
+    points.textContent = '';
+    score.textContent = '';
+    var b = document.createElement('b');
+    b.textContent = bons + ' / ' + n;
+    score.appendChild(b);
+    score.appendChild(document.createTextNode(bons > 1 ? 'bonnes réponses' : 'bonne réponse'));
+    if (bons === n) message.textContent = 'Sans faute' + NB + '! Vous connaissez Jesus’Trip & Co par cœur.';
+    else if (bons * 2 >= n) message.textContent = 'Bien joué' + NB + '! Il ne vous reste plus qu’à venir nous écouter en vrai.';
+    else message.textContent = 'On a encore plein de choses à se raconter' + NB + ': venez nous rencontrer en concert' + NB + '!';
+    fin.hidden = false;
+    animer();
+    score.focus();
+  }
+  boutons.forEach(function (b) { b.addEventListener('click', function () { repondre(b); }); });
+  suivant.addEventListener('click', function () {
+    if (i < questions.length - 1) { i++; afficher(true); } else { terminer(); }
+  });
+  jeu.querySelector('.jeu__rejouer').addEventListener('click', function () { i = 0; bons = 0; afficher(true); });
+  jeu.classList.add('est-actif');
+  plateau.hidden = false;
+  afficher(false);
+})();
+</script>
 </body>
 </html>
