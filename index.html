@@ -1009,6 +1009,10 @@ a.pro__logo:hover{opacity:.82}
 @media (prefers-reduced-motion:reduce){
   .affiche,.dl{transition:none}
 }
+/* téléphone : les étiquettes des portraits ne doivent pas mordre sur le texte voisin */
+@media (max-width:480px){
+  .etiquette--rond{right:-12%}
+}
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "MusicGroup", "name": "Jesus'Trip & Co", "alternateName": "Jesus'Trip", "genre": ["Pop-louange", "Musique chrétienne"], "foundingDate": "2014", "foundingLocation": {"@type": "Place", "name": "Verviers, Belgique"}, "description": "Jesus’Trip & Co, groupe belge de pop-louange : des temps de louange festifs et priants dans les églises de Wallonie, de Bruxelles et jusqu’à Lourdes. Invitez-nous chez vous.", "url": "https://jesustripandco.be/", "image": "https://jesustripandco.be/img/partage.jpg", "sameAs": ["https://www.facebook.com/jesustrip.be", "https://www.instagram.com/jesustripandco/", "https://www.youtube.com/@jesustrip3223", "https://open.spotify.com/artist/0YSleEpy61th1Lasah1Fnt", "https://www.deezer.com/fr/artist/9116278", "https://music.apple.com/be/artist/jesustrip/1046558283"], "member": [{"@type": "Person", "name": "Luc Mathues"}, {"@type": "Person", "name": "Gaël Haine"}, {"@type": "Person", "name": "Nathan Lamberts"}, {"@type": "Person", "name": "Joanna Verwilghen"}, {"@type": "Person", "name": "Frédéric Kienen"}]}, {"@type": "MusicEvent", "name": "Premier concert de Jesus'Trip & Co", "description": "Premier concert de Jesus'Trip & Co : pour la première fois, deux nouveaux musiciens rejoignent l'aventure Jesus'Trip. Entrée gratuite, verre de l'amitié offert.", "image": ["https://jesustripandco.be/telechargements/JesusTrip-and-Co_Concert-Battice_carre.jpg", "https://jesustripandco.be/telechargements/JesusTrip-and-Co_Concert-Battice_publication-4x5.jpg", "https://jesustripandco.be/img/partage.jpg"], "url": "https://jesustripandco.be/#agenda", "startDate": "2027-01-16T20:00:00+01:00", "eventStatus": "https://schema.org/EventScheduled", "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode", "isAccessibleForFree": true, "location": {"@type": "Place", "name": "Église de Battice", "address": {"@type": "PostalAddress", "addressLocality": "Battice", "addressCountry": "BE"}}, "performer": {"@type": "MusicGroup", "name": "Jesus'Trip & Co"}, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "EUR", "availability": "https://schema.org/InStock"}}]}</script>
 </head>
@@ -1484,7 +1488,7 @@ a.pro__logo:hover{opacity:.82}
           </div>
           <ul class="membres">
             <li class="membre membre--co">
-              <div class="membre__rond"><img src="img/rond-joanna.jpg?v=2" alt="Joanna Verwilghen, souriante" width="560" height="560" loading="lazy"></div>
+              <div class="membre__rond"><img src="img/rond-joanna.jpg?v=2" alt="Joanna Verwilghen, souriante" width="560" height="560" loading="lazy"><span class="etiquette etiquette--rond etiquette--rose" aria-hidden="true">au chant !</span></div>
               <h4>Joanna Verwilghen</h4>
               <p class="membre__role">Chant</p>
               <p class="membre__bio">Benjamine de la scène et coprésidente du MEJ. Appelée en renfort pour Lourdes, elle est restée : les refrains se chantent désormais à voix mêlées.</p>
