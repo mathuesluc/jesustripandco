@@ -1194,6 +1194,33 @@ a.pro__logo:hover{opacity:.82}
   .logo-carte__formats a{min-width:46px;padding:7px 8px}
 }
 @media (prefers-reduced-motion:reduce){.logo-carte__formats a{transition:none}}
+
+/* ---------- 28/11 : revue de presse ---------- */
+.revue{max-width:1000px;margin:clamp(52px,6.4vw,80px) auto 0;scroll-margin-top:24px}
+.revue__titre-bloc{text-align:center;font-family:var(--f-main);font-size:clamp(30px,3.2vw,36px);font-weight:700;line-height:1.1;letter-spacing:0;color:var(--marine);rotate:-1.5deg}
+.revue__intro{max-width:640px;margin:8px auto clamp(22px,3vw,30px);text-align:center;font-size:15px;color:var(--gris);text-wrap:balance}
+.revue__annee{display:grid;grid-template-columns:120px minmax(0,1fr);gap:14px 22px;padding:18px 0;border-top:1px solid var(--ligne)}
+.revue__an{margin:6px 0 0;font:800 clamp(22px,2.4vw,28px)/1 var(--f-titre);letter-spacing:-.01em;color:var(--rouge-vif)}
+.revue__liste{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.revue__article a{display:flex;flex-direction:column;gap:5px;height:100%;padding:14px 16px 15px;border:1px solid var(--ligne);border-radius:16px;background:#fff;color:inherit;text-decoration:none;transition:border-color .2s,box-shadow .2s,translate .2s}
+.revue__article a:focus-visible{outline:3px solid var(--rouge-vif);outline-offset:3px}
+.revue__meta{font:700 11.5px/1.3 var(--f-titre);letter-spacing:.08em;text-transform:uppercase;color:var(--gris)}
+.revue__media{color:var(--rouge)}
+.revue__titre{font:700 16px/1.32 var(--f-titre);color:var(--marine);text-wrap:pretty}
+.revue__fleche{display:inline-block;width:15px;height:15px;margin-left:5px;vertical-align:-1px;fill:none;stroke:var(--rouge-vif);stroke-width:2.6;stroke-linecap:round;stroke-linejoin:round;transition:translate .2s}
+.revue__resume{font-size:14.5px;line-height:1.45;color:var(--gris)}
+@media (hover:hover){
+  .revue__article a:hover{border-color:var(--ciel);box-shadow:0 16px 30px -22px rgba(6,48,95,.5);translate:0 -2px}
+  .revue__article a:hover .revue__fleche{translate:2px -2px}
+}
+@media (max-width:760px){
+  .revue__annee{grid-template-columns:minmax(0,1fr);gap:10px;padding:16px 0}
+  .revue__an{margin:0}
+  .revue__liste{grid-template-columns:minmax(0,1fr);gap:8px}
+  .revue__article a{padding:12px 14px 13px}
+  .revue__resume{display:none}
+}
+@media (prefers-reduced-motion:reduce){.revue__article a,.revue__fleche{transition:none}}
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "MusicGroup", "name": "Jesus'Trip & Co", "alternateName": "Jesus'Trip", "genre": ["Pop-louange", "Musique chrétienne"], "foundingDate": "2014", "foundingLocation": {"@type": "Place", "name": "Verviers, Belgique"}, "description": "Jesus’Trip & Co, groupe belge de pop-louange : des temps de louange festifs et priants dans les églises de Wallonie, de Bruxelles et jusqu’à Lourdes. Invitez-nous chez vous.", "url": "https://jesustripandco.be/", "image": "https://jesustripandco.be/img/partage.jpg?v=2", "sameAs": ["https://www.facebook.com/jesustrip.be", "https://www.instagram.com/jesustripandco/", "https://www.youtube.com/@jesustrip3223", "https://open.spotify.com/artist/0YSleEpy61th1Lasah1Fnt", "https://www.deezer.com/fr/artist/9116278", "https://music.apple.com/be/artist/jesustrip/1046558283"], "member": [{"@type": "Person", "name": "Luc Mathues"}, {"@type": "Person", "name": "Gaël Haine"}, {"@type": "Person", "name": "Nathan Lamberts"}, {"@type": "Person", "name": "Joanna Verwilghen"}, {"@type": "Person", "name": "Frédéric Kienen"}]}, {"@type": "MusicEvent", "name": "Jesus'Trip & Co en concert", "description": "Jesus'Trip & Co en concert à l'église de Battice : pour la première fois, deux nouveaux musiciens rejoignent l'aventure Jesus'Trip. Entrée gratuite, verre de l'amitié offert.", "image": ["https://jesustripandco.be/telechargements/JesusTrip-and-Co_Concert-Battice_carre.jpg", "https://jesustripandco.be/telechargements/JesusTrip-and-Co_Concert-Battice_publication-4x5.jpg", "https://jesustripandco.be/img/partage.jpg?v=2"], "url": "https://jesustripandco.be/#agenda", "startDate": "2027-01-16T20:00:00+01:00", "eventStatus": "https://schema.org/EventScheduled", "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode", "isAccessibleForFree": true, "location": {"@type": "Place", "name": "Église de Battice", "address": {"@type": "PostalAddress", "addressLocality": "Battice", "addressCountry": "BE"}}, "performer": {"@type": "MusicGroup", "name": "Jesus'Trip & Co"}, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "EUR", "availability": "https://schema.org/InStock"}}]}</script>
 </head>
@@ -1877,7 +1904,7 @@ a.pro__logo:hover{opacity:.82}
       <div class="entete-section">
         <p class="surtitre">Dans la presse</p>
         <h2 id="titre-presse">Ils parlent <span class="eclat">de nous</span></h2>
-        <p class="chapo">Cathobel, L’Avenir, le collège de Maredsous : quelques articles parus depuis nos débuts.</p>
+        <p class="chapo">Cathobel, L’Avenir, Sudinfo, le collège de Maredsous : depuis nos débuts, la presse raconte notre aventure.</p>
       </div>
       <div class="coupures-scene">
         <p class="annot annot--battice" aria-hidden="true"><span>déjà à Battice en 2015 !</span><svg class="fleche trace" viewBox="0 0 100 64" aria-hidden="true" focusable="false"><path d="M8 52C24 22 54 10 88 20"/><path d="M75 8.5l15 12-17.5 6.5"/></svg></p>
@@ -1886,9 +1913,57 @@ a.pro__logo:hover{opacity:.82}
           <li class="coupure"><a href="https://www.cathobel.be/2018/02/jesustrip-partage-foi-scene/" target="_blank" rel="noopener"><span class="coupure__tete"><span class="coupure__media">Cathobel</span><span class="coupure__date">février 2018</span></span><span class="coupure__corps"><img src="img/presse-1.jpg" alt="" width="240" height="240" loading="lazy"><span class="coupure__titre">Jesus’Trip partage sa foi sur scène</span></span><span class="coupure__lire">Lire l’article<span class="sr"> (nouvel onglet)</span></span></a></li>
           <li class="coupure"><a href="https://www.lavenir.net/regions/2015/09/24/chanter-dieu-cest-vraiment-son-trip-D7D5F2N3P5D6TCRJSIU5JW63RU/" target="_blank" rel="noopener"><span class="coupure__tete"><span class="coupure__media">L’Avenir</span><span class="coupure__date">24 septembre 2015</span></span><span class="coupure__corps"><img src="img/presse-4.jpg" alt="" width="240" height="240" loading="lazy"><span class="coupure__titre">Chanter Dieu, c’est vraiment son trip</span></span><span class="coupure__lire">Lire l’article<span class="sr"> (nouvel onglet)</span></span></a></li>
           <li class="coupure"><a href="https://www.cathobel.be/2015/03/jesustrip-partager-la-joie/" target="_blank" rel="noopener"><span class="coupure__tete"><span class="coupure__media">Cathobel</span><span class="coupure__date">mars 2015</span></span><span class="coupure__corps"><img src="img/presse-3.jpg" alt="" width="240" height="240" loading="lazy"><span class="coupure__titre">Jesus’Trip : partager la joie !</span></span><span class="coupure__lire">Lire l’article<span class="sr"> (nouvel onglet)</span></span></a></li>
-          <li class="coupure"><a href="https://www.lavenir.net/cnt/dmf20140602_019" target="_blank" rel="noopener"><span class="coupure__tete"><span class="coupure__media">L’Avenir</span><span class="coupure__date">2 juin 2014</span></span><span class="coupure__corps"><img src="img/presse-5.jpg" alt="" width="240" height="240" loading="lazy"><span class="coupure__titre">Jesus’Trip, groupe de pop-louange verviétois, chante sa foi catholique</span></span><span class="coupure__lire">Lire l’article<span class="sr"> (nouvel onglet)</span></span></a></li>
+          <li class="coupure"><a href="https://www.lavenir.net/regions/2014/06/02/jesustrip-groupe-de-pop-louange-vervietois-chante-sa-foi-catholique-CG5LB6X45JHXHCMHHA7AGMWH2A/" target="_blank" rel="noopener"><span class="coupure__tete"><span class="coupure__media">L’Avenir</span><span class="coupure__date">2 juin 2014</span></span><span class="coupure__corps"><img src="img/presse-5.jpg" alt="" width="240" height="240" loading="lazy"><span class="coupure__titre">Jesus’Trip, groupe de pop-louange verviétois, chante sa foi catholique</span></span><span class="coupure__lire">Lire l’article<span class="sr"> (nouvel onglet)</span></span></a></li>
           <li class="coupure"><a href="https://college.maredsous.be/page/concert-de-jesus-trip-a-l-abbaye.html" target="_blank" rel="noopener"><span class="coupure__tete"><span class="coupure__media">Collège de Maredsous</span><span class="coupure__date">à l’abbaye</span></span><span class="coupure__corps"><img src="img/presse-6.jpg" alt="" width="240" height="240" loading="lazy"><span class="coupure__titre">Concert de Jesus’Trip</span></span><span class="coupure__lire">Lire l’article<span class="sr"> (nouvel onglet)</span></span></a></li>
         </ul>
+      </div>
+      <div class="revue" id="revue-de-presse">
+        <h3 class="revue__titre-bloc">Toute notre revue de presse</h3>
+        <p class="revue__intro">Depuis 2014, Cathobel, L’Avenir, Sudinfo et d’autres ont raconté notre aventure. Les articles s’ouvrent dans un nouvel onglet ; certains sont réservés aux abonnés.</p>
+        <div class="revue__annee">
+          <h4 class="revue__an">2019</h4>
+          <ul class="revue__liste">
+            <li class="revue__article"><a href="https://www.cathobel.be/2019/09/jesustrip-cest-dans-la-fragilite-quon-puise-notre-force/" target="_blank" rel="noopener"><span class="revue__meta"><span class="revue__media">Cathobel</span> <span aria-hidden="true">·</span> <time datetime="2019-09-04">4 septembre 2019</time></span><span class="revue__titre">Jesus’Trip : « C’est dans la fragilité qu’on puise notre force »<svg class="revue__fleche" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M9 7h8v8"/></svg></span><span class="revue__resume">Plutôt qu’un nouvel album, le groupe a choisi d’accompagner les pèlerins liégeois à Lourdes, où il anime leur prière trois fois par jour.</span><span class="sr"> (nouvel onglet)</span></a></li>
+          </ul>
+        </div>
+        <div class="revue__annee">
+          <h4 class="revue__an">2018</h4>
+          <ul class="revue__liste">
+            <li class="revue__article"><a href="https://www.lavenir.net/regions/verviers/verviers/2018/08/29/aider-la-justice-a-faire-son-travail-2SHY34X6C5BYVJSUUFEC4VXBWA/" target="_blank" rel="noopener"><span class="revue__meta"><span class="revue__media">L’Avenir</span> <span aria-hidden="true">·</span> <time datetime="2018-08-29">29 août 2018</time></span><span class="revue__titre">Aider la justice à faire son travail<svg class="revue__fleche" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M9 7h8v8"/></svg></span><span class="revue__resume">Luc Mathues, chanteur du groupe, prend la parole sur les abus commis dans l’Église : la justice doit pouvoir faire son travail, et les victimes passer en premier.</span><span class="sr"> (nouvel onglet)</span></a></li>
+            <li class="revue__article"><a href="https://www.cathobel.be/2018/02/jesustrip-partage-foi-scene/" target="_blank" rel="noopener"><span class="revue__meta"><span class="revue__media">Cathobel</span> <span aria-hidden="true">·</span> <time datetime="2018-02">février 2018</time></span><span class="revue__titre">Jesus’Trip partage sa foi sur scène<svg class="revue__fleche" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M9 7h8v8"/></svg></span><span class="revue__resume">Rencontre avec Gaël, Nathan et Luc, en pleine tournée « Jump, Sing and Pray », alors qu’ils préparent leur deuxième album. Paru aussi dans le journal Dimanche.</span><span class="sr"> (nouvel onglet)</span></a></li>
+          </ul>
+        </div>
+        <div class="revue__annee">
+          <h4 class="revue__an">2016</h4>
+          <ul class="revue__liste">
+            <li class="revue__article"><a href="https://www.cathobel.be/2016/10/jesustrip-concert-cest-jesus-parlait-aujourdhui-direct/" target="_blank" rel="noopener"><span class="revue__meta"><span class="revue__media">Cathobel</span> <span aria-hidden="true">·</span> <time datetime="2016-10">octobre 2016</time></span><span class="revue__titre">JesusTrip en concert : « C’est comme si Jésus parlait aujourd’hui en direct »<svg class="revue__fleche" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M9 7h8v8"/></svg></span><span class="sr"> (nouvel onglet)</span></a></li>
+          </ul>
+        </div>
+        <div class="revue__annee">
+          <h4 class="revue__an">2015</h4>
+          <ul class="revue__liste">
+            <li class="revue__article"><a href="https://www.lavenir.net/regions/2015/09/24/chanter-dieu-cest-vraiment-son-trip-D7D5F2N3P5D6TCRJSIU5JW63RU/" target="_blank" rel="noopener"><span class="revue__meta"><span class="revue__media">L’Avenir</span> <span aria-hidden="true">·</span> <time datetime="2015-09-24">24 septembre 2015</time></span><span class="revue__titre">Chanter Dieu, c’est vraiment son trip<svg class="revue__fleche" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M9 7h8v8"/></svg></span><span class="revue__resume">Portrait de Luc Mathues, de son enfance à la louange.</span><span class="sr"> (nouvel onglet)</span></a></li>
+            <li class="revue__article"><a href="https://www.lavenir.net/regions/2015/09/24/jai-un-peu-trouve-ma-vocation-QUT24QLEIJCQ5AITY5NUJAKV34/" target="_blank" rel="noopener"><span class="revue__meta"><span class="revue__media">L’Avenir</span> <span aria-hidden="true">·</span> <time datetime="2015-09-24">24 septembre 2015</time></span><span class="revue__titre">J’ai un peu trouvé ma vocation<svg class="revue__fleche" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M9 7h8v8"/></svg></span><span class="revue__resume">Un musicien du groupe raconte ses débuts, à quelques jours de la sortie du premier album, Dance for God.</span><span class="sr"> (nouvel onglet)</span></a></li>
+            <li class="revue__article"><a href="https://www.cathobel.be/2015/09/pop-louange-a-battice-avec-jesustrip/" target="_blank" rel="noopener"><span class="revue__meta"><span class="revue__media">Cathobel</span> <span aria-hidden="true">·</span> <time datetime="2015-09-25">25 septembre 2015</time></span><span class="revue__titre">Pop louange à Battice avec Jesus’Trip !<svg class="revue__fleche" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M9 7h8v8"/></svg></span><span class="revue__resume">Concert gratuit à l’église Saint-Vincent de Paul de Battice, pour la sortie du premier album.</span><span class="sr"> (nouvel onglet)</span></a></li>
+            <li class="revue__article"><a href="https://www.cathobel.be/2015/09/un-concert-gratuit-pour-lancer-le-premier-album-de-jesustrip/" target="_blank" rel="noopener"><span class="revue__meta"><span class="revue__media">Cathobel</span> <span aria-hidden="true">·</span> <time datetime="2015-09">septembre 2015</time></span><span class="revue__titre">Un concert gratuit pour lancer le premier album de Jesus’Trip<svg class="revue__fleche" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M9 7h8v8"/></svg></span><span class="revue__resume">Le concert de lancement de Dance for God.</span><span class="sr"> (nouvel onglet)</span></a></li>
+            <li class="revue__article"><a href="https://www.sudinfo.be/art/1298824/article/2015-05-29/l-eveque-de-liege-en-concert-de-pop-louange-avec-jesus-trip-a-l-eglise-d-hognoul" target="_blank" rel="noopener"><span class="revue__meta"><span class="revue__media">Sudinfo</span> <span aria-hidden="true">·</span> <time datetime="2015-05-29">29 mai 2015</time></span><span class="revue__titre">L’évêque de Liège en concert de pop-louange avec Jesus’Trip à l’église d’Hognoul<svg class="revue__fleche" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M9 7h8v8"/></svg></span><span class="revue__resume">Un concert à Hognoul, au programme de la visite pastorale de Mgr Delville dans le doyenné d’Ans.</span><span class="sr"> (nouvel onglet)</span></a></li>
+            <li class="revue__article"><a href="https://www.cathobel.be/2015/03/jesustrip-partager-la-joie/" target="_blank" rel="noopener"><span class="revue__meta"><span class="revue__media">Cathobel</span> <span aria-hidden="true">·</span> <time datetime="2015-03">mars 2015</time></span><span class="revue__titre">Jesus’Trip : partager la joie !<svg class="revue__fleche" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M9 7h8v8"/></svg></span><span class="revue__resume">Invité de la marche Namur-Malonne, le groupe y lance sa tournée Dance for God Tour.</span><span class="sr"> (nouvel onglet)</span></a></li>
+          </ul>
+        </div>
+        <div class="revue__annee">
+          <h4 class="revue__an">2014</h4>
+          <ul class="revue__liste">
+            <li class="revue__article"><a href="https://www.cathobel.be/2014/10/jesus-trip-en-concert-gratuit-a-bruxelles/" target="_blank" rel="noopener"><span class="revue__meta"><span class="revue__media">Cathobel</span> <span aria-hidden="true">·</span> <time datetime="2014-10-07">7 octobre 2014</time></span><span class="revue__titre">Jesus Trip en concert gratuit à Bruxelles<svg class="revue__fleche" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M9 7h8v8"/></svg></span><span class="revue__resume">Premier concert du groupe à Bruxelles, le 18 octobre, à l’église Saint-Jean Berchmans.</span><span class="sr"> (nouvel onglet)</span></a></li>
+            <li class="revue__article"><a href="https://www.lavenir.net/regions/2014/06/02/jesustrip-groupe-de-pop-louange-vervietois-chante-sa-foi-catholique-CG5LB6X45JHXHCMHHA7AGMWH2A/" target="_blank" rel="noopener"><span class="revue__meta"><span class="revue__media">L’Avenir</span> <span aria-hidden="true">·</span> <time datetime="2014-06-02">2 juin 2014</time></span><span class="revue__titre">Jesus’Trip, groupe de pop-louange verviétois, chante sa foi catholique<svg class="revue__fleche" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M9 7h8v8"/></svg></span><span class="revue__resume">Luc, Gaël et Nathan présentent leurs concerts de pop-louange, un mois après leurs débuts.</span><span class="sr"> (nouvel onglet)</span></a></li>
+          </ul>
+        </div>
+        <div class="revue__annee">
+          <h4 class="revue__an">Et aussi</h4>
+          <ul class="revue__liste">
+            <li class="revue__article"><a href="https://college.maredsous.be/page/concert-de-jesus-trip-a-l-abbaye.html" target="_blank" rel="noopener"><span class="revue__meta"><span class="revue__media">Collège de Maredsous</span></span><span class="revue__titre">Concert de Jesus’Trip<svg class="revue__fleche" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M9 7h8v8"/></svg></span><span class="revue__resume">Le groupe en concert à l’abbaye de Maredsous.</span><span class="sr"> (nouvel onglet)</span></a></li>
+            <li class="revue__article"><a href="https://www.youtube.com/watch?v=uJBmWcCvUms" target="_blank" rel="noopener"><span class="revue__meta"><span class="revue__media">YouTube</span></span><span class="revue__titre">Jesus’Trip en vidéo<svg class="revue__fleche" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M9 7h8v8"/></svg></span><span class="revue__resume">À voir sur YouTube.</span><span class="sr"> (nouvel onglet)</span></a></li>
+          </ul>
+        </div>
       </div>
       <div class="presse__espace">
         <p><strong>Journalistes</strong> : notre dossier de présentation rassemble l’histoire, l’équipe et les chiffres ; photos sur demande auprès de Luc Mathues.</p>
