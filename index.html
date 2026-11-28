@@ -1204,6 +1204,57 @@ a.pro__logo:hover{opacity:.82}
   .coupures-scene--repliable:not(.est-deplie) .coupure:nth-child(n+7){display:none}
   .coupures-scene--repliable:not(.est-deplie) .coupures__plus{display:flex}
 }
+
+/* ---------- Le jeu, version 3 (28/11) : progression, animations, profil, confettis ---------- */
+.jeu__haut{position:relative}
+.jeu__points{display:inline-block}
+.jeu__progression{list-style:none;display:flex;gap:4px;margin:10px 0 0;padding:0}
+.jeu__progression li{flex:1;height:7px;border-radius:999px;background:rgba(6,48,95,.13);transition:background-color .3s}
+.jeu__progression li.est-courant{background:var(--marine)}
+.jeu__progression li.est-juste{background:#17804F}
+.jeu__progression li.est-faux{background:var(--rouge)}
+.jeu__recap{max-width:320px;margin:16px auto 0}
+.jeu__recap li{height:6px}
+.jeu__plus-un{position:absolute;right:0;top:-8px;font:800 15px/1 var(--f-titre);letter-spacing:0;text-transform:none;color:#17804F;pointer-events:none;animation:jeu-monte 1s ease-out forwards}
+.jeu__etincelle{position:fixed;z-index:60;width:8px;height:8px;border-radius:50%;pointer-events:none}
+.jeu__confettis{position:fixed;inset:0;z-index:60;overflow:hidden;pointer-events:none}
+.jeu__confettis span{position:absolute;display:block;border-radius:2px}
+.jeu__verdict b,.jeu__bonus-verdict b{display:inline-block}
+.jeu__serie{display:inline-block;margin-right:8px;padding:3px 11px 2px;border-radius:999px;background:#17804F;color:#fff;font:700 19px/1.1 var(--f-main);rotate:-4deg;vertical-align:4px}
+.jeu__profil{display:inline-block;margin-top:30px;padding:9px 18px 8px;border:3px double var(--rouge);border-radius:10px;color:var(--rouge);font:800 14.5px/1.25 var(--f-titre);letter-spacing:.12em;text-transform:uppercase;rotate:-6deg}
+.jeu__profil:empty{display:none}
+.jeu__profil + .jeu__message{margin-top:22px}
+@media (max-width:640px){.jeu__profil{font-size:13px;letter-spacing:.08em;padding:8px 14px 7px}}
+.est-parfaite .jeu__profil{border-color:#17804F;color:#17804F}
+.est-parfaite .jeu__score b{color:#17804F}
+@media (prefers-reduced-motion:no-preference){
+  .jeu__progression li.est-courant{animation:jeu-courant 1.6s ease-in-out infinite}
+  .jeu__progression li.vient{animation:jeu-segment .5s ease}
+  .jeu__membre.est-choisi .jeu__photo{animation:jeu-saut .6s cubic-bezier(.3,.7,.4,1)}
+  .jeu__membre.est-faux .jeu__photo{animation:jeu-secoue .5s ease}
+  .jeu__membre.est-revele .jeu__photo{animation:jeu-revele 1.1s ease-out 2}
+  .jeu__badge{transition:opacity .2s,scale .35s cubic-bezier(.34,1.56,.64,1)}
+  .jeu__verdict.est-juste b,.jeu__bonus-verdict.est-juste b{animation:jeu-pop .5s cubic-bezier(.34,1.56,.64,1)}
+  .jeu__verdict.est-faux b,.jeu__bonus-verdict.est-faux b{animation:jeu-oups .5s ease}
+  .jeu__serie{animation:jeu-pastille .55s cubic-bezier(.34,1.56,.64,1) .12s both}
+  .jeu__points.est-plus{animation:jeu-bond .45s ease}
+  .jeu__puce.est-bon{animation:jeu-saut .55s cubic-bezier(.3,.7,.4,1)}
+  .jeu__puce.est-faux{animation:jeu-secoue .5s ease}
+  .jeu__bonus.est-neuf{animation:jeu-carte .45s ease}
+  .jeu__suivant.est-neuf{animation:jeu-carte .4s ease .15s both}
+  .jeu__profil.est-tamponne{animation:jeu-tampon .6s cubic-bezier(.2,.8,.3,1.2) .35s both}
+}
+@keyframes jeu-courant{0%,100%{opacity:1}50%{opacity:.45}}
+@keyframes jeu-segment{0%,100%{scale:1}40%{scale:1 2.2}}
+@keyframes jeu-saut{0%{translate:0 0;scale:1}30%{translate:0 -12px;scale:1.12}60%{translate:0 0;scale:.95}80%{scale:1.03}100%{translate:0 0;scale:1}}
+@keyframes jeu-secoue{0%,100%{translate:0 0}15%{translate:-8px 0}30%{translate:7px 0}45%{translate:-5px 0}60%{translate:4px 0}75%{translate:-2px 0}}
+@keyframes jeu-revele{0%{box-shadow:0 0 0 4px #17804F,0 0 0 4px rgba(23,128,79,.5)}100%{box-shadow:0 0 0 4px #17804F,0 0 0 20px rgba(23,128,79,0)}}
+@keyframes jeu-pop{0%{opacity:0;scale:.3;rotate:-12deg}60%{opacity:1;scale:1.18;rotate:4deg}100%{opacity:1;scale:1;rotate:0deg}}
+@keyframes jeu-pastille{0%{opacity:0;scale:.3;rotate:-16deg}60%{opacity:1;scale:1.15;rotate:0deg}100%{opacity:1;scale:1;rotate:-4deg}}
+@keyframes jeu-oups{0%,100%{rotate:0deg}20%{rotate:-9deg}40%{rotate:7deg}60%{rotate:-5deg}80%{rotate:2deg}}
+@keyframes jeu-bond{0%,100%{scale:1}40%{scale:1.4}}
+@keyframes jeu-monte{0%{opacity:0;translate:0 8px}20%{opacity:1}100%{opacity:0;translate:0 -28px}}
+@keyframes jeu-tampon{0%{opacity:0;scale:2.6;rotate:-16deg}55%{opacity:1;scale:.9;rotate:-5deg}75%{scale:1.05}100%{opacity:1;scale:1;rotate:-6deg}}
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "MusicGroup", "name": "Jesus'Trip & Co", "alternateName": "Jesus'Trip", "genre": ["Pop-louange", "Musique chrétienne"], "foundingDate": "2014", "foundingLocation": {"@type": "Place", "name": "Verviers, Belgique"}, "description": "Jesus’Trip & Co, groupe belge de pop-louange : des temps de louange festifs et priants dans les églises de Wallonie, de Bruxelles et jusqu’à Lourdes. Invitez-nous chez vous.", "url": "https://jesustripandco.be/", "image": "https://jesustripandco.be/img/partage.jpg?v=2", "sameAs": ["https://www.facebook.com/jesustrip.be", "https://www.instagram.com/jesustripandco/", "https://www.youtube.com/@jesustrip3223", "https://open.spotify.com/artist/0YSleEpy61th1Lasah1Fnt", "https://www.deezer.com/fr/artist/9116278", "https://music.apple.com/be/artist/jesustrip/1046558283"], "member": [{"@type": "Person", "name": "Luc Mathues"}, {"@type": "Person", "name": "Gaël Haine"}, {"@type": "Person", "name": "Nathan Lamberts"}, {"@type": "Person", "name": "Joanna Verwilghen"}, {"@type": "Person", "name": "Frédéric Kienen"}]}, {"@type": "MusicEvent", "name": "Jesus'Trip & Co en concert", "description": "Jesus'Trip & Co en concert à l'église de Battice : pour la première fois, deux nouveaux musiciens rejoignent l'aventure Jesus'Trip. Entrée gratuite, verre de l'amitié offert.", "image": ["https://jesustripandco.be/telechargements/JesusTrip-and-Co_Concert-Battice_carre.jpg", "https://jesustripandco.be/telechargements/JesusTrip-and-Co_Concert-Battice_publication-4x5.jpg", "https://jesustripandco.be/img/partage.jpg?v=2"], "url": "https://jesustripandco.be/#agenda", "startDate": "2027-01-16T20:00:00+01:00", "eventStatus": "https://schema.org/EventScheduled", "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode", "isAccessibleForFree": true, "location": {"@type": "Place", "name": "Église de Battice", "address": {"@type": "PostalAddress", "addressLocality": "Battice", "addressCountry": "BE"}}, "performer": {"@type": "MusicGroup", "name": "Jesus'Trip & Co"}, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "EUR", "availability": "https://schema.org/InStock"}}]}</script>
 </head>
@@ -1615,11 +1666,11 @@ a.pro__logo:hover{opacity:.82}
             <li data-qui="gael" data-revelation="C’était Gaël, la plume du groupe !"><p class="jeu__texte">« Plus de 90 % des chants du groupe sont sortis de ma plume. Certains, je les ai écrits en moins d’une heure. »</p><details><summary>Voir la réponse</summary><p>C’était Gaël, la plume du groupe !</p></details></li>
             <li data-qui="fred" data-revelation="C’était l’abbé Fred : un prêtre tatoué, eh oui !"><p class="jeu__texte">« Je suis le seul membre du groupe à avoir des tatouages. »</p><details><summary>Voir la réponse</summary><p>C’était l’abbé Fred : un prêtre tatoué, eh oui !</p></details></li>
             <li data-qui="nathan" data-revelation="C’était Nathan, aux claviers… officiellement !"><p class="jeu__texte">« Officiellement, je ne sais pas chanter. Mais quand je kiffe, on n’entend plus que moi ! »</p><details><summary>Voir la réponse</summary><p>C’était Nathan, aux claviers… officiellement !</p></details></li>
-            <li data-qui="luc" data-revelation="C’était Luc, le fondateur !"><p class="jeu__texte">« Au départ, je voulais faire de Jesus’Trip une agence de voyages (d’où le nom !). Un soir, entre amis musiciens, j’ai lancé ce nom à un journaliste… et il est resté. »</p><details><summary>Voir la réponse</summary><p>C’était Luc, le fondateur !</p></details></li>
+            <li data-qui="luc" data-revelation="C’était Luc, le fondateur du groupe !"><p class="jeu__texte">« Au départ, Jesus’Trip devait être une agence de voyages. Un jour, un journaliste m’a demandé comment s’appelait notre groupe. J’ai répondu “Jesus’Trip”… et c’est comme ça que le nom du groupe est né ! »</p><details><summary>Voir la réponse</summary><p>C’était Luc, le fondateur du groupe !</p></details></li>
             <li data-qui="joanna" data-revelation="C’était Joanna : de fan à chanteuse !" data-note="facile, celle-là !"><p class="jeu__texte">« À 14 ans, je venais déjà les voir en concert, et leurs chants tournaient en boucle dans ma playlist Spotify. »</p><details><summary>Voir la réponse</summary><p>C’était Joanna : de fan à chanteuse !</p></details></li>
-            <li data-qui="fred" data-revelation="C’était Fred, à la basse et à la clarinette !" data-bonus="Et son troisième instrument, c’est… ?" data-bonus-choix="Le violon|L’accordéon|La trompette|La batterie" data-bonus-reponse="L’accordéon" data-bonus-solution="Son troisième instrument, c’est l’accordéon !"><p class="jeu__texte">« C’est moi qui joue le plus d’instruments dans le groupe : deux sur scène… et un troisième en plus. »</p><details><summary>Voir la réponse</summary><p>C’était Fred, à la basse et à la clarinette !</p><p><strong>Bonus :</strong> Et son troisième instrument, c’est… ? Son troisième instrument, c’est l’accordéon !</p></details></li>
+            <li data-qui="fred" data-revelation="C’était Fred, à la basse et à la clarinette !" data-bonus="Et son troisième instrument, celui qu’il ne joue pas sur scène, c’est… ?" data-bonus-choix="Le violon|L’accordéon|La trompette|La batterie" data-bonus-reponse="L’accordéon" data-bonus-solution="C’est l’accordéon ! Il en joue, mais pas sur scène avec le groupe."><p class="jeu__texte">« C’est moi qui joue le plus d’instruments dans le groupe : la basse et la clarinette sur scène… et un troisième, que je ne joue pas en concert avec eux. »</p><details><summary>Voir la réponse</summary><p>C’était Fred, à la basse et à la clarinette !</p><p><strong>Bonus :</strong> Et son troisième instrument, celui qu’il ne joue pas sur scène, c’est… ? C’est l’accordéon ! Il en joue, mais pas sur scène avec le groupe.</p></details></li>
             <li data-qui="gael" data-revelation="C’était Gaël : gare aux fausses notes !"><p class="jeu__texte">« Dans le groupe, c’est moi l’oreille la plus exigeante : je ne tolère ni la moindre fausse note, ni la moindre petite rature. »</p><details><summary>Voir la réponse</summary><p>C’était Gaël : gare aux fausses notes !</p></details></li>
-            <li data-qui="nathan" data-revelation="C’était Nathan : des vaches et des robots… aux claviers !"><p class="jeu__texte">« Au quotidien, je suis loin de la musique : plutôt au milieu des vaches et des robots. »</p><details><summary>Voir la réponse</summary><p>C’était Nathan : des vaches et des robots… aux claviers !</p></details></li>
+            <li data-qui="nathan" data-revelation="C’était Nathan ! Il travaille pour une entreprise qui installe des robots de traite dans les fermes."><p class="jeu__texte">« Au quotidien, je suis loin de la musique : plutôt au milieu des vaches et des robots. »</p><details><summary>Voir la réponse</summary><p>C’était Nathan ! Il travaille pour une entreprise qui installe des robots de traite dans les fermes.</p></details></li>
             <li data-qui="luc" data-revelation="C’était Luc : un vrai cadeau de Noël !"><p class="jeu__texte">« J’ai composé “Génération François 1er” en pyjama, dans mon lit, un matin de Noël. »</p><details><summary>Voir la réponse</summary><p>C’était Luc : un vrai cadeau de Noël !</p></details></li>
             <li data-qui="joanna" data-revelation="C’était Joanna : du public à la scène, en passant par la régie !"><p class="jeu__texte">« Dans ce groupe, j’aurai tout fait : d’abord dans le public, puis à la régie vidéo, ensuite aux lumières… et maintenant sur scène ! »</p><details><summary>Voir la réponse</summary><p>C’était Joanna : du public à la scène, en passant par la régie !</p></details></li>
             <li data-qui="gael" data-revelation="C’était Gaël !" data-bonus="À qui les a-t-il fait découvrir ?" data-bonus-choix="Luc|Nathan|Joanna|Fred" data-bonus-reponse="Luc" data-bonus-solution="C’est à Luc qu’il les a fait découvrir !"><p class="jeu__texte">« J’ai fait découvrir Lourdes, Taizé et le MEJ à un autre membre du groupe. »</p><details><summary>Voir la réponse</summary><p>C’était Gaël !</p><p><strong>Bonus :</strong> À qui les a-t-il fait découvrir ? C’est à Luc qu’il les a fait découvrir !</p></details></li>
@@ -1641,6 +1692,7 @@ a.pro__logo:hover{opacity:.82}
             </div>
             <div class="jeu__partie" hidden>
               <div class="jeu__haut"><span class="jeu__compteur"></span><span class="jeu__points"></span></div>
+              <ol class="jeu__progression" aria-hidden="true"></ol>
               <span class="etiquette jeu__note" aria-hidden="true" hidden></span>
               <div class="jeu__question">
                 <blockquote class="jeu__anecdote" tabindex="-1"></blockquote>
@@ -1665,6 +1717,8 @@ a.pro__logo:hover{opacity:.82}
               <p class="jeu__resultat">Résultat</p>
               <p class="jeu__score" tabindex="-1"></p>
               <p class="jeu__score-bonus"></p>
+              <ol class="jeu__progression jeu__recap" aria-hidden="true"></ol>
+              <p class="jeu__profil"></p>
               <p class="jeu__message"></p>
               <div class="jeu__boutons">
                 <button type="button" class="btn btn--contour-marine btn--petit jeu__rejouer">Rejouer</button>
@@ -2225,11 +2279,12 @@ a.pro__logo:hover{opacity:.82}
 </script>
 
 <script>
-/* Le jeu « Qui est qui ? » : construit à partir de la liste .jeu__liste (version sans JavaScript) */
+/* Le jeu « Qui est qui ? » (version 3, 28/11 : progression, animations, profil, confettis) : construit à partir de la liste .jeu__liste (version sans JavaScript) */
 (function () {
   var jeu = document.querySelector('[data-jeu]');
   if (!jeu) return;
-  var NB = '\u00a0';
+  var NB = ' ';
+  var calme = !!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
   var questions = [].slice.call(jeu.querySelectorAll('.jeu__liste > li')).map(function (li) {
     var q = {
       texte: li.querySelector('.jeu__texte').textContent,
@@ -2248,84 +2303,182 @@ a.pro__logo:hover{opacity:.82}
     return q;
   });
   if (!questions.length) return;
+  var n = questions.length;
   var nbBonus = questions.filter(function (q) { return q.bonus; }).length;
   function $(sel) { return jeu.querySelector(sel); }
   var plateau = $('.jeu__plateau'), carte = $('.jeu__carte');
   var accueil = $('.jeu__accueil'), partie = $('.jeu__partie'), fin = $('.jeu__fin');
-  var compteur = $('.jeu__compteur'), points = $('.jeu__points'), note = $('.jeu__note');
+  var haut = $('.jeu__haut'), compteur = $('.jeu__compteur'), points = $('.jeu__points'), note = $('.jeu__note');
+  var progression = $('.jeu__partie .jeu__progression'), recap = $('.jeu__recap');
   var anecdote = $('.jeu__anecdote'), verdict = $('.jeu__verdict'), suivant = $('.jeu__suivant');
   var zoneBonus = $('.jeu__bonus'), texteBonus = $('.jeu__bonus-texte'), puces = $('.jeu__puces'), verdictBonus = $('.jeu__bonus-verdict');
-  var score = $('.jeu__score'), scoreBonus = $('.jeu__score-bonus'), message = $('.jeu__message');
+  var score = $('.jeu__score'), scoreBonus = $('.jeu__score-bonus'), profil = $('.jeu__profil'), message = $('.jeu__message');
   var choix = $('.jeu__choix');
   var boutons = [].slice.call(jeu.querySelectorAll('.jeu__membre'));
   var portraits = {};
   boutons.forEach(function (b) { portraits[b.querySelector('.jeu__prenom').textContent] = b.querySelector('img').getAttribute('src'); });
-  $('.jeu__nb').textContent = questions.length;
-  var i = 0, bons = 0, bonus = 0, repondu = false;
+  $('.jeu__nb').textContent = n;
+  var i = 0, bons = 0, bonus = 0, serie = 0, repondu = false, etats = [];
+  /* ce que le score dit de vous (seuils en part du nombre d'anecdotes) */
+  var PROFILS = [
+    { part: 1, titre: 'Membre d’honneur du' + NB + '&' + NB + 'Co', texte: 'Vous connaissez Jesus’Trip & Co par cœur' + NB + ': il ne vous manque plus qu’un instrument pour monter sur scène avec nous.' },
+    { part: 0.75, titre: 'Fan de la première heure', texte: 'Vous connaissez presque tous nos secrets. Il ne vous reste plus qu’à venir chanter avec nous en vrai' + NB + '!' },
+    { part: 0.5, titre: 'Compagnon de route', texte: 'Vous connaissez déjà bien la bande. Venez nous écouter en concert' + NB + ': vous découvrirez le reste' + NB + '!' },
+    { part: 0.3, titre: 'Curieux du premier rang', texte: 'Vous avez du flair' + NB + '! Pour en savoir plus sur nous, rien ne vaut un concert.' },
+    { part: 0, titre: 'Nouveau dans la bande', texte: 'On a encore plein de choses à se raconter' + NB + ': venez nous rencontrer en concert' + NB + '!' }
+  ];
+  var COULEURS = ['#FFFFFF', '#93B7D9', '#FF8C95', '#E83442', '#06305F', '#FFD166', '#17804F'];
 
-  function animer() { carte.classList.remove('est-neuve'); void carte.offsetWidth; carte.classList.add('est-neuve'); }
-  function majPoints() {
-    points.textContent = 'Score' + NB + ': ' + bons + (bonus ? ' + ' + bonus + ' bonus' : '');
+  function relancer(el, cls) { el.classList.remove(cls); void el.offsetWidth; el.classList.add(cls); }
+  function animer() { relancer(carte, 'est-neuve'); }
+  function majPoints() { points.textContent = 'Score' + NB + ': ' + bons + (bonus ? ' + ' + bonus + ' bonus' : ''); }
+  function plus(texte) {
+    relancer(points, 'est-plus');
+    if (calme) return;
+    var e = document.createElement('span');
+    e.className = 'jeu__plus-un'; e.setAttribute('aria-hidden', 'true'); e.textContent = texte;
+    haut.appendChild(e);
+    setTimeout(function () { e.remove(); }, 1100);
   }
-  function ecrireVerdict(el, juste, motJuste, motFaux, texte) {
+  /* petite gerbe d'étincelles autour d'un portrait ou d'une pastille */
+  function eclat(el, nb) {
+    if (calme || !el || !el.animate) return;
+    var r = el.getBoundingClientRect(), cx = r.left + r.width / 2, cy = r.top + r.height / 2;
+    for (var k = 0; k < nb; k++) {
+      var e = document.createElement('span');
+      e.className = 'jeu__etincelle'; e.setAttribute('aria-hidden', 'true');
+      e.style.left = (cx - 4) + 'px'; e.style.top = (cy - 4) + 'px';
+      e.style.background = COULEURS[1 + k % (COULEURS.length - 1)];
+      document.body.appendChild(e);
+      var a = Math.PI * 2 * k / nb + Math.random() * 0.4, d = r.width * 0.55 + 14 + Math.random() * 22;
+      var anim = e.animate([
+        { transform: 'translate(0,0) scale(1)', opacity: 1 },
+        { transform: 'translate(' + Math.cos(a) * d + 'px,' + Math.sin(a) * d + 'px) scale(.3)', opacity: 0 }
+      ], { duration: 600 + Math.random() * 300, easing: 'cubic-bezier(.2,.7,.3,1)', fill: 'forwards' });
+      anim.onfinish = e.remove.bind(e);
+    }
+  }
+  /* l'explosion du sans-faute */
+  function confettis() {
+    if (calme || !document.body.animate) return;
+    var r = score.getBoundingClientRect(), cx = r.left + r.width / 2, cy = r.top + r.height / 2;
+    var boite = document.createElement('div');
+    boite.className = 'jeu__confettis'; boite.setAttribute('aria-hidden', 'true');
+    document.body.appendChild(boite);
+    var nb = window.innerWidth < 640 ? 90 : 160;
+    for (var k = 0; k < nb; k++) {
+      var c = document.createElement('span');
+      var w = 6 + Math.random() * 7, h = w * (0.45 + Math.random() * 0.9);
+      c.style.left = (cx - w / 2) + 'px'; c.style.top = (cy - h / 2) + 'px';
+      c.style.width = w + 'px'; c.style.height = h + 'px';
+      c.style.background = COULEURS[k % COULEURS.length];
+      if (Math.random() < 0.3) c.style.borderRadius = '50%';
+      boite.appendChild(c);
+      var ang = Math.random() * Math.PI * 2, force = 110 + Math.random() * 280;
+      var dx = Math.cos(ang) * force, dy = Math.sin(ang) * force * 0.8 - 160;
+      var chute = window.innerHeight * (0.5 + Math.random() * 0.6), rot = (Math.random() * 2 - 1) * 900;
+      c.animate([
+        { transform: 'translate(0,0) rotate(0deg)', opacity: 1 },
+        { transform: 'translate(' + dx + 'px,' + dy + 'px) rotate(' + rot / 3 + 'deg)', opacity: 1, offset: 0.25 },
+        { transform: 'translate(' + dx * 1.3 + 'px,' + (dy + chute) + 'px) rotate(' + rot + 'deg)', opacity: 0 }
+      ], { duration: 2600 + Math.random() * 1600, easing: 'cubic-bezier(.15,.55,.35,1)', fill: 'forwards' });
+    }
+    setTimeout(function () { boite.remove(); }, 4600);
+  }
+  function compter(el, cible) {
+    if (calme || !cible || !window.requestAnimationFrame) { el.textContent = cible; return; }
+    var t0 = 0, duree = 300 + cible * 55;
+    function pas(t) {
+      if (!t0) t0 = t;
+      var x = Math.min(1, (t - t0) / duree);
+      el.textContent = Math.round(cible * (1 - Math.pow(1 - x, 3)));
+      if (x < 1) requestAnimationFrame(pas);
+    }
+    el.textContent = '0';
+    requestAnimationFrame(pas);
+  }
+  function construireProgression(liste) {
+    liste.textContent = '';
+    for (var k = 0; k < n; k++) liste.appendChild(document.createElement('li'));
+  }
+  function majProgression(vient) {
+    [].forEach.call(progression.children, function (li, k) {
+      li.className = etats[k] ? 'est-' + etats[k] : (k === i ? 'est-courant' : '');
+      if (k === vient) relancer(li, 'vient');
+    });
+  }
+  function ecrireVerdict(el, juste, motJuste, motFaux, texte, extra) {
     el.textContent = '';
     var b = document.createElement('b');
     b.className = juste ? 'jeu__bien' : 'jeu__rate';
     b.textContent = juste ? motJuste : motFaux;
     el.appendChild(b);
+    if (extra) {
+      var e = document.createElement('span');
+      e.className = 'jeu__serie';
+      e.textContent = extra;
+      el.appendChild(e);
+    }
     el.appendChild(document.createTextNode(' ' + texte));
+    el.classList.remove(juste ? 'est-faux' : 'est-juste');
+    relancer(el, juste ? 'est-juste' : 'est-faux');
   }
   function afficher(focus) {
     var q = questions[i];
     repondu = false;
     accueil.hidden = true; fin.hidden = true; partie.hidden = false; choix.hidden = false;
-    compteur.textContent = 'Anecdote ' + (i + 1) + ' / ' + questions.length;
+    compteur.textContent = 'Anecdote ' + (i + 1) + ' / ' + n;
     majPoints();
+    majProgression(-1);
     anecdote.textContent = q.texte;
     note.textContent = q.note; note.hidden = !q.note;
-    verdict.textContent = '';
-    zoneBonus.hidden = true; puces.textContent = ''; puces.classList.remove('a-repondu'); verdictBonus.textContent = '';
+    verdict.textContent = ''; verdict.classList.remove('est-juste', 'est-faux');
+    zoneBonus.hidden = true; puces.textContent = ''; puces.classList.remove('a-repondu');
+    verdictBonus.textContent = ''; verdictBonus.classList.remove('est-juste', 'est-faux');
     suivant.hidden = true;
     choix.classList.remove('a-repondu');
-    boutons.forEach(function (b) { b.disabled = false; b.classList.remove('est-bon', 'est-faux'); });
+    boutons.forEach(function (b) { b.disabled = false; b.classList.remove('est-bon', 'est-faux', 'est-choisi', 'est-revele'); });
     animer();
     if (focus) anecdote.focus();
   }
   function montrerSuivant() {
-    suivant.textContent = i < questions.length - 1 ? 'Anecdote suivante' : 'Voir mon score';
+    suivant.textContent = i < n - 1 ? 'Anecdote suivante' : 'Voir mon résultat';
     suivant.hidden = false;
+    relancer(suivant, 'est-neuf');
     suivant.focus();
   }
   function poserBonus(q) {
     texteBonus.textContent = q.bonus.question;
     q.bonus.choix.forEach(function (c) {
-      var p = document.createElement('button');
-      p.type = 'button';
-      p.className = 'jeu__puce' + (portraits[c] ? '' : ' jeu__puce--texte');
+      var x = document.createElement('button');
+      x.type = 'button';
+      x.className = 'jeu__puce' + (portraits[c] ? '' : ' jeu__puce--texte');
       if (portraits[c]) {
         var img = document.createElement('img');
         img.src = portraits[c]; img.alt = ''; img.width = 60; img.height = 60;
-        p.appendChild(img);
+        x.appendChild(img);
       }
-      p.appendChild(document.createTextNode(c));
-      p.addEventListener('click', function () { repondreBonus(q, p, c); });
-      puces.appendChild(p);
+      x.appendChild(document.createTextNode(c));
+      x.addEventListener('click', function () { repondreBonus(q, x, c); });
+      puces.appendChild(x);
     });
     zoneBonus.hidden = false;
+    relancer(zoneBonus, 'est-neuf');
     puces.querySelector('button').focus();
   }
-  function repondreBonus(q, p, c) {
+  function repondreBonus(q, x, c) {
     if (puces.classList.contains('a-repondu')) return;
     var juste = c === q.bonus.reponse;
     if (juste) bonus++;
-    [].slice.call(puces.querySelectorAll('button')).forEach(function (x) {
-      x.disabled = true;
-      if (x.textContent === q.bonus.reponse) x.classList.add('est-bon');
+    [].slice.call(puces.querySelectorAll('button')).forEach(function (y) {
+      y.disabled = true;
+      if (y.textContent === q.bonus.reponse) y.classList.add('est-bon');
     });
-    if (!juste) p.classList.add('est-faux');
+    if (!juste) x.classList.add('est-faux');
     puces.classList.add('a-repondu');
     ecrireVerdict(verdictBonus, juste, 'Bonus gagné' + NB + '!', 'Raté pour le bonus' + NB + '!', q.bonus.solution);
     majPoints();
+    if (juste) { plus('+1 bonus'); eclat(x, 12); }
     montrerSuivant();
   }
   function repondre(b) {
@@ -2333,36 +2486,47 @@ a.pro__logo:hover{opacity:.82}
     repondu = true;
     var q = questions[i];
     var juste = b.getAttribute('data-qui') === q.qui;
-    if (juste) bons++;
+    if (juste) { bons++; serie++; } else { serie = 0; }
+    etats[i] = juste ? 'juste' : 'faux';
     boutons.forEach(function (x) {
       x.disabled = true;
-      if (x.getAttribute('data-qui') === q.qui) x.classList.add('est-bon');
+      if (x.getAttribute('data-qui') === q.qui) x.classList.add('est-bon', juste ? 'est-choisi' : 'est-revele');
     });
     if (!juste) b.classList.add('est-faux');
     choix.classList.add('a-repondu');
     majPoints();
+    majProgression(i);
     var texte = q.revelation + (!juste && q.bonus ? ' ' + q.bonus.solution : '');
-    ecrireVerdict(verdict, juste, 'Bien vu' + NB + '!', 'Raté' + NB + '!', texte);
+    ecrireVerdict(verdict, juste, 'Bien vu' + NB + '!', 'Raté' + NB + '!', texte, juste && serie >= 3 ? serie + ' d’affilée' + NB + '!' : '');
+    if (juste) { plus('+1'); eclat(b.querySelector('.jeu__photo'), 14); }
     if (juste && q.bonus) poserBonus(q); else montrerSuivant();
   }
   function terminer() {
-    var n = questions.length;
     partie.hidden = true; choix.hidden = true; fin.hidden = false;
+    var sansFaute = bons === n;
     score.textContent = '';
-    var b = document.createElement('b');
-    b.textContent = bons + ' / ' + n;
+    var b = document.createElement('b'), chiffre = document.createElement('span');
+    chiffre.className = 'jeu__score-n';
+    b.appendChild(chiffre); b.appendChild(document.createTextNode(' / ' + n));
     score.appendChild(b);
     score.appendChild(document.createTextNode(bons > 1 ? 'bonnes réponses' : 'bonne réponse'));
-    scoreBonus.textContent = nbBonus ? '+ ' + bonus + ' bonus sur ' + nbBonus : '';
-    if (bons === n) message.textContent = 'Sans faute' + NB + '! Vous connaissez Jesus’Trip & Co par cœur.';
-    else if (bons >= Math.ceil(n * 0.6)) message.textContent = 'Bien joué' + NB + '! Il ne vous reste plus qu’à venir nous écouter en vrai.';
-    else message.textContent = 'On a encore plein de choses à se raconter' + NB + ': venez nous rencontrer en concert' + NB + '!';
+    score.setAttribute('aria-label', bons + ' sur ' + n + ', ' + (bons > 1 ? 'bonnes réponses' : 'bonne réponse'));
+    scoreBonus.textContent = nbBonus ? (bonus ? '+ ' + bonus : '0') + ' bonus sur ' + nbBonus : '';
+    construireProgression(recap);
+    [].forEach.call(recap.children, function (li, k) { li.className = 'est-' + etats[k]; });
+    var pr = PROFILS.filter(function (x) { return bons >= Math.ceil(n * x.part); })[0];
+    profil.textContent = pr.titre;
+    message.textContent = (sansFaute ? (nbBonus && bonus === nbBonus ? 'Sans faute, et les bonus en prime' + NB + '! ' : 'Sans faute' + NB + '! ') : '') + pr.texte;
+    fin.classList.toggle('est-parfaite', sansFaute);
     animer();
+    relancer(profil, 'est-tamponne');
+    compter(chiffre, bons);
     score.focus();
+    if (sansFaute) setTimeout(confettis, 450);
   }
-  function commencer() { i = 0; bons = 0; bonus = 0; afficher(true); }
+  function commencer() { i = 0; bons = 0; bonus = 0; serie = 0; etats = []; construireProgression(progression); afficher(true); }
   boutons.forEach(function (b) { b.addEventListener('click', function () { repondre(b); }); });
-  suivant.addEventListener('click', function () { if (i < questions.length - 1) { i++; afficher(true); } else { terminer(); } });
+  suivant.addEventListener('click', function () { if (i < n - 1) { i++; afficher(true); } else { terminer(); } });
   $('.jeu__jouer').addEventListener('click', commencer);
   $('.jeu__rejouer').addEventListener('click', commencer);
   jeu.classList.add('est-actif');
